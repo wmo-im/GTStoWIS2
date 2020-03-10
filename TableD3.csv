@@ -1,0 +1,7 @@
+FA,01-49,aloft/alerts/area,,Aviation area /advisories	FM 53 (ARFOR)/[text]
+FA,50-59,aloft,,GAMET	[TEXT]
+FA,60-99,aloft,,Not assigned	Not assigned
+UA,01-59,aloft/routine,,Routine aircraft reports	ICAO AIREP
+UA,60-69,aloft/special,,Special aircraft reports, except for volcanic ash	ICAO AIREP
+UA,70-79,aloft/special/ash,,Special aircraft reports related to volcanic ash	ICAO AIREP
+UA,80-99,aloft/airep,,Reserved for future use	ICAO AIREP

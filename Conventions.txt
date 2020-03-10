@@ -1,0 +1,61 @@
+
+
+in WMO 386, there are three concepts expressed in T1T2.
+
+  - what is the data partaining to?  (Surface, upper air, etc...)
+  - who is it for ( public, marine, aviation, etc...)
+  - how is it encoded ( TAC, TDCF, etc...)
+  - when... (routine, interim synoptic, synoptic, speci)
+
+Data
+----
+
+Singular is used throughout, because otherwise everything would be plural,
+and it leads to many occurrences of the word 's', with out any concomitant clarification.
+
+Product pertinence: aloft,clouds,aviation,land,water,ocean,marine
+*surface* is an odd choice for observations, since it leads to confusion with water/lake/ocean
+where use of the word surface is more common. *land*, *ground*
+
+*upper-air* replaced by *aloft* aloft vs. cloud... hmm... can they be combined?
+
+ocean vs. marine, vs. sea vs. coast.
+sea is shorter than ocean. used ocean throughout, as the more general term.
+
+
+Gridded and grib data represents NWP products, so it could all be grouped
+under model ?  model/prediction  model/analysis
+
+Nothing is plural.
+
+Audience
+--------
+
+hmm.. 
+SA's:
+   observations/surface ?
+   observations/surface/aerodrome  ?
+   observations/aviation/ ?
+
+aviation, marine, ...
+
+Encoding
+--------
+
+The encoding should be expressed, as is universally done
+in other domains, using file type suffixes.
+
+file types:
+        .txt for TAC
+        .bufr for BUFR
+        .crex for CREX
+        .grib for grib
+
+There is a mixture of data type (observation), with encoding
+(METAR, BUFR, etc...) in the new scheme, type is taken care of
+by file extension (.txt or .metar? for those, .bufr for the other)
+so encoding information is elided from the topic tree.
+
+for for example T1=D,G,H all become "model"
+
+There i

@@ -1,0 +1,29 @@
+#Table C4: Reference time designator A2 (when T1 = D, G, H, J, O, P or T)
+#T1,A2,,,A2 - Reference Time Designator
+DGHJOPT,A,analysys,,Analysis (00 hour)
+DGHJOPT,B,006hr,,6 hours forecast
+DGHJOPT,C,012h,,12 hours forecast
+DGHJOPT,D,018h,,18 hours forecast
+DGHJOPT,E,024h,,24 hours forecast
+DGHJOPT,F,030h,,30 hours forecast
+DGHJOPT,G,036h,,36 hours forecast
+DGHJOPT,H,042h,,42 hours forecast
+DGHJOPT,I,048h,,48 hours forecast
+DGHJOPT,J,060h,,60 hours forecast
+DGHJOPT,K,072h,,72 hours forecast
+DGHJOPT,L,084h,,84 hours forecast
+DGHJOPT,M,096h,,96 hours forecast
+DGHJOPT,N,108h,,108 hours forecast
+DGHJOPT,O,120h,,120 hours forecast (5 days)
+DGHJOPT,P,132h,,132 hours forecast
+DGHJOPT,Q,144h,,144 hours forecast
+DGHJOPT,R,156h,,156 hours forecast (7 days)
+DGHJOPT,S,168h,,168 hours forecast
+DGHJOPT,T,10d,,10 days forecast
+DGHJOPT,U,15d,,15 days forecast
+DGHJOPT,V,30d,,30 days forecast
+DGHJOPT,W,XX,,Not assigned
+DGHJOPT,X,XX,,Not assigned
+DGHJOPT,Y,XX,,Not assigned
+DGHJOPT,Z,XX,,Not assigned
+
