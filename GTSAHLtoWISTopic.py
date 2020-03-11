@@ -70,11 +70,32 @@ class GTSAHLtoWISTopicMapper():
         
     def iiTopic(self,t1,a2,ii,ahlHint):
 
+        try:
+            inum=int(ii)
+        except:
+            return("")
+
+        if inum==0: return ""
+
         if t1 == 'O':
            if ii in self.tableD1:
               return(self.tableD1[ii])
            else:
               return( "undefined depth" )
+        #manual implementation of D3
+        elif t1 == 'F' and t2 == 'A':
+           if inum < 49 :
+                return "aloft/alerts/area" 
+           return "aloft"
+        elif t1 == 'U' and t2 == 'A':
+           if inum < 60 :
+                return "aloft/routine" 
+           elif inum < 70:
+                return "aloft/special" 
+           elif inum < 80:
+                return "aloft/special/ash" 
+           else:
+                return "aloft/reserved" 
 
         if 'D' in ahlHint['ii']:
             if ahlHint['ii'] == 'D2':
@@ -82,9 +103,8 @@ class GTSAHLtoWISTopicMapper():
                if k in self.tableD2:
                   return(self.tableD2[k])
                else:
-                  return( "undefined height" )
-        else:
-            return( "" )
+                  return "ERROR undefined height" 
+        return "" 
            
 
 
