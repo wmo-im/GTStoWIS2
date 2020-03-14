@@ -3,21 +3,21 @@
 
 #Table B1 A & C
 A,C,analysis/cyclone,
-A,G,analysis/marine,marine vs. shipping?,
+A,G,analysis/sea/navigation, marine vs. sea/navigation,
 A,H,analysis/thickness,
 A,I,analysis/ice,
 A,O,analysis/ozone,
 A,R,analysis/radar,
 A,S,analysis/land,
-A,U,analysis/aloft,replace:,Upper,Air,
+A,U,analysis/air/upper,replace:,Upper,Air,
 A,W,analysis/weather,
 A,X,analysis,
 C,A,climate/anomalies,
-C,E,climate/monthly/aloft,
+C,E,climate/monthly/air/upper,
 C,H,climate/monthly/land,
-C,O,climate/monthly/ocean,
+C,O,climate/monthly/sea,
 C,S,climate/monthly/land,
-C,S,climate/monthly/ocean,
+C,S,climate/monthly/sea,
 #Table B2
 DGHXY,A,model/radar,,Radar data
 DGHXY,B,model/cloud,,Cloud
@@ -56,14 +56,14 @@ E,Y,satelite/other,,Table B5 User specified
 E,Z,satelite/other,,Table B5 Unspecified
 
 #Table B1, F
-F,A,forecast/aloft/advisories upperair vs. aviation?,
-F,B,forecast/aloft/,
+F,A,forecast/air/navigation/advisories, upperair vs. aviation?,
+F,B,forecast/air/navigation/,
 F,C,forecast/aerodrome/,
 F,D,forecast/radiation/ replaced: radiological,
 F,E,forecast/extended/,
 F,F,forecast/shipping/,
 F,G,forecast/water,replaced: hydrology,
-F,H,forecast/aloft/thickness,
+F,H,forecast/air/thickness,
 F,I,forecast/iceberg,
 F,J,forecast/radiowarningservice,???,
 F,K,forecast/cyclone What would *tropical* add?,
@@ -72,37 +72,37 @@ F,M,forecast/temperature/extremes,
 F,O,forecast/guidance,
 F,P,forecast/public,
 F,Q,forecast/shipping/other, why other?,
-F,R,forecast/aviation/route, 
+F,R,forecast/air/navigation/route, 
 F,S,forecast/land,
 F,T,forecast/aerodrome,
-F,U,forecast/aviation/,
-F,V,forecast/aviation/ash, elided volcanic,
+F,U,forecast/air/navigation/,
+F,V,forecast/air/navigation/ash, elided volcanic,
 F,W,forecast/land/sport,elided winter,
 F,X,forecast,
 F,Z,forecast/shipping/area,
 
 #Table B3
 I,N,observation/satellite,,Satellite data
-I,O,observation/ocean,,Oceanographic/limnographic (water properties)
+I,O,observation/sea,,Oceanographic/limnographic (water properties)
 I,P,observation,,Pictorial
-I,S,observation/ocean/surface,,Surface/sea level
+I,S,observation/sea/surface,,Surface/sea level
 I,T,observation,,Text (plain language information)
-I,U,observation/aloft,,Upper air
+I,U,observation/air/upper,,Upper air
 I,X,observation,,Other data types
 
 J,N,forecast/satellite,,Satellite data
-J,O,forecast/ocean/,,Oceanographic/limnographic (water properties)
+J,O,forecast/sea/,,Oceanographic/limnographic (water properties)
 J,P,forecast,,Pictorial
-J,S,forecast/ocean/surface,,Surface/sea level
+J,S,forecast/sea/surface,,Surface/sea level
 J,T,forecast,,Text (plain language information)
-J,U,forecast/aloft,,Upper air
+J,U,forecast/air/upper,,Upper air
 J,X,forecast,,Other data types
 
 #Table B1, N
-N,A,notices/aviation,
-N,B,notices/aviation,
+N,A,notices/air/navigation,
+N,B,notices/air/navigation,
 N,G,notice/water,,Hydrological,[TEXT]
-N,H,notice/marine,,Marine,[TEXT]
+N,H,notice/sea/navigation,,Marine,[TEXT]
 N,N,alert/nuclear,,Nuclear emergency response,[TEXT]
 N,O,notice/,,METNO/WIFMA,[TEXT]
 N,P,notice/delay,,Product generation delay,[TEXT]
@@ -111,20 +111,20 @@ N,W,alert,,Warning related and/or cancellation,[TEXT]
 
 
 #table B4
-O,D,ocean/deep,,Depth
-O,E,ocean/ice/concentration,,Ice concentration
-O,F,ocean/ice/thickness,,Ice thickness
-O,G,ocean/ice/drift,,Ice drift
-O,H,ocean/ice/growth,,Ice growth
-O,I,ocean/ice,,Ice convergence/divergence
-O,Q,ocean/temperature,,Temperature anomaly
-O,R,ocean/deep,,Depth anomaly
-O,S,ocean/salinity,,Salinity
-O,T,ocean/termperature,,Temperature
-O,U,ocean/current,,Current component
-O,V,ocean/current,,Current component
-O,W,ocean/warming,,Temperature warming
-O,X,ocean,,Mixed data
+O,D,sea/deep,,Depth
+O,E,sea/ice/concentration,,Ice concentration
+O,F,sea/ice/thickness,,Ice thickness
+O,G,sea/ice/drift,,Ice drift
+O,H,sea/ice/growth,,Ice growth
+O,I,sea/ice,,Ice convergence/divergence
+O,Q,sea/temperature,,Temperature anomaly
+O,R,sea/deep,,Depth anomaly
+O,S,sea/salinity,,Salinity
+O,T,sea/termperature,,Temperature
+O,U,sea/current,,Current component
+O,V,sea/current,,Current component
+O,W,sea/warming,,Temperature warming
+O,X,sea,,Mixed data
 
 #Table B6: pictorial...
 PQ,A,observation/cloud/radar,,Radar data
@@ -135,10 +135,10 @@ PQ,E,observation/cloud/precip,,Precipitation
 PQ,F,observation/cloud/ash,,Aerological diagrams (Ash Cloud)
 PQ,G,alerts/cloud/,,Significant weather
 PQ,H,observation/cloud/height,,Height
-PQ,I,observation/ocean/ice,,Ice flow
-PQ,J,observation/ocean/wave,,Wave height + combinations
-PQ,K,observation/ocean/wave,,Swell height + combinations
-PQ,L,observation/ocean/wave,,Plain language
+PQ,I,observation/sea/ice,,Ice flow
+PQ,J,observation/sea/wave,,Wave height + combinations
+PQ,K,observation/sea/wave,,Swell height + combinations
+PQ,L,observation/sea/wave,,Plain language
 PQ,M,observation/national,,For national use
 PQ,N,observation/radiation,,Radiation
 PQ,O,observation/cloud/velocity/vertical,,Vertical velocity
@@ -165,52 +165,52 @@ S,I,observation/land,,Intermediate synoptic hour,FM 12 (SYNOP)/FM 13 (SHIP)
 S,L,observation,,-,-
 S,M,observation/land,,Main synoptic hour,FM 12 (SYNOP)/FM 13 (SHIP)
 S,N,observation/land,,Non-standard synoptic hour,FM 12 (SYNOP)/FM 13 (SHIP)
-S,O,observation/ocean,,Oceanographic data,FM 63 (BATHY)/FM 64 (TESAC)/FM 62 (TRACKOB)
+S,O,observation/sea,,Oceanographic data,FM 63 (BATHY)/FM 64 (TESAC)/FM 62 (TRACKOB)
 S,P,observation/land,,Special aviation weather reports,FM 16 (SPECI)
 S,R,observation/water,,Hydrological (river) reports,FM 67 (HYDRA)
-S,S,observation/ocean/buoy,,Drifting buoy reports,FM 18 (BUOY)
-S,T,observation/ocean/ice,,Sea Ice,[TEXT]
+S,S,observation/sea/buoy,,Drifting buoy reports,FM 18 (BUOY)
+S,T,observation/sea/ice,,Sea Ice,[TEXT]
 S,U,observation/land/snow/deep,,Snow depth,[TEXT]
 S,V,observation/water/ice,,Lake ice,[TEXT]
-S,W,observation/ocean/wave,,Wave information,FM 65 (WAVEOB)
+S,W,observation/sea/wave,,Wave information,FM 65 (WAVEOB)
 S,X,observation,,Miscellaneous,[TEXT]
 S,Y,seismic,,Seismic wave form data,[any format]
-S,Z,tsunami,,Sea level data and deep-ocean tsunami data,[any alphanumeric format]
+S,Z,observation/sea/tsunami,Sea level data and deep-ocean tsunami data,[any alphanumeric format]
 T,B,satellite/orbit,,Satellite orbit parameters,[TEXT]
 T,C,satellite/cloud,,Satellite cloud interpretations,FM 85 (SAREP)
-T,H,satellite/soundings/aloft,,Satellite remote upper air soundings,FM 86 (SATEM)
+T,H,satellite/soundings/air/upper,,Satellite remote upper air soundings,FM 86 (SATEM)
 T,R,satellite/radiance,,Clear radiance observations,FM 87 (SARAD)
-T,T,ocean/surface/temperature,,Sea surface temperatures,FM 88 (SATOB)
+T,T,sea/surface/temperature,,Sea surface temperatures,FM 88 (SATOB)
 T,W,satellite/winds/,,Winds and cloud temperatures,FM 88 (SATOB)
 T,X,miscellaneous,,Miscellaneous,[TEXT]
-U,A,aloft/aircraft,,Aircraft reports,FM 41 (CODAR), ICAO (AIREP)
-U,D,aloft/aircraft,,Aircraft reports,FM 42 (AMDAR)
-U,E,aloft/,,Upper level pressure, temperature, humidity and wind (Part D),FM 35 (TEMP)/FM 36 (TEMP SHIP)/FM 38 (TEMP MOBIL)
-U,F,aloft,,Upper level pressure, temperature, humidity and wind (Parts C and D) [National and bilateral option],FM 35 (TEMP)/FM 36 (TEMP SHIP)/FM 38 (TEMP MOBIL)
-U,G,aloft/wind,,Upper wind (Part B),FM 32 (PILOT)/FM 33(PILOT SHIP)/FM 34(PILOT MOBIL)
-U,H,aloft/wind,,Upper wind (Part C),FM 32 (PILOT)/FM 33 (PILOT SHIP)/FM 34 (PILOT MOBIL)
-U,I,aloft/wind,,Upper wind (Parts A and B) [National and bilateral option],FM 32(PILOT)/FM 33(PILOT SHIP)/FM 34 (PILOT MOBIL)
-U,K,aloft,,Upper level pressure, temperature, humidity and wind (Part B),FM 35 (TEMP)/FM 36 (TEMP SHIP)/FM 38 (TEMP MOBIL)
-U,L,aloft,,Upper level pressure, temperature, humidity and wind (Part C),FM 35 (TEMP)/FM 36 (TEMP SHIP)/FM 38 (TEMP MOBIL)
-U,M,aloft,,Upper level pressure, temperature, humidity and wind (Parts A and B) [National and bilateral option],FM 35 (TEMP)/FM 36 (TEMP SHIP)/FM 38 (TEMP MOBIL)
-U,N,aloft,,Rocketsonde reports,FM 39(ROCOB)/FM 40 (ROCOB SHIP)
-U,P,aloft/wind,,Upper wind (Part A),FM 32 (PILOT)/FM 33 (PILOT SHIP)/FM 34 (PILOT MOBIL)
-U,Q,aloft/wind,,Upper wind (Part D),FM 32(PILOT)/FM 33 (PILOT SHIP)/FM 34 (PILOT MOBIL)
-U,R,aloft/aircraft,,Aircraft report,[NATIONAL**] (RECCO)
-U,S,aloft,,Upper level pressure, temperature, humidity and wind (Part A),FM 35 (TEMP)/FM 36 (TEMP SHIP)FM 38 (TEMP MOBIL)
-U,T,aloft/aircraft,,Aircraft report,FM 41 (CODAR)
-U,X,aloft,,Miscellaneous,[TEXT]
-U,Y,aloft,,Upper wind (Parts C and D) [National and bilateral option],FM 32 (PILOT)/FM 33 (PILOT SHIP)/FM 34 (PILOT MOBIL)
-U,Z,aloft,,Upper level pressure, temperature, humidity and wind from a sonde released by carrier balloon or aircraft (Parts A, B, C, D),FM 37 (TEMP DROP)
-W,A,alert/aviation,,AIRMET,[TEXT]
-W,C,alert/aviation/cyclone,,Tropical cyclone (SIGMET),[TEXT]
+U,A,air/aircraft,,Aircraft reports,FM 41 (CODAR), ICAO (AIREP)
+U,D,air/aircraft,,Aircraft reports,FM 42 (AMDAR)
+U,E,air/upper,,Upper level pressure, temperature, humidity and wind (Part D),FM 35 (TEMP)/FM 36 (TEMP SHIP)/FM 38 (TEMP MOBIL)
+U,F,air/upper,,Upper level pressure, temperature, humidity and wind (Parts C and D) [National and bilateral option],FM 35 (TEMP)/FM 36 (TEMP SHIP)/FM 38 (TEMP MOBIL)
+U,G,air/wind,,Upper wind (Part B),FM 32 (PILOT)/FM 33(PILOT SHIP)/FM 34(PILOT MOBIL)
+U,H,air/wind,,Upper wind (Part C),FM 32 (PILOT)/FM 33 (PILOT SHIP)/FM 34 (PILOT MOBIL)
+U,I,air/upper/wind,,Upper wind (Parts A and B) [National and bilateral option],FM 32(PILOT)/FM 33(PILOT SHIP)/FM 34 (PILOT MOBIL)
+U,K,air/upper,,Upper level pressure, temperature, humidity and wind (Part B),FM 35 (TEMP)/FM 36 (TEMP SHIP)/FM 38 (TEMP MOBIL)
+U,L,air/upper,,Upper level pressure, temperature, humidity and wind (Part C),FM 35 (TEMP)/FM 36 (TEMP SHIP)/FM 38 (TEMP MOBIL)
+U,M,air/upper,,Upper level pressure, temperature, humidity and wind (Parts A and B) [National and bilateral option],FM 35 (TEMP)/FM 36 (TEMP SHIP)/FM 38 (TEMP MOBIL)
+U,N,air/upper,,Rocketsonde reports,FM 39(ROCOB)/FM 40 (ROCOB SHIP)
+U,P,air/upper/wind,,Upper wind (Part A),FM 32 (PILOT)/FM 33 (PILOT SHIP)/FM 34 (PILOT MOBIL)
+U,Q,air/upper/wind,,Upper wind (Part D),FM 32(PILOT)/FM 33 (PILOT SHIP)/FM 34 (PILOT MOBIL)
+U,R,air/upper/aircraft,,Aircraft report,[NATIONAL**] (RECCO)
+U,S,air/upper,,Upper level pressure, temperature, humidity and wind (Part A),FM 35 (TEMP)/FM 36 (TEMP SHIP)FM 38 (TEMP MOBIL)
+U,T,air/upper/aircraft,,Aircraft report,FM 41 (CODAR)
+U,X,air/upper,,Miscellaneous,[TEXT]
+U,Y,air/upper,,Upper wind (Parts C and D) [National and bilateral option],FM 32 (PILOT)/FM 33 (PILOT SHIP)/FM 34 (PILOT MOBIL)
+U,Z,air/upper,,Upper level pressure, temperature, humidity and wind from a sonde released by carrier balloon or aircraft (Parts A, B, C, D),FM 37 (TEMP DROP)
+W,A,alert/air/navigation,,AIRMET,[TEXT]
+W,C,alert/air/navigation/cyclone,,Tropical cyclone (SIGMET),[TEXT]
 W,E,alert/tsunami,,Tsunami,[TEXT]
 W,F,alert/tornado,,Tornado,[TEXT]
 W,G,alert/water/flood,,Hydrological/River flood,[TEXT]
-W,H,alert/ocean/flood,,Marine/Coastal flood,[TEXT]
+W,H,alert/sea/flood,,Marine/Coastal flood,[TEXT]
 W,O,alert,,Other,[TEXT]
-W,S,aviation/,,SIGMET,[TEXT]
+W,S,air/navigation/,,SIGMET,[TEXT]
 W,T,surface/storms/cyclone,,Tropical cyclone (Typhoon/Hurricane),[TEXT]
 W,U,surface/storms/thunder,,Severe thunderstorm,[TEXT]
-W,V,alerts/clouds/ash,,Volcanic ash clouds (SIGMET),[TEXT]
+W,V,air/navigation/clouds/ash,,Volcanic ash clouds (SIGMET),[TEXT]
 W,W,alerts,,Warnings and weather summary,[TEXT]

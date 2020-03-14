@@ -53,8 +53,12 @@ class GTSAHLtoWISTopicMapper():
         with open( self.tableDir + '/TableC1.json', 'r' ) as m:
           self.tableC1=json.load(m)
 
+        with open( self.tableDir + '/CCCC_to_WIS_Centre.json', 'r' ) as m:
+          self.tableCCCC=json.load(m)
+
         print( "Table A: %s" % json.dumps(self.tableA, indent=2) )
         print( "Table C1: %s" % json.dumps(self.tableC1, indent=2) )
+        print( "Table CCCC: %s" % json.dumps(self.tableC1, indent=2) )
         # TableB
         for t in [ 'B', 'C4', 'D2' ]:
             self.parseCSVB(t)
@@ -85,17 +89,17 @@ class GTSAHLtoWISTopicMapper():
         #manual implementation of D3
         elif t1 == 'F' and t2 == 'A':
            if inum < 49 :
-                return "aloft/alerts/area" 
-           return "aloft"
+                return "air/navigation/alerts/area" 
+           return "air/navigation"
         elif t1 == 'U' and t2 == 'A':
            if inum < 60 :
-                return "aloft/routine" 
+                return "air/navigation/routine" 
            elif inum < 70:
-                return "aloft/special" 
+                return "air/navigation/special" 
            elif inum < 80:
-                return "aloft/special/ash" 
+                return "air/navigation/special/ash" 
            else:
-                return "aloft/reserved" 
+                return "air/navigation/reserved" 
 
         if 'D' in ahlHint['ii']:
             if ahlHint['ii'] == 'D2':
@@ -146,6 +150,8 @@ class GTSAHLtoWISTopicMapper():
         AA=ahl[2:4].upper()
         ii=ahl[4:6]
         T1=ahl[0].upper()
+        CCCC = ahl[7:11]
+        CCCCTopic=self.tableCCCC[ CCCC ]["centre"]
         ahlParseHint=self.tableA[ T1 ]
         print( "ahlParseHint: %s" % ahlParseHint )
 
@@ -168,7 +174,11 @@ class GTSAHLtoWISTopicMapper():
         if iiTopic :
            topic += '/' + iiTopic
 
+        if CCCCTopic:
+           topic = CCCCTopic + '/' + topic
+
         print( "ahlpib: %s" % ahlpiB )
+        print( "topic from CCCC is: %s " % CCCCTopic )
         print( "topic from TT/B is: %s " % TTTopic )
         print( "topic from AA/C is: %s " % AATopic )
         print( "topic from ii/C is: %s " % iiTopic )

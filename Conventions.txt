@@ -1,5 +1,4 @@
 
-
 in WMO 386, there are three concepts expressed in T1T2.
 
   - what is the data partaining to?  (Surface, upper air, etc...)
@@ -17,10 +16,13 @@ Product pertinence: aloft,clouds,aviation,land,water,ocean,marine
 *surface* is an odd choice for observations, since it leads to confusion with water/lake/ocean
 where use of the word surface is more common. *land*, *ground*
 
-*upper-air* replaced by *aloft* aloft vs. cloud... hmm... can they be combined?
+aviation -> air/navigation
+marine   -> sea/navigation
+            water/navigation (inland)
 
-ocean vs. marine, vs. sea vs. coast.
-sea is shorter than ocean. used ocean throughout, as the more general term.
+*upper-air* replaced by *air/upper*  .
+
+sea is shorter than ocean... also a bit less specific.  better suited for sea/navigation.
 
 
 Gridded and grib data represents NWP products, so it could all be grouped
