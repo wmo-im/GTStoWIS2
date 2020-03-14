@@ -1,11 +1,3 @@
-ANNEXE I
-
-Location Indicators used in the Abbreviated Headings (TTAAii CCCC)
-CCCCs by Location Indicator
-CCCC
-
-Location Name
-
 Country Name
 
 ABCS
@@ -37,6 +29,16 @@ BIEG
 BIKF
 BIRK
 BOCW
+BOIA
+BOID
+BOIJ
+BOIP
+BOIT
+BOKE
+BOLP
+BOLU
+BOLV
+BOLW
 
 Cairns
 Brisbane (Regional Forecasting Centre)
@@ -44,7 +46,7 @@ Rockhampton
 Thursday I.
 Townsville
 Weipa
-Cocos Island
+Cocos Islands
 Darwin
 Darwin/Regional Met. Centre
 Honiara (COM Centre), Guadalcanal I.
@@ -84,7 +86,7 @@ Australia
 Australia
 Australia
 Australia
-Cocos Island
+Cocos Islands
 Australia
 Australia
 Solomon Islands
@@ -107,20 +109,6 @@ Iceland
 Iceland
 Iceland
 China
-
-BOIA
-BOID
-BOIJ
-BOIP
-BOIT
-BOKE
-BOLP
-BOLU
-BOLV
-BOLW
-
-Page 9
-
 China
 China
 China
@@ -131,49 +119,10 @@ China
 China
 China
 China
-
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
-
-CCCC
-
-Location Name
 
 Country Name
 
 BOOA
-
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-Call sign of ship recruited by/Indicatif d'appel de navire recruté par
-
-China
-
 BOOG
 BOOM
 BOOU
@@ -202,7 +151,36 @@ BRVG
 BSQK
 BSQP
 BSQU
-Page 10
+
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
+Call sign of ship recruited by/Indicatif d'appel de navire recruté par
 
 China
 China
@@ -232,11 +210,8 @@ China
 China
 China
 China
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
+China
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -294,16 +269,59 @@ CWTQ
 CWTZ
 CWUL
 
----Montreal (Canadian Met. Centre), Que.
---------Edmonton, Alta. (Alberta/Arctic Weather Centres)
--------Halifax Dockyard, N.S.
--Bedford (Atlantic Weather Centre), N.S.
+Bhutan
+--
+--
+Montreal (Canadian Met. Centre), Que.
+--
+--
+--
+--
+--
+--
+--
+Edmonton, Alta. (Alberta/Arctic Weather Centres)
+--
+--
+--
+--
+--
+--
+--
+Halifax Dockyard, N.S.
+--
+Bedford (Atlantic Weather Centre), N.S.
 Ottawa (AES Ice Forecasting Centre), Ont.
----------Turtle Mountain
--Ottawa, Ont.
+Charlevoix, QC
+--
+--
+--
+--
+--
+--
+--
+--
+Turtle Mountain
+--
+Ottawa, Ont.
 Esquimalt (Maritime HQ CFB Dockyard), B.C.
-------------Toronto, Ont. (Atmospheric Environment Service HQ.)
---Montreal (Quebec Forecast Office), Que.
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+Toronto, Ont. (Atmospheric Environment Service HQ.)
+--
+--
+Montreal (Quebec Forecast Office), Que.
 
 Bhutan
 Canada
@@ -359,13 +377,7 @@ Canada
 Canada
 Canada
 
-Page 11
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
-
-CCCC
-
-Location Name
 
 Country Name
 
@@ -424,7 +436,12 @@ CYQQ
 CYQR
 
 Vancouver (Pacific Weather Centre), B.C.
------Halifax/Shearwater, NS (Heli)
+--
+--
+--
+--
+--
+Halifax/Shearwater, NS (Heli)
 Baie-Comeau, QC
 Uranium City, SK
 Bagotville, Que.
@@ -526,13 +543,8 @@ Canada
 Canada
 Canada
 
-Page 12
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -698,13 +710,8 @@ Canada
 Canada
 Canada
 
-Page 13
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -838,7 +845,6 @@ DIAP
 DIBK
 DKPY
 DNAA
-Page 14
 
 Algeria
 Algeria
@@ -872,11 +878,7 @@ Cote d'Ivoire
 Cote d'Ivoire
 Democratic People's Republic of Korea
 Nigeria
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -1042,13 +1044,8 @@ Germany
 Germany
 Germany
 
-Page 15
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -1214,13 +1211,8 @@ Finland
 Finland
 Finland
 
-Page 16
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -1386,13 +1378,8 @@ Norway
 Norway
 Norway
 
-Page 17
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -1558,13 +1545,8 @@ Norway
 Norway
 Norway
 
-Page 18
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -1670,6 +1652,7 @@ Storuman
 Hemavan
 Norrköping (Swedish Meteorological and Hydrological Institute)
 Euskirchen Mil. Met Com Center -EUMETSAT (Darmstadt)
+--
 
 Norway
 Norway
@@ -1725,16 +1708,11 @@ Sweden
 ETGT
 EUMC
 EUMG
-Page 19
 
 Germany
 EUMETSAT (Darmstadt)
 EUMETSAT (Darmstadt)
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -1870,7 +1848,7 @@ South Africa (Gough & Marion Islands)
 South Africa (Gough & Marion Islands)
 South Africa (Gough & Marion Islands)
 South Africa (Gough & Marion Islands)
-Operated by South Africa
+Antarctic
 South Africa (Gough & Marion Islands)
 South Africa (Gough & Marion Islands)
 South Africa (Gough & Marion Islands)
@@ -1900,13 +1878,8 @@ Cameroon
 Zambia
 Comoros
 
-Page 20
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -2020,7 +1993,7 @@ Ouarzazate
 
 Comoros
 Comoros
-Reunion
+Réunion
 Madagascar
 Madagascar
 Madagascar
@@ -2045,7 +2018,7 @@ Malawi
 Malawi
 Lesotho
 Lesotho
-Operated by the United Kingdom
+St. Helena
 Namibia
 Namibia
 Namibia
@@ -2072,13 +2045,8 @@ Morocco
 Morocco
 Morocco
 
-Page 21
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -2155,10 +2123,12 @@ PRAIA
 SAO PEDRO/SAO VICENTE ISLAND
 Addis Ababa
 Asmara
--Budapest
+--
+Budapest
 Dire Dawa
 Addis Ababa
--Massawa
+--
+Massawa
 Assab
 Bujumbura
 Berbera
@@ -2166,15 +2136,27 @@ Mogadiscio
 Djibouti/Ambouli
 Cairo (Le Caire)
 Asmara
----Bura
+--
+--
+--
+Bura
 Bungoma
--Eldoret International
+--
+Eldoret International
 Embu
 Garba Tula
--Hola
-----Kakamega
---Lokichogio
--Loitokitok
+--
+Hola
+--
+--
+--
+--
+Kakamega
+--
+--
+Lokichogio
+--
+Loitokitok
 
 Morocco
 Morocco
@@ -2230,13 +2212,8 @@ Kenya
 Kenya
 Kenya
 
-Page 22
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -2265,67 +2242,6 @@ HLTD
 HRYR
 HSSS
 HTDA
-
-Mandera
--Maral (Kisima)
-Masai Mara Camp
-Mombasa
--Mackinnon Road
--Nairobi ACC/FIC/RCC/MET/COM
-Nairobi
---Naivasha
-----Gamal Abd El Nasser (Mil)
-Benghazi/Benina
-Sebha
-Tripoli/Intl.
-Ghadames
-Kigali
-Khartoum
-Dar-es-Salaam/Dar-es-Salaam (APP, TWR, NOF, MET, Civil Airlines)
-Kilimanjaro (APP, TWR, AIS, MET, Civil Airlines)
-Entebbe
-International Atomic Energy Agency
--------Allentown-Bethlehem-Easton, PA
-Abilene/Regional, TX
-Albuquerque/Intl, NM
-Aberdeen Rgnl, SD
-Southwest Georgia Rgnl, Albany, GA
-Nantucket Memorial, MA
--Waco Rgnl, TX
-Arcata/Eureka, CA
-Atlantic City/Intl, NJ
-Ardmore Municipal Airport – Ardmore, OK
--Alexandria Intl Arpt, Alexandria, LA
---Pittsburgh/Allegheny County, PA
-MacDill AFB Auxiliary Field – Avon Park, FL
-August/Bush Field, GA
-
-Kenya
-Kenya
-Kenya
-Kenya
-Kenya
-Kenya
-Kenya
-Kenya
-Kenya
-Kenya
-Kenya
-Kenya
-Kenya
-Kenya
-Kenya
-Kenya
-Kenya
-Libya
-Libya
-Libya
-Libya
-Libya
-Rwanda
-Sudan
-Tanzania, United Republic of
-
 HTKJ
 HUEN
 IAEA
@@ -2354,9 +2270,87 @@ KAFG
 KAGC
 KAGR
 KAGS
-Page 23
 
-Tanzania, United Republic of
+Mandera
+--
+Maral (Kisima)
+Masai Mara Camp
+Mombasa
+--
+Mackinnon Road
+--
+Nairobi ACC/FIC/RCC/MET/COM
+Nairobi
+--
+--
+Naivasha
+--
+--
+--
+--
+Gamal Abd El Nasser (Mil)
+Benghazi/Benina
+Sebha
+Tripoli/Intl.
+Ghadames
+Kigali
+Khartoum
+Dar-es-Salaam/Dar-es-Salaam (APP, TWR, NOF, MET, Civil Airlines)
+Kilimanjaro (APP, TWR, AIS, MET, Civil Airlines)
+Entebbe
+International Atomic Energy Agency
+--
+--
+--
+--
+--
+--
+--
+Allentown-Bethlehem-Easton, PA
+Abilene/Regional, TX
+Albuquerque/Intl, NM
+Aberdeen Rgnl, SD
+Southwest Georgia Rgnl, Albany, GA
+Nantucket Memorial, MA
+--
+Waco Rgnl, TX
+Arcata/Eureka, CA
+Atlantic City/Intl, NJ
+Ardmore Municipal Airport – Ardmore, OK
+--
+Alexandria Intl Arpt, Alexandria, LA
+--
+--
+Pittsburgh/Allegheny County, PA
+MacDill AFB Auxiliary Field – Avon Park, FL
+August/Bush Field, GA
+
+Kenya
+Kenya
+Kenya
+Kenya
+Kenya
+Kenya
+Kenya
+Kenya
+Kenya
+Kenya
+Kenya
+Kenya
+Kenya
+Kenya
+Kenya
+Kenya
+Kenya
+Libya
+Libya
+Libya
+Libya
+Libya
+Rwanda
+Sudan
+Tanzania
+Tanzania
 Uganda
 Germany
 United States of America
@@ -2385,11 +2379,7 @@ United States of America
 United States of America
 United States of America
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -2436,14 +2426,18 @@ KAWH
 KAWN
 
 Athens/Ben Epps, GA
--Colorado Plains Regional Airport – Akron, CO
+--
+Colorado Plains Regional Airport – Akron, CO
 Wakefield Municipal Airport – Wakefield, VA
 Albany/Albany, NY
 Alice Intl, TX
 Waterloo Muni, IA
--San Luis Valley Regional Airport – Alamosa, CO
--Walla Walla Rgnl, WA
--Amarillo Intl, TX
+--
+San Luis Valley Regional Airport – Alamosa, CO
+--
+Walla Walla Rgnl, WA
+--
+Amarillo Intl, TX
 Bacon County Airport – Alma, GA
 Anniston Metropolitan, AL
 Anderson County, SC
@@ -2451,11 +2445,14 @@ Lima Allen County Airport – Lima, OH
 Altoona-Blair County, PA
 Aberdeen/Phillips AAF Proving Ground, MD
 Alpena County Rgnl, MI
---Acadiana Regional Airport – New Iberia, LA
+--
+Acadiana Regional Airport – New Iberia, LA
 Ann Arbor Municipal Airport – Ann Arbor, Michigan
----U.S. Argos Communications Centre, Landover, MD
+--
+U.S. Argos Communications Centre, Landover, MD
 Watertown Intl, NY
--Astoria Regional Airport – Astoria, OR
+--
+Astoria Regional Airport – Astoria, OR
 Atlanta, GA
 Appleton International Airport – Greenville, WI
 Watertown Muni, SD
@@ -2464,13 +2461,16 @@ Austin-Bergstrom Intl Arpt, Austin, TX
 Wausau Downtown Airport – Wausau, WI
 Asheville Rgnl, NC
 Scranton/Wilkes-Barre Intl, PA
--Tinker AFB, Oklahoma City, OK (Automated Weather Network Switching Center)
+--
+Tinker AFB, Oklahoma City, OK (Automated Weather Network Switching Center)
 Alexandria/Chandler Fld, MN
--Marysville/Beale AFB, CA
+--
+Marysville/Beale AFB, CA
 Westfield/Barnes Muni, MA
 Baltimore/Friendship Intl. MD
 Bryce Canyon Airport – Bryce Canyon, UT
--Windsor Locks/Bradlex Intl., CT
+--
+Windsor Locks/Bradlex Intl., CT
 Bridgeport/Igor I Sikorsky Memorial, CT
 Bradford Rgnl, PA
 Scottsbluff/William B Heilig Field, NE
@@ -2530,7 +2530,6 @@ KBDR
 KBFD
 KBFF
 KBFI
-Page 24
 
 United States of America
 United States of America
@@ -2544,11 +2543,7 @@ United States of America
 United States of America
 United States of America
 United States of America
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -2611,25 +2606,31 @@ Hutchinson County Airport – Borger, TX
 Binghamton Regional/Edwin A Linkfield, NY
 Bangor/Intl., ME
 Birmingham, AL
--Block Island State Airport – Block Island, RI
+--
+Block Island State Airport – Block Island, RI
 Eastern Sierra Regional Airport – Bishop, CA
 Billings Logan Intl, MT
 Bismarck Muni, ND
 West Michigan Regional Airport – Holland, MI
 Keesler AFB, Biloxi, MS
 Bemidji Regional Airport – Bemidji, MN
--Baker/Muni, OR
+--
+Baker/Muni, OR
 Beckley/Raleigh County Memorial, WV
 Mercer County Airport – Bluefield, WV
 Blythe Airport – Blythe, CA
 Bellingham/Intl, WA
 Blue Canyon-Nyack Airport – Emigrant Gap, CA
 Bloomington/Normal, IL
--Nashville Intl, TN
+--
+Nashville Intl, TN
 Burns Municipal Airport – Burns, OR
--Boise Air Terminal/Gowen Fld, ID
+--
+Boise Air Terminal/Gowen Fld, ID
 Boston/Logan, MA
---Big Piney-Marbleton Airport – Big Piney, WY
+--
+--
+Big Piney-Marbleton Airport – Big Piney, WY
 Beaumont Port-Arthur/Jefferson County, TX
 Brainerd Lakes Regional Airport – Brainerd, MI
 Burlington Muni, IA
@@ -2640,11 +2641,15 @@ Baton Rouge Metropolitanl/Ryan Field, LA
 Burlington, VT
 Buffalo/Greater Buffalo Intl., NY
 burbank/Glendale-Passadena, CA
--Bowling Green/Warren County Rngl, KY
+--
+Bowling Green/Warren County Rngl, KY
 Baltimore/Baltimore-Washington Intl., MD
--Blytheville, Arkansas Intl Arpt, AR
+--
+Blytheville, Arkansas Intl Arpt, AR
 Burley Muni, ID
---Bozeman Mt. Gallatin Fld
+--
+--
+Bozeman Mt. Gallatin Fld
 Columbia Metropolitan, SC
 Craig-Moffat Airport – Craig, CO
 Akron-Canton Rgnl, OH
@@ -2704,13 +2709,8 @@ United States of America
 United States of America
 United States of America
 
-Page 25
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -2727,27 +2727,32 @@ KCHI
 
 Caribou Muni, ME
 Columbus AFB, MS
--Cedar City Muni, UT
+--
+Cedar City Muni, UT
 Chadron Municipal Airport – Chadron, NE
 Childress Municipal Airport – Childress, TX
 Springfield-Chicope/Westover AFB Metropolitan, MA
 Chattanooga/Lovell, TN
--Chicago/Du Page County Airport and Chicago
+--
+Chicago/Du Page County Airport and Chicago
 Metropolitan area, IL
 Charlottesville-Albemarle, VA
 Charleston/Municipal and AFB, SC
 Cedar Rapids Muni, IA
 Cairo Regional Airport – Cairo, IL
 Clarksbzrg/Benedum, WV
--Cleveland/Hopkins Intl, OH
+--
+Cleveland/Hopkins Intl, OH
 College Station/Easterwood Fld, TX
 Charlotte/Douglas Intl, NC
--Columbus/Port Columbus Intl, OH
+--
+Columbus/Port Columbus Intl, OH
 Champaign-Urbana Univresity of Illinois Willard, IL
 Blosser Municipal Airport – Concordia, KS
 Carlsbad/Cavern City Air Terminal, NM
 Chanute Martin Johnson Airport – Chanute, KS
--Yellowstone Regional Airport – Cody, WY
+--
+Yellowstone Regional Airport – Cody, WY
 Cocoa/Patrick AFB, FL
 Coleman Municipal Airport – Coleman, TX
 Concord Municipal Airport – Concord, NH
@@ -2755,18 +2760,22 @@ Colorado Springs Municipal
 Cotulla-La Salle County Airport – Cotulla, TX
 Columbia Rgnl, MO
 Casper/Natrona County Intl, WY
---Corpus Christi/Intl, TX
+--
+Corpus Christi/Intl, TX
 Z.M. Jack Stell Field – Crossett, AR
 Charleston/Yeager, WV
 Columbus Metropolitan, GA
--Clinton-Sherman Airport – Clinton, OK
+--
+Clinton-Sherman Airport – Clinton, OK
 Crossville Memorial, TN
 Cut Bank Muni, MT
--Cross City Airport – Cross City, FL
+--
+Cross City Airport – Cross City, FL
 Covington-Cincinnati/Northern Kentucky Intl, KY
 Clovis AFB, NM
 Capital City Airport – Harrisburg, PA
---Cheyenne Regional Airport (Jerry Olson Field) –
+--
+Cheyenne Regional Airport (Jerry Olson Field) –
 Cheyenne, WY
 
 United States of America
@@ -2822,7 +2831,6 @@ KCXY
 KCYA
 KCYP
 KCYS
-Page 26
 
 United States of America
 United States of America
@@ -2866,11 +2874,7 @@ United States of America
 United States of America
 United States of America
 United States of America
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -2901,6 +2905,32 @@ KDTA
 KDTW
 KDTX
 KDUG
+KDUJ
+KDVD
+KDVN
+KDVR
+KDXR
+KDXZ
+KDYR
+KE74
+KEAT
+KEAU
+KEAX
+KECG
+KEDW
+KEED
+KEEW
+KEHA
+KEHU
+KEKA
+KEKN
+KEKO
+KELD
+KELM
+KELP
+KELY
+KEMP
+KEND
 
 Cascade Locks State Airport – Cascade Locks, OR
 Daytona Beach Rgnl, FL
@@ -2911,7 +2941,8 @@ Dayton/James M. Cox Dayton Intl, OH
 Dubuque Regional, IA
 Washington/National, DC
 Dodge City Regional, KS
--Denver International
+--
+Denver International
 Dallas-Fort Worth/Regional Airport, TX
 Dothan, AL
 Dalhart Municipal Airport – Dalhart, TX
@@ -2919,25 +2950,33 @@ Duluth/Intl, MN
 Columbia Gorge Regional Airport, OR
 Tucson/Davis Monthan AFB, AZ
 Deming Muni, NM
--Dover AFB, DE
+--
+Dover AFB, DE
 Desert Rock Airport – Mercury, NV
 Del Rio International Airport – Del Rio, TX
 Des Moines Intl, IA
 Delta Municipal Airport – Delta, UT
 Detroit/Metropolitan Wayne County, MI
--Bisbee-Douglas International Airport – Bisbee / Douglas,
-AZ
+--
+Bisbee-Douglas International Airport – Bisbee / Douglas, AZ
 Du Bois/Jefferson County, PA
----Danbury Municipal Airport – Danbury, CT
+--
+--
+--
+Danbury Municipal Airport – Danbury, CT
 St. George Regional Airport – St. George, UT
 Dyersburg Regional Airport – Dyersburg, TN
--Pangborn Memorial Airport – Wenatchee, WA
+--
+Pangborn Memorial Airport – Wenatchee, WA
 Eau Claire County, WI
--Elizabeth City Coast Guard, NC
+--
+Elizabeth City Coast Guard, NC
 Edwards AFB, CA
 Needles Airport – Needles, CA
--Elkhart-Morton County Airport – Elkhart, KS
--Murray Field – Eureka, CA
+--
+Elkhart-Morton County Airport – Elkhart, KS
+--
+Murray Field – Eureka, CA
 Elkins/Jennings Randolph Fld, WV
 Elko Muni-JC Harris Field, NV
 El Dorado/Goodwin Field, AR
@@ -2974,35 +3013,6 @@ United States of America
 United States of America
 United States of America
 United States of America
-
-KDUJ
-KDVD
-KDVN
-KDVR
-KDXR
-KDXZ
-KDYR
-KE74
-KEAT
-KEAU
-KEAX
-KECG
-KEDW
-KEED
-KEEW
-KEHA
-KEHU
-KEKA
-KEKN
-KEKO
-KELD
-KELM
-KELP
-KELY
-KEMP
-KEND
-Page 27
-
 United States of America
 United States of America
 United States of America
@@ -3030,11 +3040,7 @@ United States of America
 United States of America
 United States of America
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -3094,21 +3100,27 @@ KGGW
 
 Wendover Airport – Wendover, UT
 Ephrata Municipal Airport – Ephrata, WA
--Erie Intl, PA
+--
+Erie Intl, PA
 Alexandria/Esler Rgnl, LA
 Eugene/Mahlon Swete Field, OR
 Evansville Rgnl, IN
 New Bern/Craven County Rgnl, NC
 Newark/Newark, NJ
--Key West Intl, FL
--Fargo/Hector Intl, ND
+--
+Key West Intl, FL
+--
+Fargo/Hector Intl, ND
 Fresno Yosemite International, CA
 Fayetteville/Regional Grannis Field, NC
 Glacier Park International Airport – Kalispell, MT
--Fairfield County Airport – Winnsboro, SC
+--
+Fairfield County Airport – Winnsboro, SC
 Findlay Airport – Findlay, OH
 Falcon Field – Peachtree City, GA
---Fort Huachuca/Libby AAF-Sierra Vista Muni, AZ
+--
+--
+Fort Huachuca/Libby AAF-Sierra Vista Muni, AZ
 Flagstaff/Pulliam, AZ
 Fort Lauderdale/Holywood International, FL
 Florence Regional, SC
@@ -3121,10 +3133,14 @@ Topeka/Forbes Field, KS
 Francis S. Gabreski Airport – Westhampton Beach, NY
 Sioux Falls/Joe Foss Field, SD
 Ft Sill/Henry Post AAF, OK
--Fort Smith/Regional, AR
+--
+Fort Smith/Regional, AR
 Fort Worth/Meacham, TX
 Fort Wayne International, IN
----Fayetteville/Drake Field, AR
+--
+--
+--
+Fayetteville/Drake Field, AR
 Gage Airport - Gage, OK
 Gila Bend Air Force Auxiliary Field – Gila Bend, AZ
 Gillette-Campbell County Airport – Gillette, WY
@@ -3190,13 +3206,8 @@ United States of America
 United States of America
 United States of America
 
-Page 28
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -3254,7 +3265,8 @@ KHOT
 KHOU
 KHPN
 
--Galveston/Walker Field, CO
+--
+Galveston/Walker Field, CO
 Renner Goodland Municipal Airport – Goodland, KS
 Mid Delta Regional Airport – Greenville, MS
 Galveston, Scholes Fld, TX
@@ -3272,23 +3284,35 @@ Greensboro, piedmont Triad Intl, NC
 Greer/Greenville-Spartanburg, SC
 Fort Drum/Wheeler-Sack AAF, NY
 Great Falls/Intl, MT
--Gallupm,NM
+--
+Gallupm,NM
 Peru/Grissom AFB, IN
 Offutt AFB, Omaha, WA (USAF Global Weather Center)
 Greenwood/Le Flore Arpt, MS
----Half Moon Bay Airport – Half Moon Bay, CA
--Harford Airport – Casper, WY
--Hobart Municipal Airport - Hobart, OK
+--
+--
+--
+Half Moon Bay Airport – Half Moon Bay, CA
+--
+Harford Airport – Casper, WY
+--
+Hobart Municipal Airport - Hobart, OK
 Hondo Municipal Airport – Hondo, TX
 Hartford-Brainard Airport – Hartford, CT
-----Hibbing/Chisholm-Hibbing, MN
+--
+--
+--
+--
+Hibbing/Chisholm-Hibbing, MN
 Hickory/Regional, NC
 Hill City Municipal Airport – Hill City, KS
 Helena Regional, MT
 Ft Hood-Killeen/Hood AFB, TX
 Alamogordo/Holloman AFB, NM
 Richland Airport - Richland, WA
---Lea County Regional Airport – Hobbs, NM
+--
+--
+Lea County Regional Airport – Hobbs, NM
 Huron Regional, SD
 Fort Campbell (Hopkinsville, KY)
 Hot Springs/Memorial Field, AR
@@ -3349,13 +3373,8 @@ United States of America
 United States of America
 United States of America
 
-Page 29
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -3410,28 +3429,34 @@ KJDN
 KJFK
 KJHW
 
--Hoqiam/Bowerman Fld, WA
+--
+Hoqiam/Bowerman Fld, WA
 Harrison/Boone County, AR
--Stennis International Airport – Bay St. Louis, MI
+--
+Stennis International Airport – Bay St. Louis, MI
 Hastings Municipal Airport – Hastings, NE
 Homestead Joint Air Reserve Base – Homestead, FL
 Huntsville/Intl Carl T Jones Feld, AL
--Huntington/Tri-State Milton J Ferguson Field, WV
+--
+Huntington/Tri-State Milton J Ferguson Field, WV
 Terre Haute/Hulman Regional, IN
 Houlton International Airport – Houlton, ME
 Houma-Terrebonne Airport – Houma, LA
--New Haven/Tweed, CT
+--
+New Haven/Tweed, CT
 Havre City County Airport – Havre, MT
 Washington/Dulles Intl., DC
 Niagara Falls International, NY
 George Bush Intercontinental/Houston, TX
--Wichita Mid-Continent, KS
+--
+Wichita Mid-Continent, KS
 Idaho Falls/Fanning Field, ID
 Kingman Airport – Kingman, AZ
 Wilmington, New Castle, DE
 Wilmington, New Hannover Intl, NC
 Airborne Airpark – Wilmington, OH
---Indianapolis/Indianapolis-Weir Cook Airport, IN
+--
+Indianapolis/Indianapolis-Weir Cook Airport, IN
 International Falls, MN
 Winston Salem
 Winslow-Lindbergh Regional Airport – Winslow, AZ
@@ -3439,9 +3464,12 @@ Iowa City Municipal Airport – Iowa City, IA
 Imperial County Airport – Imperial, CA
 Williamsport/Lycoming County PA
 Kirksville/Regional, MO
--Islip/Long Island Macarthur, NY
--Ithaca Tompkins Regional Airport – Ithaca, NY
--Jackson Hole, WY
+--
+Islip/Long Island Macarthur, NY
+--
+Ithaca Tompkins Regional Airport – Ithaca, NY
+--
+Jackson Hole, WY
 Jackson Intl, MS
 Jacksonville/Intl., FL
 Jonesboro Muni, AR
@@ -3450,7 +3478,8 @@ Diego Garcia-US Navy Relay to Diego Garcia (FJDG)
 Jordan Airport – Jordan, MT
 New York/John F. Kennedy Intl., NY
 Chautauqua County-Jamestown Airport – Jamestown, NY
--Joplin Rgnl, MO
+--
+Joplin Rgnl, MO
 --
 
 United States of America
@@ -3507,16 +3536,11 @@ United States of America
 KJKL
 KJLN
 KJOS
-Page 30
 
 United States of America
 United States of America
 United States of America
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -3575,7 +3599,11 @@ KLWS
 KLWT
 
 Johnstown-Cambria County, PA
-----Lamar Municipal Airport – Lamar, CO
+--
+--
+--
+--
+Lamar Municipal Airport – Lamar, CO
 Lafayette/Purdue University, IN
 Lakeland Linder Regional, FL
 Lansing/Capital City, MI
@@ -3596,21 +3624,32 @@ Long Beach/Daugherty Field, CA
 La Junta Municipal Airport – La Junta, CO
 Limon Municipal Airport – Limon, CO
 Little Rock/Adams Field, AR
-------Klamath Falls International Airport – Klamath Falls, OR
--Hunt Field – Lander, WY
+--
+--
+--
+--
+--
+--
+Klamath Falls International Airport – Klamath Falls, OR
+--
+Hunt Field – Lander, WY
 Lincoln/Municipal, NE
 Derby Airport – Lovelock, NV
 Lewis University Airport – Romeoville, IL
 Louisville/Bowman, KY
--London-Corbin/Mage Field, KY
+--
+London-Corbin/Mage Field, KY
 Laredo International, TX
 Jacksonville, Little Rock AFB, AR
 La Crosse Muni, WI
 las Vegas/Nellis AFB, NV
--Altus AFB, OK
--Cincinnati/Muni Lunken Field, OH
+--
+Altus AFB, OK
+--
+Cincinnati/Muni Lunken Field, OH
 Las Vegas Municipal Airport – Las Vegas, NM
--Lewiston-Nez Perce County Airport – Lewiston, ID
+--
+Lewiston-Nez Perce County Airport – Lewiston, ID
 Lewlistown Muni, MT
 
 United States of America
@@ -3667,13 +3706,8 @@ United States of America
 United States of America
 United States of America
 
-Page 31
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -3731,9 +3765,12 @@ KMPV
 KMPX
 KMQT
 
--Lake County Airport – Leadville, CO
+--
+Lake County Airport – Leadville, CO
 Lynchburg/Regional Preston Glenn Field, VA
---Macon Downtown Airport – Macon, GA
+--
+--
+Macon Downtown Airport – Macon, GA
 Midland/Intl, TX
 Mobridge Municipal Airport – Mobridge, SD
 Mc Comb-Pike County/John E Lewis Field, MS
@@ -3744,34 +3781,43 @@ Orlando Intl, FL
 Mason City Municipal Airport – Mason City, IA
 Harrisburg/Intl, PA
 Chicago/Chicago Midway, IL
--Meridian/Key Field, MS
+--
+Meridian/Key Field, MS
 Memphis Intl, Tenn
 Merced, Castle Arpt, CA
 Mansfield/Lahm Muni, OH
 Mcalle/Miller Intl, TX
--Medford-Jackson County, OR
+--
+Medford-Jackson County, OR
 Montgomery/Dannelly Field, AL
 Morgantown/Muni-Walter L Bill Hart Fld, WV
 Manhattan/Muni, KS
 Sacramento/Mather AFB, CA
 Dunsmuir Municipal-Mott Airport - Mount Shasta, CA
---Miami/Miami Intl., FL
+--
+--
+Miami/Miami Intl., FL
 Millville, NJ
 Kansas City Downtown, MO
 Milwaukee/General Mitchell Field, WI
 Muskegon/County, MI
 Jackson/MC Kellar-Sipes Rgnl, TN
--Melbourne/Rgnl, FL
+--
+Melbourne/Rgnl, FL
 McAlester/Rgnl, OK
 Malad City Airport – Malad City, ID
 Moline/Quad-City, IL
 Miles City/Frank Wiley Field MT
 Monroe Rgnl, LA
----Mobile Rgnl, AL
+--
+--
+--
+Mobile Rgnl, AL
 Modesto/City County-Harry Sham Field, CA
 Minot/Intl, ND
 Edward F. Knapp State Airport – Barre-Montpelier, VT
--Marquette/County, MI
+--
+Marquette/County, MI
 
 United States of America
 United States of America
@@ -3827,13 +3873,8 @@ United States of America
 United States of America
 United States of America
 
-Page 32
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -3864,71 +3905,6 @@ KMYL
 KMYR
 KNBC
 KNBG
-
-Martinsburg/Eastern Rgnl-Shepherd Field, WV
-Marfa Municipal Airport - Marfa, TX
---Monterey/Penninsula, CA
--Muscle Shoals/Rgnl, MS
-Madison/Dane County Rgnl Truax Field, WI
-Missoula/Intl, MT
-Minneapolis-St Paul Intl (Wold Chamberlain), MN
--Massen/Intl Richards Field, NY
-New Orleans/Intl., LA
-Florida Keys Marathon Airport – Marathon, FL
-Baltimore/Martin State, MD
---Mountain Home AFB, ID
-Grant County International Airport – Moses Lake, WA
---Montgomery/Maxwell AFB, AL
--McCall Airport – McCall, ID
-Myrtle Beach Intl Arpt, SC
-Beaufort Mcas/Merritt Field, SC
-New Orleans/New Orleans NAS JRB /Alvin Callender
-Field); LA US
--Jacksonville/New River Mcas (McCutcheon Field), NC
-----Lakehurst Naes/Maxfield Field, NJ
-Washington VAAC
-New Orleans/New Orleans, LA
-Oceanside/Camp pendelton Mcas, CA
-Fallon Nas (Van Voorhis Field), NV
-Naval Air Station Joint Reserve Base Fort Worth – Fort
-Worth, TX
--Corpus Christi/Corpus Christi Nas (Truax Field), TX
-Norfolk/Norfolk NS (Chambers Field), VA
-Miami, FL (National Hurricane Center)
-Patuxent River Nas (Trapnell Field), MD US
---Brunswick/Brunswick Nas, ME
-Naval Air Weapons Station China Lake – Ridgecrest, CA
--Naval Air Station Jacksonville – Jacksonville, FL
--El Centro NAF, CA
-
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-United States of America
-
 KNBU
 KNCA
 KNCF
@@ -3954,7 +3930,59 @@ KNIK
 KNIP
 KNIR
 KNJK
-Page 33
+
+Martinsburg/Eastern Rgnl-Shepherd Field, WV
+Marfa Municipal Airport - Marfa, TX
+--
+--
+Monterey/Penninsula, CA
+--
+Muscle Shoals/Rgnl, MS
+Madison/Dane County Rgnl Truax Field, WI
+Missoula/Intl, MT
+Minneapolis-St Paul Intl (Wold Chamberlain), MN
+--
+Massen/Intl Richards Field, NY
+New Orleans/Intl., LA
+Florida Keys Marathon Airport – Marathon, FL
+Baltimore/Martin State, MD
+--
+--
+Mountain Home AFB, ID
+Grant County International Airport – Moses Lake, WA
+--
+--
+Montgomery/Maxwell AFB, AL
+--
+McCall Airport – McCall, ID
+Myrtle Beach Intl Arpt, SC
+Beaufort Mcas/Merritt Field, SC
+New Orleans/New Orleans NAS JRB /Alvin Callender Field); LA US
+--
+Jacksonville/New River Mcas (McCutcheon Field), NC
+--
+--
+--
+--
+Lakehurst Naes/Maxfield Field, NJ
+Washington VAAC
+New Orleans/New Orleans, LA
+Oceanside/Camp pendelton Mcas, CA
+Fallon Nas (Van Voorhis Field), NV
+Naval Air Station Joint Reserve Base Fort Worth – Fort Worth, TX
+--
+Corpus Christi/Corpus Christi Nas (Truax Field), TX
+Norfolk/Norfolk NS (Chambers Field), VA
+Miami, FL (National Hurricane Center)
+Patuxent River Nas (Trapnell Field), MD US
+--
+--
+Brunswick/Brunswick Nas, ME
+Naval Air Weapons Station China Lake – Ridgecrest, CA
+--
+Naval Air Station Jacksonville – Jacksonville, FL
+--
+El Centro NAF, CA
 
 United States of America
 United States of America
@@ -3981,12 +4009,35 @@ United States of America
 United States of America
 United States of America
 United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
+United States of America
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -4011,41 +4062,59 @@ KNSB
 KNSE
 KNSI
 
--Cherry Point Mcas/Cunningham Field, NC
+--
+Cherry Point Mcas/Cunningham Field, NC
 San Diego/Miramar Mcas (Mitscher Field), CA US
 Naval Air Station Lemoore – Lemoore, CA
 Miami, Coast Guard, FL
--Boston, Coast Guard, MA
+--
+Boston, Coast Guard, MA
 Coast Guard Station, Washington, DC
 Meridian Nas (mMcCain Field), MS
-----Pensacola Nas (Forrest Sherman Field), FL
+--
+--
+--
+--
+Pensacola Nas (Forrest Sherman Field), FL
 Kingsville/Kingsville Nas, TX
 Key West/Key West Nas (Boca Chica Field), FL
 Naval Station Mayport – Jacksonville, FL
---Naval Outlying Field San Nicolas Island – San Nicolas
+--
+--
+Naval Outlying Field San Nicolas Island – San Nicolas
 Island, CA
---Naval Air Station Point Mugu – Oxnard, CA
+--
+--
+Naval Air Station Point Mugu – Oxnard, CA
 Virginia Beach/Oceana Nas-Apollo Soucek Field, VA
 Naval Air Station Whidbey Island – Oak Harbor, WA
 Monterey-FNWC
 Willow Grove Nas Jrb, PA
--Marine Corps Air Facility Quantico – Quantico, VA
---San Diego/North Island Nas-Halsey Field, CA
+--
+Marine Corps Air Facility Quantico – Quantico, VA
+--
+--
+San Diego/North Island Nas-Halsey Field, CA
 Oakland International Airport – Oakland, CA
--Evelyn Sharp Field Airport – Ord, NE
+--
+Evelyn Sharp Field Airport – Ord, NE
 Offutt Air Force Base – Omaha, NE
 Stefan Memorial Airport – Norfolk, NE
 Orangeburg Municipal Airport – Orangeburg, SC
--Oklahoma City/Will Roger World, OK
--Olympia, WA
+--
+Oklahoma City/Will Roger World, OK
+--
+Olympia, WA
 Omaha/Eppley Air Field, NE
 Ontario/Intl., CA
 Chicago/O'hare, IL
 Norfolk/Intl, VA
 Worcester/Muni, MA
--North Bend Muni, OR
+--
+North Bend Muni, OR
 Ottumwa/Industrial, IA
--University of Oklahoma Westheimer Airport – Norman, OK
+--
+University of Oklahoma Westheimer Airport – Norman, OK
 
 United States of America
 United States of America
@@ -4100,7 +4169,6 @@ KOTH
 KOTM
 KOTX
 KOUN
-Page 34
 
 United States of America
 United States of America
@@ -4134,11 +4202,7 @@ United States of America
 United States of America
 United States of America
 United States of America
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -4197,18 +4261,29 @@ KPUM
 KPVD
 
 Fort Rucker/Ozark-Cairns AAF, AL
--------Everett/Snohomish County (Paine Field), WA
+--
+--
+--
+--
+--
+--
+--
+Everett/Snohomish County (Paine Field), WA
 Paduca/Barkley Regional, KY
--Tyndall AFB – Panama City, FL
+--
+Tyndall AFB – Panama City, FL
 Grider Field – Pine Bluff, AR
 Plattsburg Intl Arpt, NY
 West Palm Beach/Palm Beach, FL
--Pike County Airport (Hatcher Field) – Pikeville, KY
+--
+Pike County Airport (Hatcher Field) – Pikeville, KY
 Pike County Airport (Hatcher Field) – Pikeville, KY
 Eastern Oregon Regional Airport – Pendleton, OR
 Portland/Intl., OR
-Page Municipal Airport – Page, AZ
---Philadelphia/Intl., PA
+Page Municipal Airport - Page, AZ
+--
+--
+Philadelphia/Intl., PA
 Phoenix Sky Harbor International, AZ
 Peoria/Greater Preoria Regional, IL
 Hattiesburg/Laurel, MS
@@ -4217,19 +4292,27 @@ Pierre/Muni, SD
 Pittsburgh/Greater Pittsburgh, PA
 Parkeresburg/Wood County-Gil Robb Wilson Arpt, WV
 Palmdale/Air Force Plant No. 42, CA
--Ponca City Regional Airport - Ponca City, OK
+--
+Ponca City Regional Airport - Ponca City, OK
 Pensacola/Regional, FL
 Fort Polk AAF, LA
--Poughkeepsie/Dutchess County, NY
---Paso Robles/Muni, CA
+--
+Poughkeepsie/Dutchess County, NY
+--
+--
+Paso Robles/Muni, CA
 Prescott/Ernest A, Love Field, AZ
 Mid-State Airport – Philipsburg, PA
 Tri-Cities Airport – Pasco, WA
 Portsmouth/Pease Intl Tradeport, NH
 Palm Springs/Regional, CA
----Pueblo Memorial, CO
+--
+--
+--
+Pueblo Memorial, CO
 Carbon County Airport – Price, UT
--Providence/Theodore Francis Greene State, RI
+--
+Providence/Theodore Francis Greene State, RI
 
 United States of America
 United States of America
@@ -4285,13 +4368,8 @@ United States of America
 United States of America
 United States of America
 
-Page 35
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -4318,30 +4396,38 @@ KRLA
 
 Portland/Intl., Jetport, ME
 NAS Keflavik, Iceland
---Rapid City/Regional, SD
+--
+--
+Rapid City/Regional, SD
 Red Bluff/Muni, CA
 Redding/Muni, CA
 Redmond/Roberts Field, OR
 Raleigh-Durham International, NC
 Janesville, Southern Wisconsin Rgnl, WI
 Rome State Airport – Rome, OR
--Rockford/Greater Rockford, IL
--Rhinelander/Oneida County, WI
+--
+Rockford/Greater Rockford, IL
+--
+Rhinelander/Oneida County, WI
 Richmond/Intl (Byrd Field), VA
 Riverside/March AFB, Ca
 Riverton Regional Airport – Riverton, WY
 Rocksprings/Swetwater County, WY
 Los Angeles (Pacific Regional Office Message Center, CA
--Rome, Grifiss Airfield Arpt, NY
+--
+Rome, Grifiss Airfield Arpt, NY
 Rome/Richard B Russell, GA
--Reno/Tahoe Internaitonal, NV
+--
+Reno/Tahoe Internaitonal, NV
 Roanoke/Regional Woodrum Field, VA
 Rochester/Greater Rochester Intl, NY
 Roswell/Industrial Air Center, NM
--Russell Municipal Airport – Russell, KS
+--
+Russell Municipal Airport – Russell, KS
 Rochester/Muni, MN
 Washington (FAA Washington Office Message Center), DC
--Rawlins Municipal Airport – Rawlins, WY
+--
+Rawlins Municipal Airport – Rawlins, WY
 Cobb County McCollum Field – Kennesaw, GA
 Sacramento/Executive, CA
 Santa Fe Municipal Airport – Santa Fe, NM
@@ -4353,10 +4439,12 @@ Santa Barbara/Muni, CA
 San Bernardino, CA, San Bernardino Intl Arpt
 South Bend/Michiana Rgnal, IN
 San Lui Obispo/County Mc Chesney Field, CA
--Salisbury/Wicomico County Regional, MD
+--
+Salisbury/Wicomico County Regional, MD
 Stockton Metropolitan, CA
 Siler City Municipal Airport -[1] Siler City, NC
--Louisville/Standiford, KY
+--
+Louisville/Standiford, KY
 Seattle/Seattle-Tacoma Intl., WA
 
 United States of America
@@ -4412,7 +4500,6 @@ KSCR
 KSCS
 KSDF
 KSEA
-Page 36
 
 United States of America
 United States of America
@@ -4446,11 +4533,7 @@ United States of America
 United States of America
 United States of America
 United States of America
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -4509,31 +4592,44 @@ KTCC
 KTCG
 
 Stephenville Clark Regional Airport – Stephenville, TX
---Sanford Regional Airport – Sanford, ME
+--
+--
+Sanford Regional Airport – Sanford, ME
 San Francisco/Intl., CA
 Springfield/Regional, MO
--Sheridan/County, WY
+--
+Sheridan/County, WY
 Shrevport/Regional, LA
--San Jose Norman Y Mineta International, CA
+--
+San Jose Norman Y Mineta International, CA
 San Angelo/MathiasField, TX
--Spokane/Fairchild AFB, WA
+--
+Spokane/Fairchild AFB, WA
 Salt Lake City International, UT
 Salem/McNary Field, OR
 Salina/Muni, KS
--Santa Maria/Publiv, CA
+--
+Santa Maria/Publiv, CA
 Santa Ana/John Wayne Arpt Orange County, CA
 Salinas/Muni, CA
 Sidney Municipal Airport – Sidney, NE
--Springfield Municipal Airport – Springfield, CO
+--
+Springfield Municipal Airport – Springfield, CO
 Springfield/Capital, IL
 Wichita Falls/Sheppard AFB Falls
 Sarasota/Bradenton, FL
 Sumter/Shaw AFB, SC
 Brunswick/Malcom-McKinnon, MO
----St. Cloud/Muni, MN
--St. Joseph/Rosecrans Memorial, MO
+--
+--
+--
+St. Cloud/Muni, MN
+--
+St. Joseph/Rosecrans Memorial, MO
 St. Louis/Lambert - St. Louis, MO
---Sonoma County Airport – Santa Rosa, CA
+--
+--
+Sonoma County Airport – Santa Rosa, CA
 Friedman Memorial Airport – Hailey, ID
 Faifield/Travis FB, CA
 Sioux City/Gateway, IA
@@ -4542,7 +4638,11 @@ Grants Pass - Grants Pass, OR
 Syracuse/Hancock Intl., NY
 Knob Noster MO/Whiteman AFB
 Perry Stokes Airport – Trinidad, CO
-----Tucumcari/Muni, NM
+--
+--
+--
+--
+Tucumcari/Muni, NM
 --
 
 United States of America
@@ -4599,13 +4699,8 @@ United States of America
 United States of America
 United States of America
 
-Page 37
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -4667,7 +4762,9 @@ Tuscaloosa/Muni, AL
 Tacoma/McChord AFB, WA
 Truth or Consequences/Municipal, NM
 Teterboro, NJ
---Tallahassee Regional Airport – Tallahassee, FL
+--
+--
+Tallahassee Regional Airport – Tallahassee, FL
 Toledo/Express, OH
 Billard Municipal Airport – Topeka, KS
 Tampa/Intl., FL
@@ -4675,31 +4772,45 @@ Tonopah Airport – Tonopah, NV
 Bristol-Kingsport-Johnson City/Tri City Rgnl, TN
 Truckee-Tahoe Airport – Truckee, CA
 Desert Resorts Regional Airport – Palm Springs, CA
--Troutdale Airport – Portland, OR
---Tulsa/Intl, OK
+--
+Troutdale Airport – Portland, OR
+--
+--
+Tulsa/Intl, OK
 Tupelo/Muni-C D Lemons, MS
--Tucson Intl, AZ
+--
+Tucson Intl, AZ
 Treverse City/Cherry Capital, MI
 South Lake Tahoe/Lake Tahoe, CA
--Twin Falls/Sun Valley Rgnl Joslin Fld, ID
+--
+Twin Falls/Sun Valley Rgnl Joslin Fld, ID
 Texakana/Rgnl-Webb Fld, TX
 Tyler/Pounds Fld, TX
 Knoxville/McGee Tyson, TN
---Utica/Oneida County, NY
--Quillayute Airport – Quillayute, WA
+--
+--
+Utica/Oneida County, NY
+--
+Quillayute Airport – Quillayute, WA
 Quincy/Muni Baldwin Fld, IL
 Ukiah/Muni, CA
---University Park Airport – University Park, PA
+--
+--
+University Park Airport – University Park, PA
 Lompoc/Vandenburg AFB, CA
 Victoria/Rgnl, TX
 Southern California Logistics Airport – Victorville, CA
---Valdost/Rgnl, GA
+--
+--
+Valdost/Rgnl, GA
 Van Nuys Airport – Van Nuys, CA
 Valparaiso/Eglin AFB, FL
 Vero Beach Muni, FL
 Miller Field – Valentine, NE
--Wallops I./Wallops Station, VA
--Washington (National Meteorological COM Centre), DC
+--
+Wallops I./Wallops Station, VA
+--
+Washington (National Meteorological COM Centre), DC
 
 United States of America
 United States of America
@@ -4755,13 +4866,8 @@ United States of America
 United States of America
 United States of America
 
-Page 38
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -4819,21 +4925,49 @@ KZMP
 KZNY
 KZOA
 
----------Wilkes-Barre Wyoming Valley Airport – Wilkes-Barre, PA
----Winnemucca Municipal Airport – Winnemucca, NV
-------------Wrightstown/McGuire AFB, NJ
+--
+--
+--
+--
+--
+--
+--
+--
+--
+Wilkes-Barre Wyoming Valley Airport – Wilkes-Barre, PA
+--
+--
+--
+Winnemucca Municipal Airport – Winnemucca, NV
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+Wrightstown/McGuire AFB, NJ
 White Sands/Condron AAF, NM
--Cocoa Beach/Cape Canaveral AFS Skid Strip, FL.
--Yakima/Air Terminal, WA
+--
+Cocoa Beach/Cape Canaveral AFS Skid Strip, FL.
+--
+Yakima/Air Terminal, WA
 Yongstown/Muni, OH
 Yuma/Yuma Mcas. Yuma Intl., AZ
 Albuquerque (ATRTCC), NM
--Chicago (ARTCC), IL
+--
+Chicago (ARTCC), IL
 Boston (ARTCC), Nashua, NH
 Washington (ARTCC), DC
 Denver (ARTCC), CO
 Fort Worth (ARTCC), TX
--Houston (ARTCC), TX
+--
+Houston (ARTCC), TX
 Indianapolis (ARTCC), IN
 Jacksonville (ARTCC), FL
 Kansas City (ARTCC), KS
@@ -4899,13 +5033,8 @@ United States of America
 United States of America
 United States of America
 
-Page 39
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -4923,7 +5052,8 @@ LCNC
 Cleveland (ARTCC), Oberlin, OH
 Seattle (ARTCC), Auburn, WA
 Atlanta (ARTCC), Hampton, GA
--Zanesville, OH
+--
+Zanesville, OH
 Tirana
 Sofia
 Met Com Centre Sofia
@@ -5026,7 +5156,6 @@ LFKC
 LFKS
 LFLA
 LFLB
-Page 40
 
 Cyprus
 Cyprus
@@ -5070,11 +5199,7 @@ France
 France
 France
 France
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -5240,13 +5365,8 @@ France
 France
 France
 
-Page 41
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -5317,12 +5437,14 @@ Hyeres/Le Palyvestre
 Nîmes/Garons
 Saint-Pierre
 French Argos Global Processing Centre, Toulouse
--Andravida
+--
+Andravida
 Athinai
 Iraklion/Nikos Kazantzakis
 Thessaloniki
 Athinai
--Amendola (Mil)
+--
+Amendola (Mil)
 Crotone (Mil)
 Bari
 Grottaglie (Mil)
@@ -5367,7 +5489,7 @@ France
 France
 France
 France
-St. Pierre and Miquelon
+Saint Pierre and Miquelon
 France
 France
 Greece
@@ -5410,13 +5532,8 @@ Italy
 Italy
 Italy
 
-Page 42
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -5582,13 +5699,8 @@ Italy
 Italy
 Italy
 
-Page 43
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -5660,7 +5772,8 @@ Paganella
 Passo Rolle
 Trieste
 Monte Venda
--Cerklje
+--
+Cerklje
 Ljubljana Brnik
 Ljubljana
 Maribor Aerodrome
@@ -5753,13 +5866,8 @@ Austria
 Austria
 Austria
 
-Page 44
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -5827,7 +5935,9 @@ Wiener Neustadt (Mil)
 Schwaz (Tirol) (Mil HEL)
 Langenlebarn (Mil)
 Zeltweg (Mil)
---Santa Maria, Ilha de Santa Maria
+--
+--
+Santa Maria, Ilha de Santa Maria
 Faro
 Funchal, Ilha da Madeira
 Lajes, Ilha Terceira
@@ -5881,14 +5991,14 @@ Austria
 Austria
 Austria
 Austria
-Azores (Portugal)
+Azores
 Portugal
-Madeira (Portugal)
-Azores (Portugal)
+Madeira
+Azores
 Portugal
-Azores (Portugal)
+Azores
 Portugal
-Madeira (Portugal)
+Madeira
 Portugal
 Bosnia and Herzegovina
 Bosnia and Herzegovina
@@ -5923,13 +6033,8 @@ Turkey
 Turkey
 Turkey
 
-Page 45
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -5937,7 +6042,6 @@ LTCC
 LTCE
 LTCG
 LUKK
-LWMO
 LXGB
 LYBE
 LYBM
@@ -6009,24 +6113,31 @@ Trencin
 Poprad
 Jags McCartney International
 Providenciales International
--Higuero/Intl Dr Joaquin Balaguer
+--
+Higuero/Intl Dr Joaquin Balaguer
 Punta Cana Intl
 Santo Domingo/De las Américas
----Guatemala/La Aurora
+--
+--
+--
+Guatemala/La Aurora
 Puerto de San Jose
 Amapala
 Catacamas
 Choluteca
--La Ceiba/Goloson Intl
+--
+La Ceiba/Goloson Intl
 La Esperanza
 San Pedro Sula/Ramon V Morales Intl
--Puerto Lempira
+--
+Puerto Lempira
 Roatan/Juan Manuel Galvez Intl
 San Pedro Sula
 Santa Rosa de Copan
 Tela
 Tegucigalpa/Toncontín
--Yoro
+--
+Yoro
 Skopje
 Kingston (City, ACC, FIR)
 Montego Bay (City)
@@ -6043,8 +6154,8 @@ Gibraltar
 Serbia
 Serbia
 Montenegro
-Serbia and Montenegro
-Serbia and Montenegro
+Montenegro
+Montenegro
 Slovakia
 Slovakia
 Slovakia
@@ -6081,20 +6192,15 @@ Honduras
 Honduras
 Honduras
 Honduras
-The former Yugoslav Republic of Macedonia
+Former Yugoslav Republic of Macedonia
 Honduras
 Jamaica
 Jamaica
 Jamaica
 Jamaica
 
-Page 46
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -6152,21 +6258,28 @@ MTPP
 MTTP
 MUCC
 
----Aguascalientes
+--
+--
+--
+Aguascalientes
 Cd. Juarez
 Chihuahua
 Cd. Victoria
 Cozumel
--Tepic
+--
+Tepic
 Acc Mexico
 Guadalajara
--Acc Merida
+--
+Acc Merida
 Saltillo
 Leon
 Loreto
 Matamoros
 Merida
---Morelia
+--
+--
+Morelia
 Monclova
 Mexico
 Monterrey
@@ -6192,10 +6305,13 @@ Panamá/Tocumén
 San José/Juan Santamaría Intl.
 San José (City)
 Cuscatlán
--San Salvador/Ilopango Intl.
+--
+--
+San Salvador/Ilopango Intl.
 Cap Haitien/Intl
 Port-au-Prince
--Cayo Coco/Jardines del Rey
+--
+Cayo Coco/Jardines del Rey
 
 Jamaica
 Jamaica
@@ -6251,13 +6367,8 @@ Haiti
 Haiti
 Cuba
 
-Page 47
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -6319,16 +6430,22 @@ Cienfuegos/Jamie Gonzalez
 Camagüey
 Guantánamo (US-Naval Air Base)
 Habana/José Martí (Havana-La Habana- La Havane)
----Pina
--Varadero
+--
+--
+--
+Pina
+--
+Varadero
 Charles Kirkconnell International Airport
 Grand Cayman, Cayman Is.
 Owen Roberts Intl/Grand Cayman
--Exuma International
+--
+Exuma International
 Freeport/Intl., Grand Bahama I.
 Nassau/Intl., New Providence I.
 Belize/Intl.
--Aitutaki
+--
+Aitutaki
 Penrhyn/Tongareva
 Rarotonga
 Nadi Intl.
@@ -6345,7 +6462,8 @@ Faleolo/Intl
 Pago Pago Intl., Tutuila Island
 Tahiti/Faaa, Archipel de la Société
 Tubuai/Mataura
--Takapoto
+--
+Takapoto
 Takaroa
 Bora-Bora-Motu-Mute
 Santo/Pekoa
@@ -6375,10 +6493,10 @@ Cuba
 Cayman Islands
 Cayman Islands
 Cayman Islands
-Bahamas and Turks and Caicos Islands
-Bahamas and Turks and Caicos Islands
-Bahamas and Turks and Caicos Islands
-Bahamas and Turks and Caicos Islands
+Bahamas
+Bahamas
+Bahamas
+Bahamas
 Belize
 Belize
 Cook Islands
@@ -6395,7 +6513,7 @@ Niue
 New Caledonia
 Samoa
 Samoa
-Samoa (American)
+Samoa
 French Polynesia
 French Polynesia
 French Polynesia
@@ -6409,20 +6527,15 @@ New Caledonia
 New Caledonia
 New Caledonia
 New Zealand
-Operated by the USA
+Antarctica, Operated by the USA
 New Zealand
-Operated by the USA
-Afghanistan, Islamic State of
+Antarctica, Operated by the USA
+Afghanistan
 Bahrain
 Saudi Arabia
 
-Page 48
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -6533,6 +6646,7 @@ Amman (Civil)
 Kuwait MET
 Kuwait COM
 --
+--
 
 Saudi Arabia
 Saudi Arabia
@@ -6566,35 +6680,30 @@ Saudi Arabia
 Saudi Arabia
 Saudi Arabia
 Saudi Arabia
-Iran, Islamic Republic of
-Iran, Islamic Republic of
-Iran, Islamic Republic of
-Iran, Islamic Republic of
-Iran, Islamic Republic of
-Iran, Islamic Republic of
-Iran, Islamic Republic of
-Iran, Islamic Republic of
-Iran, Islamic Republic of
-Iran, Islamic Republic of
-Iran, Islamic Republic of
-Iran, Islamic Republic of
-Iran, Islamic Republic of
-Iran, Islamic Republic of
-Iran, Islamic Republic of
-Iran, Islamic Republic of
-Iran, Islamic Republic of
+Islamic Republic of Iran
+Islamic Republic of Iran
+Islamic Republic of Iran
+Islamic Republic of Iran
+Islamic Republic of Iran
+Islamic Republic of Iran
+Islamic Republic of Iran
+Islamic Republic of Iran
+Islamic Republic of Iran
+Islamic Republic of Iran
+Islamic Republic of Iran
+Islamic Republic of Iran
+Islamic Republic of Iran
+Islamic Republic of Iran
+Islamic Republic of Iran
+Islamic Republic of Iran
+Islamic Republic of Iran
 Jordan
 Kuwait
 Kuwait
 Czech Republic
 
-Page 49
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -6688,14 +6797,20 @@ Taiz/Ganad
 Palmer, AK
 Bethel
 Barrow, AK
--Cold Bay
+--
+Cold Bay
 Circle
--Kodiak
+--
+Kodiak
 UNALASKA
--Fairbanks International
+--
+Fairbanks International
 Fairbanks/Wainwright AAF, AK
---Homer
--Juneau International
+--
+--
+Homer
+--
+Juneau International
 King Salmon
 Cape Lisburne LRRS
 McGrath
@@ -6754,13 +6869,8 @@ Alaska (U.S.A.)
 Alaska (U.S.A.)
 Alaska (U.S.A.)
 
-Page 50
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -6796,11 +6906,17 @@ Anchorage Intl., AK
 Annette Island
 Nome
 Kotzebue/Ralph Wien Memorial
--St. Paul Island
+--
+St. Paul Island
 Shemya AFB, AK
---Unalakleet
+--
+--
+Unalakleet
 Valdez
----Anchorage VAAC
+--
+--
+--
+Anchorage VAAC
 Yakutat
 Canton Is.
 Guam/Taguac
@@ -6813,7 +6929,8 @@ Guam/Agana NAS
 West Tinian, Tinian Island
 Banking Sands, Kauai, HI
 Honolulu/Ewa Beach, HI (Pacific Tsunami Warning Center)
--Honolulu/Hickam AFB, Oahu I., HI
+--
+Honolulu/Hickam AFB, Oahu I., HI
 Lihue, Kauai, HI
 Honolulu/Honolulu Intl.,Oahu, HI
 Lanai City, Lanai, HI
@@ -6821,7 +6938,8 @@ Hilo/General Lyman Field, HI
 Johnston Island/Johnston AFB
 Majuro
 Kwajalein
--Truk
+--
+Truk
 Ponape I.
 Koror
 Yap
@@ -6892,7 +7010,6 @@ RJCC
 RJCH
 RJCK
 RJCM
-Page 51
 
 Hawaii (U.S.A.)
 Hawaii (U.S.A.)
@@ -6920,11 +7037,7 @@ Japan
 Japan
 Japan
 Japan
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -7090,13 +7203,8 @@ Japan
 Japan
 Japan
 
-Page 52
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -7227,8 +7335,8 @@ Republic of Korea
 Republic of Korea
 Republic of Korea
 Republic of Korea
-Ryukyu Islands
-Ryukyu Islands
+Japan
+Japan
 Philippines
 Philippines
 Philippines
@@ -7243,7 +7351,7 @@ Russian Federation
 Russian Federation
 Russian Federation
 Russian Federation
-Operated by the Russian Federation
+Antarctica, Operated by the Russian Federation
 Russian Federation
 Russian Federation
 Russian Federation
@@ -7262,13 +7370,8 @@ Russian Federation
 Argentina
 Argentina
 
-Page 53
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -7398,7 +7501,7 @@ Brazil
 Brazil
 Brazil
 Brazil
-Operated by Chile
+Antarctica, Operated by Chile
 Chile
 Chile
 Chile
@@ -7422,8 +7525,8 @@ French Guiana
 Poland
 Peru
 Peru
-Operated by Ukraine
-Falkland Islands (Malvinas) and Dependencies
+Antarctica,Operated by Ukraine
+Falkland Islands (Malvinas)
 Uruguay
 Venezuela
 Venezuela
@@ -7434,13 +7537,8 @@ Venezuela
 Venezuela
 Venezuela
 
-Page 54
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -7518,11 +7616,15 @@ San Fernando de Apure
 Tumeremo
 Temblador
 Valera
--Timehri/Cheddi Jagan International
+--
+Timehri/Cheddi Jagan International
 St. Johns/Coolidge, Antigua I.
---Bridgetown/Grantley Adams Intl.
+--
+--
+Bridgetown/Grantley Adams Intl.
 Bridgetown
--Melville Hall
+--
+Melville Hall
 Fort de France (Ville), Martinique
 Fort de France/Lamentin, Martinique
 Pointe-à-Pitre/Le Raizet, Guadeloupe
@@ -7535,10 +7637,15 @@ Mayaguez/Mayaguez
 Roosevelt Roads NAS
 Ponce Mercedita
 San Juan/Puerto Rico Intl.
-----Basseterre/Golden Rock, St. Christopher
+--
+--
+--
+--
+Basseterre/Golden Rock, St. Christopher
 VanceWinkworth, Amory, St. Chrisopher (St. Kitts) and
 Nevis
--Castries/Vigie
+--
+Castries/Vigie
 Vieux-Fort/Hewanorra Intl.
 
 Venezuela
@@ -7573,9 +7680,9 @@ Barbados
 Barbados
 Dominica
 Dominica
-French Antilles
-French Antilles
-French Antilles
+Martinique
+Martinique
+Guadeloupe
 Grenada
 Grenada
 Virgin Islands
@@ -7595,16 +7702,11 @@ Saint Kitts and Nevis
 TKUR
 TLPC
 TLPL
-Page 55
 
 Saint Kitts and Nevis
 Saint Lucia
 Saint Lucia
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -7667,11 +7769,17 @@ Kralendijk/Flamingo, Bonaire
 Willemstad/Dr. A. Plesman, Curaçao
 Sint Eustatius, Sint Eustatius I.
 Philipsburg/Juliana, Sint Maarten
--Scarborough/Crown Point, Tobago
---Port-of-Spain/Piarco, Trinidad
---Piarco FIR/ACC
+--
+Scarborough/Crown Point, Tobago
+--
+--
+Port-of-Spain/Piarco, Trinidad
+--
+--
+Piarco FIR/ACC
 Bermuda NAS
--Almaty
+--
+Almaty
 Taldykorgan
 Kokshetau
 Petropavlovsk
@@ -7694,23 +7802,27 @@ Yerevan
 Tbilisi/Novoalexeyvka + FIR
 Kyiv/Bory Spil
 Kyiv Fir/Acc
--Dnepropetrovsk FIR/ACC
--Simferopol
+--
+Dnepropetrovsk FIR/ACC
+--
+Simferopol
 Simferopol FIR/ACC
 Kharkiv
 L'Viv
 L'Viv FIR/ACC
--Kiev
+--
+Kiev
 Odesa
 Odesa FIR/ACC
--Minsk
+--
+Minsk
 Minsk-2
 
 Aruba
-Netherlands Antilles
-Netherlands Antilles
-Netherlands Antilles
-Netherlands Antilles
+Aruba
+Curaçao
+Caribbean Netherlands
+Caribbean Netherlands
 Trinidad and Tobago
 Trinidad and Tobago
 Trinidad and Tobago
@@ -7760,13 +7872,8 @@ Ukraine
 Belarus
 Belarus
 
-Page 56
 
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
 
-CCCC
-
-Location Name
 
 Country Name
 
@@ -7858,7 +7965,8 @@ Jakarta (City)
 Kuala Lumpur Intl.
 Penang
 Singapore
--Bucarest
+--
+Bucarest
 Tirana
 
 Latvia
@@ -7878,7 +7986,7 @@ Hong Kong, China
 India
 Lao People's Democratic Republic
 Lao People's Democratic Republic
-Macao, China
+Macao
 Nepal
 Viet Nam
 India
@@ -7907,8 +8015,3 @@ United States of America
 Romania
 Albania
 
-Page 57
-
-WMO No. 9 - Volume C1 - Catalogue of Meteorological Bulletins
-
-
