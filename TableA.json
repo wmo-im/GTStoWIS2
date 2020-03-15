@@ -36,7 +36,7 @@
  "T": { "Description": "Satellite data",     
             "T2":"B", "A1":"C3", "A2":"C4", "ii":"**", "priority":"2" } ,
  "U": { "Description": "Upper air data",     
-            "T2":"B", "A1": "C1/C2", "A2":"C1/c2", "ii":"**", "priority":"2" } ,
+            "T2":"B", "A1": "C1", "A2":"C1", "ii":"**", "priority":"2" } ,
  "V": { "Description": "National data",      
             "T2":"(1)", "A1":"C1", "A2":"C1", "ii":"**", "priority":"(2)" } ,
  "W": { "Description": "Warnings",           

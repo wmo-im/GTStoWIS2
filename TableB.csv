@@ -18,6 +18,7 @@ C,H,climate/monthly/land,
 C,O,climate/monthly/sea,
 C,S,climate/monthly/land,
 C,S,climate/monthly/sea,
+C,X,climate,MISSING from Table B1
 #Table B2
 DGHXY,A,model/radar,,Radar data
 DGHXY,B,model/cloud,,Cloud
@@ -108,6 +109,9 @@ N,O,notice/,,METNO/WIFMA,[TEXT]
 N,P,notice/delay,,Product generation delay,[TEXT]
 N,T,notice/test,,TEST MSG [System related],[TEXT]
 N,W,alert,,Warning related and/or cancellation,[TEXT]
+N,W,alert,,Warning related and/or cancellation,[TEXT]
+N,X,alert,,Missing from WMO Table B1 got some from PHFO, and is [BINARY]
+N,Z,alert,,Missing from WMO Table B1 got some from PHFO, and is [BINARY]
 
 
 #table B4
@@ -184,6 +188,7 @@ T,T,sea/surface/temperature,,Sea surface temperatures,FM 88 (SATOB)
 T,W,satellite/winds/,,Winds and cloud temperatures,FM 88 (SATOB)
 T,X,miscellaneous,,Miscellaneous,[TEXT]
 U,A,air/aircraft,,Aircraft reports,FM 41 (CODAR), ICAO (AIREP)
+U,B,air/aircraft,,Aircraft reports,MISSING from WMO Table B1
 U,D,air/aircraft,,Aircraft reports,FM 42 (AMDAR)
 U,E,air/upper,,Upper level pressure, temperature, humidity and wind (Part D),FM 35 (TEMP)/FM 36 (TEMP SHIP)/FM 38 (TEMP MOBIL)
 U,F,air/upper,,Upper level pressure, temperature, humidity and wind (Parts C and D) [National and bilateral option],FM 35 (TEMP)/FM 36 (TEMP SHIP)/FM 38 (TEMP MOBIL)

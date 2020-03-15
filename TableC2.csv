@@ -6,11 +6,13 @@
 #
 # T1T2=SZ, A1A2 area designator from Table C1
 #A2,topic,description.
-A,sea/area0, between 30°N - 60°S, 035°W - 070° E
-B,sea/area1,Area between 90°N - 05°N, 070°E - 180°E
-C,sea/area2,Area between 05°N - 60°S, 120°W - 035°W
-D,sea/area3,Area between 90°N - 05°N, 180°W - 035°W
-E,sea/area4,Area between 05°N - 60°S, 070°E - 120°W
-F,sea/area5,Area between 90°N - 30°N, 035°W - 070°E
-J,sea/area6,Area between 60°S
-X,sea/area7,More than one area
+A,sea/atlantic/south, between 30°N - 60°S, 035°W - 070° E
+B,sea/atlantic/northeast,Area between 90°N - 05°N, 070°E - 180°E
+C,sea/pacific/southeast,Area between 05°N - 60°S, 120°W - 035°W
+D,sea/pacific/northeast,Area between 90°N - 05°N, 180°W - 035°W
+E,sea/indian/east,Area between 05°N - 60°S, 070°E - 120°W
+F,sea/atlantic/northwest,Area between 90°N - 30°N, 035°W - 070°E
+J,sea/,Area between 60°S
+L,sea/,MISSING from WMO Table C2.
+X,sea/many,More than one area
+Y,sea/,MISSING from WMO Table C2.

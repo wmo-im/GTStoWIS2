@@ -17,5 +17,7 @@ L,hemisphere/south/east/west,90°E - 0° southern hemisphere
 N,hemisphere/north,Northern hemisphere
 S,hemisphere/south,Southern hemisphere
 T,america/north,45°W - 180° northern hemisphere
+V,somewhere,MISSING from Table C6
 X,global,Global Area (area not definable)
+Z,somewhere,MISSING from Table C6
 

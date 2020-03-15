@@ -1,6 +1,7 @@
 #TTAtopic,notes,,tableC6 description.
 INA,satellite/amsua,,,Satellite data (AMSUA)	003003
 INB,satellite/amsua,,,Satellite data (AMSUB)	003004
+ING,satellite/other,,,MISSING from Table C6 
 INH,satellite/hirs,,,Satellite data (HIRS)	003005
 INM,satellite/mhs,,,Satellite data (MHS)	003006
 IOB,sea/buoy,,,Buoy observations	BUOY	001/025
