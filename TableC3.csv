@@ -2,21 +2,21 @@
 #Geographical area designator A1 (when T1 = D, G, H, O, P, Q, T or Y) and
 #geographical area designator A2 (when T1 = I or K)
 #T2,topic,description from table.
-A,hemispehere/north/west/east,0° - 90°W northern hemisphere
-B,hemisphere/north/west/west,90°W - 180° northern hemisphere
-C,hemispehere/north/east/east,180° - 90°E northern hemisphere
-D,hemisphere/north/east/west,90°E - 0° northern hemisphere
+A,sphere/north/west/east,0° - 90°W northern sphere
+B,sphere/north/west/west,90°W - 180° northern hemisphere
+C,sphere/north/east/east,180° - 90°E northern sphere
+D,sphere/north/east/west,90°E - 0° northern hemisphere
 E,tropics/west/east,0° - 90°W tropical belt
 F,tropics/west/west,90°W - 180° tropical belt
 G,tropics/east/east,180° - 90°E tropical belt
 H,tropics/east/west,90°E - 0° tropical belt
-I,hemisphere/south/west/east,0° - 90°W southern hemisphere
-J,hemisphere/south/west/west,90°W - 180° southern hemisphere
-K,hemisphere/south/east/east,180° - 90°E southern hemisphere
-L,hemisphere/south/east/west,90°E - 0° southern hemisphere
-N,hemisphere/north,Northern hemisphere
-S,hemisphere/south,Southern hemisphere
-T,america/north,45°W - 180° northern hemisphere
+I,sphere/south/west/east,0° - 90°W southern hemisphere
+J,sphere/south/west/west,90°W - 180° southern hemisphere
+K,sphere/south/east/east,180° - 90°E southern hemisphere
+L,sphere/south/east/west,90°E - 0° southern hemisphere
+N,sphere/north,Northern hemisphere
+S,sphere/south,Southern hemisphere
+T,america/north,45°W - 180° northern sphere
 V,somewhere,MISSING from Table C6
 X,global,Global Area (area not definable)
 Z,somewhere,MISSING from Table C6

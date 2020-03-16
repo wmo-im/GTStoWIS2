@@ -29,7 +29,7 @@ def map_centre_from_desc( cccc, iso2country, desc ):
 
     l=desc.lower().replace('/','_').replace('.',' ').replace('(','').replace(')','').replace(',','').replace("'","").replace('"',"").split()
     if (l[0] == "call") or ( l[0] == '--'):
-       return iso2country + "/" + cccc.lower()
+       return iso2country + "/" + cccc
     return iso2country + "/" + '_'.join(l)
    
 
