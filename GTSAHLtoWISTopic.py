@@ -10,6 +10,7 @@
 
 """
 import json
+import pycountry
 
 #dump tables on startup.
 dump=False
@@ -61,7 +62,7 @@ class GTSAHLtoWISTopicMapper():
         with open( self.tableDir + '/TableC1.json', 'r' ) as m:
           self.tableC1=json.load(m)
 
-        with open( self.tableDir + '/CCCC_to_WIS_Centre.json', 'r' ) as m:
+        with open( self.tableDir + '/TableCCCC.json', 'r' ) as m:
           self.tableCCCC=json.load(m)
 
         if dump:
@@ -81,6 +82,12 @@ class GTSAHLtoWISTopicMapper():
           
         self.tableDir = tableDir
         self.readTables()
+        c = list(map( lambda x : x.alpha_2.lower(), pycountry.countries))
+        c.sort()
+      
+        self.iso2countries = c
+        if debug:
+            print( "iso2countries: %s" % c )
         
     def iiTopic(self,t1,t2,a2,ii,ahlHint):
 
@@ -225,6 +232,12 @@ class GTSAHLtoWISTopicMapper():
         AATopic=self.AATopic(TT,AA,CCCC,ahlParseHint) 
         if AATopic :
            topic += '/' + AATopic
+
+        # If CCCC not in the original table, use AA to assign a country.
+        if not CCCC in self.tableCCCC and AATopic in self.iso2countries:
+           CCCCTopic = AATopic + '/' + CCCC
+           if debug: print( "topic from CCCC revised to: %s " % CCCCTopic )
+
         if debug: print( "topic from AA/C is: %s " % AATopic )
 
         iiTopic=self.iiTopic(T1,T2,AA[1],ii,ahlParseHint)
@@ -417,6 +430,12 @@ if __name__ == '__main__':
   print( "topic=%s\n" % ( t ) )
   
   ahl="HGJF98_KWBC_151800"
+  print( "ahl=%s" % ( ahl ) )
+  t = topic_builder.mapAHLtoTopic(ahl)
+  print( "topic=%s\n" % ( t ) )
+  
+  # example of CCCC not in any table.
+  ahl="SIIN90_VIHS_160300"
   print( "ahl=%s" % ( ahl ) )
   t = topic_builder.mapAHLtoTopic(ahl)
   print( "topic=%s\n" % ( t ) )
