@@ -61,3 +61,12 @@ so encoding information is elided from the topic tree.
 for for example T1=D,G,H all become "model"
 
 There i
+
+To build CCCC, started with Attachment 1 pdf.
+much manual work.
+
+tested on real feeds discovered many missing CCCC's.
+
+found another source: http://weather.rap.ucar.edu/surface/stations.txt
+merged the two.
+
