@@ -13,10 +13,10 @@ as extracted from the WMO web site and expanded through testing with some
 feeds. The topics chosen are taken from the existing tables, subject
 to a few conventions, to create a starting point.
 
-To do so, it needs to create an executable version of the WMO Tables
-from 386. Those tables are in this directory with names like TableB.json
+To do so, we need an executable version of the Tables from WMO 386. 
+Those tables are in this directory with names like TableB.json
 (where TableB includes both B1 and B2 in a single table). Where they
-can be literally used, the tables are in json format. where some
+can be literally used, the tables are in json format. where some comments or
 processing is required, the input is a comma separated value, or csv file.
 
 There proved to many gaps in the existing tables.  Where the tables were
@@ -48,7 +48,9 @@ it will output the translation results for a number of sample AHL's::
    topic is: ca/montreal_canadian_met_centre_que/observation/land/ca 
    ahl=SACN37 CWAO 090807, topic=ca/montreal_canadian_met_centre_que/observation/land/ca
 
-This provides a means of inspection and consideration o
+This provides a means of inspection and consideration of the hierarchy.
+one can add lines to the end of the file to put in more tests.
+
 
 
 Conventions
@@ -180,6 +182,6 @@ The hierarchy is especially evident in the dropping of hemi from hemispherical d
 
 * sphere --> topics that follow divide the sphere.
 * sphere/north -> Northern Hemisphere.
-* sphere/north/west -> 0-180 deg. west in northern hemisphere.
-* sphere/north/west/east -> Eastern half (0-90 deg. west) in the NW quartersphere.
+* sphere/north/west -> 0-180 deg. west in northern hemisphere. (NW quarter sphere)
+* sphere/north/west/east -> Eastern half (0-90 deg. west) of the NW quarter sphere.
 

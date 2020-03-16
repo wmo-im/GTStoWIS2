@@ -2743,6 +2743,7 @@
 "LDWR":{"centre":"hr/ship_c7m_mik", "description":"MISSING (from stations.txt) SHIP C7M_MIK", "Country":"hr"},
 "LDZA":{"centre":"hr/zagreb_pleso", "description":"MISSING (from stations.txt) ZAGREB_PLESO", "Country":"hr"},
 "LDZD":{"centre":"hr/zadar_zemuni", "description":"MISSING (from stations.txt) ZADAR_ZEMUNI", "Country":"hr"},
+"LDZM":{"centre":"hr/LDZM", "description":"MISSING", "Country":"hr"},
 "LEAB":{"centre":"es/albacete_ci", "description":"MISSING (from stations.txt) ALBACETE (CI", "Country":"es"},
 "LEAL":{"centre":"es/alicante_el", "description":"MISSING (from stations.txt) ALICANTE_EL", "Country":"es"},
 "LEAM":{"centre":"es/almeria_airp", "description":"MISSING (from stations.txt) ALMERIA AIRP", "Country":"es"},
