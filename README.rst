@@ -26,7 +26,8 @@ supplemented from other means, the description field included the keyword
    grep MISSING Table*
 
 There is also an additional field in all the tables giving a topic to which
-the table entry corresponds. 
+the table entry corresponds.  All hierarchies here are partial, indicating
+only the portion derived from the AHL.
 
 Testing
 -------
@@ -55,10 +56,11 @@ Conventions
 
 in WMO 386, there are three concepts expressed in T1T2.
 
- * what is the data partaining to?  (Surface, upper air, etc...)
- * who is it for ( public, marine, aviation, etc...)
- * how is it encoded ( TAC, TDCF, etc...)
- * when... (routine, interim synoptic, synoptic, speci)
+ * origin: who produce or is responsible for the data?
+ * subject: what is the data partaining to?  (Surface, upper air, etc...)
+ * audience: who is it for ( public, marine, aviation, etc...)
+ * encoding: how is it encoded ( TAC, TDCF, etc...)
+ * time:  when... (routine, interim synoptic, synoptic, speci)
 
 Aside from names, topics are intended to be single words, and as generic as possible.
 
@@ -83,6 +85,34 @@ Gridded and grib data represents NWP products, so it could all be grouped
 under model ?  model/prediction  model/analysis
 
 Nothing is plural.
+
+
+Origin
+------
+
+Top two levels of hierarchy, replace the CCCC with the two-letter iso code, followed by a centre identifier.
+These centre identifiers are just mildly transformed versions of the description from the CCCC table.
+
+To build CCCC, started with (https://www.wmo.int/pages/prog/www/ois/Operational_Information/VolumeC1/CCCC_en.pdf)
+Volume C1 Attachment I in pdf format. After much manual work, 
+there is a mapping built in the CCCC Table lookup.
+tested on real feeds, and noticed many missing CCCC's.
+
+found another source: http://weather.rap.ucar.edu/surface/stations.txt
+merged the two. There are still some that are not in either source,
+use the AA to guess. trying to at least assign them all to countries.
+
+To build the centre name, took the description offerred, following conversions:
+ 
+* converted to lower case
+* removed parentheses ( )
+* removed slashes /
+* replaced spaces with underscore
+
+left in some accented characters where present. Should we limit to 7-bit?
+in order to restrict to Englishish names? Protocols support eight bit, 
+but it will get very difficult to use in practice for people who do not
+speak all world languages if full utf-8 is used with native language names.
 
 
 Audience
@@ -115,29 +145,6 @@ file type suffix taking care of the encoding.
 
 The topic tree should not mention encoding or format.
 For example, T1=D,G,H all become "model"
-
-CCCC
-----
-
-To build CCCC, started with Attachment 1 pdf.  much manual work.
-in the topic hierarchy the top is supposed to be the iso 2 letter country.
-there is a mapping built in the CCCC Table lookup.
-tested on real feeds, and noticed many missing CCCC's.
-
-found another source: http://weather.rap.ucar.edu/surface/stations.txt
-merged the two. There are still some that are not in either source,
-use the AA to guess. trying to at least assign them all to countries.
-
-To build the name, took the description offerred, following conversions:
- 
-* lower case
-* removed ( )
-* removed /
-
-left in some accented characters where present. Should we limit to 7-bit?
-in order to restrict to Englishish names? Protocols support eight bit, 
-but it will get very difficult to use in practice for people who do not
-speak all world languages if full utf-8 is used with native language names.
 
 
 
