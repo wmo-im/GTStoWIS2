@@ -1,6 +1,6 @@
 
 """
-take the pdf version of the CCCC table, convert to txt via pdftotxt
+Take the pdf version of the CCCC table, convert to txt via pdftotxt
 This gives an output that is in three columns, one column at a time, per page.
 
 In addition, in some cases, the middle column is two lines. The two
@@ -13,9 +13,10 @@ CCCC, CCCC_replacement, description, country
 The CCCC value is printed twice to provide the placeholder column CCCC_replacement,
 which will gradually be replaced. 
 
-lots of manual massage to produce the initial json file.
 
-
+WARNING: 
+   A great deal of manual edits were done to produce the initial json file.
+   This is only useful for historical purposes, documenting the method of work.
 
 """
 debug=False
