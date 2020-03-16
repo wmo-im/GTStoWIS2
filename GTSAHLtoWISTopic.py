@@ -12,12 +12,6 @@
 import json
 import pycountry
 
-#dump tables on startup.
-dump=False
-
-debug=False
-debug=False
-
 class GTSAHLtoWISTopicMapper(): 
 
     def skip_line(self,l):
@@ -35,7 +29,7 @@ class GTSAHLtoWISTopicMapper():
                     continue
                 b = l.split(',')
                 exec( "self.table" + tid + "[b[0]] = b[1:]" )
-                if dump:
+                if self.dump:
                    exec( "print( '\tTable"+tid+"[%s]=%s' % ( b[0], self.table" + tid + "[b[0]] ))" )
 
 
@@ -49,7 +43,7 @@ class GTSAHLtoWISTopicMapper():
                 for i in b[0]:
                     j=i+b[1]
                     exec( "self.table" + tid + "[j] = b[2:]" ) 
-                    if dump:
+                    if self.dump:
                         exec( "print('\tTable" + tid + "[ %s ]= %s' % (j,self.table" + tid +"[j]))" )
 
     def readTables(self):
@@ -65,7 +59,7 @@ class GTSAHLtoWISTopicMapper():
         with open( self.tableDir + '/TableCCCC.json', 'r' ) as m:
           self.tableCCCC=json.load(m)
 
-        if dump:
+        if self.dump:
             print( "Table A: %s" % json.dumps(self.tableA, indent=2) )
             print( "Table C1: %s" % json.dumps(self.tableC1, indent=2) )
             print( "Table CCCC: %s" % json.dumps(self.tableC1, indent=2) )
@@ -77,16 +71,20 @@ class GTSAHLtoWISTopicMapper():
         for t in [ 'C2', 'C3', 'C5', 'C6', 'D1', 'D3' ]:
             self.parseCSV(t)
 
+    """
 
-    def __init__(self,tableDir=None):
+    """
+    def __init__(self,tableDir=None,debug=False,dump_tables=False):
           
         self.tableDir = tableDir
+        self.debug=debug
+        self.dump=dump_tables
         self.readTables()
         c = list(map( lambda x : x.alpha_2.lower(), pycountry.countries))
         c.sort()
-      
+
         self.iso2countries = c
-        if debug:
+        if self.dump:
             print( "iso2countries: %s" % c )
         
     def iiTopic(self,t1,t2,a2,ii,ahlHint):
@@ -135,8 +133,8 @@ class GTSAHLtoWISTopicMapper():
 
     def AATopic(self,TT,AA,CCCC,ahlHint):
         topic=""
-        if debug:
-           print( "AATopic input: TT=%s, AA=%s, ahlHint=%s" % ( TT, AA, ahlHint) )
+        if self.debug:
+           print( "AATopic 1 input: TT=%s, AA=%s, ahlHint=%s" % ( TT, AA, ahlHint) )
         if "AA" in ahlHint:
             atab = ahlHint["AA"]
 
@@ -155,40 +153,40 @@ class GTSAHLtoWISTopicMapper():
                 else:
                     topic=self.tableC1[AA][0]+'/'+suffix
             else: 
-                if debug:
-                    print( "self._AATopic=self.table"+atab+"[\""+AA+"\"][0]" )
+                if self.debug:
+                    print( "AATopic 2 self._AATopic=self.table"+atab+"[\""+AA+"\"][0]" )
                 exec( "self._AATopic=self.table"+atab+"[\""+AA+"\"][0]" )
                 topic=self._AATopic
         elif "A1" in ahlHint:
             a1 = ahlHint["A1"]
             a2 = ahlHint["A2"]
             if ( TT in [ 'TR', 'TH'] ) and ( CCCC in [ 'KWBC' ] ): 
-                topic=self.USAA(AA) 
+                self.a1topic=self.USAA(AA) 
             elif a1 == 'C6' :
                 i=TT+AA[0]
-                if debug: print( "self.a1topic=self.table"+a1+"[%s][0]" % i )
+                if self.debug: print( "AATopic 3 self.a1topic=self.table"+a1+"[%s][0]" % i )
                 exec( "self.a1topic=self.table"+a1+"[i][0]" )
-                if debug: print( "self.a1topic=%s" % self.a1topic )
+                if self.debug: print( "self.a1topic=%s" % self.a1topic )
                 
                 if a2 == 'C3':
                     self.a2topic=self.tableC3[AA[1]][0]
-                    if debug: print( "self.a2topic=self.tableC3[%s]=%s" % (AA[1], self.a2topic) )
+                    if self.debug: print( "AATopic 4 self.a2topic=self.tableC3[%s]=%s" % (AA[1], self.a2topic) )
                 else: #C4
                     j=TT[0]+AA[0]
                     self.a2topic=self.tableC4[j][0]
-                    if debug: print( "self.a2topic=self.tableC4[%s]=%s" % (j, self.a2topic) )
+                    if self.debug: print( "AATopic 5 self.a2topic=self.tableC4[%s]=%s" % (j, self.a2topic) )
             else: 
                 if (a1 == 'C3') or ( TT in [ 'UB' ]):
                     self.a1topic=self.tableC3[AA[1]][0]
-                    if debug: print( "self.a1topic=self.tableC3[%s][0] = %s" % (AA[1],self.a1topic) )
+                    if self.debug: print( "AATopic 6 self.a1topic=self.tableC3[%s][0] = %s" % (AA[1],self.a1topic) )
                 else:
-                    if debug: print( "self.a1topic=self.table"+a1+"[%s][0]" % (AA) )
+                    if self.debug: print( "AATopic 7 self.a1topic=self.table"+a1+"[%s][0]" % (AA) )
                     exec( "self.a1topic=self.table"+a1+"[AA][0]" )
 
                     exec( "self.a2topic=self.table"+a2+"[AA][0]" )
-                    if debug: print( "self.a2topic=self.table"+a2+"[AA][0] = %s" % ( self.a2topic ) )
+                    if self.debug: print( "AATopic 8 self.a2topic=self.table"+a2+"[AA][0] = %s" % ( self.a2topic ) )
 
-            if topic  != "":
+            if self.a1topic  != "":
                 if self.a2topic != "": 
                    topic = self.a1topic + "/" + self.a2topic
             elif hasattr(self,'a2topic') and self.a2topic != "":
@@ -210,7 +208,7 @@ class GTSAHLtoWISTopicMapper():
             CCCCTopic=self.tableCCCC[ CCCC ]["centre"]
         else:
             CCCCTopic=CCCC
-        if debug: print( "topic from CCCC is: %s " % CCCCTopic )
+        if self.debug: print( "topic from CCCC is: %s " % CCCCTopic )
         ahlParseHint=self.tableA[ T1 ]
 
         if T1 == 'K':
@@ -223,11 +221,11 @@ class GTSAHLtoWISTopicMapper():
            return CCCCTopic + "/addressed"
         else:
            ahlpiB=self.tableB[ TT ]
-           if debug: print( "ahlpib: %s" % ahlpiB )
+           if self.debug: print( "ahlpib: %s" % ahlpiB )
            TTTopic=ahlpiB[0]
 
         topic=TTTopic
-        if debug: print( "topic from TT/B is: %s " % TTTopic )
+        if self.debug: print( "topic from TT/B is: %s " % TTTopic )
 
         AATopic=self.AATopic(TT,AA,CCCC,ahlParseHint) 
         if AATopic :
@@ -236,9 +234,9 @@ class GTSAHLtoWISTopicMapper():
         # If CCCC not in the original table, use AA to assign a country.
         if not CCCC in self.tableCCCC and AATopic in self.iso2countries:
            CCCCTopic = AATopic + '/' + CCCC
-           if debug: print( "topic from CCCC revised to: %s " % CCCCTopic )
+           if self.debug: print( "topic from CCCC revised to: %s " % CCCCTopic )
 
-        if debug: print( "topic from AA/C is: %s " % AATopic )
+        if self.debug: print( "topic from AA/C is: %s " % AATopic )
 
         iiTopic=self.iiTopic(T1,T2,AA[1],ii,ahlParseHint)
         if iiTopic :
@@ -247,8 +245,10 @@ class GTSAHLtoWISTopicMapper():
         if CCCCTopic:
            topic = CCCCTopic + '/' + topic
 
-        if debug: print( "topic from ii/C is: %s " % iiTopic )
-        if debug: print( "topic is: %s " % topic )
+        if self.debug: 
+            print( "topic from ii/C is: %s " % iiTopic )
+            print( "topic is: %s " % topic )
+
         return topic
         
     def mapTopicToAHL(self,topic):
@@ -256,37 +256,34 @@ class GTSAHLtoWISTopicMapper():
         pas
 
 """
-The following logic is used as a test harness when developing plugins.
-Append this file to the end of the plugin, and  then invoke it from
-the command line.  Add variables to parent (in the testmessage class) 
-as needed to exercise your plugin.
+Place additional test AHL's here to see how they are interpreted.
 
 """
 
 if __name__ == '__main__':
 
-  topic_builder=GTSAHLtoWISTopicMapper(".")
+  topic_builder=GTSAHLtoWISTopicMapper(".",debug=True,dump_tables=False)
 
 
   ahl="SACN37 CWAO 090807"
   print( "ahl=%s" % ( ahl ) )
   t = topic_builder.mapAHLtoTopic(ahl)
-  print( "ahl=%s, topic=%s\n" % ( ahl, t ) )
+  print( "topic=%s\n" % ( t ) )
 
   ahl="SSAS33 KWBC 14220"
   print( "ahl=%s" % ( ahl ) )
   t = topic_builder.mapAHLtoTopic(ahl)
-  print( "ahl=%s, topic=%s\n" % ( ahl, t ) )
+  print( "topic=%s\n" % ( t ) )
 
   ahl="SNFI01 KWBC 142200"
   print( "ahl=%s" % ( ahl ) )
   t = topic_builder.mapAHLtoTopic(ahl)
-  print( "ahl=%s, topic=%s\n" % ( ahl, t ) )
+  print( "topic=%s\n" % ( t ) )
 
   ahl="IUPA54_LFPW_150000"
   print( "ahl=%s" % ( ahl ) )
   t = topic_builder.mapAHLtoTopic(ahl)
-  print( "ahl=%s, topic=%s\n" % ( ahl, t ) )
+  print( "topic=%s\n" % ( t ) )
 
   ahl="IUPD48_SOWR_150004"
   print( "ahl=%s" % ( ahl ) )
