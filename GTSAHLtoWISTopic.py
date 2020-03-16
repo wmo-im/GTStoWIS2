@@ -16,7 +16,7 @@ import pycountry
 dump=False
 
 debug=False
-debug=True
+debug=False
 
 class GTSAHLtoWISTopicMapper(): 
 
@@ -180,9 +180,9 @@ class GTSAHLtoWISTopicMapper():
             else: 
                 if (a1 == 'C3') or ( TT in [ 'UB' ]):
                     self.a1topic=self.tableC3[AA[1]][0]
-                    print( "self.a1topic=self.tableC3[%s][0] = %s" % (AA[1],self.a1topic) )
+                    if debug: print( "self.a1topic=self.tableC3[%s][0] = %s" % (AA[1],self.a1topic) )
                 else:
-                    print( "self.a1topic=self.table"+a1+"[%s][0]" % (AA) )
+                    if debug: print( "self.a1topic=self.table"+a1+"[%s][0]" % (AA) )
                     exec( "self.a1topic=self.table"+a1+"[AA][0]" )
 
                     exec( "self.a2topic=self.table"+a2+"[AA][0]" )
