@@ -1,0 +1,106 @@
+#TTAtopic,notes,,tableC6 description.
+INA,satellite/amsua,,,Satellite data (AMSUA)	003003
+INB,satellite/amsua,,,Satellite data (AMSUB)	003004
+ING,satellite/other,,,MISSING from Table C6 
+INH,satellite/hirs,,,Satellite data (HIRS)	003005
+INM,satellite/mhs,,,Satellite data (MHS)	003006
+IOB,sea/buoy,,,Buoy observations	BUOY	001/025
+IOI,sea/ice,,,Sea ice	
+IOP,sea/deep,,,Sub-surface profiling floats	TESAC	031/004
+IOR,sea/surface,,,Sea surface observations	TRACKOB	031/001
+IOS,sea/surface/below,,,Sea surface and below soundings	BATHY, TESAC	031/005
+IOT,sea/surface/temperature,,,Sea surface temperature	
+IOW,sea/surface/wave,,,Sea surface waves	WAVEOB	031/002
+IOX,sea/other,,,Other sea environmetal	
+IOZ,sea/deep/tsunami,,,Deep ocean tsunameter	 	031/007
+IPC,radar/composite/image,,,Radar composite imagery data	
+IPI,satellite/image,,,Satellite imagery data	
+IPR,radar/image,,,Radar imagery data	
+IPX,radar,,,Not defined	
+ISA,observations/land,,,01-29	Routinely scheduled observations for distribution from automatic (fixed or mobile) land stations (e.g. 0000, 0100, … or 0220, 0240, 0300, …, or 0715, 0745, ... UTC)	n/a	000/006
+ISA,observation/land,,,30-59	N-minute observations from automatic (fixed or mobile) land stations	n/a	000/007
+ISB,observation/radar,,,Radar reports (parts A and B)	RADOB	006/003
+ISC,observation/land/climate,,,01-45	Climatic observations from land stations	CLIMAT	000/020
+ISC,observation/marine,,,46-59	Climatic observations from marine stations	CLIMAT SHIP	001/020
+ISD,observation/radiation,,,Radiological observation	RADREP	010/001
+ISE,observation/land/ozone,,,Measurement of surface ozone	 	008/000
+ISF,observation/,,,Source of atmospherics	SFAZI, SFLOC, SFAZU	000/030
+ISI,observation/land/fixed,,,01-45	Intermediate synoptic observations from fixed land stations	SYNOP (SIxx)	000/001 000/051
+ISI,observation/land/mobile,,,46-59	Intermediate synoptic observations from mobile land stations	SYNOP MOBIL	000/004
+ISM,observation/land/fixed,,,01-45	Main synoptic observations from fixed land stations	SYNOP (SMxx)	000/002 000/052
+ISM,observation/land/mobile,,,46-59	Main synoptic observations from mobile land stations	SYNOP MOBIL	000/005
+ISN,observation/land/fixed,,,01-45	Synoptic observations from fixed land stations at non-standard time (i.e. 01, 02, 04, 05, ... UTC)	SYNOP (SNxx)	000/000 000/050
+ISN,observation/land/mobile,,,46-59	Synoptic observations from mobile land stations at non-standard time (i.e. 01, 02, 04, 05, ... UTC)	SYNOP MOBIL	000/003
+ISR,observation/water,,,Hydrologic reports	HYDRA	000/040
+ISS,observation/water,,,01-19	Synoptic observations from marine stations	SHIP	001/000
+ISS,observation/water,,,20-39	One-hour observations from automatic marine stations	n/a	001/006
+ISS,observation/water,,,40-59	N-minute observations from automatic marine stations	n/a	001/007
+IST,observation/water,,,01-19	Tide gauge observations	n/a	001/030
+IST,observation/water,,,20-39	Observed water level time series	n/a	001/031
+ISV,observation/air/navigation/special,,,Special aeronautical observations (SPECI)	SPECI	000/011
+ISW,observation/air/navigation,,,Aviation routine weather observations (METAR)	METAR	000/010
+ISX,observation/land,,,Other surface data	IAC, IAC FLEET	
+ITA,message,,,Administrative message	
+ITB,message,,,Service message	
+ITR,message,,,Request for data (inclusive of type)	
+ITX,message,,,Other text messages of information	
+IUA,observation/air/amdar,,,Single level aircraft reports (automatic)	AMDAR	004/000
+IUA,observation/air/airep,,,Single level aircraft reports (manual)	AIREP/PIREP	004/001
+IUB,observation,,,Single level balloon reports	n/a	
+IUC,satellite,,,(used for single level satellite-derived reports – see Note 3)	SAREP/SATOB	005/000
+IUD,observation/air/sonde,,,Dropsonde/Dropwindsondes	TEMP DROP	002/007
+IUE,observation/air/ozone,,,Ozone vertical sounding	n/a	008/001
+IUI,observation/air/dispersal,,,Dispersal and transport analysis	n/a	009/000
+IUJ,observation/air/wind/fixed,,,01-19	Upper wind from fixed land stations (entire sounding)	PILOT (parts A, B, C, D)	002/001
+IUJ,observation/air/wind/mobile,,,20-39	Upper wind from mobile land stations (entire sounding)	PILOT MOBIL (parts A, B, C, D)	002/003
+IUJ,observation/air/wind/marine,,,40-59	Upper wind from marine stations (entire sounding)	PILOT SHIP (parts A, B, C, D)	002/002
+IUK,observation/air/wind/fixed,,,01-19	Radio soundings from fixed land stations (up to 100 hPa)	TEMP (parts A, B)	002/004
+IUK,observation/air/sonde/mobile,,,20-39	Radio soundings from mobile land stations (up to 100 hPa)	TEMP MOBIL (parts A, B)	002/006
+IUK,observation/air/sonde/marine,,,40-59	Radio soundings from marine stations (up to 100 hPa)	TEMP SHIP (parts A, B)	002/005
+IUL,observation/air/ozone,,, 	Total ozone	 	008/002
+IUM,model/sonde,,,Model derived sondes	
+IUN,observations/air/sonde/rocket,,,Rocketsondes	
+IUO,observations/air/amdar/profile,,,Profiles of aircraft observations in ascending /descending	AMDAR	002/020
+IUP,observations/air/profile,,,Profilers	PILOT	002/010
+IUQ,observations/air/sonde/fixed,rass,,,RASS temperature profilers	TEMP	002/011
+IUR,observations/radiance,,,(used for radiance data – see Note 3)	
+IUS,observations/air/sonde/fixed,,,01-19	Radiosondes/pibal reports from fixed land stations (entire sounding)	TEMP (parts A, B, C, D)	002/004
+IUS,observations/air/sonde/mobile,,,20-39	Radio soundings from mobile land stations (entire sounding)	TEMP MOBIL (parts A, B, C, D)	002/006
+IUS,observations/air/sonde/marine,,,40-59	Radio soundings from marine stations (entire sounding)	TEMP SHIP (parts A, B, C, D)	002/005
+IUT,observations/air/sonde/satellite,,,(used for satellite-derived sondes – see Note 3)	SATEM, SARAD, SATOB	
+IUU,observations/air/monthly/fixed,,,01-45	Monthly statistics of data from upper-air stations	CLIMAT TEMP	002/025
+IUU,observations/air/monthly/marine,,,46-59	Monthly statistics of data from marine stations	CLIMAT TEMP, SHIP	002/026
+IUW,observations/air/monthly/wind/fixed,,,01-19	Upper wind from fixed land stations (up to 100 hPa)	PILOT (parts A, B)	002/001
+IUW,observations/air/monthly/wind/mobile,,,20-39	Upper wind from mobile land stations (up to 100 hPa)	PILOT MOBIL (parts A, B)	002/003
+IUW,observations/air/monthly/wind/marine,,,40-59	Upper wind from marine stations (up to 100 hPa)	PILOT SHIP (parts A, B)	002/002
+IUX,observations/air/monthly/wind/,,,Other upper air reports	
+JOI,observations/sea/ice,,,Sea ice	
+JOS,observations/sea/deep,,,Sea surface and below soundings	
+JOT,observations/sea/surface,,,Sea surface temperature	
+JOW,observations/sea/surface/waves,,,Sea surface waves	
+JOX,observations/sea/,,,Other sea environmetal data	
+JSA,forecast/air/navigation/routes,,,Surface area forecast (e.g. airways)	
+JSD,forecast/radiation,,,Radiological forecast	RADOF	
+JSM,forecast/sea/surface,,,Surface forecasts (e.g. MOS)	
+JSO,forecast/marine,,,Maritime forecast	MAFOR	
+JSP,forecast/air/navigation,,,Forecast amendments (airways)	
+JSR,forecast/water,,,Hydrologic forecast	HYFOR	
+JSS,forecast/air/navigation,,,Forecast amendments (TAF)	
+JST,forecast/air/navigation,,,Aerodrome forecast (TAF)	
+JSX,forecast/land,,,Other surface forecasts	
+JTE,forecast/tsunami,,,Tsunami	
+JTH,forecast/cyclone,,,Hurricane, typhoon, tropical storm warning	
+JTS,alert/air/navigation/,,,Severe weather, SIGMET	
+JTT,alert/tornado/,,,Tornado warning	
+JTX,alert,,,Other warnings	
+JUA,forecast/,,,Forecast at single levels	
+JUB,alert/air/navigation/cb,,,Binary coded SIGWX, Embeded Cumulonimbus	 	 
+JUC,alert/air/navigation/turbulence,,,Binary coded SIGWX, Clear air turbulence	
+JUF,alert/air/navigation/fronts,,,Binary coded SIGWX, Fronts	
+JUN,alert/air/navigation,,,Binary coded SIGWX, Other SIGWX parameters	
+JUO,alert/air/navigation/turbulence,,,Binary coded SIGWX, Turbulence	
+JUS,forecast/sonde,,,Forecast soundings	
+JUT,alert/air/navigation/ice,,,Binary coded SIGWX, Icing/Tropopause	
+JUV,alert/air/navigation/storms,,,Binary coded SIGWX, Tropical storms, sandstorms, volcanoes	
+JUW,alert/air/navigation/winds,,,Binary coded SIGWX, High-level winds	
+JUX,alert/air,,,Other upper air forecasts	
