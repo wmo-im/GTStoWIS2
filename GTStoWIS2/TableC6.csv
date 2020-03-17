@@ -82,7 +82,7 @@ JOX,observations/sea/,,,Other sea environmetal data
 JSA,forecast/air/navigation/routes,,,Surface area forecast (e.g. airways)	
 JSD,forecast/radiation,,,Radiological forecast	RADOF	
 JSM,forecast/sea/surface,,,Surface forecasts (e.g. MOS)	
-JSO,forecast/marine,,,Maritime forecast	MAFOR	
+JSO,forecast/sea/navigation,,,Maritime forecast	MAFOR	
 JSP,forecast/air/navigation,,,Forecast amendments (airways)	
 JSR,forecast/water,,,Hydrologic forecast	HYFOR	
 JSS,forecast/air/navigation,,,Forecast amendments (TAF)	
