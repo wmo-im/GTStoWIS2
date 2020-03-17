@@ -3,12 +3,12 @@ Towards a Topic Hierarchy for the WIS
 =====================================
 
 In the March 2020 meeting, the WMO expert team on Computing and Telecommunications 
-Systems has asked for a mapping to be created from the traditional WMO-386 AHL (
-TTAAii CCCC ... abbreviated header lines) to a more readable topic hierarchy. 
+Systems asked for a mapping to be created from the traditional WMO-386 AHL (
+TTAAii CCCC ... AHL = abbreviated header lines) to a more readable topic hierarchy. 
 This needs to be done in a standard way so that the AHL will end up under the 
 same topic regardless of the nation doing the classification. 
 
-So this sample provides a sample python script to interpret the tables 
+This sample provides a python script to interpret the tables 
 as extracted from the WMO web site and expanded through testing with some
 feeds. The topics chosen are taken from the existing tables, subject
 to a few conventions, to create a starting point.
@@ -35,7 +35,9 @@ Testing
 On a Linux host with this directory present, execute the translation module, and
 it will output the translation results for a number of sample AHL's::
 
-   python GTStoWISTopic.py
+   git clone https://github.com/wmo-im/GTStoWIS2
+   cd GTStoWIS2
+   python test.py
 
    ahl=SACN37 CWAO 090807
    topic from CCCC is: ca/montreal_canadian_met_centre_que 
@@ -49,14 +51,15 @@ it will output the translation results for a number of sample AHL's::
    ahl=SACN37 CWAO 090807, topic=ca/montreal_canadian_met_centre_que/observation/land/ca
 
 This provides a means of inspection and consideration of the hierarchy.
-one can add lines to the end of the file to put in more tests.
+one can add lines to the end of the file to put in more tests. 
+
 
 
 
 Conventions
 -----------
 
-in WMO 386, there are three concepts expressed in T1T2.
+in WMO 386, there are five concepts expressed in the AHL:
 
  * origin: who produce or is responsible for the data?
  * subject: what is the data partaining to?  (Surface, upper air, etc...)
@@ -64,30 +67,14 @@ in WMO 386, there are three concepts expressed in T1T2.
  * encoding: how is it encoded ( TAC, TDCF, etc...)
  * time:  when... (routine, interim synoptic, synoptic, speci)
 
-Aside from names, topics are intended to be single words, and as generic as possible.
+Note that the '/' is used as a topic separator here, as is used in MQTT.
+One will need to replace '/' with '.' in AMQP deployments, which is one
+reason why neither character can be permitted in any placename or
+topic label.
 
-*upper-air* replaced by *air/upper*  .
-
-Singular is used throughout, because otherwise everything would be plural,
-and it leads to many occurrences of the word 's', with out any concomitant clarification.
-
-Product pertinence: aloft,clouds,aviation,land,water,ocean,marine
-*surface* is an odd choice for observations, since it leads to confusion with water/lake/ocean
-where use of the word surface is more common. *land*, *ground* ::
-
-   surface(land) -> land/
-   aviation -> air/navigation
-   marine   -> sea/navigation
-               water/navigation (inland)
-
-
-sea is shorter than ocean... also a bit less specific.  better suited for sea/navigation.
-
-Gridded and grib data represents NWP products, so it could all be grouped
-under model ?  model/prediction  model/analysis
-
-Nothing is plural.
-
+Also using English as a single, most accessible language to write the topics
+in. Translation tables could be created,  but a single language needs to be
+used for international data exchange to be coherent.
 
 Origin
 ------
@@ -115,6 +102,33 @@ left in some accented characters where present. Should we limit to 7-bit?
 in order to restrict to Englishish names? Protocols support eight bit, 
 but it will get very difficult to use in practice for people who do not
 speak all world languages if full utf-8 is used with native language names.
+
+Subject
+-------
+
+Aside from names, topics are intended to be single words, and as generic as possible.
+
+*upper-air* replaced by *air/upper*  .
+
+Singular is used throughout, because otherwise everything would be plural,
+and it leads to many occurrences of the word 's', with out any concomitant clarification.
+
+Product pertinence: aloft,clouds,aviation,land,water,ocean,marine
+*surface* is an odd choice for observations, since it leads to confusion with water/lake/ocean
+where use of the word surface is more common. *land*, *ground* ::
+
+   surface(land) -> land/
+   aviation -> air/navigation
+   marine   -> sea/navigation
+               water/navigation (inland)
+
+sea is shorter than ocean... also a bit less specific.  better suited for sea/navigation.
+
+Gridded and grib data represents NWP products, so it could all be grouped
+under model ?  model/prediction  model/analysis
+
+Nothing is plural.
+
 
 
 Audience
