@@ -11,6 +11,8 @@
 """
 import json
 import pycountry
+import pkgutil
+import os.path
 
 class GTStoWIS2(): 
 
@@ -76,7 +78,10 @@ class GTStoWIS2():
     """
     def __init__(self,tableDir=None,debug=False,dump_tables=False):
           
-        self.tableDir = tableDir
+        if tableDir == None:
+            self.tableDir = os.path.dirname( __file__ )
+        else:
+            self.tableDir = tableDir
         self.debug=debug
         self.dump=dump_tables
         self._readTables()
