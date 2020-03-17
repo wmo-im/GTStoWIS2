@@ -12,20 +12,20 @@
 import json
 import pycountry
 
-class GTSAHLtoWISTopicMapper(): 
+class GTStoWIS2(): 
 
-    def skip_line(self,l):
+    def _skip_line(self,l):
         if l[0] == '#':
            return True
         if len(l) < 4 :
            return True
         return False
 
-    def parseCSV(self, tid, word=True ):
+    def _parseCSV(self, tid, word=True ):
         exec( "self.table" + tid + " = {}" )
         with open( self.tableDir + '/Table'+tid+'.csv', 'r' ) as m:
             for l in m.readlines():
-                if self.skip_line(l):
+                if self._skip_line(l):
                     continue
                 b = l.split(',')
                 exec( "self.table" + tid + "[b[0]] = b[1:]" )
@@ -33,11 +33,11 @@ class GTSAHLtoWISTopicMapper():
                    exec( "print( '\tTable"+tid+"[%s]=%s' % ( b[0], self.table" + tid + "[b[0]] ))" )
 
 
-    def parseCSVB(self, tid, word=True ):
+    def _parseCSVB(self, tid, word=True ):
         exec( "self.table" + tid + " = {}" )
         with open( self.tableDir + '/Table'+tid+'.csv', 'r' ) as m:
             for l in m.readlines():
-                if self.skip_line(l):
+                if self._skip_line(l):
                     continue
                 b = l.split(',')
                 for i in b[0]:
@@ -46,7 +46,7 @@ class GTSAHLtoWISTopicMapper():
                     if self.dump:
                         exec( "print('\tTable" + tid + "[ %s ]= %s' % (j,self.table" + tid +"[j]))" )
 
-    def readTables(self):
+    def _readTables(self):
 
         # TableA
         self.tableA={}
@@ -66,10 +66,10 @@ class GTSAHLtoWISTopicMapper():
 
         # TableB
         for t in [ 'B', 'C4', 'D2' ]:
-            self.parseCSVB(t)
+            self._parseCSVB(t)
 
         for t in [ 'C2', 'C3', 'C5', 'C6', 'D1', 'D3' ]:
-            self.parseCSV(t)
+            self._parseCSV(t)
 
     """
 
@@ -79,7 +79,7 @@ class GTSAHLtoWISTopicMapper():
         self.tableDir = tableDir
         self.debug=debug
         self.dump=dump_tables
-        self.readTables()
+        self._readTables()
         c = list(map( lambda x : x.alpha_2.lower(), pycountry.countries))
         c.sort()
 
@@ -125,7 +125,7 @@ class GTSAHLtoWISTopicMapper():
                   return "" 
         return "" 
            
-    def USAA(self,AA):   # American local bulletins use AA for more local meanings: US States, and neighbouring Countries.
+    def _USAA(self,AA):   # American local bulletins use AA for more local meanings: US States, and neighbouring Countries.
         if AA == 'CN': return 'ca'
         elif AA == 'SV': return 'vg'
         else: return 'us'
@@ -141,7 +141,7 @@ class GTSAHLtoWISTopicMapper():
             if ( TT in [ 'SF', 'SR', 'SX' ] ) and ( CCCC in [ 'KWAL' ] ):  
                 # Americans have some by state: SROK... OK-Oklahoma
                 # note use CCCC because CA... ( Carribbean or California?) how to know?
-                topic=self.USAA(AA)  # losing the sub-national info...
+                topic=self._USAA(AA)  # losing the sub-national info...
             elif TT[0] == 'S' and AA[0] in [ 'W', 'V', 'F' ]:
                 if TT == 'SO' and AA[0] in [ 'F' ]: suffix='buoy'
                 if AA[0] == 'W' : suffix='station'
@@ -161,7 +161,7 @@ class GTSAHLtoWISTopicMapper():
             a1 = ahlHint["A1"]
             a2 = ahlHint["A2"]
             if ( TT in [ 'TR', 'TH'] ) and ( CCCC in [ 'KWBC' ] ): 
-                self.a1topic=self.USAA(AA) 
+                self.a1topic=self._USAA(AA) 
             elif a1 == 'C6' :
                 i=TT+AA[0]
                 if self.debug: print( "AATopic 3 self.a1topic=self.table"+a1+"[%s][0]" % i )
@@ -253,187 +253,3 @@ class GTSAHLtoWISTopicMapper():
         
     def mapTopicToAHL(self,topic):
         print( "NotImplemented" )
-        pas
-
-"""
-Place additional test AHL's here to see how they are interpreted.
-
-"""
-
-if __name__ == '__main__':
-
-  topic_builder=GTSAHLtoWISTopicMapper(".",debug=True,dump_tables=False)
-
-
-  ahl="SACN37 CWAO 090807"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-
-  ahl="SSAS33 KWBC 14220"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-
-  ahl="SNFI01 KWBC 142200"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-
-  ahl="IUPA54_LFPW_150000"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-
-  ahl="IUPD48_SOWR_150004"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-
-
-  ahl="FTPA32_KWBC_151015_AAA"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-
-  ahl="SRFL20_KWAL_151016"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-
-  ahl="SXWY50_KWAL_151017"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-
-  ahl="SNVB21_AMMC_151000"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-
-  ahl="SROK30_KWAL_151111"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-
-  ahl="SXNE55_KWAL_151116"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-
-  ahl="UANT01_CWAO_15111"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-
-  ahl="NXUS60_PHFO_151120"  # PHFO not in WMO CCCC Table... Honolulu forecast office.
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-
-  ahl="SRWV30_KWAL_151120_"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-
-  ahl="FTZZ40_KAWN_151121"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-
-  ahl="SZMS01_WMKK_151123"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-
-  ahl="UBUS31_KWBC_151125"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-  
-  ahl="TRCA01_KWBC_151000"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-  
-  ahl="THCA01_KWBC_151100"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-  
-  ahl="IUSV51_KWBC_151150"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-  
-  ahl="IUSV52_KWBC_151150"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-  
-  ahl="SRUS54_KOHX_151216"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-  
-  ahl="CXUS43_KBIS_151217"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-  
-  ahl="NZUS93_KARX_151217"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-  
-  ahl="YVXX84_KAWN_151200"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-  
-  ahl="SFTX57_KWAL_151220"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-  
-  ahl="BMBB91_KJAX_151224"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-  
-  ahl="IUSZ52_KWBC_151235"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-  
-  ahl="INGX27_KNES_151252"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-  
-  ahl="UBFL90_KWBC_151310"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-  
-  ahl="USBZ05_SBBR_151200"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-  
-  ahl="HEPF98_KWBC_151800"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-  
-  ahl="HGJF98_KWBC_151800"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-  
-  # example of CCCC not in any table.
-  ahl="SIIN90_VIHS_160300"
-  print( "ahl=%s" % ( ahl ) )
-  t = topic_builder.mapAHLtoTopic(ahl)
-  print( "topic=%s\n" % ( t ) )
-  
