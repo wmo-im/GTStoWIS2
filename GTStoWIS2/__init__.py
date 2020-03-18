@@ -54,11 +54,14 @@ class GTStoWIS2():
         self.tableA={}
         self.tableC1={}
         with open( self.tableDir + '/TableA.json', 'r' ) as m:
+          if self.debug: print( 'reading TableA' )
           self.tableA=json.load(m)
         with open( self.tableDir + '/TableC1.json', 'r' ) as m:
+          if self.debug: print( 'reading TableC1' )
           self.tableC1=json.load(m)
 
         with open( self.tableDir + '/TableCCCC.json', 'r' ) as m:
+          if self.debug: print( 'reading TableCCCC' )
           self.tableCCCC=json.load(m)
 
         if self.dump:
@@ -163,11 +166,13 @@ class GTStoWIS2():
                 if AA[1] in self.tableC2:
                     topic=self.tableC2[AA[1]][0]+'/'+suffix
                 else:
-                    topic=self.tableC1[AA][0]+'/'+suffix
+                    topic=self.tableC1[AA]['topic']+'/'+suffix
             else: 
+                if atab == 'C1': idx='["topic"]'
+                else: idx='[0]'
                 if self.debug:
-                    print( "AATopic 2 self._AATopic=self.table"+atab+"[\""+AA+"\"][0]" )
-                exec( "self._AATopic=self.table"+atab+"[\""+AA+"\"][0]" )
+                    print( "AATopic 2 self._AATopic=self.table"+atab+"[\""+AA+"\"]"+idx )
+                exec( "self._AATopic=self.table"+atab+"[\""+AA+"\"]"+idx )
                 topic=self._AATopic
         elif "A1" in ahlHint:
             a1 = ahlHint["A1"]
@@ -192,11 +197,15 @@ class GTStoWIS2():
                     self.a1topic=self.tableC3[AA[1]][0]
                     if self.debug: print( "AATopic 6 self.a1topic=self.tableC3[%s][0] = \"%s\"" % (AA[1],self.a1topic) )
                 else:
-                    if self.debug: print( "AATopic 7 self.a1topic=self.table"+a1+"[%s][0]" % (AA) )
-                    exec( "self.a1topic=self.table"+a1+"[AA][0]" )
+                    if a1 == 'C1': idx='["topic"]'
+                    else: idx='[0]'
+                    if self.debug: print( "AATopic 7 self.a1topic=self.table"+a1+"[%s]%s" % (AA,idx) )
+                    exec( "self.a1topic=self.table"+a1+"[AA]"+idx )
 
-                    exec( "self.a2topic=self.table"+a2+"[AA][0]" )
-                    if self.debug: print( "AATopic 8 self.a2topic=self.table"+a2+"[AA][0] = %s" % ( self.a2topic ) )
+                    if a2 == 'C1': idx='["topic"]'
+                    else: idx='[0]'
+                    exec( "self.a2topic=self.table"+a2+"[AA]"+idx )
+                    if self.debug: print( "AATopic 8 self.a2topic=self.table"+a2+"[AA]%s = %s" % ( idx,self.a2topic ) )
 
             if self.a1topic  != "":
                 if self.a2topic != "": 
@@ -248,9 +257,18 @@ class GTStoWIS2():
            topic += '/' + AATopic
 
         # If CCCC not in the original table, use AA to assign a country.
-        if not CCCC in self.tableCCCC and AATopic in self.iso2countries:
-           CCCCTopic = AATopic + '/' + CCCC
-           if self.debug: print( "topic from CCCC revised to: \"%s\" " % CCCCTopic )
+        if not CCCC in self.tableCCCC :
+           if AATopic in self.iso2countries:
+               CCCCTopic = AATopic + '/' + CCCC
+               if self.debug: print( "topic from CCCC revised to: \"%s\" " % CCCCTopic )
+           else:  # last ditch go through CC in Table C1
+               CC = CCCC[0:2]
+               for c in self.tableC1:
+                   if "CC" in self.tableC1[c]:
+                      if CC in self.tableC1[c]['CC']:
+                         CCCCTopic=self.tableC1[c]['topic'] + '/' + CCCC
+                         if self.debug: print( "topic from CCCC revised using Table C1: \"%s\" " % CCCCTopic )
+                           
 
         if self.debug: print( "topic from AA/C: \"%s\" -> \"%s\"" % (AA, AATopic ) )
 
