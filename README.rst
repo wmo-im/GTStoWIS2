@@ -29,6 +29,17 @@ There is also an additional field in all the tables giving a topic to which
 the table entry corresponds.  All hierarchies here are partial, indicating
 only the portion derived from the AHL.
 
+STATUS
+------
+
+TableC7 not yet properly used, TableC6 and C7 require interpretation of ii,
+not implemented yet. None of the topic choices have been validated by
+meteorologically knowledgable people, this is just an IT sketch of a
+technical means of implementing a topic tree.  Still working to 
+get full interpretations of existing tables.  Once that is done,
+can open up discussion of what the topics should really be.
+
+
 Testing
 -------
 
@@ -39,19 +50,22 @@ it will output the translation results for a number of sample AHL's::
    cd GTStoWIS2
    python test.py
 
-   ahl=SACN37 CWAO 090807
-   topic from CCCC is: ca/montreal_canadian_met_centre_que 
-   ahlpib: ['observation/land', '', 'Aviation routine reports', 'FM 15 (METAR)\n']
-   topic from TT/B is: observation/land 
-   AATopic input: TT=SA, AA=CN, ahlHint={'Description': 'Surface data', 'T2': 'B', 'AA': 'C1', 'ii': '**', 'priority': '2/4'}
-   self._AATopic=self.tableC1["CN"][0]
-   topic from AA/C is: ca 
-   topic from ii/C is:  
-   topic is: ca/montreal_canadian_met_centre_que/observation/land/ca 
-   ahl=SACN37 CWAO 090807, topic=ca/montreal_canadian_met_centre_que/observation/land/ca
+
+   UGIN90_VOPB_181200_cd81eac262c21cffe4a83cd6572e6aba.txt
+
+   topic from CCCC VOPB -> in/VOPB 
+   ahlpib: ['air/wind', '', 'Upper wind (Part B)', 'FM 32 (PILOT)/FM 33(PILOT SHIP)/FM 34(PILOT MOBIL)\n']
+   topic from TT/B  "UG" -> "air/wind" 
+   AATopic 1 input: TT=UG, AA=IN, ahlHint={'Description': 'Upper air data', 'T2': 'B', 'A1': 'C1', 'A2': 'C1', 'ii': '**', 'priority': '2'}
+   AATopic 7 self.a1topic=self.tableC1[IN]["topic"]
+   AATopic 8 self.a2topic=self.tableC1[AA]["topic"] = in
+   topic from AA/C: "IN" -> "in/in"
+   topic from ii/C is: "90" -> "" 
+   topic is: in/VOPB/air/wind/in/in 
+   topic=in/VOPB/air/wind/in/in
 
 This provides a means of inspection and consideration of the hierarchy.
-one can add lines to the end of the file to put in more tests. 
+one can add lines to the end of the file (*AHL_examples.txt*) to put in more tests. 
 
 
 
