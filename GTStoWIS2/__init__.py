@@ -16,6 +16,8 @@ import os.path
 
 class GTStoWIS2(): 
 
+    sep='/'
+
     def _skip_line(self,l):
         if l[0] == '#':
            return True
@@ -25,7 +27,7 @@ class GTStoWIS2():
 
     def _parseCSV(self, tid, word=True ):
         exec( "self.table" + tid + " = {}" )
-        with open( self.tableDir + '/Table'+tid+'.csv', 'r' ) as m:
+        with open( self.tableDir + GTStoWIS2.sep + 'Table'+tid+'.csv', 'r' ) as m:
             for l in m.readlines():
                 if self._skip_line(l):
                     continue
@@ -102,7 +104,7 @@ class GTStoWIS2():
         if self.dump:
             print( "iso2countries: %s" % c )
         
-    def iiTopic(self,t1,t2,a2,ii,ahlHint):
+    def __iiTopic(self,t1,t2,a2,ii,ahlHint):
 
         try:
             inum=int(ii)
@@ -164,9 +166,9 @@ class GTStoWIS2():
                 else: suffix='surface'
 
                 if AA[1] in self.tableC2:
-                    topic=self.tableC2[AA[1]][0]+'/'+suffix
+                    topic=self.tableC2[AA[1]][0]+GTStoWIS2.sep+suffix
                 else:
-                    topic=self.tableC1[AA]['topic']+'/'+suffix
+                    topic=self.tableC1[AA]['topic']+ GTStoWIS2.sep +suffix
             else: 
                 if atab == 'C1': idx='["topic"]'
                 else: idx='[0]'
@@ -222,6 +224,14 @@ class GTStoWIS2():
         """
             given an instance and an AHL, return the topic tree that corresponds to it.
 
+            Sample input:
+               ahl=UGIN90_VOPB_181200_cd81eac262c21cffe4a83cd6572e6aba.txt
+
+            Sample output:
+               output: in/VOPB/air/wind/in/in
+
+            if debug is set, in the constructor, it will be more verbose.
+
         """
         TT=ahl[0:2].upper()
         AA=ahl[2:4].upper()
@@ -254,30 +264,30 @@ class GTStoWIS2():
 
         AATopic=self.__AATopic(TT,AA,CCCC,ahlParseHint) 
         if AATopic :
-           topic += '/' + AATopic
+           topic += GTStoWIS2.sep + AATopic
 
         # If CCCC not in the original table, use AA to assign a country.
         if not CCCC in self.tableCCCC :
            if AATopic in self.iso2countries:
-               CCCCTopic = AATopic + '/' + CCCC
+               CCCCTopic = AATopic + GTStoWIS2.sep + CCCC
                if self.debug: print( "topic from CCCC revised to: \"%s\" " % CCCCTopic )
            else:  # last ditch go through CC in Table C1
                CC = CCCC[0:2]
                for c in self.tableC1:
                    if "CC" in self.tableC1[c]:
                       if CC in self.tableC1[c]['CC']:
-                         CCCCTopic=self.tableC1[c]['topic'] + '/' + CCCC
+                         CCCCTopic=self.tableC1[c]['topic'] + GTStoWIS2.sep + CCCC
                          if self.debug: print( "topic from CCCC revised using Table C1: \"%s\" " % CCCCTopic )
                            
 
         if self.debug: print( "topic from AA/C: \"%s\" -> \"%s\"" % (AA, AATopic ) )
 
-        iiTopic=self.iiTopic(T1,T2,AA[1],ii,ahlParseHint)
+        iiTopic=self.__iiTopic(T1,T2,AA[1],ii,ahlParseHint)
         if iiTopic :
-           topic += '/' + iiTopic
+           topic += GTStoWIS2.sep + iiTopic
 
         if CCCCTopic:
-           topic = CCCCTopic + '/' + topic
+           topic = CCCCTopic + GTStoWIS2.sep + topic
 
         if self.debug: 
             print( "topic from ii/C is: \"%s\" -> \"%s\" " % ( ii, iiTopic ) )
