@@ -77,7 +77,14 @@ class GTStoWIS2():
 
     """
     def __init__(self,tableDir=None,debug=False,dump_tables=False):
-          
+        """
+             create an instance for parsing WMO-386 AHL's.
+
+             tableDir - directory where all the tables are, by default use one included in package.  
+             debug - prints some interim steps in applying the tables.
+             dump_tables - shows how the tables were interpreted by GTStoWIS2.
+
+        """
         if tableDir == None:
             self.tableDir = os.path.dirname( __file__ )
         else:
@@ -136,7 +143,7 @@ class GTStoWIS2():
         else: return 'us'
 
 
-    def AATopic(self,TT,AA,CCCC,ahlHint):
+    def __AATopic(self,TT,AA,CCCC,ahlHint):
         topic=""
         if self.debug:
            print( "AATopic 1 input: TT=%s, AA=%s, ahlHint=%s" % ( TT, AA, ahlHint) )
@@ -169,8 +176,8 @@ class GTStoWIS2():
                 self.a1topic=self._USAA(AA) 
             elif a1 == 'C6' :
                 i=TT+AA[0]
-                if self.debug: print( "AATopic 3 self.a1topic=self.table"+a1+"[%s][0]" % i )
-                exec( "self.a1topic=self.table"+a1+"[i][0]" )
+                if self.debug: print( "AATopic 3 self.a1topic=self.table"+a1+"[%s][1]" % i )
+                exec( "self.a1topic=self.table"+a1+"[i][1]" )
                 if self.debug: print( "self.a1topic=%s" % self.a1topic )
                 
                 if a2 == 'C3':
@@ -183,7 +190,7 @@ class GTStoWIS2():
             else: 
                 if (a1 == 'C3') or ( TT in [ 'UB' ]):
                     self.a1topic=self.tableC3[AA[1]][0]
-                    if self.debug: print( "AATopic 6 self.a1topic=self.tableC3[%s][0] = %s" % (AA[1],self.a1topic) )
+                    if self.debug: print( "AATopic 6 self.a1topic=self.tableC3[%s][0] = \"%s\"" % (AA[1],self.a1topic) )
                 else:
                     if self.debug: print( "AATopic 7 self.a1topic=self.table"+a1+"[%s][0]" % (AA) )
                     exec( "self.a1topic=self.table"+a1+"[AA][0]" )
@@ -203,6 +210,10 @@ class GTStoWIS2():
     """
 
     def mapAHLtoTopic(self,ahl):
+        """
+            given an instance and an AHL, return the topic tree that corresponds to it.
+
+        """
         TT=ahl[0:2].upper()
         AA=ahl[2:4].upper()
         ii=ahl[4:6]
@@ -213,7 +224,7 @@ class GTStoWIS2():
             CCCCTopic=self.tableCCCC[ CCCC ]["centre"]
         else:
             CCCCTopic=CCCC
-        if self.debug: print( "topic from CCCC is: %s " % CCCCTopic )
+        if self.debug: print( "topic from CCCC %s -> %s " % ( CCCC, CCCCTopic ) )
         ahlParseHint=self.tableA[ T1 ]
 
         if T1 == 'K':
@@ -230,18 +241,18 @@ class GTStoWIS2():
            TTTopic=ahlpiB[0]
 
         topic=TTTopic
-        if self.debug: print( "topic from TT/B is: %s " % TTTopic )
+        if self.debug: print( "topic from TT/B  \"%s\" -> \"%s\" " % ( TT, TTTopic ) )
 
-        AATopic=self.AATopic(TT,AA,CCCC,ahlParseHint) 
+        AATopic=self.__AATopic(TT,AA,CCCC,ahlParseHint) 
         if AATopic :
            topic += '/' + AATopic
 
         # If CCCC not in the original table, use AA to assign a country.
         if not CCCC in self.tableCCCC and AATopic in self.iso2countries:
            CCCCTopic = AATopic + '/' + CCCC
-           if self.debug: print( "topic from CCCC revised to: %s " % CCCCTopic )
+           if self.debug: print( "topic from CCCC revised to: \"%s\" " % CCCCTopic )
 
-        if self.debug: print( "topic from AA/C is: %s " % AATopic )
+        if self.debug: print( "topic from AA/C: \"%s\" -> \"%s\"" % (AA, AATopic ) )
 
         iiTopic=self.iiTopic(T1,T2,AA[1],ii,ahlParseHint)
         if iiTopic :
@@ -251,7 +262,7 @@ class GTStoWIS2():
            topic = CCCCTopic + '/' + topic
 
         if self.debug: 
-            print( "topic from ii/C is: %s " % iiTopic )
+            print( "topic from ii/C is: \"%s\" -> \"%s\" " % ( ii, iiTopic ) )
             print( "topic is: %s " % topic )
 
         return topic

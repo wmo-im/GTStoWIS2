@@ -44,5 +44,7 @@
  "X": { "Description": "Common Alert Protocol (CAP) messages",
            "T2":"B", "A1":"C1", "A2":"C1", "ii":"", "priority":"" } ,
  "Y": { "Description": "GRIB regional use",  
+           "T2":"B"," A1":"C3", "A2":"C5", "ii":"D2", "priority":"3" },
+ "Z": { "Description": "MISSING: US KWBE sends these (presumed GRIB regional use)",  
            "T2":"B"," A1":"C3", "A2":"C5", "ii":"D2", "priority":"3" }
 }

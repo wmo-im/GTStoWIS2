@@ -19,33 +19,33 @@ C,O,climate/monthly/sea,
 C,S,climate/monthly/land,
 C,S,climate/monthly/sea,
 C,X,climate,MISSING from Table B1
-#Table B2
-DGHXY,A,model/radar,,Radar data
-DGHXY,B,model/cloud,,Cloud
-DGHXY,C,model/vorticity,,Vorticity
-DGHXY,D,model/thickness,,Thickness (relative topography)
-DGHXY,E,model/precipitation,,Precipitation
-DGHXY,F,model,,-
-DGHXY,G,model/divergence,,Divergence
-DGHXY,H,model/height,,Height
-DGHXY,I,model,,-
-DGHXY,J,model/wave,,Wave height + combinations
-DGHXY,K,model/swell,,Swell height + combinations
-DGHXY,L,model,,-
-DGHXY,M,model/national,,For national use
-DGHXY,N,model/radiation,,Radiation
-DGHXY,O,model/velocity/vertical,,Vertical velocity
-DGHXY,P,model/pressure,,Pressure
-DGHXY,Q,model/temperature/bulb,,Wet bulb potential temperature
-DGHXY,R,model/humidity/relative,,Relative humidity
-DGHXY,S,model,,-
-DGHXY,T,model/temperature,,Temperature
-DGHXY,U,model/wind/east,,Eastward wind component
-DGHXY,V,model/wind/north,,Northward wind component
-DGHXY,W,model/wind,,Wind
-DGHXY,X,model/lifted,,Lifted index
-DGHXY,Y,model/observation/chart,,Observational plotted chart
-DGHXY,Z,model,,Not assigned
+#Table B2 -- Added T1=Z, from American KWBE messages.
+DGHXYZ,A,model/radar,,Radar data
+DGHXYZ,B,model/cloud,,Cloud
+DGHXYZ,C,model/vorticity,,Vorticity
+DGHXYZ,D,model/thickness,,Thickness (relative topography)
+DGHXYZ,E,model/precipitation,,Precipitation
+DGHXYZ,F,model,,-
+DGHXYZ,G,model/divergence,,Divergence
+DGHXYZ,H,model/height,,Height
+DGHXYZ,I,model,,-
+DGHXYZ,J,model/wave,,Wave height + combinations
+DGHXYZ,K,model/swell,,Swell height + combinations
+DGHXYZ,L,model,,-
+DGHXYZ,M,model/national,,For national use
+DGHXYZ,N,model/radiation,,Radiation
+DGHXYZ,O,model/velocity/vertical,,Vertical velocity
+DGHXYZ,P,model/pressure,,Pressure
+DGHXYZ,Q,model/temperature/bulb,,Wet bulb potential temperature
+DGHXYZ,R,model/humidity/relative,,Relative humidity
+DGHXYZ,S,model,,-
+DGHXYZ,T,model/temperature,,Temperature
+DGHXYZ,U,model/wind/east,,Eastward wind component
+DGHXYZ,V,model/wind/north,,Northward wind component
+DGHXYZ,W,model/wind,,Wind
+DGHXYZ,X,model/lifted,,Lifted index
+DGHXYZ,Y,model/observation/chart,,Observational plotted chart
+DGHXYZ,Z,model,,Not assigned
 # Table B5
 E,C,satelite/cloud,,Table B5 Cloud top temperature
 E,F,satelite/fog,,Table B5 Fog
