@@ -11,9 +11,14 @@ import GTStoWIS2
 topic_builder=GTStoWIS2.GTStoWIS2("GTStoWIS2",debug=True,dump_tables=False)
 
 with open( 'AHL_examples.txt', 'r' ) as headers:
-    for hl in headers:
-        ahl= hl.split(',')[0]
-        print( "   %s" % ( ahl ) )
-        t = topic_builder.mapAHLtoTopic(ahl)
-        print( "topic=%s\n" % ( t ) )
+    hh=headers.readlines()
+
+print( "Tests, count: %d" % len(hh) )
+n=1
+for hl in hh:
+    ahl= hl.split(',')[0]
+    print( "%3d - %s" % ( n, ahl ) )
+    t = topic_builder.mapAHLtoTopic(ahl)
+    print( "topic=%s\n" % ( t ) )
+    n+=1
 

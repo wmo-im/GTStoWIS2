@@ -26,6 +26,7 @@ class GTStoWIS2():
         return False
 
     def _parseCSV(self, tid, word=True ):
+        if self.dump: print( "Table"+tid )
         exec( "self.table" + tid + " = {}" )
         with open( self.tableDir + GTStoWIS2.sep + 'Table'+tid+'.csv', 'r' ) as m:
             for l in m.readlines():
@@ -38,6 +39,7 @@ class GTStoWIS2():
 
 
     def _parseCSVB(self, tid, word=True ):
+        if self.dump: print( "Table%s" % tid ) 
         exec( "self.table" + tid + " = {}" )
         with open( self.tableDir + '/Table'+tid+'.csv', 'r' ) as m:
             for l in m.readlines():
@@ -55,27 +57,20 @@ class GTStoWIS2():
         # TableA
         self.tableA={}
         self.tableC1={}
-        with open( self.tableDir + '/TableA.json', 'r' ) as m:
-          if self.debug: print( 'reading TableA' )
-          self.tableA=json.load(m)
-        with open( self.tableDir + '/TableC1.json', 'r' ) as m:
-          if self.debug: print( 'reading TableC1' )
-          self.tableC1=json.load(m)
 
-        with open( self.tableDir + '/TableCCCC.json', 'r' ) as m:
-          if self.debug: print( 'reading TableCCCC' )
-          self.tableCCCC=json.load(m)
-
-        if self.dump:
-            print( "Table A: %s" % json.dumps(self.tableA, indent=2) )
-            print( "Table C1: %s" % json.dumps(self.tableC1, indent=2) )
-            print( "Table CCCC: %s" % json.dumps(self.tableC1, indent=2) )
+        for t in [ 'A', 'C1', 'C6', 'CCCC' ]:
+            with open( self.tableDir + '/Table%s.json' % t, 'r' ) as m:
+                if self.debug: print( 'reading Table%s' % t )
+                exec( "self.table"+t+"=json.load(m)" )
+            if self.dump:
+               d = eval( "json.dumps(self.table"+t+", indent=2)" )
+               print( "Table%s : %s" % (t, d ) ) 
 
         # TableB
         for t in [ 'B', 'C4', 'D2' ]:
             self._parseCSVB(t)
 
-        for t in [ 'C2', 'C3', 'C5', 'C6', 'D1', 'D3' ]:
+        for t in [ 'C2', 'C3', 'C5', 'D1', 'D3' ]:
             self._parseCSV(t)
 
     """
@@ -142,24 +137,40 @@ class GTStoWIS2():
                   return "" 
         return "" 
            
-    def _USAA(self,AA):   # American local bulletins use AA for more local meanings: US States, and neighbouring Countries.
+    def _USAA(self,AA):   
+        """ 
+              Some American bulletins, from KWAL mostly, use AA for more local meanings: US States, and neighbouring Countries.
+              CA - California? OK- Oklahoma, FL-FLorida, etc...
+    
+              CN - Canada, MX - Mexico...  
+              BZ ? guessing Belize, C1 would say Brazil... used Brasil
+              Do not know about these:  CL, FR, SK, SV, VX, XX, 
+        """
         if AA == 'CN': return 'ca'
-        elif AA == 'SV': return 'vg'
+        if AA == 'MX': return 'mx'
+        if AA == 'SV': return 'vg'
+        if AA == 'BZ': return 'br'
+        if AA == 'CH': return 'cl'
+        if AA == 'FR': return 'fr'
+        if AA == 'NL': return 'nl'
         else: return 'us'
 
 
-    def __AATopic(self,TT,AA,CCCC,ahlHint):
+    def __AATopic(self,TT,AA,ii,CCCC,ahlHint):
         topic=""
+        self.a1topic=""
+        self.a2topic=""
         if self.debug:
            print( "AATopic 1 input: TT=%s, AA=%s, ahlHint=%s" % ( TT, AA, ahlHint) )
         if "AA" in ahlHint:
             atab = ahlHint["AA"]
 
-            if ( TT in [ 'SF', 'SR', 'SX' ] ) and ( CCCC in [ 'KWAL' ] ):  
+            if ( ( TT in [ 'SF', 'SR', 'SX' ] ) and ( CCCC in [ 'KWAL' ] ) ) or \
+               ( ( TT in [ 'UB' ] ) and ( CCCC in [ 'KWBC' ] ) ):  
                 # Americans have some by state: SROK... OK-Oklahoma
                 # note use CCCC because CA... ( Carribbean or California?) how to know?
                 topic=self._USAA(AA)  # losing the sub-national info...
-            elif TT[0] == 'S' and AA[0] in [ 'W', 'V', 'F' ]:
+            elif ( TT[0] == 'S' ) and (AA[0] in [ 'W', 'V', 'F' ]):
                 if TT == 'SO' and AA[0] in [ 'F' ]: suffix='buoy'
                 if AA[0] == 'W' : suffix='station'
                 if AA[0] == 'V' : suffix='ship'
@@ -179,13 +190,23 @@ class GTStoWIS2():
         elif "A1" in ahlHint:
             a1 = ahlHint["A1"]
             a2 = ahlHint["A2"]
-            if ( TT in [ 'TR', 'TH'] ) and ( CCCC in [ 'KWBC' ] ): 
-                self.a1topic=self._USAA(AA) 
-            elif a1 == 'C6' :
+            #if ( TT in [ 'TR', 'TH'] ) and ( CCCC in [ 'KWBC' ] ): 
+            #    self.a1topic=self._USAA(AA) 
+            if a1 == 'C6' :
                 i=TT+AA[0]
-                if self.debug: print( "AATopic 3 self.a1topic=self.table"+a1+"[%s][1]" % i )
-                exec( "self.a1topic=self.table"+a1+"[i][1]" )
-                if self.debug: print( "self.a1topic=%s" % self.a1topic )
+                print( "AATopic 2.5 C6: " )
+                if "ii" in self.tableC6[i]:
+                    iii = int(ii)
+                    for iis in self.tableC6[i]["ii"]:
+                         print( "iis: %s" % iis )
+                         (iilb, iiub) = iis.split("-") # get ii lower and upperbounds.
+                         if (iii >= int(iilb) ) and ( iii <= int(iiub) ) :
+                             self.a1topic=self.tableC6[i]["ii"][iis]["topic"]
+                else:
+                    if self.debug: print( "AATopic 3 self.a1topic=self.tableC6[%s][\"topic\"]" % i )
+                    self.a1topic=self.tableC6[i]["topic"]
+
+                if self.debug: print( "C6 self.a1topic=%s" % self.a1topic )
                 
                 if a2 == 'C3':
                     self.a2topic=self.tableC3[AA[1]][0]
@@ -195,12 +216,18 @@ class GTStoWIS2():
                     self.a2topic=self.tableC4[j][0]
                     if self.debug: print( "AATopic 5 self.a2topic=self.tableC4[%s]=%s" % (j, self.a2topic) )
             else: 
-                if (a1 == 'C3') or ( TT in [ 'UB' ]):
-                    self.a1topic=self.tableC3[AA[1]][0]
-                    if self.debug: print( "AATopic 6 self.a1topic=self.tableC3[%s][0] = \"%s\"" % (AA[1],self.a1topic) )
+                if (a1 == 'C3'):
+                    self.a1topic=self.tableC3[AA[0]][0]
+                    if self.debug: print( "AATopic 6 self.a1topic=self.tableC3[%s][0] = \"%s\"" % (AA[0],self.a1topic) )
+
+                    if ( a2 == 'C4' ):
+                        self.a2topic=self.tableC4[ TT[0]+AA[1] ][0]
+                        if self.debug: print( "AATopic 6.1 self.a2topic=self.tableC4[%s][0] = \"%s\"" % (TT[0]+AA[1],self.a2topic) )
                 else:
                     if a1 == 'C1': idx='["topic"]'
                     else: idx='[0]'
+
+                    
                     if self.debug: print( "AATopic 7 self.a1topic=self.table"+a1+"[%s]%s" % (AA,idx) )
                     exec( "self.a1topic=self.table"+a1+"[AA]"+idx )
 
@@ -239,10 +266,18 @@ class GTStoWIS2():
         T1=ahl[0].upper()
         T2=ahl[1].upper()
         CCCC = ahl[7:11]
+        CCCCTopic=""
+
         if CCCC in self.tableCCCC:
             CCCCTopic=self.tableCCCC[ CCCC ]["centre"]
-        else:
-            CCCCTopic=CCCC
+        else: # last ditch go through CC in Table C1
+            CC = CCCC[0:2]
+            for c in self.tableC1:
+                if "CC" in self.tableC1[c]:
+                    if CC in self.tableC1[c]['CC']:
+                        CCCCTopic=self.tableC1[c]['topic'] + GTStoWIS2.sep + CCCC
+                        if self.debug: print( "topic from CCCC revised using Table C1: \"%s\" " % CCCCTopic )
+                           
         if self.debug: print( "topic from CCCC %s -> %s " % ( CCCC, CCCCTopic ) )
         ahlParseHint=self.tableA[ T1 ]
 
@@ -262,23 +297,15 @@ class GTStoWIS2():
         topic=TTTopic
         if self.debug: print( "topic from TT/B  \"%s\" -> \"%s\" " % ( TT, TTTopic ) )
 
-        AATopic=self.__AATopic(TT,AA,CCCC,ahlParseHint) 
+        AATopic=self.__AATopic(TT,AA,ii,CCCC,ahlParseHint) 
         if AATopic :
            topic += GTStoWIS2.sep + AATopic
 
-        # If CCCC not in the original table, use AA to assign a country.
-        if not CCCC in self.tableCCCC :
+        # If CCCC found some other way, use AA to assign a country.
+        if CCCCTopic == "":
            if AATopic in self.iso2countries:
                CCCCTopic = AATopic + GTStoWIS2.sep + CCCC
                if self.debug: print( "topic from CCCC revised to: \"%s\" " % CCCCTopic )
-           else:  # last ditch go through CC in Table C1
-               CC = CCCC[0:2]
-               for c in self.tableC1:
-                   if "CC" in self.tableC1[c]:
-                      if CC in self.tableC1[c]['CC']:
-                         CCCCTopic=self.tableC1[c]['topic'] + GTStoWIS2.sep + CCCC
-                         if self.debug: print( "topic from CCCC revised using Table C1: \"%s\" " % CCCCTopic )
-                           
 
         if self.debug: print( "topic from AA/C: \"%s\" -> \"%s\"" % (AA, AATopic ) )
 

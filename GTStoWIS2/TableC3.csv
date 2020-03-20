@@ -15,9 +15,10 @@ J,sphere/south/west/west,90°W - 180° southern hemisphere
 K,sphere/south/east/east,180° - 90°E southern hemisphere
 L,sphere/south/east/west,90°E - 0° southern hemisphere
 N,sphere/north,Northern hemisphere
+P,somewhere/tableC3P,MISSING from Table C3
 S,sphere/south,Southern hemisphere
 T,america/north,45°W - 180° northern sphere
 V,somewhere,MISSING from Table C6
 X,global,Global Area (area not definable)
-Z,somewhere,MISSING from Table C6
+Z,somewhere/tableC3Z,MISSING from Table C3
 
