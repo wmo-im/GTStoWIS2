@@ -99,6 +99,15 @@ J,T,forecast,,Text (plain language information)
 J,U,forecast/air/upper,,Upper air
 J,X,forecast,,Other data types
 
+#Table B7, L
+L,A,air/navigation/,Aviation routine reports ("METAR"),2	 
+L,C,air/navigation/forecast,Aerodrome Forecast ("TAF") (VT < 12 hours),3	 
+L,P,air/navigation/special,Special aviation weather reports (“SPECI”),2	 
+L,S,air/naviation/alert,Aviation general warning ("SIGMET"),1	 
+L,T,air/navigation/forecast,Aerodrome forecast ("TAF")) (VT ≥ 12 hours),3	 
+L,V,air/navigation/ash,Aviation volcanic ash warning ("SIGMET"),1	 
+L,Y,air/navigation/cyclone,Aviation tropical cyclone warning ("SIGMET"),1
+
 #Table B1, N
 N,A,notices/air/navigation,
 N,B,notices/air/navigation,
@@ -219,3 +228,5 @@ W,T,surface/storms/cyclone,,Tropical cyclone (Typhoon/Hurricane),[TEXT]
 W,U,surface/storms/thunder,,Severe thunderstorm,[TEXT]
 W,V,air/navigation/clouds/ash,,Volcanic ash clouds (SIGMET),[TEXT]
 W,W,alerts,,Warnings and weather summary,[TEXT]
+
+

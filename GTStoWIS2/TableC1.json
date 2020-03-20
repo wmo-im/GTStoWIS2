@@ -284,13 +284,14 @@
 "XS": { "topic":"sphere/southern","description":"Southern hemisphere" },
 "XT": { "topic":"tropics/","description":"Tropical belt" },
 "XW": { "topic":"sphere/west","description":"Western hemisphere" },
-"XX": { "topic":"somewhere","description":"For use when other designators are not appropriate" },
+"XX": { "topic":"","description":"For use when other designators are not appropriate" },
 "YE": { "topic":"ye","description":"Yemen"},
 "YG": { "topic":"rs","description":"Serbia"},
 "ZA": { "topic":"za","description":"South Africa"},
 "ZB": { "topic":"zm","description":"Zambia"},
 "ZM": { "topic":"ws","description":"Samoa"},
 "ZR": { "topic":"cd","description":"Democratic Republic of the Congo"},
+"ZS": { "topic":"ZS","description":"MISSING: designator on some gribs called: LVZS50 KWBX"},
 "ZW": { "topic":"zw","description":"Zimbabwe"},
-"ZZ": { "topic":"somehwere","description":"used in some American FT", "note":"MISSING: WMO Table C"}
+"ZZ": { "topic":"ZZ","description":"used in some American FT", "note":"MISSING: WMO Table C"}
 }
