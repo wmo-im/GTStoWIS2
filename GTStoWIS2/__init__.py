@@ -58,7 +58,7 @@ class GTStoWIS2():
         self.tableA={}
         self.tableC1={}
 
-        for t in [ 'A', 'C1', 'C6', 'CCCC' ]:
+        for t in [ 'A', 'C1', 'C6', 'C7', 'CCCC' ]:
             with open( self.tableDir + '/Table%s.json' % t, 'r' ) as m:
                 if self.debug: print( 'reading Table%s' % t )
                 exec( "self.table"+t+"=json.load(m)" )
@@ -282,10 +282,17 @@ class GTStoWIS2():
         ahlParseHint=self.tableA[ T1 ]
 
         if T1 == 'K':
-           print( 'CREX Table C7 not yet implemented')
+           if debug: print( 'Applying CREX Table C7 ')
            TTTopic="crex"
+           i=TT+AA[0]
+           if "ii" in self.tableC7[i]:
+                iii = int(ii)
+                for iis in self.tableC7[i]["ii"]:
+                    print( "iis: %s" % iis )
+                    (iilb, iiub) = iis.split("-") # get ii lower and upperbounds.
+                    if (iii >= int(iilb) ) and ( iii <= int(iiub) ) :
+                         self.a1topic=self.tableC7[i]["ii"][iis]["topic"]
         elif TT == 'SZ':
-           print( 'TT=SZ not implemented yet.' )
            TTTopic="sea/"
         elif T1 == 'B': # Addressed messages, no idea...
            return CCCCTopic + "/addressed"

@@ -283,3 +283,4 @@ PAHM44_TNCC_190408
 SXBZ20_KWAL_200204_bacf9daddab445bfd22c4351a6075721.txt,Wallopps? is AA=BZ Belize or (as per Table C1:Brasil? )
 SXCA03_KWAL_200221_be054b0bd6d42bb037de5783dc3d216f.txt,Wallopps? is AA=CA California, or Table C1:Carribbean?) 
 SXCH40_KWAL_200202_b1d6db361790b1e72848de4ac3283a11.txt,Wallopps... Chile? what state is this?
+SZHW36_KWBC_191806,SZ is a special TT.

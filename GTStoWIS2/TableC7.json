@@ -1,0 +1,113 @@
+{
+"KFA": { "topic":"forecast/air/navigation/routes", "description": "Surface area forecast (e.g. airways) " },
+"KFD": { "topic":"forecast/radiation", "description": "Radiological forecast RADOF " },
+"KFM": { "topic":"forecast/sea/surface", "description": "Surface forecasts (eg MOS) " },
+"KFO": { "topic":"forecast/sea/navigation", "description": "Maritime forecast MAFOR " },
+"KFP": { "topic":"forecast/air/navigation", "description": "Forecast amendments (airways) " },
+"KFR": { "topic":"forecast/water", "description": "Hydrologic forecast HYFOR " },
+"KFS": { "topic":"forecast/air/navigation", "description": "Forecast amendments (TAF) " },
+"KFT": { "topic":"forecast/air/navigation", "description": "Aerodrome forecast (TAF) " },
+"KFX": { "topic":"forecast/land", "description": "Other surface forecasts" },
+"KOB": { "topic":"observation/sea/buoy", "description": "Buoy observations BUOY 001/025" },
+"KOI": { "topic":"observation/sea/ice", "description": "Sea ice " },
+"KOP": { "topic":"observation/sea/deep", "description": "Sub-surface profiling floats TESAC 031/004" },
+"KOR": { "topic":"observation/sea/surface", "description": "Sea surface observations TRACKOB 031/001" },
+"KOS": { "topic":"observation/sea/surface/below", "description": "Sea surface and below soundings BATHY, TESAC 031/005" },
+"KOT": { "topic":"observation/sea/surface/temperature", "description": "Sea surface temperature " },
+"KOW": { "topic":"observation/sea/surface/wave", "description": "Sea surface waves WAVEOB 031/002" },
+"KOX": { "topic":"observation/sea/other", "description": "Other sea environmental WAVEOB 031/002" },
+"KPI": { "topic":"sea/ice", "description": "Sea ice " },
+"KPS": { "topic":"sea/surface", "description": "Sea surface and below soundings " },
+"KPT": { "topic":"sea/surface", "description": "Sea surface temperature " },
+"KPW": { "topic":"sea/surface/waves", "description": "Sea surface waves " },
+"KPX": { "topic":"sea/other", "description": "Other sea environmental " },
+"KSA": { "id": { "01-29" : { "topic":"observation/land", "description": "01-29 Routinely scheduled observations for distribution from automatic (fixed or mobile) land stations (e.g. 0000, 0100, … or 0220, 0240, 0300, …, or 0715, 0745, … UTC) n/a 000/006" },
+               "30-59" : { "topic":"observation/land", "description": "30-59 N-minute observations from automatic (fixed or mobile) land stations n/a 000/007" }
+               }
+       },
+"KSB": { "topic":"observation/land", "description": "Radar reports (parts A and B) RADOB 006/003" },
+"KSC": { "id": { "01-45": { "topic":"observation/climate/land", "description": "Climatic observations from land stations CLIMAT 000/020" },
+                 "46-59": { "topic":"observation/climate/sea", "description": "Climatic observations from marine stations CLIMAT SHIP 001/020" }
+               }
+       },
+"KSD": { "topic":"observation/radiation", "description": "Radiological observation RADREP 010/001" },
+"KSE": { "topic":"observation/land/ozone", "description": "Measurement of surface ozone n/a 008/000" },
+"KSF": { "topic":"observation", "description": "Source of atmospherics SFAZI, SFLOC, SFAZU 000/030" },
+"KSI": { "id": { "01-45" : { "topic":"obsevation/land/fixed", "description": "Intermediate synoptic observations from fixed land stations SYNOP (SIxx) 000/001 000/051" },
+                 "46-59" : { "topic":"observation/land/mobile", "description": "Intermediate synoptic observations from mobile land stations SYNOP MOBIL 000/004" }
+               }
+       },
+"KSM": { "id": { "01-45" : { "topic":"observation/land/fixed", "description": "Main synoptic observations from fixed land stations SYNOP (SMxx) 000/002 000/052" },
+                 "46-59" : { "topic":"observation/land/mobileMain synoptic observations from mobile land stations SYNOP MOBIL 000/005" }
+               }
+       },
+"KSN": { "id": { "01-45" : { "topic":"observation/land/fixed", "description": "Synoptic observations from fixed land stations at non-standard time (i.e. 01, 02, 04, 05, ... UTC) SYNOP (SNxx) 000/000 000/050" },
+                 "46-59" : { "topic":"observation/land/mobile", "description": "Synoptic observations from mobile land stations at non-standard time (i.e. 01, 02, 04, 05, 07, 08, 10, 11, 13, ..UTC) SYNOP MOBIL 000/003" }
+               }
+       },
+"KSR": { "topic":"observation/water", "description": "Hydrologic reports HYDRA 000/040" },
+"KSS": { "id": { "01-19": { "topic":"observation/water", "description": "Synoptic observations from marine stations SHIP 001/000" },
+                 "20-39": {  "topic":"observation/water", "description": "One-hour observations from automatic marine stations n/a 001/006" },
+                 "40-59": {  "topic":"observation/water", "description": "N-minute observations from automatic marine stations n/a 001/007" }
+               }
+       },
+"KSV": { "topic":"observation/air/navigation/special", "description": "Special aeronautical observations (SPECI) SPECI 000/011" },
+"KSW": { "topic":"observation/air/navigation", "description": "Aviation routine weather observations (METAR) METAR 000/010" },
+"KSX": { "topic":"observation/land", "description": "Other surface data IAC, IAC FLEET " },
+"KTE": { "topic":"forecast/tsunami", "description": "Tsunami " },
+"KTH": { "topic":"forecast/cyclone", "description": "Hurricane, typhoon, tropical storm warning " },
+"KTS": { "topic":"alert/air/navigation", "description": "Severe weather, SIGMET " },
+"KTT": { "topic":"alert/tornado", "description": "Tornado warning " },
+"KTX": { "topic":"alert", "description": "Other warnings " },
+"KUA": { "topic":"Single level aircraft reports (automatic) AMDAR 004/000" },
+"KUA": { "topic":"Single level aircraft reports (manual) AIREP/PIREP 004/001" },
+"KUB": { "topic":"Single level balloon reports n/a " },
+"KUC": { "topic":"Single level satellite-derived reports SAREP 005/000" },
+"KUD": { "topic":"Dropsonde/dropwindsondes TEMP DROP 002/007" },
+"KUE": { "topic":"Ozone vertical sounding   008/001" },
+"KUI": { "topic":"Dispersal and transport analysis n/a 009/000" },
+"KUJ": { "ii" : { "01-19" : { "topic":"observation/air/wind/fixed", "description": " Upper wind from fixed land stations (parts A, B, C and D) PILOT 002/001" },
+                  "20-39" : { "topic":"observation/air/wind/mobile", "description": " Upper wind from mobile land stations (parts A, B, C and D) PILOT MOBIL 002/003" },
+                  "40-59" : { "topic":"observation/air/wind/marine", "description": " Upper wind from marine stations (parts A, B, C and D) PILOT SHIP 002/002" }
+               }
+       },
+"KUK": { "ii" : { "01-19":{ "topic":"observation/air/sonde/fixed", "description": " Radio soundings from fixed land stations (parts A and B) TEMP 002/004" },
+                  "20-39":{ "topic":"observation/air/sonde/mobile", "description": " Radio soundings from mobile land stations (parts A and B) TEMP MOBIL 002/006" },
+                  "40-59":{ "topic":"observation/air/sonde/marine", "description": " Radio soundings from marine stations (parts A and B) TEMP SHIP 002/005" }
+               }
+       },
+"KUL": { "topic":"observat/air/ozone", "description": "Total ozone n/a 008/002" },
+"KUM": { "topic":"model/sonde", "description": "Model derived sondes " },
+"KUN": { "topic":"observation/air/sonde/rocket", "description": "Rocketsondes " },
+"KUO": { "topic":"observation/air/amdar/profile", "description": "Profiles of aircraft observations in ascending /descending AMDAR 002/020" },
+"KUP": { "topic":"observation/air/sonde/profile", "description": "Profilers PILOT 002/010" },
+"KUQ": { "topic":"observation/air/sonde/radio", "description": "RASS temperature profilers TEMP 002/011" },
+"KUS": { "ii": { "01-19" : { "topic":"observation/air/sonde/fixed", "description": " Radiosondes/pibal reports from fixed land stations (parts A, B, C and D) TEMP 002/004" },
+                 "20-39" : { "topic":"observation/air/sonde/mobile", "description": "Radio soundings from mobile land stations (parts A, B, C and D) TEMP MOBIL 002/006" },
+                 "40-59" : {  "topic":"observation/air/sonde/satellite", "description": " Radio soundings from marine stations (parts A, B, C and D) TEMP SHIP 002/005" }
+               }
+       },
+"KUT": { "topic":"observation/air/sonde/satellite", "description": "Satellite derived sondes " },
+"KUU": { "ii": { "01-45": { "topic":"observation/air/monthly/wind/fixed", "description": " Monthly statistics of data from upper-air stations CLIMAT TEMP 002/025" },
+                 "01-45": { "topic":"observation/air/monthly/wind/mobile", "description": " Monthly statistics of data from upper-air stations CLIMAT TEMP 002/025" },
+                 "46-59": { "topic":"observation/air/monthly/wind/marine", "description": " Monthly statistics of data from marine stations CLIMAT TEMP, SHIP 002/026" }
+               }
+       },
+"KUW": { "ii": { "01-19": { "topic":"observation/air/upper/wind/fixed", "description": "Upper wind from fixed land stations (parts A and B) PILOT 002/001" },
+                 "20-39": { "topic":"observation/air/upper/mobile", "description": "Upper wind from mobile land stations (parts A and B) PILOT MOBIL 002/003" },
+                 "40-59": { "topic":"observation/air/upper/marine", "description": "Upper wind from marine stations (parts A and B) PILOT SHIP 002/002" }
+               }
+       },
+"KUX": { "topic":"", "description": "observation/air/upper,Other upper air reports " },
+"KVA": { "topic":"forecast/air/navigation", "description": "Forecast at single levels " },
+"KVB": { "topic":"alert/air/navigation/cb", "description": "Coded SIGWX, Embedded Cumulonimbus " },
+"KVC": { "topic":"alert/air/navigation/turbulence", "description": "CREX coded SIGWX, Clear air turbulence " },
+"KVF": { "topic":"alert/air/navigation/fronts", "description": "CREX coded SIGWX, Fronts " },
+"KVN": { "topic":"alert/air/navigation", "description": "CREX coded SIGWX, Other SIGWX parameters " },
+"KVO": { "topic":"alert/air/navigation/turbulence", "description": "CREX coded SIGWX, Turbulence " },
+"KVS": { "topic":"forecast/sonde", "description": "Forecast soundings " },
+"KVT": { "topic":"alert/air/navigation/ice", "description": "CREX coded SIGWX, Icing/Tropopause " },
+"KVV": { "topic":"alert/air/navigation/storms", "description": "CREX coded SIGWX, Tropical storms, sandstorms, volcanoes " },
+"KVW": { "topic":"alert/air/navigation/winds", "description": "CREX coded SIGWX, High-level winds " },
+"KVX": { "topic":"alert/air/upper", "description": "Other upper air forecasts " }
+}
