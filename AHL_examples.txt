@@ -285,3 +285,7 @@ SXCA03_KWAL_200221_be054b0bd6d42bb037de5783dc3d216f.txt,Wallopps? is AA=CA Calif
 SXCH40_KWAL_200202_b1d6db361790b1e72848de4ac3283a11.txt,Wallopps... Chile? what state is this?
 SZHW36_KWBC_191806,SZ is a special TT.
 LVZS50_KWBX_200000_qwtwqwfwq.grib,um... WMO TAble A says these should be XML, but the file is .grib. hmm...
+LTUS43_KFSD_200400_AAA_634152e96f377ecc654f531b3d341a9f.iwxxm
+PAHM44_TFFR_200400_920d838d40b1382c91a47ffe7c7af422.bin
+QZTB90_KKCI_200300_21650fe67ecf97b340951631da2a41fe.bin
+QZTG90_KKCI_200600_c9f5fec4e51669fe5140e09203f3f452.bin

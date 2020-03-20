@@ -165,6 +165,7 @@ PQ,V,observation/wind/north,,Northward wind component
 PQ,W,observation/wind,,Wind
 PQ,X,observation/lifted,,Lifted index
 PQ,Y,observation/,,Observational plotted chart
+PQ,Z,Z/,,not assigned
 
 #Table B1, S,T,U,W
 S,A,observation/land,,Aviation routine reports,FM 15 (METAR)
