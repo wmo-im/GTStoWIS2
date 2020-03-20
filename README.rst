@@ -19,25 +19,27 @@ Those tables are in this directory with names like TableB.json
 can be literally used, the tables are in json format. where some comments or
 processing is required, the input is a comma separated value, or csv file.
 
-There proved to many gaps in the existing tables.  Where the tables were
+STATUS
+------
+
+There proved to many gaps in the existing tables. Where the tables were
 supplemented from other means, the description field included the keyword
 **MISSING**, thus to find the changes made to the tables, one can execute::
 
    grep MISSING Table*
 
 There is also an additional field in all the tables giving a topic to which
-the table entry corresponds.  All hierarchies here are partial, indicating
-only the portion derived from the AHL.
+the table entry corresponds. All hierarchies here are partial, indicating
+only the portion derived from the AHL. 
 
-STATUS
-------
+Initial attempts were made to complete TableCCCC, but it proved fruitless,
+so added a field to C1 to associate the first to letters of the origin,
+aka: C1, C2,  to the corresponding country. This allows generally correct
+attribution of an origin to a country.
 
-TableC7 not yet properly used, TableC6 and C7 require interpretation of ii,
-not implemented yet. None of the topic choices have been validated by
-meteorologically knowledgable people, this is just an IT sketch of a
-technical means of implementing a topic tree.  Still working to 
-get full interpretations of existing tables.  Once that is done,
-can open up discussion of what the topics should really be.
+The data set used for validation had perhaps data the americans consider
+domestic which has a number of products not defined un the WMO tables.
+Clarification of additional table entries would be helpful.
 
 
 Testing

@@ -8,7 +8,7 @@ print ( "%s" % __file__ )
 
 import GTStoWIS2
 
-topic_builder=GTStoWIS2.GTStoWIS2("GTStoWIS2",debug=True,dump_tables=True)
+topic_builder=GTStoWIS2.GTStoWIS2(debug=False,dump_tables=False)
 
 with open( 'AHL_examples.txt', 'r' ) as headers:
     hh=headers.readlines()
@@ -19,6 +19,6 @@ for hl in hh:
     ahl= hl.split(',')[0]
     print( "%3d - %s" % ( n, ahl ) )
     t = topic_builder.mapAHLtoTopic(ahl)
-    print( "topic=%s\n" % ( t ) )
+    print( "\ttopic=%s\n" % ( t ) )
     n+=1
 

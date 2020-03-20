@@ -26,9 +26,10 @@ class GTStoWIS2():
         return False
 
     def _parseCSV(self, tid, word=True ):
-        if self.dump: print( "Table"+tid )
+        t=self.tableDir + os.sep + 'Table'+tid+'.csv'
+        if self.debug: print( "reading %s " % t )
         exec( "self.table" + tid + " = {}" )
-        with open( self.tableDir + GTStoWIS2.sep + 'Table'+tid+'.csv', 'r' ) as m:
+        with open( t, 'r' ) as m:
             for l in m.readlines():
                 if self._skip_line(l):
                     continue
@@ -39,9 +40,10 @@ class GTStoWIS2():
 
 
     def _parseCSVB(self, tid, word=True ):
-        if self.dump: print( "Table%s" % tid ) 
+        t= self.tableDir + os.sep + 'Table'+tid+'.csv'
+        if self.debug: print( "reading %s " % t )
         exec( "self.table" + tid + " = {}" )
-        with open( self.tableDir + '/Table'+tid+'.csv', 'r' ) as m:
+        with open( t, 'r' ) as m:
             for l in m.readlines():
                 if self._skip_line(l):
                     continue
@@ -59,8 +61,9 @@ class GTStoWIS2():
         self.tableC1={}
 
         for t in [ 'A', 'C1', 'C6', 'C7', 'CCCC' ]:
-            with open( self.tableDir + '/Table%s.json' % t, 'r' ) as m:
-                if self.debug: print( 'reading Table%s' % t )
+            f = self.tableDir + '/Table%s.json' % t
+            with open( f, 'r' ) as m:
+                if self.debug: print( 'reading %s' % f )
                 exec( "self.table"+t+"=json.load(m)" )
             if self.dump:
                d = eval( "json.dumps(self.table"+t+", indent=2)" )
@@ -71,6 +74,7 @@ class GTStoWIS2():
             self._parseCSVB(t)
 
         for t in [ 'C2', 'C3', 'C5', 'D1', 'D3' ]:
+            if self.debug: print( 'reading Table%s' % t )
             self._parseCSV(t)
 
     """
@@ -194,11 +198,10 @@ class GTStoWIS2():
             #    self.a1topic=self._USAA(AA) 
             if a1 == 'C6' :
                 i=TT+AA[0]
-                print( "AATopic 2.5 C6: " )
+                if self.debug: print( "AATopic 2.5 C6: " )
                 if "ii" in self.tableC6[i]:
                     iii = int(ii)
                     for iis in self.tableC6[i]["ii"]:
-                         print( "iis: %s" % iis )
                          (iilb, iiub) = iis.split("-") # get ii lower and upperbounds.
                          if (iii >= int(iilb) ) and ( iii <= int(iiub) ) :
                              self.a1topic=self.tableC6[i]["ii"][iis]["topic"]
@@ -270,6 +273,7 @@ class GTStoWIS2():
 
         if CCCC in self.tableCCCC:
             CCCCTopic=self.tableCCCC[ CCCC ]["centre"]
+            if self.debug: print( "topic from CCCC %s -> %s " % ( CCCC, CCCCTopic ) )
         else: # last ditch go through CC in Table C1
             CC = CCCC[0:2]
             for c in self.tableC1:
@@ -278,17 +282,14 @@ class GTStoWIS2():
                         CCCCTopic=self.tableC1[c]['topic'] + GTStoWIS2.sep + CCCC
                         if self.debug: print( "topic from CCCC revised using Table C1: \"%s\" " % CCCCTopic )
                            
-        if self.debug: print( "topic from CCCC %s -> %s " % ( CCCC, CCCCTopic ) )
         ahlParseHint=self.tableA[ T1 ]
 
         if T1 == 'K':
            if debug: print( 'Applying CREX Table C7 ')
-           TTTopic="crex"
            i=TT+AA[0]
            if "ii" in self.tableC7[i]:
                 iii = int(ii)
                 for iis in self.tableC7[i]["ii"]:
-                    print( "iis: %s" % iis )
                     (iilb, iiub) = iis.split("-") # get ii lower and upperbounds.
                     if (iii >= int(iilb) ) and ( iii <= int(iiub) ) :
                          self.a1topic=self.tableC7[i]["ii"][iis]["topic"]
