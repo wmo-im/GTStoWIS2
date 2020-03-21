@@ -41,6 +41,7 @@ The data set used for validation had perhaps data the americans consider
 domestic which has a number of products not defined un the WMO tables.
 Clarification of additional table entries would be helpful.
 
+Also TableD3 is not yet properly handled.
 
 Testing
 -------
