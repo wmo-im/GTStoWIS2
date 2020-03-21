@@ -7,7 +7,7 @@ import sys
 from setuptools import find_packages
 from distutils.core import setup
 
-import sarra
+import GTStoWIS2
 
 here = os.path.abspath(os.path.dirname(__file__))
 
@@ -22,7 +22,7 @@ print("packages = %s" % packages)
 
 setup(
     name='wmo-im-GTS2WIS2',
-    version='0.0.1',
+    version=GTStoWIS2.__version__,
     description='Convert GTS AHL to WIS2 topic tree',
     long_description=(read('README.rst')),
     url='https://github.com/wmo-im/GTStoWIS2',

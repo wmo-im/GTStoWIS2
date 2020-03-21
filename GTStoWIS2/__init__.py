@@ -14,7 +14,10 @@ import pycountry
 import pkgutil
 import os.path
 
+__version__ = '0.0.1'
+
 class GTStoWIS2(): 
+
 
     sep='/'
 
