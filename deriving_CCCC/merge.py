@@ -6,7 +6,7 @@
 """
 import json
 
-cf=open("../TableCCCC.json","r")
+cf=open("TableCCCC.json","r")
 origins=json.load(cf)
 cf.close()
 

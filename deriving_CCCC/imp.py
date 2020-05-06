@@ -27,6 +27,13 @@ with open("stations.txt") as sf:
        if country == 'us':
            description +=' '+l[0:2]
            
+       lat= int(l[39:41]) + int(l[42:44])/60.0
+       if l[44] == 'S': lat = -lat
+
+       lon= int(l[47:50]) + int(l[51:53])/60.0
+       if l[53] == 'W': lon = -lon
+
+       elev= int(l[55:60])
+
        desc=description.lower().replace(' ','_')
-       print( '"%4s": { "centre":"%s/%s", "description":"MISSING (from stations.txt) %s", "Country":"%s" },' 
-              % ( CCCC, country, desc, description, country ) )
+       print( '"%s": { "centre":"%s", "geometry": { "type":"Point", "coordinates": [ %g, %g, %g  ] }, "description":"MISSING (from stations.txt) %s", "Country":"%s" }},' % ( CCCC, desc, lon, lat, elev, description, country ) )
