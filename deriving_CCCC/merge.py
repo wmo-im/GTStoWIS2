@@ -1,39 +1,40 @@
-
 """
- 
- merge the table from the 
-
+ merge the table from TableCCC and stations.json (created by imp.py)
 """
 import json
+import sys
 
 cf=open("TableCCCC.json","r")
 origins=json.load(cf)
 cf.close()
 
-#print( " origins[%s]=%s" % ( 'CWAO', origins['CWAO'] ) )
+print ( "CCCC read" )
 
 sf=open("stations.json","r")
 stations=json.load(sf)
 sf.close()
 
-#print( " stations[%s]=%s, present in origins?: %s" % \
-#    ( 'CWGJ', stations['CWGJ'], 'CWCJ' in origins ) )
+print ( "Stations read" )
 
-#print( " origins.keys() = %s " % origins.keys() )
+sys.exit(0)
 
 all=list(set().union(stations.keys(),origins.keys()))
-#print("len of all: %d" % len(all) )
 all.sort()
-#print("len of all: %d" % len(all) )
 
 for c in all:
-        
-     if not c in origins.keys():
-         i=stations[c]
-     elif ( origins[c]['description'] == '--' ) and (c in stations.keys() ):
-         i=stations[c]
+     m='hoho'   
+     if c in origins.keys():
+         print('c is in origin.keys: %s' % origins[c] )
+         if c in stations.keys():
+            i=origins[c].update(stations[c])
+            m="both"
+         else:
+            i=origins[c]
+            m="CCCC"
      else:
-         i=origins[c]
+         print('c is in stations.keys: %s' % stations[c] )
+         i=stations[c]
+         m="stations"
 
      j=json.dumps(i,ensure_ascii=False,separators=(', ',':'))
-     print( '"%s":%s,' % (c, j) )
+     #print( '"%s":%s, %s' % (c, j, m) )

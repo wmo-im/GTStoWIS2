@@ -63,7 +63,7 @@ class GTStoWIS2():
         self.tableA={}
         self.tableC1={}
 
-        for t in [ 'A', 'C1', 'C6', 'C7', 'CCCC' ]:
+        for t in [ 'A', 'C1', 'C6', 'C7', 'CCCC', 'GISC' ]:
             f = self.tableDir + '/Table%s.json' % t
             with open( f, 'r' ) as m:
                 if self.debug: print( 'reading %s' % f )
@@ -335,3 +335,9 @@ class GTStoWIS2():
         
     def mapTopicToAHL(self,topic):
         print( "NotImplemented" )
+
+    def mapAHLtoGISC(self,ahl):
+        t=self.mapAHLtoTopic(ahl)
+        for gisc in self.tableGISC:
+            if t[0:2] in self.tableGISC[gisc]['responsible']:
+               return gisc
