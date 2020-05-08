@@ -1,0 +1,18 @@
+{ 
+"Beijing":    {"responsible": {"cn", "kp", "pk", "np", "mn", "hk"}},
+"Brasilia":   {"responsible": {"br", "py", "co", "ar", "bo", "pe", "ve", "uy", "ec", "cl", "gy", "sr"}},
+"Casablanca": {"responsible": {"bj", "bf", "gh", "ci", "ng", "ne", "tg", "mg", "ml", "cf", "cd", "cg", "eg", "ma", "gn", "sn", "dj", "cm", "sl", "rw", "ga", "lr", "td", "mr", "ly", "er", "gm", "et", "so", "st", "ug", "bi", "sc", "km", "mu", "cv"}},
+"Exeter":     {"responsible": {"gb", "is", "eu", "nl", "tz", "ie", "uk"}},
+"Jeddah":     {"responsible": {"ae", "ye", "kw", "bh", "qa", "om", "sa"}},
+"Melbourne":  {"responsible": {"au", "cc", "nr", "nz", "sb", "pg", "id", "my", "nz", "sg", "fj", "fm", "bn", "ki", "tv", "tl", "ws", "pf", "vu", "to", "nc", "nu", "ck"}},
+"Moscow":     {"responsible": {"ru", "am", "az", "tj", "ua", "by", "md", "ge", "kz", "kg", "tm"}}
+"New Delhi":  {"responsible": {"bt", "in", "lk", "bd", "mv"}},
+"Offenbach":  {"responsible": {"de", "ee", "fi", "gl", "xk", "dk", "no", "tr", "gr", "rs", "ro", "hu", "ke", "cz", "it", "bg", "at", "lt", "pl", "hr", "se", "lv", "sk", "ch", "si", "ba", "me", "mk", "cy", "il", "jo"}},
+"Pretoria":   {"responsible": {"zw", "sd", "mw", "ao", "zm", "mz", "za", "na", "bw", "ls"}},
+"Seoul":      {"responsible": {"uz", "kr"}},
+"Tehran":     {"responsible": {"iq", "sy", "af", "ir"}},
+"Tokyo":      {"responsible": {"la", "th", "ph", "kh", "jp", "vn", "mm"}},
+"Toulouse":   {"responsible": {"dz", "tn", "be", "pt", "es", "lu", "fr"}},
+"Washington": {"responsible": {"ca", "ht", "gt", "cu", "jm", "ni", "ag", "sv", "dm", "hn", "bs", "mx", "vg", "ky", "ms", "ai", "tc", "bz", "lc", "bb", "tt", "cr", "pa", "cw", "us"}},
+"none":       {"responsible": {"al", "mc", "mt", "lb"}}
+}
