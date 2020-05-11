@@ -8,7 +8,7 @@ print ( "%s" % __file__ )
 
 import GTStoWIS2
 
-topic_builder=GTStoWIS2.GTStoWIS2(debug=False,dump_tables=False)
+topic_builder=GTStoWIS2.GTStoWIS2(debug=True,dump_tables=False)
 
 with open( 'AHL_examples.txt', 'r' ) as headers:
     hh=headers.readlines()
