@@ -4884,7 +4884,7 @@
 "SMTB":{"centre":"tafelberg_ru", "name":" TAFELBERG_RU", "country_short":"sr"},
 "SMZO":{"centre":"paramaribo", "name":" PARAMARIBO", "country_short":"sr"},
 "SMZY":{"centre":"paramaribo_zanderij", "name":"Paramaribo/Zanderij", "country_short":"sr"},
-"SOCA":{"centre":"cayenne_rochambeau_cayenne", "name":"CAYENNE", "country_short":"gf | fr", "wigos":"0-20000-0-81406"},
+"SOCA":{"centre":"cayenne_rochambeau_cayenne", "name":"CAYENNE", "country_short":"gf", "wigos":"0-20000-0-81406"},
 "SOOM":{"centre":"st_laurent_d", "name":" ST LAURENT D", "country_short":"gy"},
 "SOWR":{"centre":"warszawa", "name":"Warszawa", "country_short":"pl"},
 "SPAY":{"centre":"atalaya", "name":" ATALAYA", "country_short":"pe"},
