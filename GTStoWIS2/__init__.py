@@ -352,7 +352,7 @@ class GTStoWIS2():
 
     def mapAHLtoTopic(self,ahl):
         a = self.analyzeAHL(ahl)      
-        return a[2]
+        return a[1] + GTStoWIS2.sep + a[2]
         
     def mapTopicToAHL(self,topic):
         print( "NotImplemented" )
