@@ -5050,7 +5050,7 @@
 "TNCB":{"centre":"kralendijk_flamingo_bonaire", "name":"FLAMINGO AIRPORT, BONAIRE", "country_short":"nl", "wigos":"0-20000-0-78990"},
 "TNCC":{"centre":"willemstad_dr_a_plesman_curaçao", "name":"Willemstad/Dr. A. Plesman, Curaçao", "country_short":"cw"},
 "TNCE":{"centre":"sint_eustatius_sint_eustatius_i", "name":"F.D. ROOSEVELT AIRPORT ST. EUSTATIUS", "country_short":"bq", "wigos":"0-20000-0-78873"},
-"TNCM":{"centre":"philipsburg_juliana_sint_maarten", "name":"JULIANA AIRPORT, ST. MAARTEN", "country_short":"bq|sx", "wigos":"0-20000-0-78866"},
+"TNCM":{"centre":"philipsburg_juliana_sint_maarten", "name":"JULIANA AIRPORT, ST. MAARTEN", "country_short":"sx", "wigos":"0-20000-0-78866"},
 "TQPF":{"centre":"wall_blake", "name":" WALL BLAKE", "country_short":"vi"},
 "TRPA":{"centre":"tegucigalpa", "name":" TEGUCIGALPA", "country_short":"hn"},
 "TRPG":{"centre":"john_osborne", "name":" JOHN OSBORNE", "country_short":"ms"},
