@@ -4114,7 +4114,7 @@
 "PHFO":{"centre":"honolulu_forecast_office", "name":"MISSING: Honolulu forecast office", "country_short":"us"},
 "PHTO":{"centre":"hilo_hi", "name":"MISSING: Hilo (HI)", "country_short":"us"},
 "PKMJ":{"centre":"PKMJ", "name":"MISSING:", "country_short":"mh"},
-"PKMR":{"centre":"majuro", "name":"MAJURO/MARSHALL IS. INTNL.", "country_short":"mh" "wigos":"0-20000-0-91376"},
+"PKMR":{"centre":"majuro", "name":"MAJURO/MARSHALL IS. INTNL.", "country_short":"mh", "wigos":"0-20000-0-91376"},
 "PKWA":{"centre":"kwajalein", "name":"MISSING: Kwajalein Atoll", "country_short":"mh"},
 "PLMR":{"centre":"majuro", "name":"MISSING: Majuro Atoll", "country_short":"mh"},
 "PTKK":{"centre":"wno_is", "name":"MISSING: Weno Is/Chuuk", "country_short":"fm"},
