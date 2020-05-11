@@ -273,8 +273,8 @@ class GTStoWIS2():
         T2=ahl[1].upper()
         CCCC = ahl[7:11]
         CCCCTopic=""
-        country=""
-
+        country="unknown"
+        gisc="unknown"
         if CCCC in self.tableCCCC:
             CCCCTopic=self.tableCCCC[ CCCC ]["centre"]
             country=self.tableCCCC[ CCCC ]["country_short"]
@@ -285,7 +285,7 @@ class GTStoWIS2():
                 if "CC" in self.tableC1[c]:
                     if CC in self.tableC1[c]['CC']:
                         CCCCTopic=self.tableC1[c]['topic'] + GTStoWIS2.sep + CCCC
-                        country=self.tableCCCC[ CCCC ]["country_short"]
+                        country=self.tableC1[c]['topic']
                         if self.debug: print( "topic from CCCC revised using Table C1: \"%s\" (country: %s)" % (CCCCTopic, country) )
                            
         ahlParseHint=self.tableA[ T1 ]
@@ -336,6 +336,8 @@ class GTStoWIS2():
 
         if CCCCTopic:
            topic = CCCCTopic + GTStoWIS2.sep + topic
+
+        if self.debug: print( "country to lookup for GISC: %s" % country )
 
         for g in self.tableGISC:
            if country in self.tableGISC[g]["responsible"]:
