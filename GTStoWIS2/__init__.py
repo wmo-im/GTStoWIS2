@@ -63,7 +63,7 @@ class GTStoWIS2():
         self.tableA={}
         self.tableC1={}
 
-        for t in [ 'A', 'C1', 'C6', 'C7', 'CCCC', 'GISC' ]:
+        for t in [ 'A', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'CCCC', 'GISC' ]:
             f = self.tableDir + '/Table%s.json' % t
             with open( f, 'r' ) as m:
                 if self.debug: print( 'reading %s' % f )
@@ -73,10 +73,12 @@ class GTStoWIS2():
                print( "Table%s : %s" % (t, d ) ) 
 
         # TableB
-        for t in [ 'B', 'C4', 'D2' ]:
+        #for t in [ 'B', 'C4', 'D2' ]:
+        for t in [ 'B', 'D2' ]:
             self._parseCSVB(t)
 
-        for t in [ 'C2', 'C3', 'C5', 'D1', 'D3' ]:
+        #for t in [ 'C2', 'C3', 'C5', 'D1', 'D3' ]:
+        for t in [ 'D1', 'D3' ]:
             if self.debug: print( 'reading Table%s' % t )
             self._parseCSV(t)
 
@@ -184,7 +186,7 @@ class GTStoWIS2():
                 else: suffix='surface'
 
                 if AA[1] in self.tableC2:
-                    topic=self.tableC2[AA[1]][0]+GTStoWIS2.sep+suffix
+                    topic=self.tableC2[AA[1]]+GTStoWIS2.sep+suffix
                 else:
                     topic=self.tableC1[AA]['topic']+ GTStoWIS2.sep +suffix
             else: 
@@ -215,20 +217,21 @@ class GTStoWIS2():
                 if self.debug: print( "C6 self.a1topic=%s" % self.a1topic )
                 
                 if a2 == 'C3':
-                    self.a2topic=self.tableC3[AA[1]][0]
+                    self.a2topic=self.tableC3[AA[1]]
                     if self.debug: print( "AATopic 4 self.a2topic=self.tableC3[%s]=%s" % (AA[1], self.a2topic) )
                 else: #C4
-                    j=TT[0]+AA[0]
-                    self.a2topic=self.tableC4[j][0]
-                    if self.debug: print( "AATopic 5 self.a2topic=self.tableC4[%s]=%s" % (j, self.a2topic) )
+                    if TT[0] in 'DGHJOPT':
+                        self.a2topic=self.tableC4[AA[1]]
+                    if self.debug: print( "AATopic 5 self.a2topic=self.tableC4[%s]=%s" % (AA[1], self.a2topic) )
             else: 
                 if (a1 == 'C3'):
-                    self.a1topic=self.tableC3[AA[0]][0]
-                    if self.debug: print( "AATopic 6 self.a1topic=self.tableC3[%s][0] = \"%s\"" % (AA[0],self.a1topic) )
+                    self.a1topic=self.tableC3[AA[0]]
+                    if self.debug: print( "AATopic 6 self.a1topic=self.tableC3[%s] = \"%s\"" % (AA[0],self.a1topic) )
 
                     if ( a2 == 'C4' ):
-                        self.a2topic=self.tableC4[ TT[0]+AA[1] ][0]
-                        if self.debug: print( "AATopic 6.1 self.a2topic=self.tableC4[%s][0] = \"%s\"" % (TT[0]+AA[1],self.a2topic) )
+                        if TT[0] in 'DGHJOPT':
+                            self.a2topic=self.tableC4[ AA[1] ]
+                        if self.debug: print( "AATopic 6.1 self.a2topic=self.tableC4[%s] = \"%s\"" % (AA[1],self.a2topic) )
                 else:
                     if a1 == 'C1': idx='["topic"]'
                     else: idx='[0]'
