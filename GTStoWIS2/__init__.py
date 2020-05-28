@@ -256,7 +256,7 @@ class GTStoWIS2():
         return the toppic hierarchy for a given AHL
     """
 
-    def mapAHLtoTopic(self,ahl):
+    def analyzeAHL(self,ahl):
         """
             given an instance and an AHL, return the topic tree that corresponds to it.
 
@@ -276,17 +276,20 @@ class GTStoWIS2():
         T2=ahl[1].upper()
         CCCC = ahl[7:11]
         CCCCTopic=""
-
+        country="unknown"
+        gisc="unknown"
         if CCCC in self.tableCCCC:
             CCCCTopic=self.tableCCCC[ CCCC ]["centre"]
-            if self.debug: print( "topic from CCCC %s -> %s " % ( CCCC, CCCCTopic ) )
+            country=self.tableCCCC[ CCCC ]["country_short"]
+            if self.debug: print( "topic from CCCC %s -> %s (country: %s )" % ( CCCC, CCCCTopic, country ) )
         else: # last ditch go through CC in Table C1
             CC = CCCC[0:2]
             for c in self.tableC1:
                 if "CC" in self.tableC1[c]:
                     if CC in self.tableC1[c]['CC']:
                         CCCCTopic=self.tableC1[c]['topic'] + GTStoWIS2.sep + CCCC
-                        if self.debug: print( "topic from CCCC revised using Table C1: \"%s\" " % CCCCTopic )
+                        country=self.tableC1[c]['topic']
+                        if self.debug: print( "topic from CCCC revised using Table C1: \"%s\" (country: %s)" % (CCCCTopic, country) )
                            
         ahlParseHint=self.tableA[ T1 ]
 
@@ -302,7 +305,11 @@ class GTStoWIS2():
         elif TT == 'SZ':
            TTTopic="sea/"
         elif T1 == 'B': # Addressed messages, no idea...
-           return CCCCTopic + "/addressed"
+           for g in self.tableGISC:
+              if country in self.tableGISC[g]["responsible"]:
+                 gisc=g
+                 break
+           return (gisc, country, CCCCTopic + "/addressed")
         else:
            ahlpiB=self.tableB[ TT ]
            if self.debug: print( "ahlpib: %s" % ahlpiB )
@@ -318,10 +325,13 @@ class GTStoWIS2():
         # If CCCC found some other way, use AA to assign a country.
         if CCCCTopic == "":
            if AATopic in self.iso2countries:
+               country=AATopic
                CCCCTopic = AATopic + GTStoWIS2.sep + CCCC
                if self.debug: print( "topic from CCCC revised to: \"%s\" " % CCCCTopic )
 
         if self.debug: print( "topic from AA/C: \"%s\" -> \"%s\"" % (AA, AATopic ) )
+
+        
 
         iiTopic=self.__iiTopic(T1,T2,AA[1],ii,ahlParseHint)
         if iiTopic :
@@ -330,17 +340,26 @@ class GTStoWIS2():
         if CCCCTopic:
            topic = CCCCTopic + GTStoWIS2.sep + topic
 
+        if self.debug: print( "country to lookup for GISC: %s" % country )
+
+        for g in self.tableGISC:
+           if country in self.tableGISC[g]["responsible"]:
+              gisc=g
+              break
+ 
         if self.debug: 
             print( "topic from ii/C is: \"%s\" -> \"%s\" " % ( ii, iiTopic ) )
-            print( "topic is: %s " % topic )
+            print( "GISC: %s country: %s topic is: %s " % (gisc, country, topic) )
+ 
+        return (gisc, country, topic)
 
-        return topic
+    def mapAHLtoTopic(self,ahl):
+        a = self.analyzeAHL(ahl)      
+        return a[1] + GTStoWIS2.sep + a[2]
         
     def mapTopicToAHL(self,topic):
         print( "NotImplemented" )
 
     def mapAHLtoGISC(self,ahl):
-        t=self.mapAHLtoTopic(ahl)
-        for gisc in self.tableGISC:
-            if t[0:2] in self.tableGISC[gisc]['responsible']:
-               return gisc
+        a=self.analyzeAHL(ahl)
+        return a[0]

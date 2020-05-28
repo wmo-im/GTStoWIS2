@@ -18,7 +18,7 @@ n=1
 for hl in hh:
     ahl= hl.split(',')[0]
     print( "%3d - %s" % ( n, ahl ) )
-    t = topic_builder.mapAHLtoTopic(ahl)
-    print( "\ttopic=%s GISC=%s\n" % ( t, topic_builder.mapAHLtoGISC(ahl) ) )
+    t = topic_builder.analyzeAHL(ahl)
+    print( "GISC,country,topic=%s\n" % ', '.join(t) )
     n+=1
 
