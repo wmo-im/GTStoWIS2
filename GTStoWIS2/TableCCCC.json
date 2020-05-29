@@ -5201,7 +5201,7 @@
 "UMGG":{"centre":"gomel", "name":" GOMEL", "country_short":"by",  "comment":""},
 "UMII":{"centre":"vitebsk", "name":" VITEBSK", "country_short":"by",  "comment":""},
 "UMKK":{"centre":"kaliningrad", "name":" KALININGRAD", "country_short":"ru",  "comment":""},
-"UMLI":{"centre":"unknown", "name":" UNKNOWN", "country_short":"by",  "comment":""},
+"UMLI":{"centre":"machulishchy_airbase", "name":"Machulishchy (air base)", "country_short":"by",  "comment":""},
 "UMMG":{"centre":"grodno", "name":" GRODNO", "country_short":"by",  "comment":""},
 "UMMM":{"centre":"minsk-in-min", "name":" MINSK-IN-MIN", "country_short":"by",  "comment":""},
 "UMMN":{"centre":"minsk", "name":"Minsk", "country_short":"by",  "comment":""},
