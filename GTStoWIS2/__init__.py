@@ -303,7 +303,9 @@ class GTStoWIS2():
                 for iis in self.tableC7[i]["ii"]:
                     (iilb, iiub) = iis.split("-") # get ii lower and upperbounds.
                     if (iii >= int(iilb) ) and ( iii <= int(iiub) ) :
-                         self.a1topic=self.tableC7[i]["ii"][iis]["topic"]
+                         self.a1topic=self.tableC7[i]["ii"][iis]
+           else:
+               self.a1topic=self.tableC7[i]
         elif TT == 'SZ':
            TTTopic="sea/"
         elif T1 == 'B': # Addressed messages, no idea...
