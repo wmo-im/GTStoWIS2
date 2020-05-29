@@ -73,11 +73,9 @@ class GTStoWIS2():
                print( "Table%s : %s" % (t, d ) ) 
 
         # TableB
-        #for t in [ 'B', 'C4', 'D2' ]:
         for t in [ 'B', 'D2' ]:
             self._parseCSVB(t)
 
-        #for t in [ 'C2', 'C3', 'C5', 'D1', 'D3' ]:
         for t in [ 'D1', 'D3' ]:
             if self.debug: print( 'reading Table%s' % t )
             self._parseCSV(t)
@@ -119,7 +117,9 @@ class GTStoWIS2():
 
         if t1 == 'O':
            if ii in self.tableD1:
-              return(self.tableD1[ii])
+              #decided all TableD2 entries should land in same topic.
+              #return(self.tableD1[ii])
+              return('')
            else:
               return( "undefined depth" )
         #manual implementation of D3
@@ -141,10 +141,12 @@ class GTStoWIS2():
             if ahlHint['ii'] == 'D2':
                k=a2+ii
                if k in self.tableD2:
-                  return(self.tableD2[k][0])
+                  #decided all TableD2 entries should land in same topic.
+                  #return(self.tableD2[k][0])
+                  return ''
                else:
-                  return "" 
-        return "" 
+                  return ''
+        return '' 
            
     def _USAA(self,AA):   
         """ 
