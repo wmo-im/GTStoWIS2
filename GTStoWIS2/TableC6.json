@@ -49,6 +49,7 @@
 	  "C":"satellite/sarep-satob",
       "D":"drop-sonde",
       "E":"vertical-ozone",
+      "F":"satellite/radiance",
       "I":"dispersal",
       "J":{ "ii": { "01-19": "pilot",
                     "20-39": "pilot/mobile",

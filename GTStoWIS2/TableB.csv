@@ -3,6 +3,7 @@
 
 #Table B1 A & C
 A,C,analysis/cyclone,
+A,E,forecast/airquality
 A,G,analysis/sea/navigation, marine vs. sea/navigation,
 A,H,analysis/thickness,
 A,I,analysis/ice,
@@ -13,6 +14,7 @@ A,U,analysis/air/upper,replace:,Upper,Air,
 A,W,analysis/weather,
 A,X,analysis,
 C,A,climate/anomalies,
+C,D,climate/daily
 C,E,climate/monthly/air/upper,
 C,H,climate/monthly/land,
 C,O,climate/monthly/sea,
