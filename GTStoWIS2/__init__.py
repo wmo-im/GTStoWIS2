@@ -206,15 +206,15 @@ class GTStoWIS2():
             if a1 == 'C6' :
                 i=TT+AA[0]
                 if self.debug: print( "AATopic 2.5 C6: " )
-                if "ii" in self.tableC6[i]:
+                if "ii" in self.tableC6[TT][AA[0]]:
                     iii = int(ii)
-                    for iis in self.tableC6[i]["ii"]:
+                    for iis in self.tableC6[TT][AA[0]]["ii"]:
                          (iilb, iiub) = iis.split("-") # get ii lower and upperbounds.
                          if (iii >= int(iilb) ) and ( iii <= int(iiub) ) :
-                             self.a1topic=self.tableC6[i]["ii"][iis]["topic"]
+                             self.a1topic=self.tableC6[TT][AA[0]]["ii"][iis]
                 else:
                     if self.debug: print( "AATopic 3 self.a1topic=self.tableC6[%s][\"topic\"]" % i )
-                    self.a1topic=self.tableC6[i]["topic"]
+                    self.a1topic=self.tableC6[TT][AA[0]]
 
                 if self.debug: print( "C6 self.a1topic=%s" % self.a1topic )
                 
