@@ -1149,6 +1149,7 @@
 "ETUO":{"centre":"guetersloh", "name":" GUETERSLOH (", "country_short":"de",  "comment":""},
 "ETUR":{"centre":"bruggen_raf", "name":" BRUGGEN (RAF", "country_short":"de",  "comment":""},
 "ETWM":{"centre":"meppen", "name":" MEPPEN", "country_short":"de",  "comment":""},
+"EUMG":{"centre":"eumetsat_darmstadt", "name":"EUMETSAT (Darmstadt)", "country_short":"eu", "gisc":"Offenbach",  "comment":""},
 "EUMP":{"centre":"eumetsat_darmstadt", "name":"EUMETSAT (Darmstadt)", "country_short":"eu", "gisc":"Offenbach",  "comment":""},
 "EUMR":{"centre":"eumetsat_darmstadt", "name":"EUMETSAT (Darmstadt)", "country_short":"eu", "gisc":"Offenbach",  "comment":""},
 "EUMS":{"centre":"eumetsat_darmstadt", "name":"EUMETSAT (Darmstadt)", "country_short":"eu", "gisc":"Offenbach",  "comment":""},
