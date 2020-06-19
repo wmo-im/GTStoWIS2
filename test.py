@@ -16,9 +16,10 @@ with open( 'AHL_examples.txt', 'r' ) as headers:
 print( "Tests, count: %d" % len(hh) )
 n=1
 for hl in hh:
-    ahl= hl.split(',')[0]
-    print( "%3d - %s" % ( n, ahl ) )
+    ahl= hl.strip().split(',')[0]
+    print( "input: %3d - %s" % ( n, ahl ) )
     t = topic_builder.analyzeAHL(ahl)
-    print( "GISC,country,topic=%s\n" % ', '.join(t) )
+    print( "GISC,country,topic=%s" % ', '.join(t) )
+    print( "summary: %3d - %s mapped to: %s/%s\n\n" % ( n, ahl, t[1], t[2] ) )
     n+=1
 
