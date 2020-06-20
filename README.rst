@@ -253,314 +253,313 @@ Results
 It may help to see where GTS products will land in the topic hierarchy.  There is a file AHL_examples.txt in this 
 repository, which is interpreted by the tables and code in the repository as follows::
     
-    fractal% python test.py | grep '^summary:' 
+    fractal% python test.py | grep '^summary:'  | sed 's/summary: ... - //g' | sed 's/mapped to:/-->/g'
 
-    summary:   1 - UARA61_RUMG_161116_445a58ea753d18b066cf872b90c517e2.txt mapped to: ru/magadan/air/aircraft/ru/air/navigation/special
-    summary:   2 - SACN37 CWAO 090807 mapped to: ca/montreal_canadian_met_centre_que/observation/land/ca
-    summary:   3 - SSAS33 KWBC 14220 mapped to: us/washington_national_meteorological_com_centre_dc/observation/sea/buoy/asia
-    summary:   4 - SNFI01 KWBC 142200 mapped to: us/washington_national_meteorological_com_centre_dc/observation/land/fi/surface
-    summary:   5 - IUPA54_LFPW_150000 mapped to: fr/toulouse_centre_régional_de_télécommunications/observation/air/upper/pilot-profiler/0-90n/0-90w
-    summary:   6 - IUPD48_SOWR_150004 mapped to: pl/warszawa/observation/air/upper/pilot-profiler/0-90n/90e-0
-    summary:   7 - FTPA32_KWBC_151015_AAA mapped to: us/washington_national_meteorological_com_centre_dc/forecast/aerodrome/pacific
-    summary:   8 - SRFL20_KWAL_151016 mapped to: us/wallops_i__wallops_station_va/observation/water/us
-    summary:   9 - SXWY50_KWAL_151017 mapped to: us/wallops_i__wallops_station_va/observation/us
-    summary:  10 - SNVB21_AMMC_151000 mapped to: au/melbourne_world_met_centre/observation/land/sea/atlantic/90n-05n/70e-180e/ship
-    summary:  11 - SROK30_KWAL_151111 mapped to: us/wallops_i__wallops_station_va/observation/water/us
-    summary:  12 - SXNE55_KWAL_151116 mapped to: us/wallops_i__wallops_station_va/observation/us
-    summary:  13 - UANT01_CWAO_15111 mapped to: ca/montreal_canadian_met_centre_que/air/aircraft/north-atlantic/air/navigation/routine
-    summary:  14 - NXUS60_PHFO_151120 mapped to: us/honolulu_forecast_office/alert/us
-    summary:  15 - SRWV30_KWAL_151120_ mapped to: us/wallops_i__wallops_station_va/observation/water/us
-    summary:  16 - FTZZ40_KAWN_151121 mapped to: us/marysville_beale_afb_ca/forecast/aerodrome/ZZ
-    summary:  17 - SZMS01_WMKK_151123 mapped to: my/kuala_lumpur_intl/sea//my
-    summary:  18 - UBUS31_KWBC_151125 mapped to: us/washington_national_meteorological_com_centre_dc/air/aircraft/us
-    summary:  19 - TRCA01_KWBC_151000 mapped to: us/washington_national_meteorological_com_centre_dc/satellite/radiance/0-90n/180-90e/analysys
-    summary:  20 - THCA01_KWBC_151100 mapped to: us/washington_national_meteorological_com_centre_dc/satellite/soundings/air/upper/0-90n/180-90e/analysys
-    summary:  21 - IUSV51_KWBC_151150 mapped to: us/washington_national_meteorological_com_centre_dc/observation/air/upper/temp/ship/somewhere/tableC3V
-    summary:  22 - IUSV52_KWBC_151150 mapped to: us/washington_national_meteorological_com_centre_dc/observation/air/upper/temp/ship/somewhere/tableC3V
-    summary:  23 - SRUS54_KOHX_151216 mapped to: us/old_hickory_ap_nashville/observation/water/us
-    summary:  24 - CXUS43_KBIS_151217 mapped to: us/bismarck_muni_nd/climate
-    summary:  25 - NZUS93_KARX_151217 mapped to: us/appleton_international_airport_–_greenville_wi/alert/us
-    summary:  26 - YVXX84_KAWN_151200 mapped to: us/marysville_beale_afb_ca/model/wind/north
-    summary:  27 - SFTX57_KWAL_151220 mapped to: us/wallops_i__wallops_station_va/observation/land//us
-    summary:  28 - BMBB91_KJAX_151224 mapped to: us/jonesboro_muni_ar/addressed
-    summary:  29 - IUSZ52_KWBC_151235 mapped to: us/washington_national_meteorological_com_centre_dc/observation/air/upper/temp/ship/somewhere/tableC3Z
-    summary:  30 - INGX27_KNES_151252 mapped to: us/washington_vaac/observation/satellite/other/global
-    summary:  31 - UBFL90_KWBC_151310 mapped to: us/washington_national_meteorological_com_centre_dc/air/aircraft/us
-    summary:  32 - USBZ05_SBBR_151200 mapped to: br/brasilia_intl_df/air/upper/br
-    summary:  33 - HEPF98_KWBC_151800 mapped to: us/washington_national_meteorological_com_centre_dc/model/precipitation/somewhere/tableC3P/030h
-    summary:  34 - HGJF98_KWBC_151800 mapped to: us/washington_national_meteorological_com_centre_dc/model/divergence/0-90s/90w-180/030h
-    summary:  35 - SIIN90_VIHS_160300 mapped to: in/in/VIHS/observation/land/in
-    summary:  36 - PEIK98_KWNH_180000 mapped to: us/KWNH/observation/cloud/precip/0-90s/0-90w/072h
-    summary:  37 - PEBI88_KWNH_171800 mapped to: us/KWNH/observation/cloud/precip/0-90n/90w-180/048h
-    summary:  38 - PSBC04_KWNH_180000 mapped to: us/KWNH/observation/land/snow/cover/0-90n/90w-180/012h
-    summary:  39 - ZCNM85_KWBE_180000 mapped to: us/KWBE/model/vorticity
-    summary:  40 - UACN10_CYXL_170329_8064d8dc1a1c71b014e0278b97e46187.txt mapped to: ca/ca/CYXL/air/aircraft/ca/air/navigation/routine
-    summary:  41 - WSBZ31_SBCW_170413_ad28898f0ff6626d56122ae48436bf23.txt mapped to: br/br/SBCW/air/navigation//br/br
-    summary:  42 - WSBZ31_SBCW_170504_d743b6a452ea75e199057095e3b08aac.txt mapped to: br/br/SBCW/air/navigation//br/br
-    summary:  43 - UECN01_CWSE_171200_CCA_ac477635827c81e676f9c992f238854d.txt mapped to: ca/ca/CWSE/air/upper/ca
-    summary:  44 - ULCN01_CWSE_171200_CCA_f17bcc66ffa171e7295eb588c115c964.txt mapped to: ca/ca/CWSE/air/upper/ca
-    summary:  45 - UQCN01_CWSE_171200_CCA_6bc3d5b32aaf4bc78173977d00ef217d.txt mapped to: ca/ca/CWSE/air/upper/wind/ca
-    summary:  46 - WSBZ31_SBCW_172021_211075aa7e95cff3c1fe583f5b367661.txt mapped to: br/br/SBCW/air/navigation//br/br
-    summary:  47 - WSBZ31_SBCW_172021_3e367b4af96aa5fee9c35272caf557d6.txt mapped to: br/br/SBCW/air/navigation//br/br
-    summary:  48 - UMHW40_PHLI_180000_32c3d0fde9e282c88aa1f96a6100e6b4.txt mapped to: us/us/PHLI/air/upper/us
-    summary:  49 - USHW40_PHLI_180000_ff545927ddf53ed6789f026914e34779.txt mapped to: us/us/PHLI/air/upper/us
-    summary:  50 - UXHW40_PHLI_180000_f89abcd66ef61b7745ce0e60207b76c7.txt mapped to: us/us/PHLI/air/upper/us
-    summary:  51 - UKCN01_CAWE_180000_b741a277d49e8f3157fc8f59fbf7ce4f.txt mapped to: ca/ca/CAWE/air/upper/ca
-    summary:  52 - USCN01_CAWE_180000_966e88216478c1944029f21ae367f2fc.txt mapped to: ca/ca/CAWE/air/upper/ca
-    summary:  53 - UGCN01_CAWE_180000_423c4d7ccfaf08d852519a298e37a4d6.txt mapped to: ca/ca/CAWE/air/wind/ca
-    summary:  54 - IUKA01_CAWE_180000_92d0b00d780fc80b36c4d570ca60c858.bufr mapped to: ca/ca/CAWE/observation/air/upper/temp/0-90n/0-90w
-    summary:  55 - IUKA01_CAWE_180000_fd10929169dc3584bd4a779ab8dcbd9a.bufr mapped to: ca/ca/CAWE/observation/air/upper/temp/0-90n/0-90w
-    summary:  56 - IUWA01_CAWE_180000_0f03cb4477263a4b727e2e61ac152756.bufr mapped to: ca/ca/CAWE/observation/air/upper/pilot/0-90n/0-90w
-    summary:  57 - UKCN01_CAYT_180000_2fe6c8680afb2b91ab2eb5efb7326f4d.txt mapped to: ca/ca/CAYT/air/upper/ca
-    summary:  58 - USCN01_CAYT_180000_1ef87ecddd63371bfdfd714511a22c0d.txt mapped to: ca/ca/CAYT/air/upper/ca
-    summary:  59 - UGCN01_CAYT_180000_b4a3602664a6e25eb6b4298b7afda135.txt mapped to: ca/ca/CAYT/air/wind/ca
-    summary:  60 - IUKA01_CAYT_180000_e9c3f1656bacfcfafe3ba39ab751244a.bufr mapped to: ca/ca/CAYT/observation/air/upper/temp/0-90n/0-90w
-    summary:  61 - IUWA01_CAYT_180000_ac7eb96bc87ad8a384fa845db0aaf2c3.bufr mapped to: ca/ca/CAYT/observation/air/upper/pilot/0-90n/0-90w
-    summary:  62 - UKCN01_CWMW_180000_7791aa7999c0d9ff01f13b7db8126f4e.txt mapped to: ca/ca/CWMW/air/upper/ca
-    summary:  63 - USCN01_CWMW_180000_9df7752a4e497ad6108efe012d5f2bcf.txt mapped to: ca/ca/CWMW/air/upper/ca
-    summary:  64 - UGCN01_CWMW_180000_e163edb60a26e8782b3be294e5169075.txt mapped to: ca/ca/CWMW/air/wind/ca
-    summary:  65 - IUKA01_CWMW_180000_bc10ca69618a60752112172ca2b5db83.bufr mapped to: ca/ca/CWMW/observation/air/upper/temp/0-90n/0-90w
-    summary:  66 - IUWA01_CWMW_180000_dadb5a5b48dbb742abf8536db24275c5.bufr mapped to: ca/ca/CWMW/observation/air/upper/pilot/0-90n/0-90w
-    summary:  67 - UKCN01_CWQI_180000_10149c33c149e58d82e956bacf0400ec.txt mapped to: ca/ca/CWQI/air/upper/ca
-    summary:  68 - USCN01_CWQI_180000_dd64be184594ae42605cde0235815159.txt mapped to: ca/ca/CWQI/air/upper/ca
-    summary:  69 - UGCN01_CWQI_180000_3386596b90eab8bbb21624a27a5dd2d9.txt mapped to: ca/ca/CWQI/air/wind/ca
-    summary:  70 - IUKA01_CWQI_180000_dfac94eabb444c7c1bb9fbd7575a3d4d.bufr mapped to: ca/ca/CWQI/observation/air/upper/temp/0-90n/0-90w
-    summary:  71 - IUWA01_CWQI_180000_2f78c016e2b66c85433ea4c37011fa17.bufr mapped to: ca/ca/CWQI/observation/air/upper/pilot/0-90n/0-90w
-    summary:  72 - UKCN01_CWSE_180000_ba85c1e766d4074fe9d1c114efe21f92.txt mapped to: ca/ca/CWSE/air/upper/ca
-    summary:  73 - USCN01_CWSE_180000_3a9cd49bbc3f7ee154c0ec84f6d76475.txt mapped to: ca/ca/CWSE/air/upper/ca
-    summary:  74 - UGCN01_CWSE_180000_04de7aa1a750e2bcd8b1cb6e8f8d8c54.txt mapped to: ca/ca/CWSE/air/wind/ca
-    summary:  75 - IUKB01_CWSE_180000_c543855c17fc9dee4620a0bf1741d474.bufr mapped to: ca/ca/CWSE/observation/air/upper/temp/0-90n/90w-180
-    summary:  76 - IUWB01_CWSE_180000_96e0da948a71181c9398159b535dba91.bufr mapped to: ca/ca/CWSE/observation/air/upper/pilot/0-90n/90w-180
-    summary:  77 - UKCN01_CWVK_180000_f443cca4cfff77924ed82730d124cec7.txt mapped to: ca/ca/CWVK/air/upper/ca
-    summary:  78 - USCN01_CWVK_180000_0c283cb8bcf3a07018de3aaa20387722.txt mapped to: ca/ca/CWVK/air/upper/ca
-    summary:  79 - UGCN01_CWVK_180000_1e906c142da951be210aef9dee1abb4f.txt mapped to: ca/ca/CWVK/air/wind/ca
-    summary:  80 - IUKB01_CWVK_180000_043df727484b7334a810faecb9862c94.bufr mapped to: ca/ca/CWVK/observation/air/upper/temp/0-90n/90w-180
-    summary:  81 - IUWB01_CWVK_180000_388399b9704234ebde74b22206c2a05c.bufr mapped to: ca/ca/CWVK/observation/air/upper/pilot/0-90n/90w-180
-    summary:  82 - UECN01_CYBK_180000_0d71f1af2916275d834517ac222ae866.txt mapped to: ca/ca/CYBK/air/upper/ca
-    summary:  83 - UKCN01_CYBK_180000_1b71e47919718a3323a32a0860cb3799.txt mapped to: ca/ca/CYBK/air/upper/ca
-    summary:  84 - ULCN01_CYBK_180000_7caca09daab861db6c431821f5dee3ff.txt mapped to: ca/ca/CYBK/air/upper/ca
-    summary:  85 - USCN01_CYBK_180000_e22e95675c549c4d403f8a4cd6a00a40.txt mapped to: ca/ca/CYBK/air/upper/ca
-    summary:  86 - UQCN01_CYBK_180000_65313f5b42db7edd650b911bbe7c9144.txt mapped to: ca/ca/CYBK/air/upper/wind/ca
-    summary:  87 - UGCN01_CYBK_180000_5dc91564dba771b0735e0a9e4d21ba86.txt mapped to: ca/ca/CYBK/air/wind/ca
-    summary:  88 - IUKB01_CYBK_180000_c41c051d840e0eee141318a51196fb83.bufr mapped to: ca/ca/CYBK/observation/air/upper/temp/0-90n/90w-180
-    summary:  89 - IUWB01_CYBK_180000_bec70db1365823a149d16cc9469f1744.bufr mapped to: ca/ca/CYBK/observation/air/upper/pilot/0-90n/90w-180
-    summary:  90 - IUSB01_CYBK_180000_6423031fb5113bcde3a37f19d68dd879.bufr mapped to: ca/ca/CYBK/observation/air/upper/temp/0-90n/90w-180
-    summary:  91 - UECN01_CYCB_180000_CCA_377aef8fd2d7143231e82a24a6afd43d.txt mapped to: ca/ca/CYCB/air/upper/ca
-    summary:  92 - UKCN01_CYCB_180000_CCA_9341057312f1e1b7463346d003f35f24.txt mapped to: ca/ca/CYCB/air/upper/ca
-    summary:  93 - ULCN01_CYCB_180000_CCA_4e76a9b2c3ce704f257c150885542eb4.txt mapped to: ca/ca/CYCB/air/upper/ca
-    summary:  94 - USCN01_CYCB_180000_CCA_d8bb8b8bf0715cb70944c93c6e9d5737.txt mapped to: ca/ca/CYCB/air/upper/ca
-    summary:  95 - UQCN01_CYCB_180000_CCA_de8c859480660003344edfd8f84383bf.txt mapped to: ca/ca/CYCB/air/upper/wind/ca
-    summary:  96 - UGCN01_CYCB_180000_CCA_ec3e142068b347ac95f2d1f42fcb3fda.txt mapped to: ca/ca/CYCB/air/wind/ca
-    summary:  97 - UKCN01_CYPH_180000_76b23973e5a5d89329ba7cf97d1b8464.txt mapped to: ca/ca/CYPH/air/upper/ca
-    summary:  98 - USCN01_CYPH_180000_0723b4acc6156525704323edccfcd937.txt mapped to: ca/ca/CYPH/air/upper/ca
-    summary:  99 - UGCN01_CYPH_180000_1ba23bd4dfe501b88adbe8bf514b2643.txt mapped to: ca/ca/CYPH/air/wind/ca
-    summary: 100 - IUKB01_CYPH_180000_8f10636f287d4883743d929656643944.bufr mapped to: ca/ca/CYPH/observation/air/upper/temp/0-90n/90w-180
-    summary: 101 - IUWB01_CYPH_180000_217eb76e7f98af618e0d6868e64abdb8.bufr mapped to: ca/ca/CYPH/observation/air/upper/pilot/0-90n/90w-180
-    summary: 102 - UKCN01_CYPL_180000_b90a260302ad9b70017cbbc22cd52c37.txt mapped to: ca/ca/CYPL/air/upper/ca
-    summary: 103 - USCN01_CYPL_180000_9103975ea84764790a14f638f0b05e59.txt mapped to: ca/ca/CYPL/air/upper/ca
-    summary: 104 - UGCN01_CYPL_180000_d1a23077fcf67b96dd6b9eae4436e197.txt mapped to: ca/ca/CYPL/air/wind/ca
-    summary: 105 - IUKB01_CYPL_180000_45723272dc897a73d820dc6dfd0290db.bufr mapped to: ca/ca/CYPL/observation/air/upper/temp/0-90n/90w-180
-    summary: 106 - IUWB01_CYPL_180000_acbd9dcc2e3e46354413678ab9451f68.bufr mapped to: ca/ca/CYPL/observation/air/upper/pilot/0-90n/90w-180
-    summary: 107 - UKCN01_CYUX_180000_eb1af94404e3695267e072f370780cd1.txt mapped to: ca/ca/CYUX/air/upper/ca
-    summary: 108 - USCN01_CYUX_180000_2d64ab164aa0d1122b5eb4a6a733fbe9.txt mapped to: ca/ca/CYUX/air/upper/ca
-    summary: 109 - UGCN01_CYUX_180000_d8a2de1bfe8a4087e4c5622470875fc5.txt mapped to: ca/ca/CYUX/air/wind/ca
-    summary: 110 - IUKA01_CYUX_180000_efc2d0685bc48ef82a007b6fe4e32b8d.bufr mapped to: ca/ca/CYUX/observation/air/upper/temp/0-90n/0-90w
-    summary: 111 - IUWA01_CYUX_180000_740d257ab4708b8b6da5a3e1719f26b4.bufr mapped to: ca/ca/CYUX/observation/air/upper/pilot/0-90n/0-90w
-    summary: 112 - IUKN04_KOAK_180000_eb0be6c50cbf20443ee9315e9613afbe.bufr mapped to: us/us/KOAK/observation/air/upper/temp/0-90n
-    summary: 113 - IUSN04_KOAK_180000_7ccce4dbfc00accc653725562d0c7f54.bufr mapped to: us/us/KOAK/observation/air/upper/temp/0-90n
-    summary: 114 - UFHW40_PHLI_180000_455f65e0fc58cc5941a4fed5e06932f1.txt mapped to: us/us/PHLI/air/upper/us
-    summary: 115 - WSBZ31_SBCW_180024_330a8e81ab22813969fdf0308440a937.txt mapped to: br/br/SBCW/air/navigation//br/br
-    summary: 116 - WSBZ31_SBCW_180024_e5a9f0b4cc0b70580e438404d2ae7e12.txt mapped to: br/br/SBCW/air/navigation//br/br
-    summary: 117 - UECN01_CAWE_180000_e5c9c8ab75cece3b92851a79396f8077.txt mapped to: ca/ca/CAWE/air/upper/ca
-    summary: 118 - ULCN01_CAWE_180000_6050e8b38322d833cdd1d2d77fb529a2.txt mapped to: ca/ca/CAWE/air/upper/ca
-    summary: 119 - UQCN01_CAWE_180000_7ba45ba5b7f8aa4ddfdfac4fb040eab8.txt mapped to: ca/ca/CAWE/air/upper/wind/ca
-    summary: 120 - IUJA01_CAWE_180000_01e312a116b979a0a8d6c9d90e6f697d.bufr mapped to: ca/ca/CAWE/observation/air/upper/pilot/0-90n/0-90w
-    summary: 121 - IUSA01_CAWE_180000_04e278d09523dbea60c75f5b0bf1dd8e.bufr mapped to: ca/ca/CAWE/observation/air/upper/temp/0-90n/0-90w
-    summary: 122 - UECN01_CAYT_180000_814362e5427862c21d95a3553cba94ef.txt mapped to: ca/ca/CAYT/air/upper/ca
-    summary: 123 - ULCN01_CAYT_180000_5d7f0c26f389a062076893bf80f8c870.txt mapped to: ca/ca/CAYT/air/upper/ca
-    summary: 124 - UQCN01_CAYT_180000_97fa18b075e461734385edb60349ccdc.txt mapped to: ca/ca/CAYT/air/upper/wind/ca
-    summary: 125 - IUJA01_CAYT_180000_aad95dc55f39cb0e7d9ce260d66c3973.bufr mapped to: ca/ca/CAYT/observation/air/upper/pilot/0-90n/0-90w
-    summary: 126 - IUSA01_CAYT_180000_bd90d12bde0b03012f4cc2134365cb1f.bufr mapped to: ca/ca/CAYT/observation/air/upper/temp/0-90n/0-90w
-    summary: 127 - UECN01_CWMW_180000_1805feae6786e29ce55a8b1d24523b1c.txt mapped to: ca/ca/CWMW/air/upper/ca
-    summary: 128 - ULCN01_CWMW_180000_60bd4899223fa300ec57f94ab8d28811.txt mapped to: ca/ca/CWMW/air/upper/ca
-    summary: 129 - UQCN01_CWMW_180000_c42a1857a81423615cd2b7f54ed2e22e.txt mapped to: ca/ca/CWMW/air/upper/wind/ca
-    summary: 130 - IUJA01_CWMW_180000_94dd1def5363977484db90472eabf18f.bufr mapped to: ca/ca/CWMW/observation/air/upper/pilot/0-90n/0-90w
-    summary: 131 - IUSA01_CWMW_180000_47d33b342bd3ebd3487e7643c5c765ec.bufr mapped to: ca/ca/CWMW/observation/air/upper/temp/0-90n/0-90w
-    summary: 132 - UECN01_CWQI_180000_e9f00be9918fdfe99423d5bb0ef053e6.txt mapped to: ca/ca/CWQI/air/upper/ca
-    summary: 133 - ULCN01_CWQI_180000_ed2d051fb64e71fca35cfcf13d974550.txt mapped to: ca/ca/CWQI/air/upper/ca
-    summary: 134 - UQCN01_CWQI_180000_4fec98aeaf760f0c03eac04150e08393.txt mapped to: ca/ca/CWQI/air/upper/wind/ca
-    summary: 135 - IUJA01_CWQI_180000_b18f96a15966c5d4ef379c8d11d99210.bufr mapped to: ca/ca/CWQI/observation/air/upper/pilot/0-90n/0-90w
-    summary: 136 - IUSA01_CWQI_180000_a5939408df28e709d6a2b5ac767c05fc.bufr mapped to: ca/ca/CWQI/observation/air/upper/temp/0-90n/0-90w
-    summary: 137 - UECN01_CWSE_180000_b38a27db2ff8c7b23fa2e32107c7bf17.txt mapped to: ca/ca/CWSE/air/upper/ca
-    summary: 138 - ULCN01_CWSE_180000_59bfc83746ca59717810abcdfe59473f.txt mapped to: ca/ca/CWSE/air/upper/ca
-    summary: 139 - UQCN01_CWSE_180000_c85010b51c9ea2c481c85c5b78cebe55.txt mapped to: ca/ca/CWSE/air/upper/wind/ca
-    summary: 140 - IUJB01_CWSE_180000_0b892fba3ca7ccfeaf6ed846af02fc96.bufr mapped to: ca/ca/CWSE/observation/air/upper/pilot/0-90n/90w-180
-    summary: 141 - IUSB01_CWSE_180000_fb6ae4af5bd4d22674203054f7f9df64.bufr mapped to: ca/ca/CWSE/observation/air/upper/temp/0-90n/90w-180
-    summary: 142 - UECN01_CWVK_180000_1f6004e15ba20cda6ea2286d9ebe0ecd.txt mapped to: ca/ca/CWVK/air/upper/ca
-    summary: 143 - UECN01_CWVK_180000_CCA_1ffde869d7b8c5723f895f13c11d3548.txt mapped to: ca/ca/CWVK/air/upper/ca
-    summary: 144 - ULCN01_CWVK_180000_c300f632716bdae3f1d3189b25c673d5.txt mapped to: ca/ca/CWVK/air/upper/ca
-    summary: 145 - ULCN01_CWVK_180000_CCA_246736873bd88f395668d7248e30bc5f.txt mapped to: ca/ca/CWVK/air/upper/ca
-    summary: 146 - UQCN01_CWVK_180000_16c81bdab875665b994838d545f10e4c.txt mapped to: ca/ca/CWVK/air/upper/wind/ca
-    summary: 147 - UQCN01_CWVK_180000_CCA_61e83cb0bc4bbf321d982d8d301c4fdb.txt mapped to: ca/ca/CWVK/air/upper/wind/ca
-    summary: 148 - IUJB01_CWVK_180000_17f2b378d87b75a774482de0032d58ab.bufr mapped to: ca/ca/CWVK/observation/air/upper/pilot/0-90n/90w-180
-    summary: 149 - IUSB01_CWVK_180000_493e5c55832b5ad7a437482d6c4fc958.bufr mapped to: ca/ca/CWVK/observation/air/upper/temp/0-90n/90w-180
-    summary: 150 - UECN01_CYPH_180000_dc5be7aded53aed672c2b7100e001226.txt mapped to: ca/ca/CYPH/air/upper/ca
-    summary: 151 - ULCN01_CYPH_180000_e4b557a58072434e50cfcb715b4ffd0c.txt mapped to: ca/ca/CYPH/air/upper/ca
-    summary: 152 - UQCN01_CYPH_180000_fc3e5606326cb9d6fe1d72498b33bb9a.txt mapped to: ca/ca/CYPH/air/upper/wind/ca
-    summary: 153 - IUJB01_CYPH_180000_3e8fcf2d7c1d2f1163d084f425e92ebc.bufr mapped to: ca/ca/CYPH/observation/air/upper/pilot/0-90n/90w-180
-    summary: 154 - IUSB01_CYPH_180000_4bd3cad2fcdd742447e5ba2a100fc8d8.bufr mapped to: ca/ca/CYPH/observation/air/upper/temp/0-90n/90w-180
-    summary: 155 - UECN01_CYPL_180000_2944f2d15a9b2b24ce0e4d0ffeef57e5.txt mapped to: ca/ca/CYPL/air/upper/ca
-    summary: 156 - UECN01_CYPL_180000_CCA_2caa657d1c533b536f14555778e3f44a.txt mapped to: ca/ca/CYPL/air/upper/ca
-    summary: 157 - ULCN01_CYPL_180000_5beabc981205f6e224ee0fd49db577b0.txt mapped to: ca/ca/CYPL/air/upper/ca
-    summary: 158 - ULCN01_CYPL_180000_CCA_ac6b866fc06f3ff946be1c248d3b6d81.txt mapped to: ca/ca/CYPL/air/upper/ca
-    summary: 159 - UQCN01_CYPL_180000_CCA_88d3c8b9927f042fed1e3cfc16889dd0.txt mapped to: ca/ca/CYPL/air/upper/wind/ca
-    summary: 160 - UQCN01_CYPL_180000_d4826b879dfb7765adb9852439c6e3c1.txt mapped to: ca/ca/CYPL/air/upper/wind/ca
-    summary: 161 - IUJB01_CYPL_180000_57b93cd75b48c8001922a835c495ed0f.bufr mapped to: ca/ca/CYPL/observation/air/upper/pilot/0-90n/90w-180
-    summary: 162 - IUJB01_CYPL_180000_CCA_eb8243da78ad0543dcde0bea25492ffe.bufr mapped to: ca/ca/CYPL/observation/air/upper/pilot/0-90n/90w-180
-    summary: 163 - IUSB01_CYPL_180000_8dfb175c8b6c905938b92fcd6f40a664.bufr mapped to: ca/ca/CYPL/observation/air/upper/temp/0-90n/90w-180
-    summary: 164 - IUSB01_CYPL_180000_CCA_2ef2146cb13abf247d789f790d92303c.bufr mapped to: ca/ca/CYPL/observation/air/upper/temp/0-90n/90w-180
-    summary: 165 - UECN01_CYUX_180000_95604ddc275ab4c30858885d6641da31.txt mapped to: ca/ca/CYUX/air/upper/ca
-    summary: 166 - UECN01_CYUX_180000_CCA_c823cc7eb7a976d58301aaf2e7f37356.txt mapped to: ca/ca/CYUX/air/upper/ca
-    summary: 167 - ULCN01_CYUX_180000_CCA_beda2ac85758b7a2a33e311f28197fa8.txt mapped to: ca/ca/CYUX/air/upper/ca
-    summary: 168 - ULCN01_CYUX_180000_eca94c6da05a85714481b1551699b359.txt mapped to: ca/ca/CYUX/air/upper/ca
-    summary: 169 - UQCN01_CYUX_180000_871ce311833ebab85b6809266895eb77.txt mapped to: ca/ca/CYUX/air/upper/wind/ca
-    summary: 170 - UQCN01_CYUX_180000_CCA_e53fd872fe553ea3b650cb8f2773c41d.txt mapped to: ca/ca/CYUX/air/upper/wind/ca
-    summary: 171 - IUJA01_CYUX_180000_95a8a87238ecf3624906bcba4646cfb5.bufr mapped to: ca/ca/CYUX/observation/air/upper/pilot/0-90n/0-90w
-    summary: 172 - IUSA01_CYUX_180000_b3106d0b5eb463a804d913d47f19ebe7.bufr mapped to: ca/ca/CYUX/observation/air/upper/temp/0-90n/0-90w
-    summary: 173 - IUSA01_CYUX_180000_e76a750ee2da035f3da37eec2875aafb.bufr mapped to: ca/ca/CYUX/observation/air/upper/temp/0-90n/0-90w
-    summary: 174 - UKIN90_VIDN_180000_9eb0d3b374f41561313c4321ba971e13.txt mapped to: in/in/VIDN/air/upper/in
-    summary: 175 - USIN90_VIDN_180000_5e1ef982bb1a66a6f939bb274fa563c9.txt mapped to: in/in/VIDN/air/upper/in
-    summary: 176 - UARS61_RUMA_180203_74381c8d9f523996e33c276e49f850ed.txt mapped to: ru/RUMA/air/aircraft/ru/air/navigation/special
-    summary: 177 - UGIN90_VERP_180000_62e2a56e66b570d410dcbf2071f249d9.txt mapped to: in/in/VERP/air/wind/in
-    summary: 178 - USIN90_VOPB_180000_a33c58a845fba4b4d1d7e513973f7a0d.txt mapped to: in/VOPB/air/upper/in
-    summary: 179 - UGIN90_VOPB_180000_ec1a5767174fc7099e3b0cb16922d3d3.txt mapped to: in/VOPB/air/wind/in
-    summary: 180 - WSBZ31_SBCW_180416_ceb94e4c0b310bdeb1ed67a2589869a5.txt mapped to: br/br/SBCW/air/navigation//br/br
-    summary: 181 - UARS61_RUMA_180506_8a4c90d4a2ed58f3099a3c6210b8611c.txt mapped to: ru/RUMA/air/aircraft/ru/air/navigation/special
-    summary: 182 - UARS61_RUMA_180510_8d519502fb481952ed5bc7c210da0d32.txt mapped to: ru/RUMA/air/aircraft/ru/air/navigation/special
-    summary: 183 - UARS61_RUMA_180512_0eb790aa34f1a10883d04507e4e02efb.txt mapped to: ru/RUMA/air/aircraft/ru/air/navigation/special
-    summary: 184 - UARS61_RUMA_180521_23278fe5a468ea28a1c83dceb7eac870.txt mapped to: ru/RUMA/air/aircraft/ru/air/navigation/special
-    summary: 185 - ISMA40_GMTL_180600_CCA_e089448152138d083940fba5e17c79fd.bufr mapped to: my/my/GMTL/observation/sea/surface/land/0-90n/0-90w
-    summary: 186 - ISMA40_GMTL_180600_d081ac76bc470f84720c8be339b69c29.bufr mapped to: my/my/GMTL/observation/sea/surface/land/0-90n/0-90w
-    summary: 187 - UARS61_RUMA_180604_8df4e09300441c14a0f64016893747e5.txt mapped to: ru/RUMA/air/aircraft/ru/air/navigation/special
-    summary: 188 - UARS61_RUMA_180610_2a3726ac06bd9367d5f957a28be1b0e2.txt mapped to: ru/RUMA/air/aircraft/ru/air/navigation/special
-    summary: 189 - UARS61_RUMA_180618_d7acae59d9af564fcb24fda66c86dfb1.txt mapped to: ru/RUMA/air/aircraft/ru/air/navigation/special
-    summary: 190 - UARS61_RUMA_180620_2593f78a01529ec0beee73f3d52022db.txt mapped to: ru/RUMA/air/aircraft/ru/air/navigation/special
-    summary: 191 - UGIN90_VOPB_180600_ba6d22767115100991236dbd1c709adb.txt mapped to: in/VOPB/air/wind/in
-    summary: 192 - WSRS31_RUSF_181020_5e380bb13a84c618c9c0b251d5d650bf.txt mapped to: ru/RUSF/air/navigation//ru/ru
-    summary: 193 - UECN01_CYBK_181200_2210fc926082cf22da926a579ee1882d.txt mapped to: ca/ca/CYBK/air/upper/ca
-    summary: 194 - UKCN01_CYBK_181200_4ec615b3868648c7bc361d88f40579fd.txt mapped to: ca/ca/CYBK/air/upper/ca
-    summary: 195 - ULCN01_CYBK_181200_cdddae0386f7bcaa4d7923e8c4084a25.txt mapped to: ca/ca/CYBK/air/upper/ca
-    summary: 196 - USCN01_CYBK_181200_0519c8841a1a91028e430a0b7502b512.txt mapped to: ca/ca/CYBK/air/upper/ca
-    summary: 197 - UQCN01_CYBK_181200_a15e3d3f03a0fff4152833cf43bed120.txt mapped to: ca/ca/CYBK/air/upper/wind/ca
-    summary: 198 - UGCN01_CYBK_181200_7784c8a5a4a9445dc8169bef0098ca58.txt mapped to: ca/ca/CYBK/air/wind/ca
-    summary: 199 - IUKB01_CYBK_181200_a6923ce59bd8c76a95d6591fb1b60da0.bufr mapped to: ca/ca/CYBK/observation/air/upper/temp/0-90n/90w-180
-    summary: 200 - IUJB01_CYBK_181200_d6d2d58bd2bb6fbe179e63218de3f42e.bufr mapped to: ca/ca/CYBK/observation/air/upper/pilot/0-90n/90w-180
-    summary: 201 - IUWB01_CYBK_181200_01b67dc916966979d1e3c68a5b26d362.bufr mapped to: ca/ca/CYBK/observation/air/upper/pilot/0-90n/90w-180
-    summary: 202 - IUSB01_CYBK_181200_a6b0f86ae54c93fa88082783c02a448c.bufr mapped to: ca/ca/CYBK/observation/air/upper/temp/0-90n/90w-180
-    summary: 203 - UXHW40_PHLI_181200_f14c4ffee4893606d979f96cd2f7ecf8.txt mapped to: us/us/PHLI/air/upper/us
-    summary: 204 - UARS61_RUMA_181119_65f76d18c74bb03611cfe9806b5f4121.txt mapped to: ru/RUMA/air/aircraft/ru/air/navigation/special
-    summary: 205 - UARS61_RUMA_181120_74c981b88936df9bed4d4945b19b9101.txt mapped to: ru/RUMA/air/aircraft/ru/air/navigation/special
-    summary: 206 - UARS61_RUMA_181122_1bc07d9726cdd7410f291057907345b7.txt mapped to: ru/RUMA/air/aircraft/ru/air/navigation/special
-    summary: 207 - UECN01_CAWE_181200_13eb5a9e836c58341b988f581bdb29fa.txt mapped to: ca/ca/CAWE/air/upper/ca
-    summary: 208 - UKCN01_CAWE_181200_68334edd6545035a5db609d8e1c2559a.txt mapped to: ca/ca/CAWE/air/upper/ca
-    summary: 209 - ULCN01_CAWE_181200_3c7e38f977de5aa861792c6d3a6f1b98.txt mapped to: ca/ca/CAWE/air/upper/ca
-    summary: 210 - USCN01_CAWE_181200_64def751423d8bc4eca10361279f99ed.txt mapped to: ca/ca/CAWE/air/upper/ca
-    summary: 211 - UQCN01_CAWE_181200_35d94b0cb08d7471ae1b5de55756df01.txt mapped to: ca/ca/CAWE/air/upper/wind/ca
-    summary: 212 - UGCN01_CAWE_181200_f0c286c52005f738df2fd5a938dafaa7.txt mapped to: ca/ca/CAWE/air/wind/ca
-    summary: 213 - IUKA01_CAWE_181200_6e71113b3f43b9f652b3e55e1a117fcf.bufr mapped to: ca/ca/CAWE/observation/air/upper/temp/0-90n/0-90w
-    summary: 214 - IUKA01_CAWE_181200_f69d5bdb9862f497e7dd150843d585f6.bufr mapped to: ca/ca/CAWE/observation/air/upper/temp/0-90n/0-90w
-    summary: 215 - IUWA01_CAWE_181200_1249d6f018c6a9889a8eb18ceeddf505.bufr mapped to: ca/ca/CAWE/observation/air/upper/pilot/0-90n/0-90w
-    summary: 216 - IUSA01_CAWE_181200_64b5db2eecbdbb0d7016a45cc2cff194.bufr mapped to: ca/ca/CAWE/observation/air/upper/temp/0-90n/0-90w
-    summary: 217 - UECN01_CAYT_181200_9cbe42756f2a55aa4ebb50900d9f19b7.txt mapped to: ca/ca/CAYT/air/upper/ca
-    summary: 218 - UKCN01_CAYT_181200_957339f2853ce03655e39f6359170855.txt mapped to: ca/ca/CAYT/air/upper/ca
-    summary: 219 - ULCN01_CAYT_181200_6dd61e4afbc6e92d6abaf6705363af77.txt mapped to: ca/ca/CAYT/air/upper/ca
-    summary: 220 - USCN01_CAYT_181200_bc35c602984baf3969b0c214e1ca5222.txt mapped to: ca/ca/CAYT/air/upper/ca
-    summary: 221 - UQCN01_CAYT_181200_883bd9d9c0cceb8e8a6a41ae6be2449b.txt mapped to: ca/ca/CAYT/air/upper/wind/ca
-    summary: 222 - UGCN01_CAYT_181200_a79bf30ef3e52347d4a8bdb27574cdaa.txt mapped to: ca/ca/CAYT/air/wind/ca
-    summary: 223 - IUKA01_CAYT_181200_6c9d8b6de884d6f58003a59abaee25aa.bufr mapped to: ca/ca/CAYT/observation/air/upper/temp/0-90n/0-90w
-    summary: 224 - IUJA01_CAYT_181200_9f8cf4387efe8420a72a5db334721a61.bufr mapped to: ca/ca/CAYT/observation/air/upper/pilot/0-90n/0-90w
-    summary: 225 - IUWA01_CAYT_181200_43b13a583ced1661bfc3e8ccb0cb20a3.bufr mapped to: ca/ca/CAYT/observation/air/upper/pilot/0-90n/0-90w
-    summary: 226 - IUSA01_CAYT_181200_f32194f08be68c7b4e0f7ff19e960d9f.bufr mapped to: ca/ca/CAYT/observation/air/upper/temp/0-90n/0-90w
-    summary: 227 - UKCN01_CWMW_181200_9be055aa3ab579b8bf24b63ae53077c6.txt mapped to: ca/ca/CWMW/air/upper/ca
-    summary: 228 - USCN01_CWMW_181200_6d09f33178dd86adbf7de29ac71f3d96.txt mapped to: ca/ca/CWMW/air/upper/ca
-    summary: 229 - UGCN01_CWMW_181200_23db90dd2d38f96a5dc53df5ee293946.txt mapped to: ca/ca/CWMW/air/wind/ca
-    summary: 230 - IUKA01_CWMW_181200_a0ad45523e57a1fefd9982407b8dcccb.bufr mapped to: ca/ca/CWMW/observation/air/upper/temp/0-90n/0-90w
-    summary: 231 - IUWA01_CWMW_181200_11b1840e4b3a5bc9474619e70bacf006.bufr mapped to: ca/ca/CWMW/observation/air/upper/pilot/0-90n/0-90w
-    summary: 232 - UECN01_CWQI_181200_98de8a02734a091cd01772db9e67d88e.txt mapped to: ca/ca/CWQI/air/upper/ca
-    summary: 233 - UKCN01_CWQI_181200_9763dd4f79d3e16550c279ec02c2da60.txt mapped to: ca/ca/CWQI/air/upper/ca
-    summary: 234 - ULCN01_CWQI_181200_1951fb50c3ae166a143de07c1661aae3.txt mapped to: ca/ca/CWQI/air/upper/ca
-    summary: 235 - USCN01_CWQI_181200_af5e2c934b8d8eb6cd7d9ce25d300b32.txt mapped to: ca/ca/CWQI/air/upper/ca
-    summary: 236 - UQCN01_CWQI_181200_a09ba2649d6c941217c97db4d9997dc1.txt mapped to: ca/ca/CWQI/air/upper/wind/ca
-    summary: 237 - UGCN01_CWQI_181200_19f498d602cb48005048a58123e8393d.txt mapped to: ca/ca/CWQI/air/wind/ca
-    summary: 238 - IUKA01_CWQI_181200_da9ece4c9cc6c61d6986726191f4d3da.bufr mapped to: ca/ca/CWQI/observation/air/upper/temp/0-90n/0-90w
-    summary: 239 - IUJA01_CWQI_181200_fe758cb586f99a8012203d4a793a966e.bufr mapped to: ca/ca/CWQI/observation/air/upper/pilot/0-90n/0-90w
-    summary: 240 - IUWA01_CWQI_181200_16307ba037478444c9daf49bb01569bb.bufr mapped to: ca/ca/CWQI/observation/air/upper/pilot/0-90n/0-90w
-    summary: 241 - IUSA01_CWQI_181200_9b0c6bbbd82311888a6b1c6c582aafef.bufr mapped to: ca/ca/CWQI/observation/air/upper/temp/0-90n/0-90w
-    summary: 242 - UECN01_CWSE_181200_596518ded550016a4e6bb319a86cc85c.txt mapped to: ca/ca/CWSE/air/upper/ca
-    summary: 243 - UKCN01_CWSE_181200_98a4440c64bc492e4516fda4a73f9695.txt mapped to: ca/ca/CWSE/air/upper/ca
-    summary: 244 - ULCN01_CWSE_181200_f009a4d8b4b9a8884a2b6f83a7a77c24.txt mapped to: ca/ca/CWSE/air/upper/ca
-    summary: 245 - USCN01_CWSE_181200_7b19db517a61f5967b23dd6649647a20.txt mapped to: ca/ca/CWSE/air/upper/ca
-    summary: 246 - UQCN01_CWSE_181200_09f7ecfad9ec0a78174fa763ff3b18f8.txt mapped to: ca/ca/CWSE/air/upper/wind/ca
-    summary: 247 - UGCN01_CWSE_181200_a7fc1a8166f4f822ce23a363daffadd0.txt mapped to: ca/ca/CWSE/air/wind/ca
-    summary: 248 - IUKB01_CWSE_181200_7086c21dc5e5cd28db64a93f97659f42.bufr mapped to: ca/ca/CWSE/observation/air/upper/temp/0-90n/90w-180
-    summary: 249 - IUJB01_CWSE_181200_1e108cedf7b87a2c730a0a806ba48242.bufr mapped to: ca/ca/CWSE/observation/air/upper/pilot/0-90n/90w-180
-    summary: 250 - IUWB01_CWSE_181200_1f1784484a3a65db15b85ef8a051c653.bufr mapped to: ca/ca/CWSE/observation/air/upper/pilot/0-90n/90w-180
-    summary: 251 - IUSB01_CWSE_181200_bd7bf1f104d9ccdb7b8514e1b9056160.bufr mapped to: ca/ca/CWSE/observation/air/upper/temp/0-90n/90w-180
-    summary: 252 - UECN01_CWVK_181200_7c12f439b0e30ae83f94efb9685c11b3.txt mapped to: ca/ca/CWVK/air/upper/ca
-    summary: 253 - UKCN01_CWVK_181200_0030a911f290ab91f83280815230d248.txt mapped to: ca/ca/CWVK/air/upper/ca
-    summary: 254 - ULCN01_CWVK_181200_59119ce7ecfbed57e7ad474faea1fca6.txt mapped to: ca/ca/CWVK/air/upper/ca
-    summary: 255 - USCN01_CWVK_181200_4b778d50d6ce82b0f35ec138b0006e8b.txt mapped to: ca/ca/CWVK/air/upper/ca
-    summary: 256 - UQCN01_CWVK_181200_d409ff08a0a42fbd89dc789978fa632c.txt mapped to: ca/ca/CWVK/air/upper/wind/ca
-    summary: 257 - UGCN01_CWVK_181200_8ddb66c39aae4545bdbe24be824b45e2.txt mapped to: ca/ca/CWVK/air/wind/ca
-    summary: 258 - IUKB01_CWVK_181200_56cfd7e5140b1435e39605556398a5ba.bufr mapped to: ca/ca/CWVK/observation/air/upper/temp/0-90n/90w-180
-    summary: 259 - IUJB01_CWVK_181200_0a248f0b7e617a7a1cacaf2c4d287873.bufr mapped to: ca/ca/CWVK/observation/air/upper/pilot/0-90n/90w-180
-    summary: 260 - IUWB01_CWVK_181200_94634d46c7b9a3cefa79bdf70bf6d182.bufr mapped to: ca/ca/CWVK/observation/air/upper/pilot/0-90n/90w-180
-    summary: 261 - IUSB01_CWVK_181200_5b2665d1825a07eb01e9e030cd82230c.bufr mapped to: ca/ca/CWVK/observation/air/upper/temp/0-90n/90w-180
-    summary: 262 - UECN01_CYCB_181200_f9b4cc11f31130fe475879df3dd24e59.txt mapped to: ca/ca/CYCB/air/upper/ca
-    summary: 263 - UKCN01_CYCB_181200_7f25ded5aace636c8e5e26dd14a0688a.txt mapped to: ca/ca/CYCB/air/upper/ca
-    summary: 264 - ULCN01_CYCB_181200_696790341879f0daaa236278150b1b5a.txt mapped to: ca/ca/CYCB/air/upper/ca
-    summary: 265 - USCN01_CYCB_181200_59b956863de999dd5736a16f524d1d5a.txt mapped to: ca/ca/CYCB/air/upper/ca
-    summary: 266 - UQCN01_CYCB_181200_9ef5ed2e89dbd191c3250d3ef935d4ce.txt mapped to: ca/ca/CYCB/air/upper/wind/ca
-    summary: 267 - UGCN01_CYCB_181200_2e75d3769c8d1d5bd6a06ef7d65b0443.txt mapped to: ca/ca/CYCB/air/wind/ca
-    summary: 268 - UKCN01_CYPH_181200_e145a86f72e763972335953a22116bb9.txt mapped to: ca/ca/CYPH/air/upper/ca
-    summary: 269 - USCN01_CYPH_181200_af7c2257f8f7bf3049ea6a33bee556a9.txt mapped to: ca/ca/CYPH/air/upper/ca
-    summary: 270 - UGCN01_CYPH_181200_f60ce0b95b4bc360e8326bcf268a1a7a.txt mapped to: ca/ca/CYPH/air/wind/ca
-    summary: 271 - IUKB01_CYPH_181200_7b27d04fa38164d8f58675b71ae8d4d6.bufr mapped to: ca/ca/CYPH/observation/air/upper/temp/0-90n/90w-180
-    summary: 272 - IUWB01_CYPH_181200_94d6a2f6ee642acafb7030ad00995850.bufr mapped to: ca/ca/CYPH/observation/air/upper/pilot/0-90n/90w-180
-    summary: 273 - UKCN01_CYPL_181200_6738e45b20fb9bfbc733b7c866543a11.txt mapped to: ca/ca/CYPL/air/upper/ca
-    summary: 274 - USCN01_CYPL_181200_a0937272a88b7858c15f26b8f1353501.txt mapped to: ca/ca/CYPL/air/upper/ca
-    summary: 275 - UGCN01_CYPL_181200_de71e2b2ae50687b7b146fcb41a970ba.txt mapped to: ca/ca/CYPL/air/wind/ca
-    summary: 276 - IUKB01_CYPL_181200_859def95c85eda2e55f0d1e5cdc285ce.bufr mapped to: ca/ca/CYPL/observation/air/upper/temp/0-90n/90w-180
-    summary: 277 - IUWB01_CYPL_181200_750da73b3b237f89bfb6d92701f4c5d8.bufr mapped to: ca/ca/CYPL/observation/air/upper/pilot/0-90n/90w-180
-    summary: 278 - UGIN90_VERP_181200_81f9828df7b785162698b64a40f09177.txt mapped to: in/in/VERP/air/wind/in
-    summary: 279 - UGIN90_VOPB_181200_cd81eac262c21cffe4a83cd6572e6aba.txt mapped to: in/VOPB/air/wind/in
-    summary: 280 - ISCD30_VOPD_181200 mapped to: in/in/VOPD/observation/sea/surface/land/climat/0-90n/90e-0
-    summary: 281 - ISCD50_VOPD_181200 mapped to: in/in/VOPD/observation/sea/surface/marine/climat/0-90n/90e-0
-    summary: 282 - INQI06_SABM_190204 mapped to: ar/buenos_aires_centro_regional_met/observation/satellite/other/0-90s/0-90w
-    summary: 283 - PAHM44_TNCC_190408 mapped to: cw/willemstad_dr_a_plesman_curaçao/observation/cloud/radar/tropics/90e-0/096h
-    summary: 284 - SXBZ20_KWAL_200204_bacf9daddab445bfd22c4351a6075721.txt mapped to: us/wallops_i__wallops_station_va/observation/br
-    summary: 285 - SXCA03_KWAL_200221_be054b0bd6d42bb037de5783dc3d216f.txt mapped to: us/wallops_i__wallops_station_va/observation/us
-    summary: 286 - SXCH40_KWAL_200202_b1d6db361790b1e72848de4ac3283a11.txt mapped to: us/wallops_i__wallops_station_va/observation/cl
-    summary: 287 - SZHW36_KWBC_191806 mapped to: us/washington_national_meteorological_com_centre_dc/sea//us
-    summary: 288 - LVZS50_KWBX_200000_qwtwqwfwq.grib mapped to: us/us/KWBX/air/navigation/ash/ZS
-    summary: 289 - LTUS43_KFSD_200400_AAA_634152e96f377ecc654f531b3d341a9f.iwxxm mapped to: us/sioux_falls_joe_foss_field_sd/air/navigation/forecast/us
-    summary: 290 - PAHM44_TFFR_200400_920d838d40b1382c91a47ffe7c7af422.bin mapped to: gp/pointe-à-pitre_le_raizet_guadeloupe/observation/cloud/radar/tropics/90e-0/096h
-    summary: 291 - QZTB90_KKCI_200300_21650fe67ecf97b340951631da2a41fe.bin mapped to: us/KKCI/Z/
-    summary: 292 - QZTG90_KKCI_200600_c9f5fec4e51669fe5140e09203f3f452.bin mapped to: us/KKCI/Z/
-    summary: 293 - ISMD01_LQSM_111800_a9ce6b3edd4d37ca4d89ae9a3c716138.bufr mapped to: ba/sarajevo_nmc/observation/sea/surface/land/0-90n/90e-0
-    summary: 294 - SAVG31_TVSA_112000_d1937fa071261528f44c6f800cc4c002.txt mapped to: vc/argyle_ia/observation/land/vc/ship
-    summary: 295 - CDUS45_KGJT_290000_01a25851f8a2ce080e51f1d2299cef2c.txt mapped to: us/galveston_walker_field_co/climate/daily
-    summary: 296 - AEUS71_KALY_290000_f1def66e9d783b6ca592bff7f36a2df5.txt mapped to: us/KALY/forecast/airquality
-    summary: 297 - IUFI02_EUMG_290000_13e70813607a302242017d3978f5856d.bufr mapped to: eu/eumetsat_darmstadt/observation/air/upper/satellite/radiance/0-90s/0-90w
-    summary: 298 - IUFL09_EUMG_290000_858666c4e9ab6897a0483a0981b8b349.bufr mapped to: eu/eumetsat_darmstadt/observation/air/upper/satellite/radiance/0-90s/90e-0
-    summary: 299 - IUFE09_EUMG_290000_6c28048d4089220ac14235d621a5ae66.bufr mapped to: eu/eumetsat_darmstadt/observation/air/upper/satellite/radiance/tropics/0-90w
-    summary: 300 - IUFI01_EUMG_290000_c7f763993d7f312ce9bb53c524b1ea6e.bufr mapped to: eu/eumetsat_darmstadt/observation/air/upper/satellite/radiance/0-90s/0-90w
-    summary: 301 - IUFD08_EUMG_290000_839806e3f292e0d10eefe2c47ee87574.bufr mapped to: eu/eumetsat_darmstadt/observation/air/upper/satellite/radiance/0-90n/90e-0
-    summary: 302 - IUFH13_EUMG_290000_a3550000251d79506cf3bd9e624a7830.bufr mapped to: eu/eumetsat_darmstadt/observation/air/upper/satellite/radiance/tropics/90e-0
-    summary: 303 - HHOG15_EGRR_290000_efeecc850c17e9650b16fe9e8eb5735d.grib mapped to: gb/bracknell/model/height/somewhere/tableC3O/036h
-    summary: 304 - HHMG20_EGRR_290000_b1e617564322a7c7e6cacb2ee579828a.grib mapped to: gb/bracknell/model/height/somewhere/tableC3M/036h
-    summary: 305 - HRYA92_EGRR_290000_393b2b09047f2cddb6b7ce6df6a768d7.grib mapped to: gb/bracknell/model/humidity/relative/somewhere/tableC3Y/analysys
-    fractal% 
+    UARA61_RUMG_161116_445a58ea753d18b066cf872b90c517e2.txt --> ru/magadan/air/aircraft/ru/air/navigation/special
+    SACN37 CWAO 090807 --> ca/montreal_canadian_met_centre_que/observation/land/ca
+    SSAS33 KWBC 14220 --> us/washington_national_meteorological_com_centre_dc/observation/sea/buoy/asia
+    SNFI01 KWBC 142200 --> us/washington_national_meteorological_com_centre_dc/observation/land/fi/surface
+    IUPA54_LFPW_150000 --> fr/toulouse_centre_régional_de_télécommunications/observation/air/upper/pilot-profiler/0-90n/0-90w
+    IUPD48_SOWR_150004 --> pl/warszawa/observation/air/upper/pilot-profiler/0-90n/90e-0
+    FTPA32_KWBC_151015_AAA --> us/washington_national_meteorological_com_centre_dc/forecast/aerodrome/pacific
+    SRFL20_KWAL_151016 --> us/wallops_i__wallops_station_va/observation/water/us
+    SXWY50_KWAL_151017 --> us/wallops_i__wallops_station_va/observation/us
+    SNVB21_AMMC_151000 --> au/melbourne_world_met_centre/observation/land/sea/atlantic/90n-05n/70e-180e/ship
+    SROK30_KWAL_151111 --> us/wallops_i__wallops_station_va/observation/water/us
+    SXNE55_KWAL_151116 --> us/wallops_i__wallops_station_va/observation/us
+    UANT01_CWAO_15111 --> ca/montreal_canadian_met_centre_que/air/aircraft/north-atlantic/air/navigation/routine
+    NXUS60_PHFO_151120 --> us/honolulu_forecast_office/alert/us
+    SRWV30_KWAL_151120_ --> us/wallops_i__wallops_station_va/observation/water/us
+    FTZZ40_KAWN_151121 --> us/marysville_beale_afb_ca/forecast/aerodrome/ZZ
+    SZMS01_WMKK_151123 --> my/kuala_lumpur_intl/sea//my
+    UBUS31_KWBC_151125 --> us/washington_national_meteorological_com_centre_dc/air/aircraft/us
+    TRCA01_KWBC_151000 --> us/washington_national_meteorological_com_centre_dc/satellite/radiance/0-90n/180-90e/analysys
+    THCA01_KWBC_151100 --> us/washington_national_meteorological_com_centre_dc/satellite/soundings/air/upper/0-90n/180-90e/analysys
+    IUSV51_KWBC_151150 --> us/washington_national_meteorological_com_centre_dc/observation/air/upper/temp/ship/somewhere/tableC3V
+    IUSV52_KWBC_151150 --> us/washington_national_meteorological_com_centre_dc/observation/air/upper/temp/ship/somewhere/tableC3V
+    SRUS54_KOHX_151216 --> us/old_hickory_ap_nashville/observation/water/us
+    CXUS43_KBIS_151217 --> us/bismarck_muni_nd/climate
+    NZUS93_KARX_151217 --> us/appleton_international_airport_–_greenville_wi/alert/us
+    YVXX84_KAWN_151200 --> us/marysville_beale_afb_ca/model/wind/north
+    SFTX57_KWAL_151220 --> us/wallops_i__wallops_station_va/observation/land//us
+    BMBB91_KJAX_151224 --> us/jonesboro_muni_ar/addressed
+    IUSZ52_KWBC_151235 --> us/washington_national_meteorological_com_centre_dc/observation/air/upper/temp/ship/somewhere/tableC3Z
+    INGX27_KNES_151252 --> us/washington_vaac/observation/satellite/other/global
+    UBFL90_KWBC_151310 --> us/washington_national_meteorological_com_centre_dc/air/aircraft/us
+    USBZ05_SBBR_151200 --> br/brasilia_intl_df/air/upper/br
+    HEPF98_KWBC_151800 --> us/washington_national_meteorological_com_centre_dc/model/precipitation/somewhere/tableC3P/030h
+    HGJF98_KWBC_151800 --> us/washington_national_meteorological_com_centre_dc/model/divergence/0-90s/90w-180/030h
+    SIIN90_VIHS_160300 --> in/in/VIHS/observation/land/in
+    PEIK98_KWNH_180000 --> us/KWNH/observation/cloud/precip/0-90s/0-90w/072h
+    PEBI88_KWNH_171800 --> us/KWNH/observation/cloud/precip/0-90n/90w-180/048h
+    PSBC04_KWNH_180000 --> us/KWNH/observation/land/snow/cover/0-90n/90w-180/012h
+    ZCNM85_KWBE_180000 --> us/KWBE/model/vorticity
+    UACN10_CYXL_170329_8064d8dc1a1c71b014e0278b97e46187.txt --> ca/ca/CYXL/air/aircraft/ca/air/navigation/routine
+    WSBZ31_SBCW_170413_ad28898f0ff6626d56122ae48436bf23.txt --> br/br/SBCW/air/navigation//br/br
+    WSBZ31_SBCW_170504_d743b6a452ea75e199057095e3b08aac.txt --> br/br/SBCW/air/navigation//br/br
+    UECN01_CWSE_171200_CCA_ac477635827c81e676f9c992f238854d.txt --> ca/ca/CWSE/air/upper/ca
+    ULCN01_CWSE_171200_CCA_f17bcc66ffa171e7295eb588c115c964.txt --> ca/ca/CWSE/air/upper/ca
+    UQCN01_CWSE_171200_CCA_6bc3d5b32aaf4bc78173977d00ef217d.txt --> ca/ca/CWSE/air/upper/wind/ca
+    WSBZ31_SBCW_172021_211075aa7e95cff3c1fe583f5b367661.txt --> br/br/SBCW/air/navigation//br/br
+    WSBZ31_SBCW_172021_3e367b4af96aa5fee9c35272caf557d6.txt --> br/br/SBCW/air/navigation//br/br
+    UMHW40_PHLI_180000_32c3d0fde9e282c88aa1f96a6100e6b4.txt --> us/us/PHLI/air/upper/us
+    USHW40_PHLI_180000_ff545927ddf53ed6789f026914e34779.txt --> us/us/PHLI/air/upper/us
+    UXHW40_PHLI_180000_f89abcd66ef61b7745ce0e60207b76c7.txt --> us/us/PHLI/air/upper/us
+    UKCN01_CAWE_180000_b741a277d49e8f3157fc8f59fbf7ce4f.txt --> ca/ca/CAWE/air/upper/ca
+    USCN01_CAWE_180000_966e88216478c1944029f21ae367f2fc.txt --> ca/ca/CAWE/air/upper/ca
+    UGCN01_CAWE_180000_423c4d7ccfaf08d852519a298e37a4d6.txt --> ca/ca/CAWE/air/wind/ca
+    IUKA01_CAWE_180000_92d0b00d780fc80b36c4d570ca60c858.bufr --> ca/ca/CAWE/observation/air/upper/temp/0-90n/0-90w
+    IUKA01_CAWE_180000_fd10929169dc3584bd4a779ab8dcbd9a.bufr --> ca/ca/CAWE/observation/air/upper/temp/0-90n/0-90w
+    IUWA01_CAWE_180000_0f03cb4477263a4b727e2e61ac152756.bufr --> ca/ca/CAWE/observation/air/upper/pilot/0-90n/0-90w
+    UKCN01_CAYT_180000_2fe6c8680afb2b91ab2eb5efb7326f4d.txt --> ca/ca/CAYT/air/upper/ca
+    USCN01_CAYT_180000_1ef87ecddd63371bfdfd714511a22c0d.txt --> ca/ca/CAYT/air/upper/ca
+    UGCN01_CAYT_180000_b4a3602664a6e25eb6b4298b7afda135.txt --> ca/ca/CAYT/air/wind/ca
+    IUKA01_CAYT_180000_e9c3f1656bacfcfafe3ba39ab751244a.bufr --> ca/ca/CAYT/observation/air/upper/temp/0-90n/0-90w
+    IUWA01_CAYT_180000_ac7eb96bc87ad8a384fa845db0aaf2c3.bufr --> ca/ca/CAYT/observation/air/upper/pilot/0-90n/0-90w
+    UKCN01_CWMW_180000_7791aa7999c0d9ff01f13b7db8126f4e.txt --> ca/ca/CWMW/air/upper/ca
+    USCN01_CWMW_180000_9df7752a4e497ad6108efe012d5f2bcf.txt --> ca/ca/CWMW/air/upper/ca
+    UGCN01_CWMW_180000_e163edb60a26e8782b3be294e5169075.txt --> ca/ca/CWMW/air/wind/ca
+    IUKA01_CWMW_180000_bc10ca69618a60752112172ca2b5db83.bufr --> ca/ca/CWMW/observation/air/upper/temp/0-90n/0-90w
+    IUWA01_CWMW_180000_dadb5a5b48dbb742abf8536db24275c5.bufr --> ca/ca/CWMW/observation/air/upper/pilot/0-90n/0-90w
+    UKCN01_CWQI_180000_10149c33c149e58d82e956bacf0400ec.txt --> ca/ca/CWQI/air/upper/ca
+    USCN01_CWQI_180000_dd64be184594ae42605cde0235815159.txt --> ca/ca/CWQI/air/upper/ca
+    UGCN01_CWQI_180000_3386596b90eab8bbb21624a27a5dd2d9.txt --> ca/ca/CWQI/air/wind/ca
+    IUKA01_CWQI_180000_dfac94eabb444c7c1bb9fbd7575a3d4d.bufr --> ca/ca/CWQI/observation/air/upper/temp/0-90n/0-90w
+    IUWA01_CWQI_180000_2f78c016e2b66c85433ea4c37011fa17.bufr --> ca/ca/CWQI/observation/air/upper/pilot/0-90n/0-90w
+    UKCN01_CWSE_180000_ba85c1e766d4074fe9d1c114efe21f92.txt --> ca/ca/CWSE/air/upper/ca
+    USCN01_CWSE_180000_3a9cd49bbc3f7ee154c0ec84f6d76475.txt --> ca/ca/CWSE/air/upper/ca
+    UGCN01_CWSE_180000_04de7aa1a750e2bcd8b1cb6e8f8d8c54.txt --> ca/ca/CWSE/air/wind/ca
+    IUKB01_CWSE_180000_c543855c17fc9dee4620a0bf1741d474.bufr --> ca/ca/CWSE/observation/air/upper/temp/0-90n/90w-180
+    IUWB01_CWSE_180000_96e0da948a71181c9398159b535dba91.bufr --> ca/ca/CWSE/observation/air/upper/pilot/0-90n/90w-180
+    UKCN01_CWVK_180000_f443cca4cfff77924ed82730d124cec7.txt --> ca/ca/CWVK/air/upper/ca
+    USCN01_CWVK_180000_0c283cb8bcf3a07018de3aaa20387722.txt --> ca/ca/CWVK/air/upper/ca
+    UGCN01_CWVK_180000_1e906c142da951be210aef9dee1abb4f.txt --> ca/ca/CWVK/air/wind/ca
+    IUKB01_CWVK_180000_043df727484b7334a810faecb9862c94.bufr --> ca/ca/CWVK/observation/air/upper/temp/0-90n/90w-180
+    IUWB01_CWVK_180000_388399b9704234ebde74b22206c2a05c.bufr --> ca/ca/CWVK/observation/air/upper/pilot/0-90n/90w-180
+    UECN01_CYBK_180000_0d71f1af2916275d834517ac222ae866.txt --> ca/ca/CYBK/air/upper/ca
+    UKCN01_CYBK_180000_1b71e47919718a3323a32a0860cb3799.txt --> ca/ca/CYBK/air/upper/ca
+    ULCN01_CYBK_180000_7caca09daab861db6c431821f5dee3ff.txt --> ca/ca/CYBK/air/upper/ca
+    USCN01_CYBK_180000_e22e95675c549c4d403f8a4cd6a00a40.txt --> ca/ca/CYBK/air/upper/ca
+    UQCN01_CYBK_180000_65313f5b42db7edd650b911bbe7c9144.txt --> ca/ca/CYBK/air/upper/wind/ca
+    UGCN01_CYBK_180000_5dc91564dba771b0735e0a9e4d21ba86.txt --> ca/ca/CYBK/air/wind/ca
+    IUKB01_CYBK_180000_c41c051d840e0eee141318a51196fb83.bufr --> ca/ca/CYBK/observation/air/upper/temp/0-90n/90w-180
+    IUWB01_CYBK_180000_bec70db1365823a149d16cc9469f1744.bufr --> ca/ca/CYBK/observation/air/upper/pilot/0-90n/90w-180
+    IUSB01_CYBK_180000_6423031fb5113bcde3a37f19d68dd879.bufr --> ca/ca/CYBK/observation/air/upper/temp/0-90n/90w-180
+    UECN01_CYCB_180000_CCA_377aef8fd2d7143231e82a24a6afd43d.txt --> ca/ca/CYCB/air/upper/ca
+    UKCN01_CYCB_180000_CCA_9341057312f1e1b7463346d003f35f24.txt --> ca/ca/CYCB/air/upper/ca
+    ULCN01_CYCB_180000_CCA_4e76a9b2c3ce704f257c150885542eb4.txt --> ca/ca/CYCB/air/upper/ca
+    USCN01_CYCB_180000_CCA_d8bb8b8bf0715cb70944c93c6e9d5737.txt --> ca/ca/CYCB/air/upper/ca
+    UQCN01_CYCB_180000_CCA_de8c859480660003344edfd8f84383bf.txt --> ca/ca/CYCB/air/upper/wind/ca
+    UGCN01_CYCB_180000_CCA_ec3e142068b347ac95f2d1f42fcb3fda.txt --> ca/ca/CYCB/air/wind/ca
+    UKCN01_CYPH_180000_76b23973e5a5d89329ba7cf97d1b8464.txt --> ca/ca/CYPH/air/upper/ca
+    USCN01_CYPH_180000_0723b4acc6156525704323edccfcd937.txt --> ca/ca/CYPH/air/upper/ca
+    UGCN01_CYPH_180000_1ba23bd4dfe501b88adbe8bf514b2643.txt --> ca/ca/CYPH/air/wind/ca
+    IUKB01_CYPH_180000_8f10636f287d4883743d929656643944.bufr --> ca/ca/CYPH/observation/air/upper/temp/0-90n/90w-180
+    IUWB01_CYPH_180000_217eb76e7f98af618e0d6868e64abdb8.bufr --> ca/ca/CYPH/observation/air/upper/pilot/0-90n/90w-180
+    UKCN01_CYPL_180000_b90a260302ad9b70017cbbc22cd52c37.txt --> ca/ca/CYPL/air/upper/ca
+    USCN01_CYPL_180000_9103975ea84764790a14f638f0b05e59.txt --> ca/ca/CYPL/air/upper/ca
+    UGCN01_CYPL_180000_d1a23077fcf67b96dd6b9eae4436e197.txt --> ca/ca/CYPL/air/wind/ca
+    IUKB01_CYPL_180000_45723272dc897a73d820dc6dfd0290db.bufr --> ca/ca/CYPL/observation/air/upper/temp/0-90n/90w-180
+    IUWB01_CYPL_180000_acbd9dcc2e3e46354413678ab9451f68.bufr --> ca/ca/CYPL/observation/air/upper/pilot/0-90n/90w-180
+    UKCN01_CYUX_180000_eb1af94404e3695267e072f370780cd1.txt --> ca/ca/CYUX/air/upper/ca
+    USCN01_CYUX_180000_2d64ab164aa0d1122b5eb4a6a733fbe9.txt --> ca/ca/CYUX/air/upper/ca
+    UGCN01_CYUX_180000_d8a2de1bfe8a4087e4c5622470875fc5.txt --> ca/ca/CYUX/air/wind/ca
+    IUKA01_CYUX_180000_efc2d0685bc48ef82a007b6fe4e32b8d.bufr --> ca/ca/CYUX/observation/air/upper/temp/0-90n/0-90w
+    IUWA01_CYUX_180000_740d257ab4708b8b6da5a3e1719f26b4.bufr --> ca/ca/CYUX/observation/air/upper/pilot/0-90n/0-90w
+    IUKN04_KOAK_180000_eb0be6c50cbf20443ee9315e9613afbe.bufr --> us/us/KOAK/observation/air/upper/temp/0-90n
+    IUSN04_KOAK_180000_7ccce4dbfc00accc653725562d0c7f54.bufr --> us/us/KOAK/observation/air/upper/temp/0-90n
+    UFHW40_PHLI_180000_455f65e0fc58cc5941a4fed5e06932f1.txt --> us/us/PHLI/air/upper/us
+    WSBZ31_SBCW_180024_330a8e81ab22813969fdf0308440a937.txt --> br/br/SBCW/air/navigation//br/br
+    WSBZ31_SBCW_180024_e5a9f0b4cc0b70580e438404d2ae7e12.txt --> br/br/SBCW/air/navigation//br/br
+    UECN01_CAWE_180000_e5c9c8ab75cece3b92851a79396f8077.txt --> ca/ca/CAWE/air/upper/ca
+    ULCN01_CAWE_180000_6050e8b38322d833cdd1d2d77fb529a2.txt --> ca/ca/CAWE/air/upper/ca
+    UQCN01_CAWE_180000_7ba45ba5b7f8aa4ddfdfac4fb040eab8.txt --> ca/ca/CAWE/air/upper/wind/ca
+    IUJA01_CAWE_180000_01e312a116b979a0a8d6c9d90e6f697d.bufr --> ca/ca/CAWE/observation/air/upper/pilot/0-90n/0-90w
+    IUSA01_CAWE_180000_04e278d09523dbea60c75f5b0bf1dd8e.bufr --> ca/ca/CAWE/observation/air/upper/temp/0-90n/0-90w
+    UECN01_CAYT_180000_814362e5427862c21d95a3553cba94ef.txt --> ca/ca/CAYT/air/upper/ca
+    ULCN01_CAYT_180000_5d7f0c26f389a062076893bf80f8c870.txt --> ca/ca/CAYT/air/upper/ca
+    UQCN01_CAYT_180000_97fa18b075e461734385edb60349ccdc.txt --> ca/ca/CAYT/air/upper/wind/ca
+    IUJA01_CAYT_180000_aad95dc55f39cb0e7d9ce260d66c3973.bufr --> ca/ca/CAYT/observation/air/upper/pilot/0-90n/0-90w
+    IUSA01_CAYT_180000_bd90d12bde0b03012f4cc2134365cb1f.bufr --> ca/ca/CAYT/observation/air/upper/temp/0-90n/0-90w
+    UECN01_CWMW_180000_1805feae6786e29ce55a8b1d24523b1c.txt --> ca/ca/CWMW/air/upper/ca
+    ULCN01_CWMW_180000_60bd4899223fa300ec57f94ab8d28811.txt --> ca/ca/CWMW/air/upper/ca
+    UQCN01_CWMW_180000_c42a1857a81423615cd2b7f54ed2e22e.txt --> ca/ca/CWMW/air/upper/wind/ca
+    IUJA01_CWMW_180000_94dd1def5363977484db90472eabf18f.bufr --> ca/ca/CWMW/observation/air/upper/pilot/0-90n/0-90w
+    IUSA01_CWMW_180000_47d33b342bd3ebd3487e7643c5c765ec.bufr --> ca/ca/CWMW/observation/air/upper/temp/0-90n/0-90w
+    UECN01_CWQI_180000_e9f00be9918fdfe99423d5bb0ef053e6.txt --> ca/ca/CWQI/air/upper/ca
+    ULCN01_CWQI_180000_ed2d051fb64e71fca35cfcf13d974550.txt --> ca/ca/CWQI/air/upper/ca
+    UQCN01_CWQI_180000_4fec98aeaf760f0c03eac04150e08393.txt --> ca/ca/CWQI/air/upper/wind/ca
+    IUJA01_CWQI_180000_b18f96a15966c5d4ef379c8d11d99210.bufr --> ca/ca/CWQI/observation/air/upper/pilot/0-90n/0-90w
+    IUSA01_CWQI_180000_a5939408df28e709d6a2b5ac767c05fc.bufr --> ca/ca/CWQI/observation/air/upper/temp/0-90n/0-90w
+    UECN01_CWSE_180000_b38a27db2ff8c7b23fa2e32107c7bf17.txt --> ca/ca/CWSE/air/upper/ca
+    ULCN01_CWSE_180000_59bfc83746ca59717810abcdfe59473f.txt --> ca/ca/CWSE/air/upper/ca
+    UQCN01_CWSE_180000_c85010b51c9ea2c481c85c5b78cebe55.txt --> ca/ca/CWSE/air/upper/wind/ca
+    IUJB01_CWSE_180000_0b892fba3ca7ccfeaf6ed846af02fc96.bufr --> ca/ca/CWSE/observation/air/upper/pilot/0-90n/90w-180
+    IUSB01_CWSE_180000_fb6ae4af5bd4d22674203054f7f9df64.bufr --> ca/ca/CWSE/observation/air/upper/temp/0-90n/90w-180
+    UECN01_CWVK_180000_1f6004e15ba20cda6ea2286d9ebe0ecd.txt --> ca/ca/CWVK/air/upper/ca
+    UECN01_CWVK_180000_CCA_1ffde869d7b8c5723f895f13c11d3548.txt --> ca/ca/CWVK/air/upper/ca
+    ULCN01_CWVK_180000_c300f632716bdae3f1d3189b25c673d5.txt --> ca/ca/CWVK/air/upper/ca
+    ULCN01_CWVK_180000_CCA_246736873bd88f395668d7248e30bc5f.txt --> ca/ca/CWVK/air/upper/ca
+    UQCN01_CWVK_180000_16c81bdab875665b994838d545f10e4c.txt --> ca/ca/CWVK/air/upper/wind/ca
+    UQCN01_CWVK_180000_CCA_61e83cb0bc4bbf321d982d8d301c4fdb.txt --> ca/ca/CWVK/air/upper/wind/ca
+    IUJB01_CWVK_180000_17f2b378d87b75a774482de0032d58ab.bufr --> ca/ca/CWVK/observation/air/upper/pilot/0-90n/90w-180
+    IUSB01_CWVK_180000_493e5c55832b5ad7a437482d6c4fc958.bufr --> ca/ca/CWVK/observation/air/upper/temp/0-90n/90w-180
+    UECN01_CYPH_180000_dc5be7aded53aed672c2b7100e001226.txt --> ca/ca/CYPH/air/upper/ca
+    ULCN01_CYPH_180000_e4b557a58072434e50cfcb715b4ffd0c.txt --> ca/ca/CYPH/air/upper/ca
+    UQCN01_CYPH_180000_fc3e5606326cb9d6fe1d72498b33bb9a.txt --> ca/ca/CYPH/air/upper/wind/ca
+    IUJB01_CYPH_180000_3e8fcf2d7c1d2f1163d084f425e92ebc.bufr --> ca/ca/CYPH/observation/air/upper/pilot/0-90n/90w-180
+    IUSB01_CYPH_180000_4bd3cad2fcdd742447e5ba2a100fc8d8.bufr --> ca/ca/CYPH/observation/air/upper/temp/0-90n/90w-180
+    UECN01_CYPL_180000_2944f2d15a9b2b24ce0e4d0ffeef57e5.txt --> ca/ca/CYPL/air/upper/ca
+    UECN01_CYPL_180000_CCA_2caa657d1c533b536f14555778e3f44a.txt --> ca/ca/CYPL/air/upper/ca
+    ULCN01_CYPL_180000_5beabc981205f6e224ee0fd49db577b0.txt --> ca/ca/CYPL/air/upper/ca
+    ULCN01_CYPL_180000_CCA_ac6b866fc06f3ff946be1c248d3b6d81.txt --> ca/ca/CYPL/air/upper/ca
+    UQCN01_CYPL_180000_CCA_88d3c8b9927f042fed1e3cfc16889dd0.txt --> ca/ca/CYPL/air/upper/wind/ca
+    UQCN01_CYPL_180000_d4826b879dfb7765adb9852439c6e3c1.txt --> ca/ca/CYPL/air/upper/wind/ca
+    IUJB01_CYPL_180000_57b93cd75b48c8001922a835c495ed0f.bufr --> ca/ca/CYPL/observation/air/upper/pilot/0-90n/90w-180
+    IUJB01_CYPL_180000_CCA_eb8243da78ad0543dcde0bea25492ffe.bufr --> ca/ca/CYPL/observation/air/upper/pilot/0-90n/90w-180
+    IUSB01_CYPL_180000_8dfb175c8b6c905938b92fcd6f40a664.bufr --> ca/ca/CYPL/observation/air/upper/temp/0-90n/90w-180
+    IUSB01_CYPL_180000_CCA_2ef2146cb13abf247d789f790d92303c.bufr --> ca/ca/CYPL/observation/air/upper/temp/0-90n/90w-180
+    UECN01_CYUX_180000_95604ddc275ab4c30858885d6641da31.txt --> ca/ca/CYUX/air/upper/ca
+    UECN01_CYUX_180000_CCA_c823cc7eb7a976d58301aaf2e7f37356.txt --> ca/ca/CYUX/air/upper/ca
+    ULCN01_CYUX_180000_CCA_beda2ac85758b7a2a33e311f28197fa8.txt --> ca/ca/CYUX/air/upper/ca
+    ULCN01_CYUX_180000_eca94c6da05a85714481b1551699b359.txt --> ca/ca/CYUX/air/upper/ca
+    UQCN01_CYUX_180000_871ce311833ebab85b6809266895eb77.txt --> ca/ca/CYUX/air/upper/wind/ca
+    UQCN01_CYUX_180000_CCA_e53fd872fe553ea3b650cb8f2773c41d.txt --> ca/ca/CYUX/air/upper/wind/ca
+    IUJA01_CYUX_180000_95a8a87238ecf3624906bcba4646cfb5.bufr --> ca/ca/CYUX/observation/air/upper/pilot/0-90n/0-90w
+    IUSA01_CYUX_180000_b3106d0b5eb463a804d913d47f19ebe7.bufr --> ca/ca/CYUX/observation/air/upper/temp/0-90n/0-90w
+    IUSA01_CYUX_180000_e76a750ee2da035f3da37eec2875aafb.bufr --> ca/ca/CYUX/observation/air/upper/temp/0-90n/0-90w
+    UKIN90_VIDN_180000_9eb0d3b374f41561313c4321ba971e13.txt --> in/in/VIDN/air/upper/in
+    USIN90_VIDN_180000_5e1ef982bb1a66a6f939bb274fa563c9.txt --> in/in/VIDN/air/upper/in
+    UARS61_RUMA_180203_74381c8d9f523996e33c276e49f850ed.txt --> ru/RUMA/air/aircraft/ru/air/navigation/special
+    UGIN90_VERP_180000_62e2a56e66b570d410dcbf2071f249d9.txt --> in/in/VERP/air/wind/in
+    USIN90_VOPB_180000_a33c58a845fba4b4d1d7e513973f7a0d.txt --> in/VOPB/air/upper/in
+    UGIN90_VOPB_180000_ec1a5767174fc7099e3b0cb16922d3d3.txt --> in/VOPB/air/wind/in
+    WSBZ31_SBCW_180416_ceb94e4c0b310bdeb1ed67a2589869a5.txt --> br/br/SBCW/air/navigation//br/br
+    UARS61_RUMA_180506_8a4c90d4a2ed58f3099a3c6210b8611c.txt --> ru/RUMA/air/aircraft/ru/air/navigation/special
+    UARS61_RUMA_180510_8d519502fb481952ed5bc7c210da0d32.txt --> ru/RUMA/air/aircraft/ru/air/navigation/special
+    UARS61_RUMA_180512_0eb790aa34f1a10883d04507e4e02efb.txt --> ru/RUMA/air/aircraft/ru/air/navigation/special
+    UARS61_RUMA_180521_23278fe5a468ea28a1c83dceb7eac870.txt --> ru/RUMA/air/aircraft/ru/air/navigation/special
+    ISMA40_GMTL_180600_CCA_e089448152138d083940fba5e17c79fd.bufr --> my/my/GMTL/observation/sea/surface/land/0-90n/0-90w
+    ISMA40_GMTL_180600_d081ac76bc470f84720c8be339b69c29.bufr --> my/my/GMTL/observation/sea/surface/land/0-90n/0-90w
+    UARS61_RUMA_180604_8df4e09300441c14a0f64016893747e5.txt --> ru/RUMA/air/aircraft/ru/air/navigation/special
+    UARS61_RUMA_180610_2a3726ac06bd9367d5f957a28be1b0e2.txt --> ru/RUMA/air/aircraft/ru/air/navigation/special
+    UARS61_RUMA_180618_d7acae59d9af564fcb24fda66c86dfb1.txt --> ru/RUMA/air/aircraft/ru/air/navigation/special
+    UARS61_RUMA_180620_2593f78a01529ec0beee73f3d52022db.txt --> ru/RUMA/air/aircraft/ru/air/navigation/special
+    UGIN90_VOPB_180600_ba6d22767115100991236dbd1c709adb.txt --> in/VOPB/air/wind/in
+    WSRS31_RUSF_181020_5e380bb13a84c618c9c0b251d5d650bf.txt --> ru/RUSF/air/navigation//ru/ru
+    UECN01_CYBK_181200_2210fc926082cf22da926a579ee1882d.txt --> ca/ca/CYBK/air/upper/ca
+    UKCN01_CYBK_181200_4ec615b3868648c7bc361d88f40579fd.txt --> ca/ca/CYBK/air/upper/ca
+    ULCN01_CYBK_181200_cdddae0386f7bcaa4d7923e8c4084a25.txt --> ca/ca/CYBK/air/upper/ca
+    USCN01_CYBK_181200_0519c8841a1a91028e430a0b7502b512.txt --> ca/ca/CYBK/air/upper/ca
+    UQCN01_CYBK_181200_a15e3d3f03a0fff4152833cf43bed120.txt --> ca/ca/CYBK/air/upper/wind/ca
+    UGCN01_CYBK_181200_7784c8a5a4a9445dc8169bef0098ca58.txt --> ca/ca/CYBK/air/wind/ca
+    IUKB01_CYBK_181200_a6923ce59bd8c76a95d6591fb1b60da0.bufr --> ca/ca/CYBK/observation/air/upper/temp/0-90n/90w-180
+    IUJB01_CYBK_181200_d6d2d58bd2bb6fbe179e63218de3f42e.bufr --> ca/ca/CYBK/observation/air/upper/pilot/0-90n/90w-180
+    IUWB01_CYBK_181200_01b67dc916966979d1e3c68a5b26d362.bufr --> ca/ca/CYBK/observation/air/upper/pilot/0-90n/90w-180
+    IUSB01_CYBK_181200_a6b0f86ae54c93fa88082783c02a448c.bufr --> ca/ca/CYBK/observation/air/upper/temp/0-90n/90w-180
+    UXHW40_PHLI_181200_f14c4ffee4893606d979f96cd2f7ecf8.txt --> us/us/PHLI/air/upper/us
+    UARS61_RUMA_181119_65f76d18c74bb03611cfe9806b5f4121.txt --> ru/RUMA/air/aircraft/ru/air/navigation/special
+    UARS61_RUMA_181120_74c981b88936df9bed4d4945b19b9101.txt --> ru/RUMA/air/aircraft/ru/air/navigation/special
+    UARS61_RUMA_181122_1bc07d9726cdd7410f291057907345b7.txt --> ru/RUMA/air/aircraft/ru/air/navigation/special
+    UECN01_CAWE_181200_13eb5a9e836c58341b988f581bdb29fa.txt --> ca/ca/CAWE/air/upper/ca
+    UKCN01_CAWE_181200_68334edd6545035a5db609d8e1c2559a.txt --> ca/ca/CAWE/air/upper/ca
+    ULCN01_CAWE_181200_3c7e38f977de5aa861792c6d3a6f1b98.txt --> ca/ca/CAWE/air/upper/ca
+    USCN01_CAWE_181200_64def751423d8bc4eca10361279f99ed.txt --> ca/ca/CAWE/air/upper/ca
+    UQCN01_CAWE_181200_35d94b0cb08d7471ae1b5de55756df01.txt --> ca/ca/CAWE/air/upper/wind/ca
+    UGCN01_CAWE_181200_f0c286c52005f738df2fd5a938dafaa7.txt --> ca/ca/CAWE/air/wind/ca
+    IUKA01_CAWE_181200_6e71113b3f43b9f652b3e55e1a117fcf.bufr --> ca/ca/CAWE/observation/air/upper/temp/0-90n/0-90w
+    IUKA01_CAWE_181200_f69d5bdb9862f497e7dd150843d585f6.bufr --> ca/ca/CAWE/observation/air/upper/temp/0-90n/0-90w
+    IUWA01_CAWE_181200_1249d6f018c6a9889a8eb18ceeddf505.bufr --> ca/ca/CAWE/observation/air/upper/pilot/0-90n/0-90w
+    IUSA01_CAWE_181200_64b5db2eecbdbb0d7016a45cc2cff194.bufr --> ca/ca/CAWE/observation/air/upper/temp/0-90n/0-90w
+    UECN01_CAYT_181200_9cbe42756f2a55aa4ebb50900d9f19b7.txt --> ca/ca/CAYT/air/upper/ca
+    UKCN01_CAYT_181200_957339f2853ce03655e39f6359170855.txt --> ca/ca/CAYT/air/upper/ca
+    ULCN01_CAYT_181200_6dd61e4afbc6e92d6abaf6705363af77.txt --> ca/ca/CAYT/air/upper/ca
+    USCN01_CAYT_181200_bc35c602984baf3969b0c214e1ca5222.txt --> ca/ca/CAYT/air/upper/ca
+    UQCN01_CAYT_181200_883bd9d9c0cceb8e8a6a41ae6be2449b.txt --> ca/ca/CAYT/air/upper/wind/ca
+    UGCN01_CAYT_181200_a79bf30ef3e52347d4a8bdb27574cdaa.txt --> ca/ca/CAYT/air/wind/ca
+    IUKA01_CAYT_181200_6c9d8b6de884d6f58003a59abaee25aa.bufr --> ca/ca/CAYT/observation/air/upper/temp/0-90n/0-90w
+    IUJA01_CAYT_181200_9f8cf4387efe8420a72a5db334721a61.bufr --> ca/ca/CAYT/observation/air/upper/pilot/0-90n/0-90w
+    IUWA01_CAYT_181200_43b13a583ced1661bfc3e8ccb0cb20a3.bufr --> ca/ca/CAYT/observation/air/upper/pilot/0-90n/0-90w
+    IUSA01_CAYT_181200_f32194f08be68c7b4e0f7ff19e960d9f.bufr --> ca/ca/CAYT/observation/air/upper/temp/0-90n/0-90w
+    UKCN01_CWMW_181200_9be055aa3ab579b8bf24b63ae53077c6.txt --> ca/ca/CWMW/air/upper/ca
+    USCN01_CWMW_181200_6d09f33178dd86adbf7de29ac71f3d96.txt --> ca/ca/CWMW/air/upper/ca
+    UGCN01_CWMW_181200_23db90dd2d38f96a5dc53df5ee293946.txt --> ca/ca/CWMW/air/wind/ca
+    IUKA01_CWMW_181200_a0ad45523e57a1fefd9982407b8dcccb.bufr --> ca/ca/CWMW/observation/air/upper/temp/0-90n/0-90w
+    IUWA01_CWMW_181200_11b1840e4b3a5bc9474619e70bacf006.bufr --> ca/ca/CWMW/observation/air/upper/pilot/0-90n/0-90w
+    UECN01_CWQI_181200_98de8a02734a091cd01772db9e67d88e.txt --> ca/ca/CWQI/air/upper/ca
+    UKCN01_CWQI_181200_9763dd4f79d3e16550c279ec02c2da60.txt --> ca/ca/CWQI/air/upper/ca
+    ULCN01_CWQI_181200_1951fb50c3ae166a143de07c1661aae3.txt --> ca/ca/CWQI/air/upper/ca
+    USCN01_CWQI_181200_af5e2c934b8d8eb6cd7d9ce25d300b32.txt --> ca/ca/CWQI/air/upper/ca
+    UQCN01_CWQI_181200_a09ba2649d6c941217c97db4d9997dc1.txt --> ca/ca/CWQI/air/upper/wind/ca
+    UGCN01_CWQI_181200_19f498d602cb48005048a58123e8393d.txt --> ca/ca/CWQI/air/wind/ca
+    IUKA01_CWQI_181200_da9ece4c9cc6c61d6986726191f4d3da.bufr --> ca/ca/CWQI/observation/air/upper/temp/0-90n/0-90w
+    IUJA01_CWQI_181200_fe758cb586f99a8012203d4a793a966e.bufr --> ca/ca/CWQI/observation/air/upper/pilot/0-90n/0-90w
+    IUWA01_CWQI_181200_16307ba037478444c9daf49bb01569bb.bufr --> ca/ca/CWQI/observation/air/upper/pilot/0-90n/0-90w
+    IUSA01_CWQI_181200_9b0c6bbbd82311888a6b1c6c582aafef.bufr --> ca/ca/CWQI/observation/air/upper/temp/0-90n/0-90w
+    UECN01_CWSE_181200_596518ded550016a4e6bb319a86cc85c.txt --> ca/ca/CWSE/air/upper/ca
+    UKCN01_CWSE_181200_98a4440c64bc492e4516fda4a73f9695.txt --> ca/ca/CWSE/air/upper/ca
+    ULCN01_CWSE_181200_f009a4d8b4b9a8884a2b6f83a7a77c24.txt --> ca/ca/CWSE/air/upper/ca
+    USCN01_CWSE_181200_7b19db517a61f5967b23dd6649647a20.txt --> ca/ca/CWSE/air/upper/ca
+    UQCN01_CWSE_181200_09f7ecfad9ec0a78174fa763ff3b18f8.txt --> ca/ca/CWSE/air/upper/wind/ca
+    UGCN01_CWSE_181200_a7fc1a8166f4f822ce23a363daffadd0.txt --> ca/ca/CWSE/air/wind/ca
+    IUKB01_CWSE_181200_7086c21dc5e5cd28db64a93f97659f42.bufr --> ca/ca/CWSE/observation/air/upper/temp/0-90n/90w-180
+    IUJB01_CWSE_181200_1e108cedf7b87a2c730a0a806ba48242.bufr --> ca/ca/CWSE/observation/air/upper/pilot/0-90n/90w-180
+    IUWB01_CWSE_181200_1f1784484a3a65db15b85ef8a051c653.bufr --> ca/ca/CWSE/observation/air/upper/pilot/0-90n/90w-180
+    IUSB01_CWSE_181200_bd7bf1f104d9ccdb7b8514e1b9056160.bufr --> ca/ca/CWSE/observation/air/upper/temp/0-90n/90w-180
+    UECN01_CWVK_181200_7c12f439b0e30ae83f94efb9685c11b3.txt --> ca/ca/CWVK/air/upper/ca
+    UKCN01_CWVK_181200_0030a911f290ab91f83280815230d248.txt --> ca/ca/CWVK/air/upper/ca
+    ULCN01_CWVK_181200_59119ce7ecfbed57e7ad474faea1fca6.txt --> ca/ca/CWVK/air/upper/ca
+    USCN01_CWVK_181200_4b778d50d6ce82b0f35ec138b0006e8b.txt --> ca/ca/CWVK/air/upper/ca
+    UQCN01_CWVK_181200_d409ff08a0a42fbd89dc789978fa632c.txt --> ca/ca/CWVK/air/upper/wind/ca
+    UGCN01_CWVK_181200_8ddb66c39aae4545bdbe24be824b45e2.txt --> ca/ca/CWVK/air/wind/ca
+    IUKB01_CWVK_181200_56cfd7e5140b1435e39605556398a5ba.bufr --> ca/ca/CWVK/observation/air/upper/temp/0-90n/90w-180
+    IUJB01_CWVK_181200_0a248f0b7e617a7a1cacaf2c4d287873.bufr --> ca/ca/CWVK/observation/air/upper/pilot/0-90n/90w-180
+    IUWB01_CWVK_181200_94634d46c7b9a3cefa79bdf70bf6d182.bufr --> ca/ca/CWVK/observation/air/upper/pilot/0-90n/90w-180
+    IUSB01_CWVK_181200_5b2665d1825a07eb01e9e030cd82230c.bufr --> ca/ca/CWVK/observation/air/upper/temp/0-90n/90w-180
+    UECN01_CYCB_181200_f9b4cc11f31130fe475879df3dd24e59.txt --> ca/ca/CYCB/air/upper/ca
+    UKCN01_CYCB_181200_7f25ded5aace636c8e5e26dd14a0688a.txt --> ca/ca/CYCB/air/upper/ca
+    ULCN01_CYCB_181200_696790341879f0daaa236278150b1b5a.txt --> ca/ca/CYCB/air/upper/ca
+    USCN01_CYCB_181200_59b956863de999dd5736a16f524d1d5a.txt --> ca/ca/CYCB/air/upper/ca
+    UQCN01_CYCB_181200_9ef5ed2e89dbd191c3250d3ef935d4ce.txt --> ca/ca/CYCB/air/upper/wind/ca
+    UGCN01_CYCB_181200_2e75d3769c8d1d5bd6a06ef7d65b0443.txt --> ca/ca/CYCB/air/wind/ca
+    UKCN01_CYPH_181200_e145a86f72e763972335953a22116bb9.txt --> ca/ca/CYPH/air/upper/ca
+    USCN01_CYPH_181200_af7c2257f8f7bf3049ea6a33bee556a9.txt --> ca/ca/CYPH/air/upper/ca
+    UGCN01_CYPH_181200_f60ce0b95b4bc360e8326bcf268a1a7a.txt --> ca/ca/CYPH/air/wind/ca
+    IUKB01_CYPH_181200_7b27d04fa38164d8f58675b71ae8d4d6.bufr --> ca/ca/CYPH/observation/air/upper/temp/0-90n/90w-180
+    IUWB01_CYPH_181200_94d6a2f6ee642acafb7030ad00995850.bufr --> ca/ca/CYPH/observation/air/upper/pilot/0-90n/90w-180
+    UKCN01_CYPL_181200_6738e45b20fb9bfbc733b7c866543a11.txt --> ca/ca/CYPL/air/upper/ca
+    USCN01_CYPL_181200_a0937272a88b7858c15f26b8f1353501.txt --> ca/ca/CYPL/air/upper/ca
+    UGCN01_CYPL_181200_de71e2b2ae50687b7b146fcb41a970ba.txt --> ca/ca/CYPL/air/wind/ca
+    IUKB01_CYPL_181200_859def95c85eda2e55f0d1e5cdc285ce.bufr --> ca/ca/CYPL/observation/air/upper/temp/0-90n/90w-180
+    IUWB01_CYPL_181200_750da73b3b237f89bfb6d92701f4c5d8.bufr --> ca/ca/CYPL/observation/air/upper/pilot/0-90n/90w-180
+    UGIN90_VERP_181200_81f9828df7b785162698b64a40f09177.txt --> in/in/VERP/air/wind/in
+    UGIN90_VOPB_181200_cd81eac262c21cffe4a83cd6572e6aba.txt --> in/VOPB/air/wind/in
+    ISCD30_VOPD_181200 --> in/in/VOPD/observation/sea/surface/land/climat/0-90n/90e-0
+    ISCD50_VOPD_181200 --> in/in/VOPD/observation/sea/surface/marine/climat/0-90n/90e-0
+    INQI06_SABM_190204 --> ar/buenos_aires_centro_regional_met/observation/satellite/other/0-90s/0-90w
+    PAHM44_TNCC_190408 --> cw/willemstad_dr_a_plesman_curaçao/observation/cloud/radar/tropics/90e-0/096h
+    SXBZ20_KWAL_200204_bacf9daddab445bfd22c4351a6075721.txt --> us/wallops_i__wallops_station_va/observation/br
+    SXCA03_KWAL_200221_be054b0bd6d42bb037de5783dc3d216f.txt --> us/wallops_i__wallops_station_va/observation/us
+    SXCH40_KWAL_200202_b1d6db361790b1e72848de4ac3283a11.txt --> us/wallops_i__wallops_station_va/observation/cl
+    SZHW36_KWBC_191806 --> us/washington_national_meteorological_com_centre_dc/sea//us
+    LVZS50_KWBX_200000_qwtwqwfwq.grib --> us/us/KWBX/air/navigation/ash/ZS
+    LTUS43_KFSD_200400_AAA_634152e96f377ecc654f531b3d341a9f.iwxxm --> us/sioux_falls_joe_foss_field_sd/air/navigation/forecast/us
+    PAHM44_TFFR_200400_920d838d40b1382c91a47ffe7c7af422.bin --> gp/pointe-à-pitre_le_raizet_guadeloupe/observation/cloud/radar/tropics/90e-0/096h
+    QZTB90_KKCI_200300_21650fe67ecf97b340951631da2a41fe.bin --> us/KKCI/Z/
+    QZTG90_KKCI_200600_c9f5fec4e51669fe5140e09203f3f452.bin --> us/KKCI/Z/
+    ISMD01_LQSM_111800_a9ce6b3edd4d37ca4d89ae9a3c716138.bufr --> ba/sarajevo_nmc/observation/sea/surface/land/0-90n/90e-0
+    SAVG31_TVSA_112000_d1937fa071261528f44c6f800cc4c002.txt --> vc/argyle_ia/observation/land/vc/ship
+    CDUS45_KGJT_290000_01a25851f8a2ce080e51f1d2299cef2c.txt --> us/galveston_walker_field_co/climate/daily
+    AEUS71_KALY_290000_f1def66e9d783b6ca592bff7f36a2df5.txt --> us/KALY/forecast/airquality
+    IUFI02_EUMG_290000_13e70813607a302242017d3978f5856d.bufr --> eu/eumetsat_darmstadt/observation/air/upper/satellite/radiance/0-90s/0-90w
+    IUFL09_EUMG_290000_858666c4e9ab6897a0483a0981b8b349.bufr --> eu/eumetsat_darmstadt/observation/air/upper/satellite/radiance/0-90s/90e-0
+    IUFE09_EUMG_290000_6c28048d4089220ac14235d621a5ae66.bufr --> eu/eumetsat_darmstadt/observation/air/upper/satellite/radiance/tropics/0-90w
+    IUFI01_EUMG_290000_c7f763993d7f312ce9bb53c524b1ea6e.bufr --> eu/eumetsat_darmstadt/observation/air/upper/satellite/radiance/0-90s/0-90w
+    IUFD08_EUMG_290000_839806e3f292e0d10eefe2c47ee87574.bufr --> eu/eumetsat_darmstadt/observation/air/upper/satellite/radiance/0-90n/90e-0
+    IUFH13_EUMG_290000_a3550000251d79506cf3bd9e624a7830.bufr --> eu/eumetsat_darmstadt/observation/air/upper/satellite/radiance/tropics/90e-0
+    HHOG15_EGRR_290000_efeecc850c17e9650b16fe9e8eb5735d.grib --> gb/bracknell/model/height/somewhere/tableC3O/036h
+    HHMG20_EGRR_290000_b1e617564322a7c7e6cacb2ee579828a.grib --> gb/bracknell/model/height/somewhere/tableC3M/036h
+    HRYA92_EGRR_290000_393b2b09047f2cddb6b7ce6df6a768d7.grib --> gb/bracknell/model/humidity/relative/somewhere/tableC3Y/analysys
     
     
     
