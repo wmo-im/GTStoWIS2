@@ -20,6 +20,10 @@ for hl in hh:
     print( "input: %3d - %s" % ( n, ahl ) )
     t = topic_builder.analyzeAHL(ahl)
     print( "GISC,country,topic=%s" % ', '.join(t) )
-    print( "summary: %3d - %s mapped to: %s/%s\n\n" % ( n, ahl, t[1], t[2] ) )
+    if t[1] +'/' != t[2][0:3]:
+       tt = t[1] + '/' + t[2]
+    else:
+       tt = t[2]
+    print( "summary: %3d - %s mapped to: %s\n\n" % ( n, ahl, tt ) )
     n+=1
 
