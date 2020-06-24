@@ -10,12 +10,12 @@ A,I,analysis/ice,
 A,O,analysis/ozone,
 A,R,analysis/radar,
 A,S,analysis/land,
-A,U,analysis/air/upper,replace:,Upper,Air,
+A,U,analysis/upper-air,replace:,Upper,Air,
 A,W,analysis/weather,
 A,X,analysis,
 C,A,climate/anomalies,
 C,D,climate/daily
-C,E,climate/monthly/air/upper,
+C,E,climate/monthly/upper-air,
 C,H,climate/monthly/land,
 C,O,climate/monthly/sea,
 C,S,climate/monthly/land,
@@ -90,7 +90,7 @@ I,O,observation/sea,,Oceanographic/limnographic (water properties)
 I,P,observation,,Pictorial
 I,S,observation/sea/surface,,Surface/sea level
 I,T,observation,,Text (plain language information)
-I,U,observation/air/upper,,Upper air
+I,U,observation/upper-air,,Upper air
 I,X,observation,,Other data types
 
 J,N,forecast/satellite,,Satellite data
@@ -98,7 +98,7 @@ J,O,forecast/sea/,,Oceanographic/limnographic (water properties)
 J,P,forecast,,Pictorial
 J,S,forecast/sea/surface,,Surface/sea level
 J,T,forecast,,Text (plain language information)
-J,U,forecast/air/upper,,Upper air
+J,U,forecast/upper-air,,Upper air
 J,X,forecast,,Other data types
 
 #Table B7, L
@@ -194,7 +194,7 @@ S,Y,seismic,,Seismic wave form data,[any format]
 S,Z,observation/sea/tsunami,Sea level data and deep-ocean tsunami data,[any alphanumeric format]
 T,B,satellite/orbit,,Satellite orbit parameters,[TEXT]
 T,C,satellite/cloud,,Satellite cloud interpretations,FM 85 (SAREP)
-T,H,satellite/soundings/air/upper,,Satellite remote upper air soundings,FM 86 (SATEM)
+T,H,satellite/soundings/upper-air,,Satellite remote upper air soundings,FM 86 (SATEM)
 T,R,satellite/radiance,,Clear radiance observations,FM 87 (SARAD)
 T,T,sea/surface/temperature,,Sea surface temperatures,FM 88 (SATOB)
 T,W,satellite/winds/,,Winds and cloud temperatures,FM 88 (SATOB)
@@ -202,23 +202,23 @@ T,X,miscellaneous,,Miscellaneous,[TEXT]
 U,A,air/aircraft,,Aircraft reports,FM 41 (CODAR), ICAO (AIREP)
 U,B,air/aircraft,,Aircraft reports,MISSING from WMO Table B1
 U,D,air/aircraft,,Aircraft reports,FM 42 (AMDAR)
-U,E,air/upper,,Upper level pressure, temperature, humidity and wind (Part D),FM 35 (TEMP)/FM 36 (TEMP SHIP)/FM 38 (TEMP MOBIL)
-U,F,air/upper,,Upper level pressure, temperature, humidity and wind (Parts C and D) [National and bilateral option],FM 35 (TEMP)/FM 36 (TEMP SHIP)/FM 38 (TEMP MOBIL)
+U,E,upper-air,,Upper level pressure, temperature, humidity and wind (Part D),FM 35 (TEMP)/FM 36 (TEMP SHIP)/FM 38 (TEMP MOBIL)
+U,F,upper-air,,Upper level pressure, temperature, humidity and wind (Parts C and D) [National and bilateral option],FM 35 (TEMP)/FM 36 (TEMP SHIP)/FM 38 (TEMP MOBIL)
 U,G,air/wind,,Upper wind (Part B),FM 32 (PILOT)/FM 33(PILOT SHIP)/FM 34(PILOT MOBIL)
 U,H,air/wind,,Upper wind (Part C),FM 32 (PILOT)/FM 33 (PILOT SHIP)/FM 34 (PILOT MOBIL)
-U,I,air/upper/wind,,Upper wind (Parts A and B) [National and bilateral option],FM 32(PILOT)/FM 33(PILOT SHIP)/FM 34 (PILOT MOBIL)
-U,K,air/upper,,Upper level pressure, temperature, humidity and wind (Part B),FM 35 (TEMP)/FM 36 (TEMP SHIP)/FM 38 (TEMP MOBIL)
-U,L,air/upper,,Upper level pressure, temperature, humidity and wind (Part C),FM 35 (TEMP)/FM 36 (TEMP SHIP)/FM 38 (TEMP MOBIL)
-U,M,air/upper,,Upper level pressure, temperature, humidity and wind (Parts A and B) [National and bilateral option],FM 35 (TEMP)/FM 36 (TEMP SHIP)/FM 38 (TEMP MOBIL)
-U,N,air/upper,,Rocketsonde reports,FM 39(ROCOB)/FM 40 (ROCOB SHIP)
-U,P,air/upper/wind,,Upper wind (Part A),FM 32 (PILOT)/FM 33 (PILOT SHIP)/FM 34 (PILOT MOBIL)
-U,Q,air/upper/wind,,Upper wind (Part D),FM 32(PILOT)/FM 33 (PILOT SHIP)/FM 34 (PILOT MOBIL)
-U,R,air/upper/aircraft,,Aircraft report,[NATIONAL**] (RECCO)
-U,S,air/upper,,Upper level pressure, temperature, humidity and wind (Part A),FM 35 (TEMP)/FM 36 (TEMP SHIP)FM 38 (TEMP MOBIL)
-U,T,air/upper/aircraft,,Aircraft report,FM 41 (CODAR)
-U,X,air/upper,,Miscellaneous,[TEXT]
-U,Y,air/upper,,Upper wind (Parts C and D) [National and bilateral option],FM 32 (PILOT)/FM 33 (PILOT SHIP)/FM 34 (PILOT MOBIL)
-U,Z,air/upper,,Upper level pressure, temperature, humidity and wind from a sonde released by carrier balloon or aircraft (Parts A, B, C, D),FM 37 (TEMP DROP)
+U,I,upper-air/wind,,Upper wind (Parts A and B) [National and bilateral option],FM 32(PILOT)/FM 33(PILOT SHIP)/FM 34 (PILOT MOBIL)
+U,K,upper-air,,Upper level pressure, temperature, humidity and wind (Part B),FM 35 (TEMP)/FM 36 (TEMP SHIP)/FM 38 (TEMP MOBIL)
+U,L,upper-air,,Upper level pressure, temperature, humidity and wind (Part C),FM 35 (TEMP)/FM 36 (TEMP SHIP)/FM 38 (TEMP MOBIL)
+U,M,upper-air,,Upper level pressure, temperature, humidity and wind (Parts A and B) [National and bilateral option],FM 35 (TEMP)/FM 36 (TEMP SHIP)/FM 38 (TEMP MOBIL)
+U,N,upper-air,,Rocketsonde reports,FM 39(ROCOB)/FM 40 (ROCOB SHIP)
+U,P,upper-air/wind,,Upper wind (Part A),FM 32 (PILOT)/FM 33 (PILOT SHIP)/FM 34 (PILOT MOBIL)
+U,Q,upper-air/wind,,Upper wind (Part D),FM 32(PILOT)/FM 33 (PILOT SHIP)/FM 34 (PILOT MOBIL)
+U,R,upper-air/aircraft,,Aircraft report,[NATIONAL**] (RECCO)
+U,S,upper-air,,Upper level pressure, temperature, humidity and wind (Part A),FM 35 (TEMP)/FM 36 (TEMP SHIP)FM 38 (TEMP MOBIL)
+U,T,upper-air/aircraft,,Aircraft report,FM 41 (CODAR)
+U,X,upper-air,,Miscellaneous,[TEXT]
+U,Y,upper-air,,Upper wind (Parts C and D) [National and bilateral option],FM 32 (PILOT)/FM 33 (PILOT SHIP)/FM 34 (PILOT MOBIL)
+U,Z,upper-air,,Upper level pressure, temperature, humidity and wind from a sonde released by carrier balloon or aircraft (Parts A, B, C, D),FM 37 (TEMP DROP)
 W,A,alert/air/navigation,,AIRMET,[TEXT]
 W,C,alert/air/navigation/cyclone,,Tropical cyclone (SIGMET),[TEXT]
 W,E,alert/tsunami,,Tsunami,[TEXT]
