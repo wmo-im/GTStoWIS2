@@ -26,7 +26,7 @@ It is now in a state where we can ask for a wider review of the proposal.
 STATUS
 ------
 
-There proved to many gaps in the existing tables. Where the tables were
+There proved to be many gaps in the existing tables. Where the tables were
 supplemented from other means, the description field included the keyword
 **MISSING**, thus to find the changes made to the tables, one can execute::
 
