@@ -5,8 +5,8 @@
 "D": "sea/pacific/90n-05n/180w-035w",
 "E": "sea/indian/05n-60s/70e-120w",
 "F": "sea/atlantic/90n-30n/35w-70e",
-"J": "sea/south_of_60s",
-"L": "sea/missing",
+"J": "sea/90s-60s",
+"L": "sea/missing_c2_l",
 "X": "sea/many_areas",
-"Y": "sea/missing"
+"Y": "sea/missing_c2_y"
 }

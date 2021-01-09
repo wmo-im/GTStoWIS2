@@ -1,7 +1,0 @@
-FA,01,49,air/navigation/alerts/area,,Aviation area /advisories	FM 53 (ARFOR)/[text]
-FA,50,59,air/navigation,,GAMET	[TEXT]
-FA,60,99,air/navigation,,Not assigned	Not assigned
-UA,01,59,air/navigation/routine,,Routine aircraft reports	ICAO AIREP
-UA,60,69,air/navigation/special,,Special aircraft reports, except for volcanic ash	ICAO AIREP
-UA,70,79,air/navigation/special/ash,,Special aircraft reports related to volcanic ash	ICAO AIREP
-UA,80,99,air/navigation/airep,,Reserved for future use	ICAO AIREP

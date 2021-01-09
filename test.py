@@ -18,12 +18,8 @@ n=1
 for hl in hh:
     ahl= hl.strip().split(',')[0]
     print( "input: %3d - %s" % ( n, ahl ) )
-    t = topic_builder.analyzeAHL(ahl)
-    print( "GISC,country,topic=%s" % ', '.join(t) )
-    if t[1] +'/' != t[2][0:3]:
-       tt = t[1] + '/' + t[2]
-    else:
-       tt = t[2]
-    print( "summary: %3d - %s mapped to: %s\n\n" % ( n, ahl, tt ) )
+    t = topic_builder.mapAHLtoTopic(ahl)
+    print( "topic=%s" % t )
+    print( "summary: %3d - %s mapped to: %s\n\n" % ( n, ahl, t ) )
     n+=1
 
