@@ -10,7 +10,7 @@
   import GTStoWIS2
 
   
-  topic_mapper = GTStoWIS2()
+  topic_mapper = GTStoWIS2.GTStoWIS2()
 
 
   for ahl in [ 'IUPA54_LFPW_150000', 'A_ISID01LZIB190300_C_EDZW_20200619030401_18422777' ]:

@@ -21,6 +21,28 @@ processing is required, the input is a comma separated value, or csv file.
 
 It is now in a state where we can ask for a wider review of the proposal.
 
+USAGE
+-----
+
+If you have some code that wants to insert traditional GTS data onto WIS,
+if you are using python, you can do the following::
+
+   import GTStoWIS2
+
+   topic_mapper = GTStoWIS2.GTStoWIS2()
+
+   for ahl in [ 'IUPA54_LFPW_150000', 'A_ISID01LZIB190300_C_EDZW_20200619030401_18422777' ]:
+       topic = topic_mapper.mapAHLtoTopic( ahl )
+       print( 'ahl: %s, mapped to: %s' % ( ahl, topic ) )
+
+so then you could place the file in a corresponding sub-directory::
+
+   import shutils
+
+   os.mkdir( topic ) 
+   shutils.move( fn, topic + os.sep + fn )
+
+and then create announcements to advertise the file.
 
 
 STATUS
