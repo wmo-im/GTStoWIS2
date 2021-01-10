@@ -44,7 +44,7 @@ Message Format
 The message format was hashed out in WMO meetings in 2018 and 2019, and
 the results have been imported into this repository.  There is no intent to 
 lock the WMO into a particular MQP.  Rather the message encoding is MQP 
-agnostic JSON format, as defined in the `message_format`_ sub-directory
+agnostic JSON format, as defined in the `message_format <message_format>`_ sub-directory
 in this repository.
 
 For more information on the message format please consult the README.rst
