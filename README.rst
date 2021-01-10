@@ -2,9 +2,9 @@
 Use of Message Queueing Protocols for WMO
 =========================================
 
-The committee whose work is documented by this repository is tasked with modernizing
-the method used by the members of the World Meteorological Organization to circulate
-data. The traditional techniques involve sending messages over X.25 channels between
+This repository documents the work of a WMO commitee tasked with modernizing
+how member states of the World Meteorological Organization to exchange data. 
+The traditional techniques involve sending messages over X.25 channels between
 weather centres using methods defined by the WMO 306 (Manual on Codes) and WMO 386 
 (Manual on the GTS.) All of those technologies pre-date the internet and are obsolete. 
 
@@ -19,23 +19,23 @@ cannot be used to produce a forecast, or worse, a severe weather warning.
 So there is the long standing need "meteorological real-time" alerting, where 
 the time to transmit data is on the order of a few seconds.
 
-Message Queueing Protocols (MQP), such as AMQP and MQTT, for example, provide the 
-basis for the notification propagation that WMO still needs. There is a wide 
-variety of such technologies, with no clear dominant one, and the emergence
-of a better one in the future is not unlikely. The WMO's approach to use
-of the technologies is to identify a few properties of MQP's that are core
-to the intended purpose, and not to bind too closely to an individual one.
+Message Queueing Protocols (MQP), such as AMQP and MQTT, for example, provide a
+good base for the notification propagation that WMO still needs. There is a wide 
+variety of MQP technologies, with no clear dominant one, and the emergence
+of a better one in the future is not unlikely. The WMO's approach is to
+to identify a few properties of MQP's that are core to the intended purpose, 
+and not to bind too closely to an individual MQP.
 
 
-Message Queueing Protocol Features
-----------------------------------
+Key Message Queueing Protocol Features
+--------------------------------------
 
 The plan is to have messages routed through hubs (often called brokers)
 that perform filtering based on hierarchical topics. MQTT is likely the
 simplest embodiment of that plan, where it's core concepts embody precisely that
 model.  AMQP, on the other hand, provides a swiss-army knife approach to messaging,
-and one must prune features to only use a small subset. In AMQP only topic-based exchanges
-are used.
+and one must prune features to only use a small subset. In AMQP only topic-based 
+exchanges are used.
 
 
 Message Format
@@ -44,8 +44,8 @@ Message Format
 The message format was hashed out in WMO meetings in 2018 and 2019, and
 the results have been imported into this repository.  There is no intent to 
 lock the WMO into a particular MQP.  Rather the message encoding is MQP 
-agnostic JSON format, as defined in the `message_format <message_format>`_ sub-directory
-in this repository.
+agnostic JSON format, as defined in the `message_format <message_format>`_ 
+sub-directory in this repository.
 
 For more information on the message format please consult the README.rst
 file in that directory.
