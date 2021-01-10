@@ -22,7 +22,7 @@ Boiling it down to this relatively small example makes discussion easier.
 *  The *pubTime* marks when the file was posted on the first broker in the network.
    This allows easy calculation of propagation delay across any number of nodes.
    The date format looks like a floating point number,  but is the conventional
-   YYYYMMDDHHMMSS (in UTC timezone) followed by a fraction of a second after the
+   YYYYMMDDTHHMMSS (in UTC timezone) followed by a fraction of a second after the
    decimal place.
 
    This is chosen rather than any sort of epochal second count for readability
@@ -86,21 +86,42 @@ Boiling it down to this relatively small example makes discussion easier.
    was accurately received.
 
 
-By exchanging messages using only those fields, enough metadata is provided
+Optional Headers
+~~~~~~~~~~~~~~~~
+
+By exchanging messages using only the above fields, enough metadata is provided
 to permit downloads from peers with reasonable assurance.  Optional fields can 
 additionally be included::
 
 *  The *content* field can be used to embed small products within the message
    itself. Content will have an *encoding* field, of which two values are permitted:
 
-   - "utf-8"
-   - "base64"
+   - *utf-8*
+   - *base64*
 
    and the value will contain the body of the file in the appropriate encoding.
 
-* The "retPath" header provides an alternate download URL, providing, for example,
+* The *retPath* header provides an alternate download URL, providing, for example,
   for direct retrieval from object stores.  This provides an optimization. 
 
+* the *partitionStrategy* field can be included:: 
+
+      { "method" : "partitioned",  -- either "partitioned" or "inplace"
+        "blockNumber" : 0,         -- 1st partition/block sent. 
+        "blockCount"  : 5,         -- how many blocks in total? 
+        "blockSize"   : 52428800,  -- size of each block (except last one)
+        "lastBlock"   : 125280     -- size of the last block.
+      } 
+
+  This field is used to transmit arbitrarily large files in pieces,
+  to permit part of the file to be sent using multiple streams, and to
+  reduce the amount of storage intervening systems need in order
+  to transmit files. 
+  
+  When transmitting *inplace*, it means that the file is in one piece at source.
+  for a *partitioned* file, only the referenced block is present at source.
+
+  
 Other Fields
 ~~~~~~~~~~~~
 
