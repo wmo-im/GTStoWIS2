@@ -57,6 +57,15 @@ def timestr2flt(s):
     t = datetime.datetime(*dt_tuple, tzinfo=datetime.timezone.utc)
     return calendar.timegm(t.timetuple()) + float('0' + s[14:])
 
+default_properties= { 
+    'baseUrl':'file://',       # depends on many things...
+    'topicPrefix': 'v03/post', # for AMQP would set to 'v03.post'
+    'topicSeparator':'/',      # for AMQP would set to '.'
+    'preserveTime': True,      # include atime/mtime?
+    'preserveMode': True,      # include mode property?
+    'inlineEncoding': 'utf-8', # or base64
+    'inlineMax': 512           # maximum size of files to include in message body. 
+} 
 
 __version__ = '0.0.2'
 
@@ -78,8 +87,7 @@ class GTStoWIS2():
 
 
     def __init__(self,tableDir=None,debug=False,dump_tables=False, \
-        properties={ 'baseUrl':'file://', 'topicPrefix': 'v03/post', 'topicSeparator':'/',
-            'baseDir': '.', 'preserveTime': True, 'preserveMode': True } ):
+        properties=default_properties ):
         """
              create an instance for parsing WMO-386 AHL's.
 
@@ -348,8 +356,19 @@ class GTStoWIS2():
 
        # WARNING: this checksum calculation might be wrong. It looks OK, but have not validated it.
        h=sha512()
+       if lstat.st_size < self.properties['inlineMax'] :
+         # FIXME: should have guessing logic here to pick utf-8 if it makes sense.
+         #        and back off to base64 otherwise.
+         m[ 'content' ] = { 'encoding': self.properties['inlineEncoding'], 'value':'' }
+           
        with open(path, 'rb') as f:
             for data in iter(functools.partial(f.read, 1024 * 1024), b''):
+                if lstat.st_size < self.properties['inlineMax'] :
+                   if self.properties['inlineEncoding'] == 'utf-8':
+                       m['content']['value'] += data.decode('utf-8')
+                   else:
+                       m['content']['value'] += b64encode(data).decode('utf-8')
+
                 h.update(data)
 
        m[ 'integrity' ]  = { 'method': 'sha512', 'value':b64encode(h.digest()).decode('utf-8') }
