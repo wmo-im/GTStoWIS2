@@ -276,8 +276,8 @@ and it leads to many occurrences of the word 's', with out any concomitant clari
 Audience
 --------
 
-hmm.. 
-SA's::
+hmm..  SA's::
+
    observations/surface ?
    observations/surface/aerodrome  ?
    observations/aviation/ ?
@@ -362,7 +362,7 @@ numerical lat/long ranges, e.g. 0-90m/0-90w ::
 
 
 Results
--------
+=======
 
 It may help to see where GTS products will land in the topic hierarchy.  There is a file AHL_examples.txt in this 
 repository, which is interpreted by the tables and code in the repository as follows::
