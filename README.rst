@@ -14,20 +14,29 @@ If you have some code that wants to insert traditional GTS data onto WIS,
    topic_mapper = GTStoWIS2.GTStoWIS2()
 
    for ahl in [ 'IUPA54_LFPW_150000', 'A_ISID01LZIB190300_C_EDZW_20200619030401_18422777' ]:
-       topic = topic_mapper.mapAHLtoTopic( ahl )
-       print( 'ahl: %s, mapped to: %s' % ( ahl, topic ) )
+        topic=g.mapAHLtoTopic( ahl ).replace('/','.')
+        relpath=g.mapAHLtoRelPath( ahl )
+        print( 'input ahl=%s\n\tAMQP topic=%s\n\trelPath=%s' % ( ahl, topic, relpath ) )
+
 
 The result of the calls above would be something like::
 
-   ahl: IUPA54_LFPW_150000, mapped to: fr/toulouse_centre_régional_de_télécommunications/observation/upperair/profile/pilot/0-90n/0-90w
-   ahl: A_ISID01LZIB190300_C_EDZW_20200619030401_18422777, mapped to: me/tivat/observation/surface/land/fixed/synop/intermediate/0-90n/90e-0
+  input ahl=IUPA54_LFPW_150000
+    AMQP topic=fr.toulouse_centre_régional_de_télécommunications.observation.upperair.profile.pilot.0-90n.0-90w
+       relPath=fr/toulouse_centre_régional_de_télécommunications/observation/upperair/profile/pilot/0-90n/0-90w/IUPA54_LFPW_150000.bufr
+  input ahl=A_ISID01LZIB190300_C_EDZW_20200619030401_18422777
+    AMQP topic=me.tivat.observation.surface.land.fixed.synop.intermediate.0-90n.90e-0
+    relPath=me/tivat/observation/surface/land/fixed/synop/intermediate/0-90n/90e-0/A_ISID01LZIB190300_C_EDZW_20200619030401_18422777.bufr
+  input ahl=UACN10_CYXL_170329_8064d8dc1a1c71b014e0278b97e46187.txt
+    AMQP topic=ca.CYXL.upperair.aircraft.airep.ca
+    relPath=ca/CYXL/upperair/aircraft/airep/ca/UACN10_CYXL_170329_8064d8dc1a1c71b014e0278b97e46187.txt
 
 One would place the file in a corresponding sub-directory::
 
-   import shutils
+   import os,os.path,shutils
 
-   os.mkdir( topic ) 
-   shutils.move( fn, topic + os.sep + fn )
+   os.makedirs( os.path.dirname(relpath) ) 
+   shutils.move( fn, relpath )
 
 and then create announcements to advertise the file.
 
@@ -294,7 +303,10 @@ it should be in the same topic in the hierarchy, with the
 file type suffix taking care of the encoding.
 
 The topic tree should not mention encoding or format.
-For example, T1=D,G,H all become "model"
+For example, T1=D,G,H all become "model".
+
+In the module, the routine *mapAHLtoRelPath(ahl)* examines T1 and T2
+and guesses at an appropriate type suffix if none is present.
 
 
 
@@ -340,21 +352,10 @@ The hierarchy is especially evident in the dropping of hemi from hemispherical d
 This spherical notation was an initial proposal, which from feedback, evolved to use
 numerical lat/long ranges, e.g. 0-90m/0-90w ::
 
-  5 - IUPA54_LFPW_150000
+  input ahl=IUPA54_LFPW_150000
+    AMQP topic=fr.toulouse_centre_régional_de_télécommunications.observation.upperair.profile.pilot.0-90n.0-90w
+    relPath=fr/toulouse_centre_régional_de_télécommunications/observation/upperair/profile/pilot/0-90n/0-90w/IUPA54_LFPW_150000.bufr
 
-   topic from CCCC LFPW -> toulouse_centre_régional_de_télécommunications (country: fr )
-   ahlpib: ['observation/air/upper', '', 'Upper air\n']
-   topic from TT/B  "IU" -> "observation/air/upper"
-   AATopic 1 input: TT=IU, AA=PA, ahlHint={'Description': 'Observational data (Binary coded) - BUFR', 'T2': 'B', 'A1': 'C6', 'A2': 'C3', 'ii': '**', 'priority': '2'}
-   AATopic 2.5 C6:
-   AATopic 3 self.a1topic=self.tableC6[IUP]["topic"]
-   C6 self.a1topic=pilot-profiler
-   AATopic 4 self.a2topic=self.tableC3[A]=0-90n/0-90w
-   topic from AA/C: "PA" -> "pilot-profiler/0-90n/0-90w"
-   country to lookup for GISC: fr
-   topic from ii/C is: "54" -> ""
-   GISC: Toulouse country: fr topic is: toulouse_centre_régional_de_télécommunications/observation/air/upper/pilot-profiler/0-90n/0-90w
-   GISC,country,topic=Toulouse, fr, toulouse_centre_régional_de_télécommunications/observation/air/upper/pilot-profiler/0-90n/0-90w
 
 
 Results
@@ -363,12 +364,15 @@ Results
 It may help to see where GTS products will land in the topic hierarchy.  There is a file AHL_examples.txt in this 
 repository, which is interpreted by the tables and code in the repository as follows::
     
-  fractal% python test.py | grep '^summary:'  | sed 's/summary: ... - //g' | sed 's/mapped to:/-->/g'
+  fractal% python test.py | more
 
-  IUFH13_EUMG_290000_a3550000251d79506cf3bd9e624a7830.bufr --> eu/eumetsat_darmstadt/observation/air/upper/satellite/radiance/tropics/90e-0
-  HHOG15_EGRR_290000_efeecc850c17e9650b16fe9e8eb5735d.grib --> gb/bracknell/model/height/somewhere/tableC3O/036h
-  HHMG20_EGRR_290000_b1e617564322a7c7e6cacb2ee579828a.grib --> gb/bracknell/model/height/somewhere/tableC3M/036h
-  HRYA92_EGRR_290000_393b2b09047f2cddb6b7ce6df6a768d7.grib --> gb/bracknell/model/humidity/relative/somewhere/tableC3Y/analysys
+  summary:   1 - UARA61_RUMG_161116_445a58ea753d18b066cf872b90c517e2.txt mapped to:
+   AMQP sub-topic: ru.magadan.upperair.aircraft.airep.ru
+          relPath: ru/magadan/upperair/aircraft/airep/ru/UARA61_RUMG_161116_445a58ea753d18b066cf872b90c517e2.txt
+  summary:   2 - SACN37 CWAO 090807 mapped to:
+   AMQP sub-topic: ca.montreal_canadian_met_centre_que.surface.aviation.metar.ca
+          relPath: ca/montreal_canadian_met_centre_que/surface/aviation/metar/ca/SACN37 CWAO 090807.txt
+
   .
   .
   . 

@@ -44,7 +44,7 @@ class GTStoWIS2():
                print( "Table%s : %s" % (t, d ) )
 
 
-    def __init__(self,tableDir=None,debug=False,dump_tables=False,separator='/'):
+    def __init__(self,tableDir=None,debug=False,dump_tables=False):
         """
              create an instance for parsing WMO-386 AHL's.
 
@@ -53,7 +53,10 @@ class GTStoWIS2():
              dump_tables - shows how the tables were interpreted by GTStoWIS2.
 
         """
-        self.separator=separator
+        # originally wanted separator to be programmable, but realized that / is used in the json
+        # tables themselves, so cannot really be an argument. need to use / and replace for protocols
+        # that use something else (like AMQP using . )
+        self.separator='/'
         self.debug=debug
         self.dump=dump_tables
 
@@ -228,15 +231,82 @@ class GTStoWIS2():
 
         return fulltopic
 
-    def mapTopicToAHL(self,topic):
-        print( "NotImplemented" )
+    def mapAHLtoExtension(self,ahl):
+        """        
+        return an appropriate file extension for a file.
 
+        """        
+        if self.debug: print("input ahl=%s" % ahl )
+        fn386=False
+        if ahl[0:2] == 'A_':
+           ahl=ahl[2:]
+           fn386=True
 
-       
+        T1 = ahl[0:1]
+        TT = ahl[0:2] 
+
+        if T1 in [ 'G' ]:
+            return '.grid'
+
+        if T1 in [ 'I' ]:
+            return '.bufr'
+
+        if TT in [ 'IX' ]:
+            return '.hdf'
+
+        if T1 in [ 'K' ]:
+            return '.crex'
+
+        if TT in [ 'LT' ]: 
+            return '.iwxxm'
+
+        if T1 in [ 'L' ]:
+            return '.grib'
+
+        if TT in [ 'XW' ]:
+            return '.txt'
+
+        if T1 in [ 'X' ]:
+            return '.cap'
+
+        if T1 in [ 'D', 'H', 'O', 'Y' ]:
+            return '.grib'
+
+        if T1 in [ 'E', 'P', 'Q', 'R' ]:
+            return '.bin'
+
+        return '.txt'         
+
+    def mapAHLtoRelPath(self,ahl):
+        """
+          return complete relative path based on a traditional file name.
+          append extension if necessary.
+        """
+        topic = self.mapAHLtoTopic( ahl )
+        ext = self.mapAHLtoExtension( ahl )
+
+        lext = len(ext)
+        if ( ahl[-lext:] == ext ) or ( ahl[-lext] == '.' ): #there is another extension et already.
+             fname = ahl
+        else:
+             fname = ahl + ext
+
+        if os.sep != self.separator :
+           topic = topic.replace( self.separator, os.sep )
+
+        relpath = topic + os.sep + fname
+        if self.debug: print("relpath is: %s" % relpath )
+
+        return relpath
 
 
 if __name__ == '__main__':
-    g=GTStoWIS2( debug=True, dump_tables=False )
-    g.mapAHLtoTopic( 'IUPA54_LFPW_150000' )
-    g.mapAHLtoTopic( 'A_ISID01LZIB190300_C_EDZW_20200619030401_18422777' )
-    g.mapAHLtoTopic( 'UACN10_CYXL_170329_8064d8dc1a1c71b014e0278b97e46187.txt' )
+    # for AMQP topic separator is a period, rather than a slash, as in MQTT
+    g=GTStoWIS2( debug=False, dump_tables=False )
+  
+    for ahl in [ 'IUPA54_LFPW_150000' , 'A_ISID01LZIB190300_C_EDZW_20200619030401_18422777', \
+        'UACN10_CYXL_170329_8064d8dc1a1c71b014e0278b97e46187.txt' ]:
+
+        topic=g.mapAHLtoTopic( ahl ).replace('/','.')
+        relpath=g.mapAHLtoRelPath( ahl )
+        print( 'input ahl=%s\n\tAMQP topic=%s\n\trelPath=%s' % ( ahl, topic, relpath ) )
