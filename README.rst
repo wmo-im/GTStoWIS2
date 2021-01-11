@@ -117,7 +117,6 @@ processing is required, the input is a comma separated value, or csv file.
 
 It is now in a state where we can ask for a wider review of the proposal.
 
-=======
 INSTALLATION
 ~~~~~~~~~~~~
 
@@ -213,7 +212,7 @@ one can add lines to the end of the file (*AHL_examples.txt*) to put in more tes
 
 
 Conventions
------------
+===========
 
 in WMO 386, there are five concepts expressed in the AHL:
 
@@ -278,7 +277,7 @@ Audience
 --------
 
 hmm.. 
-SA's:
+SA's::
    observations/surface ?
    observations/surface/aerodrome  ?
    observations/aviation/ ?
@@ -359,7 +358,7 @@ numerical lat/long ranges, e.g. 0-90m/0-90w ::
 
 
 Results
--------
+=======
 
 It may help to see where GTS products will land in the topic hierarchy.  There is a file AHL_examples.txt in this 
 repository, which is interpreted by the tables and code in the repository as follows::
