@@ -21,9 +21,9 @@ packages=find_packages()
 print("packages = %s" % packages)
 
 setup(
-    name='wmo-im-GTS2WIS2',
+    name='GTStoWIS2',
     version=GTStoWIS2.__version__,
-    description='Convert GTS AHL to WIS2 topic tree',
+    description='Conversions for GTS AHL to WIS2 tree',
     long_description=(read('README.rst')),
     url='https://github.com/wmo-im/GTStoWIS2',
     license='GPLv3',
