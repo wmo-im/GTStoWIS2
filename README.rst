@@ -1,4 +1,39 @@
 
+Introduction
+~~~~~~~~~~~~
+
+The GTStoWIS2 python library provides routines to take a World Meteorological Organization (WMO)
+Global Telecommunications System (GTS) Abbreviated Header Line (AHL) and return
+a topic hierarchy suitable for being placed into data circulation in a WMO Information System (WIS)
+network.
+
+If you have some code that wants to insert traditional GTS data onto WIS,
+
+   import GTStoWIS2
+
+   topic_mapper = GTStoWIS2.GTStoWIS2()
+
+   for ahl in [ 'IUPA54_LFPW_150000', 'A_ISID01LZIB190300_C_EDZW_20200619030401_18422777' ]:
+       topic = topic_mapper.mapAHLtoTopic( ahl )
+       print( 'ahl: %s, mapped to: %s' % ( ahl, topic ) )
+
+The result of the calls above would be something like::
+
+   ahl: IUPA54_LFPW_150000, mapped to: fr/toulouse_centre_régional_de_télécommunications/observation/upperair/profile/pilot/0-90n/0-90w
+   ahl: A_ISID01LZIB190300_C_EDZW_20200619030401_18422777, mapped to: me/tivat/observation/surface/land/fixed/synop/intermediate/0-90n/90e-0
+
+One would place the file in a corresponding sub-directory::
+
+   import shutils
+
+   os.mkdir( topic ) 
+   shutils.move( fn, topic + os.sep + fn )
+
+and then create announcements to advertise the file.
+
+
+
+
 Use of Message Queueing Protocols for WMO
 =========================================
 
@@ -73,9 +108,6 @@ processing is required, the input is a comma separated value, or csv file.
 
 It is now in a state where we can ask for a wider review of the proposal.
 
-<<<<<<< HEAD
-USAGE
------
 =======
 INSTALLATION
 ~~~~~~~~~~~~
