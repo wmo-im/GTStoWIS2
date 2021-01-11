@@ -317,18 +317,22 @@ specify or constrain the topic at the higher levels.  example::
 
    1 - UARA61_RUMG_161116_445a58ea753d18b066cf872b90c517e2.txt
 
-   topic from CCCC RUMG -> magadan (country: ru )
-   ahlpib: ['air/aircraft', '', 'Aircraft reports', 'FM 41 (CODAR)', ' ICAO (AIREP)\n']
-   topic from TT/B  "UA" -> "air/aircraft"
-   AATopic 1 input: TT=UA, AA=RA, ahlHint={'Description': 'Upper air data', 'T2': 'B', 'AA': 'C1', 'ii': '**', 'priority': '2'}
-   AATopic 2 self._AATopic=self.tableC1["RA"]["topic"]
-   topic from AA/C: "RA" -> "ru"
-   country to lookup for GISC: ru
-   topic from ii/C is: "61" -> "air/navigation/special"
-   GISC: Moscow country: ru topic is: magadan/air/aircraft/ru/air/navigation/special
-   GISC,country,topic=Moscow, ru, magadan/air/aircraft/ru/air/navigation/special
+   # debug output...
+   input ahl=UARA61_RUMG_161116_445a58ea753d18b066cf872b90c517e2.txt
+   T1=U, T2=A, A1=R, A2=A, ii=61, CCCC=RUMG
+   topic from tableA: upperair
+   subtopic_CCCC: ru/magadan
+   subtopicT2: aircraft/airep
+   subtopicA1: ru
+   subtopicA2: 
+   fulltopic is: ru/magadan/upperair/aircraft/airep/ru
+   # end debug output...
 
-   ru/magadan/air/aircraft/ru/air/navigation/special:
+   summary:   1 - UARA61_RUMG_161116_445a58ea753d18b066cf872b90c517e2.txt mapped to:
+      AMQP sub-topic: ru.magadan.upperair.aircraft.airep.ru
+             relPath: ru/magadan/upperair/aircraft/airep/ru/UARA61_RUMG_161116_445a58ea753d18b066cf872b90c517e2.txt
+
+   % ls ru/magadan/upperair/aircraft/airep/ru/
    total 4
    -rw-rw-r-- 1 peter peter 76 Mar 16 07:17 UARA61_RUMG_161116_445a58ea753d18b066cf872b90c517e2.txt
 
@@ -358,7 +362,7 @@ numerical lat/long ranges, e.g. 0-90m/0-90w ::
 
 
 Results
-=======
+-------
 
 It may help to see where GTS products will land in the topic hierarchy.  There is a file AHL_examples.txt in this 
 repository, which is interpreted by the tables and code in the repository as follows::
