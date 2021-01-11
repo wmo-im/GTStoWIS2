@@ -21,9 +21,42 @@
 
 
 """
+from base64 import b64encode
+import calendar
+import datetime
+from hashlib import sha512
+import functools
 import json
 import pkgutil
+import os
 import os.path
+import stat
+import time
+
+"""
+
+time routines imported from Sarracenia
+
+"""
+
+def nowflt():
+    return timestr2flt(nowstr())
+
+def nowstr():
+    return timeflt2str(time.time())
+
+def v3timeflt2str(f):
+    nsec = "{:.9g}".format(f % 1)[1:]
+    return "{}{}".format(time.strftime("%Y%m%dT%H%M%S", time.gmtime(f)), nsec)
+
+def timestr2flt(s):
+    if s[8] == "T":
+        s = s.replace('T', '')
+    dt_tuple = int(s[0:4]), int(s[4:6]), int(s[6:8]), int(s[8:10]), int(
+        s[10:12]), int(s[12:14])
+    t = datetime.datetime(*dt_tuple, tzinfo=datetime.timezone.utc)
+    return calendar.timegm(t.timetuple()) + float('0' + s[14:])
+
 
 __version__ = '0.0.2'
 
@@ -44,7 +77,9 @@ class GTStoWIS2():
                print( "Table%s : %s" % (t, d ) )
 
 
-    def __init__(self,tableDir=None,debug=False,dump_tables=False):
+    def __init__(self,tableDir=None,debug=False,dump_tables=False, \
+        properties={ 'baseUrl':'file://', 'topicPrefix': 'v03/post', 'topicSeparator':'/',
+            'baseDir': '.', 'preserveTime': True, 'preserveMode': True } ):
         """
              create an instance for parsing WMO-386 AHL's.
 
@@ -53,10 +88,7 @@ class GTStoWIS2():
              dump_tables - shows how the tables were interpreted by GTStoWIS2.
 
         """
-        # originally wanted separator to be programmable, but realized that / is used in the json
-        # tables themselves, so cannot really be an argument. need to use / and replace for protocols
-        # that use something else (like AMQP using . )
-        self.separator='/'
+        self.properties = properties
         self.debug=debug
         self.dump=dump_tables
 
@@ -75,7 +107,7 @@ class GTStoWIS2():
         if CCCC in self.tableCCCC.keys():
             country = self.tableCCCC[CCCC]["country_short"]
             centre = self.tableCCCC[CCCC]["centre"]
-            subtopic = country + self.separator + centre
+            subtopic = country + '/' + centre
             return subtopic
         else:
             country = ''
@@ -84,7 +116,7 @@ class GTStoWIS2():
             for c in self.tableC1:
                 if "CC" in self.tableC1[c]:
                     if CC in self.tableC1[c]['CC']:
-                        return self.tableC1[c]['topic'] + self.separator + CCCC
+                        return self.tableC1[c]['topic'] + '/' + CCCC
         return 'unknown'                 
     
 
@@ -210,22 +242,25 @@ class GTStoWIS2():
         subtopicT2 = ""
         subtopicA1 = ""
         subtopicA2 = ""
-        fulltopic = subtopic_cccc + self.separator + topic
+        fulltopic = subtopic_cccc + '/' + topic
 
         subtopicT2 = self._getSubtopicTableT2(T1, T2, A1, ii, tableT2)
         if self.debug: print("subtopicT2: %s" % subtopicT2 )
         if subtopicT2 != "":
-            fulltopic = fulltopic + self.separator + subtopicT2
+            fulltopic = fulltopic + '/' + subtopicT2
 
         subtopicA1 = self._getSubtopicTableA1(T1, T2, A1, A2, ii, tableA1)
         if self.debug: print("subtopicA1: %s" % subtopicA1 )
         if subtopicA1 != "":
-            fulltopic = fulltopic + self.separator + subtopicA1
+            fulltopic = fulltopic + '/' + subtopicA1
 
         subtopicA2 = self._getSubtopicTableA2(A2, tableA2)
         if self.debug: print("subtopicA2: %s" % subtopicA2 )
         if subtopicA2 != "":
-            fulltopic = fulltopic + self.separator + subtopicA2
+            fulltopic = fulltopic + '/' + subtopicA2
+
+        if self.properties[ 'topicSeparator' ] != '/' :
+           fulltopic = fulltopic.replace( '/', self.properties[ 'topicSeparator' ] )
 
         if self.debug: print("fulltopic is: %s" % fulltopic )
 
@@ -291,13 +326,43 @@ class GTStoWIS2():
         else:
              fname = ahl + ext
 
-        if os.sep != self.separator :
-           topic = topic.replace( self.separator, os.sep )
+        if os.sep != '/' :
+           topic = topic.replace( '/', os.sep )
 
         relpath = topic + os.sep + fname
         if self.debug: print("relpath is: %s" % relpath )
 
         return relpath
+
+    def mapAHLtoMessage(self, ahl, path):
+       """
+           given an ahl, and a corresponding file, build an MQP message as a python dictionary
+           which can be turned into json using: json.dumps(msg)
+       """
+       m = {}
+       m[ 'baseUrl' ] = self.properties[ 'baseUrl' ] 
+       m[ 'relPath' ] = self.mapAHLtoRelPath( ahl )
+       m[ 'pubTime' ] = v3timeflt2str(time.time())
+
+      
+       lstat = os.lstat( path )
+     
+
+       # WARNING: this checksum calculation might be wrong. It looks OK, but have not validated it.
+       h=sha512()
+       with open(path, 'rb') as f:
+            for data in iter(functools.partial(f.read, 1024 * 1024), b''):
+                h.update(data)
+
+       m[ 'integrity' ]  = { 'method': 'sha512', 'value':b64encode(h.digest()).decode('utf-8') }
+
+       if self.properties[ 'preserveTime' ]:
+           m['mtime'] = v3timeflt2str(lstat.st_mtime)
+           m['atime'] = v3timeflt2str(lstat.st_atime)
+
+       if self.properties[ 'preserveMode' ]:
+           m['mode'] = "%o" % (lstat[stat.ST_MODE] & 0o7777)
+       return m
 
 
 if __name__ == '__main__':
@@ -310,3 +375,15 @@ if __name__ == '__main__':
         topic=g.mapAHLtoTopic( ahl ).replace('/','.')
         relpath=g.mapAHLtoRelPath( ahl )
         print( 'input ahl=%s\n\tAMQP topic=%s\n\trelPath=%s' % ( ahl, topic, relpath ) )
+
+    import json
+
+    dataDir='../sample_GTS_data'
+
+    for path in os.listdir( dataDir ):
+        print( 'path: %s' % path )
+        m= g.mapAHLtoMessage( path, dataDir + os.sep + path )
+        msg = json.dumps(m)
+        print( 'message is: %s' % msg )
+
+
