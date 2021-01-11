@@ -344,9 +344,7 @@ class GTStoWIS2():
        m[ 'relPath' ] = self.mapAHLtoRelPath( ahl )
        m[ 'pubTime' ] = v3timeflt2str(time.time())
 
-      
        lstat = os.lstat( path )
-     
 
        # WARNING: this checksum calculation might be wrong. It looks OK, but have not validated it.
        h=sha512()
