@@ -40,16 +40,28 @@ time routines imported from Sarracenia
 """
 
 def nowflt():
+    """
+       return a floating point representation of the current time.
+    """
     return timestr2flt(nowstr())
 
 def nowstr():
+    """
+       return a string representation of the current time.
+    """
     return timeflt2str(time.time())
 
 def v3timeflt2str(f):
+    """
+       convert the given floating point time to a string.
+    """
     nsec = "{:.9g}".format(f % 1)[1:]
     return "{}{}".format(time.strftime("%Y%m%dT%H%M%S", time.gmtime(f)), nsec)
 
 def timestr2flt(s):
+    """
+       convert the given string date/time to floating point. 
+    """
     if s[8] == "T":
         s = s.replace('T', '')
     dt_tuple = int(s[0:4]), int(s[4:6]), int(s[6:8]), int(s[8:10]), int(
