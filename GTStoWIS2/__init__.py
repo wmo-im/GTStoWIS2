@@ -37,6 +37,9 @@ import time
 
 time routines imported from Sarracenia
 
+floating point is the python native date/time representation, as returned
+by the os.stat and lstat routines, or time.time().
+
 """
 
 def nowflt():
