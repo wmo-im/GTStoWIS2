@@ -17,7 +17,7 @@ print( "Tests, count: %d" % len(hh) )
 n=1
 for hl in hh:
     ahl= hl.strip().split(',')[0]
-    t = topic_builder.mapAHLtoTopic(ahl).replace('/','.')
+    t = topic_builder.mapAHLtoSubTopic(ahl).replace('/','.')
     p = topic_builder.mapAHLtoRelPath(ahl)
     print( "summary: %3d - %s mapped to:\n AMQP sub-topic: %s\n\trelPath: %s\n\n" % \
         ( n, ahl, t, p ) )

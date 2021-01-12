@@ -14,7 +14,7 @@ If you have some code that wants to insert traditional GTS data onto WIS,
    topic_mapper = GTStoWIS2.GTStoWIS2()
 
    for ahl in [ 'IUPA54_LFPW_150000', 'A_ISID01LZIB190300_C_EDZW_20200619030401_18422777' ]:
-        topic=g.mapAHLtoTopic( ahl ).replace('/','.')
+        topic=g.mapAHLtoFullTopic( ahl ).replace('/','.')
         relpath=g.mapAHLtoRelPath( ahl )
         print( 'input ahl=%s\n\tAMQP topic=%s\n\trelPath=%s' % ( ahl, topic, relpath ) )
 
@@ -22,13 +22,13 @@ If you have some code that wants to insert traditional GTS data onto WIS,
 The result of the calls above would be something like::
 
   input ahl=IUPA54_LFPW_150000
-    AMQP topic=fr.toulouse_centre_régional_de_télécommunications.observation.upperair.profile.pilot.0-90n.0-90w
+    AMQP topic=v03.post.fr.toulouse_centre_régional_de_télécommunications.observation.upperair.profile.pilot.0-90n.0-90w
        relPath=fr/toulouse_centre_régional_de_télécommunications/observation/upperair/profile/pilot/0-90n/0-90w/IUPA54_LFPW_150000.bufr
   input ahl=A_ISID01LZIB190300_C_EDZW_20200619030401_18422777
-    AMQP topic=me.tivat.observation.surface.land.fixed.synop.intermediate.0-90n.90e-0
+    AMQP topic=v03.post.me.tivat.observation.surface.land.fixed.synop.intermediate.0-90n.90e-0
     relPath=me/tivat/observation/surface/land/fixed/synop/intermediate/0-90n/90e-0/A_ISID01LZIB190300_C_EDZW_20200619030401_18422777.bufr
   input ahl=UACN10_CYXL_170329_8064d8dc1a1c71b014e0278b97e46187.txt
-    AMQP topic=ca.CYXL.upperair.aircraft.airep.ca
+    AMQP topic=v03.post.ca.CYXL.upperair.aircraft.airep.ca
     relPath=ca/CYXL/upperair/aircraft/airep/ca/UACN10_CYXL_170329_8064d8dc1a1c71b014e0278b97e46187.txt
 
 One would place the file in a corresponding sub-directory::
@@ -38,9 +38,25 @@ One would place the file in a corresponding sub-directory::
    os.makedirs( os.path.dirname(relpath) ) 
    shutils.move( fn, relpath )
 
-and then create announcements to advertise the file.
+and then create announcements to advertise the file using:: 
 
+   m = g.mapAHLtoMessage( os.path.basename(relpath), relpath )
+   msg = json.dumps(m)
+   print( "message is %s" % msg )
 
+to build a python dictionary, and then a JSON string representation of the message
+
+an example message might looks like so::
+
+   message is: {"baseUrl": "file://", "relPath": "au/melbourne_world_met_centre/surface/sea/tsunami/au/SZAU01_AMMC_111800_b87cd80f2d65cbc19c4f5cb6fff957af.txt", "pubTime": "20210112T025850.596780777", "content": {"encoding": "utf-8", "value": "SZAU01 AMMC 111800\r\r\nCREX++\r\r\nT000103 A001 D01021 D06025++\r\r\n-1058650 14222190 58170 2021 01 11 17 53 3033 11 07 00 01\r\r\n01565 0111 01571 0117 01564 0111 01565 0112 01565 0113 01563 0111+\r\r\n-1927740 14705860 59260 2021 01 11 17 53 //// 11 07 00 01\r\r\n05857 0093 05865 0091 05874 0094 05883 0093 05892 0094 05899 0094+\r\r\n-1386000 13641580 63511 2021 01 11 17 53 //// 11 07 00 01\r\r\n01649 0127 01647 0128 01645 0129 01642 0129 01638 0129 01634 0128++\r\r\n7777\r\r\n\r\r\n\r\r\n\u0003\r\n"}, "integrity": {"method": "sha512", "value": "JsOVbX8iLdFgPkPS2F1nerlJ1a7uZT8kJIXZFp1d7VzNkIWHot50kAFieUZN5qT4yNG0hTkMs+akwulntbBsgg=="}, "mtime": "20210111T223832.91905427", "atime": "20210111T223836.0510854721", "mode": "664"}
+
+then published using the amqplib library with something like::
+
+    import amqp
+
+    # missing set up... of AMQP channel... 
+    AMQP_Message = amqp.Message(msg, content_type='application/json', application_headers=None )
+    amqp_thing.channel.basic_publish( AMQP_Message, exchange, topic)
 
 
 Use of Message Queueing Protocols for WMO

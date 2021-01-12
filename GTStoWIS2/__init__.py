@@ -14,7 +14,7 @@
 
 
   for ahl in [ 'IUPA54_LFPW_150000', 'A_ISID01LZIB190300_C_EDZW_20200619030401_18422777' ]:
-      topic = topic_mapper.mapAHLtoTopic( ahl )
+      topic = topic_mapper.mapAHLtoFullTopic( ahl )
       print( 'ahl: %s, mapped to: %s' % ( ahl, topic ) )
 
 
@@ -203,7 +203,7 @@ class GTStoWIS2():
                         subTopicA2 = self.tableC5[myA2]
         return subTopicA2
     
-    def mapAHLtoTopic(self,ahl):
+    def mapAHLtoSubTopic(self,ahl):
         """
         Returns a topic, given an ahl... actually a file name that contains an ahl.
 
@@ -274,6 +274,10 @@ class GTStoWIS2():
 
         return fulltopic
 
+
+    def mapAHLtoFullTopic( self, ahl ):
+        return self.properties['topicPrefix'] + '/' + self.mapAHLtoSubTopic( ahl )
+
     def mapAHLtoExtension(self,ahl):
         """        
         return an appropriate file extension for a file.
@@ -325,7 +329,7 @@ class GTStoWIS2():
           return complete relative path based on a traditional file name.
           append extension if necessary.
         """
-        topic = self.mapAHLtoTopic( ahl )
+        topic = self.mapAHLtoSubTopic( ahl )
         ext = self.mapAHLtoExtension( ahl )
 
         lext = len(ext)
@@ -389,7 +393,7 @@ if __name__ == '__main__':
     for ahl in [ 'IUPA54_LFPW_150000' , 'A_ISID01LZIB190300_C_EDZW_20200619030401_18422777', \
         'UACN10_CYXL_170329_8064d8dc1a1c71b014e0278b97e46187.txt' ]:
 
-        topic=g.mapAHLtoTopic( ahl ).replace('/','.')
+        topic=g.mapAHLtoFullTopic( ahl ).replace('/','.')
         relpath=g.mapAHLtoRelPath( ahl )
         print( 'input ahl=%s\n\tAMQP topic=%s\n\trelPath=%s' % ( ahl, topic, relpath ) )
 
