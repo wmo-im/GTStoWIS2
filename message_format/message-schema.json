@@ -42,16 +42,6 @@
       ],
       "pattern": "^(.*)$"
     },
-    "retPath": {
-      "$id": "#/properties/retPath",
-      "type": "string",
-      "title": "Retrieval path",
-      "description": "If the relPath cannot be used to construct a URL that unambiguously identifies the data instance, than this value can be used to override it. In other words, this can be a very ugly string that together with the baseUrl forms a URL that your web server understands, while the relPath is a nice and structured and standardised and human readable identifier.",
-      "examples": [
-        "hgmpf/pfrck?instanceID=61686f79"
-      ],
-      "pattern": "^(.*)$"
-    },
     "integrity": {
       "$id": "#/properties/integrity",
       "type": "object",
@@ -79,6 +69,57 @@
           ]
         }
       }
+    },
+    "retPath": {
+      "$id": "#/properties/retPath",
+      "type": "string",
+      "title": "Retrieval path",
+      "description": "If the relPath cannot be used to construct a URL that unambiguously identifies the data instance, than this value can be used to override it. In other words, this can be a very ugly string that together with the baseUrl forms a URL that your web server understands, while the relPath is a nice and structured and standardised and human readable identifier.",
+      "examples": [
+        "hgmpf/pfrck?instanceID=61686f79"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "size": {
+      "$id": "#/properties/size",
+      "type": "integer",
+      "title": "File size in bytes (octets)",
+      "default": 0,
+      "examples": [
+        12345
+      ]
+    },
+    "atime": {
+      "$id": "#/properties/atime",
+      "format": "regex",
+      "pattern": "[0-9]{8}T[0-9]{6}(\\.[0-9]+)?Z?",
+      "type": "string",
+      "title": "File access date/time",
+      "description": "Optional file attribute that can help simulate 'rsync'. ISO 8601.",
+      "examples": [
+        "20201023T123456.789Z"
+      ]
+    },
+    "mtime": {
+      "$id": "#/properties/atime",
+      "format": "regex",
+      "pattern": "[0-9]{8}T[0-9]{6}(\\.[0-9]+)?Z?",
+      "type": "string",
+      "title": "File modification date/time",
+      "description": "Optional file attribute that can help simulate 'rsync'. ISO 8601.",
+      "examples": [
+        "20201023T123456.789Z"
+      ]
+    },
+    "mode": {
+      "$id": "#/properties/mode",
+      "format": "regex",
+      "pattern": "[0-7]{3}",
+      "type": "string",
+      "title": "File access mode in Unix like octal number.",
+      "examples": [
+        "640"
+      ]
     },
     "partitionStrategy": {
       "$id": "#/properties/partitionStrategy",
