@@ -173,6 +173,18 @@
 		"W": "airmet",
 		"Y": "sigmet/cyclone"
       },
+ "M": {
+		"A": "metar",
+		"C": "taf/under12hours",
+		"K": "tropical-cyclone",
+		"P": "speci",
+		"S": "sigmet",
+		"T": "taf/over12hours",
+		"U": "advisory/ash",
+		"V": "sigmet/ash",
+		"W": "airmet",
+		"Y": "sigmet/cyclone"
+      },
  "N": {
 		"A": "aviation",
 		"B": "aviation",

@@ -260,7 +260,7 @@ class GTStoWIS2():
         if TT in [ 'LT' ]: 
             return '.iwxxm'
 
-        if T1 in [ 'L' ]:
+        if T1 in [ 'L'  ]:
             return '.grib'
 
         if TT in [ 'XW' ]:
@@ -272,7 +272,7 @@ class GTStoWIS2():
         if T1 in [ 'D', 'H', 'O', 'Y' ]:
             return '.grib'
 
-        if T1 in [ 'E', 'P', 'Q', 'R' ]:
+        if T1 in [ 'E', 'L', 'M', 'P', 'Q', 'R' ]:
             return '.bin'
 
         return '.txt'         
