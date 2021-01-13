@@ -28,6 +28,7 @@ from hashlib import sha512
 import functools
 import json
 import pkgutil
+from pathlib import Path
 import os
 import os.path
 import stat
@@ -361,20 +362,21 @@ class GTStoWIS2():
 
         return relpath
 
-    def mapAHLtoMessage(self, ahl, path):
+    def mapAHLtoMessage(self, path, basePath):
        """
-           given an ahl, and a corresponding file, build an MQP message as a python dictionary
-           which can be turned into json using: json.dumps(msg)
+           given an path to file with AHL like name, and a base bath (base URL),
+           build an MQP message as a python dictionary which can be turned
+           into json using: json.dumps(msg)
        """
        m = {}
-       m[ 'baseUrl' ] = self.properties[ 'baseUrl' ] 
-       m[ 'relPath' ] = self.mapAHLtoRelPath( ahl )
-       m[ 'pubTime' ] = v3timeflt2str(time.time())
+       m[ 'baseUrl' ] = self.properties[ 'baseUrl' ] + str( basePath )
+       m[ 'relPath' ] = self.mapAHLtoRelPath( path.name )
+       m[ 'retPath' ] = str( path.relative_to( basePath ) )
+       m[ 'pubTime' ] = v3timeflt2str( time.time() )
 
        lstat = os.lstat( path )
 
-       # WARNING: this checksum calculation might be wrong. It looks OK, but have not validated it.
-       h=sha512()
+       h = sha512()
        if lstat.st_size < self.properties['inlineMax'] :
          # FIXME: should have guessing logic here to pick utf-8 if it makes sense.
          #        and back off to base64 otherwise.
@@ -390,36 +392,40 @@ class GTStoWIS2():
 
                 h.update(data)
 
-       m[ 'integrity' ]  = { 'method': 'sha512', 'value':b64encode(h.digest()).decode('utf-8') }
+       m[ 'integrity' ] = { 'method': 'sha512', 'value':b64encode(h.digest()).decode('utf-8') }
 
        if self.properties[ 'preserveTime' ]:
-           m['mtime'] = v3timeflt2str(lstat.st_mtime)
-           m['atime'] = v3timeflt2str(lstat.st_atime)
+           m[ 'mtime' ] = v3timeflt2str(lstat.st_mtime)
+           m[ 'atime' ] = v3timeflt2str(lstat.st_atime)
 
        if self.properties[ 'preserveMode' ]:
-           m['mode'] = "%o" % (lstat[stat.ST_MODE] & 0o7777)
+           m[ 'mode' ] = "%o" % (lstat[stat.ST_MODE] & 0o7777)
        return m
 
 
 if __name__ == '__main__':
     # for AMQP topic separator is a period, rather than a slash, as in MQTT
-    g=GTStoWIS2( debug=False, dump_tables=False )
+    g = GTStoWIS2( debug=False, dump_tables=False )
   
     for ahl in [ 'IUPA54_LFPW_150000' , 'A_ISID01LZIB190300_C_EDZW_20200619030401_18422777', \
         'UACN10_CYXL_170329_8064d8dc1a1c71b014e0278b97e46187.txt' ]:
 
-        topic=g.mapAHLtoFullTopic( ahl ).replace('/','.')
-        relpath=g.mapAHLtoRelPath( ahl )
+        topic = g.mapAHLtoFullTopic( ahl ).replace('/','.')
+        relpath = g.mapAHLtoRelPath( ahl )
         print( 'input ahl=%s\n\tAMQP topic=%s\n\trelPath=%s' % ( ahl, topic, relpath ) )
 
     import json
 
-    dataDir='../sample_GTS_data'
 
-    for path in os.listdir( dataDir ):
-        print( 'path: %s' % path )
-        m= g.mapAHLtoMessage( path, dataDir + os.sep + path )
-        msg = json.dumps(m)
+    currentDir = Path( os.getcwd() )
+    basePath = currentDir.parent
+    dataDir = currentDir / '../sample_GTS_data'
+    dataDir = dataDir.resolve()
+
+    for path in dataDir.iterdir():
+        print( 'file: %s' % path.name )
+        m = g.mapAHLtoMessage( path, basePath )
+        msg = json.dumps( m )
         print( 'message is: %s' % msg )
 
 
