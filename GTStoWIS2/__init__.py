@@ -1,5 +1,3 @@
-
-
 """
   module to map WMO 386 defined Abbreviated Header Lines (AHL) to WIS topics.
   this module is installed with default table versions, which
@@ -33,7 +31,6 @@ import os
 import os.path
 import stat
 import time
-
 """
 
 time routines imported from Sarracenia
@@ -43,11 +40,13 @@ by the os.stat and lstat routines, or time.time().
 
 """
 
+
 def nowflt():
     """
        return a floating point representation of the current time.
     """
     return timestr2flt(nowstr())
+
 
 def nowstr():
     """
@@ -55,12 +54,14 @@ def nowstr():
     """
     return timeflt2str(time.time())
 
+
 def v3timeflt2str(f):
     """
        convert the given floating point time to a string.
     """
     nsec = "{:.9g}".format(f % 1)[1:]
     return "{}{}".format(time.strftime("%Y%m%dT%H%M%S", time.gmtime(f)), nsec)
+
 
 def timestr2flt(s):
     """
@@ -73,33 +74,37 @@ def timestr2flt(s):
     t = datetime.datetime(*dt_tuple, tzinfo=datetime.timezone.utc)
     return calendar.timegm(t.timetuple()) + float('0' + s[14:])
 
-default_properties= { 
-    'baseUrl':'file://',       # depends on many things...
-    'topicPrefix': 'v03/post', # for AMQP would set to 'v03.post'
-    'topicSeparator':'/',      # for AMQP would set to '.'
-    'preserveTime': True,      # include atime/mtime?
-    'preserveMode': True,      # include mode property?
-    'inlineEncoding': 'utf-8', # or base64
-    'inlineMax': 512           # maximum size of files to include in message body. 
-} 
+
+default_properties = {
+    'baseUrl': 'file://',  # depends on many things...
+    'topicPrefix': 'v03/post',  # for AMQP would set to 'v03.post'
+    'topicSeparator': '/',  # for AMQP would set to '.'
+    'preserveTime': True,  # include atime/mtime?
+    'preserveMode': True,  # include mode property?
+    'inlineEncoding': 'utf-8',  # or base64
+    'inlineMax': 512  # maximum size of files to include in message body. 
+}
 
 __version__ = '0.0.2'
 
-class GTStoWIS2():
 
+class GTStoWIS2():
     def _readTables(self):
         """
           read in the tables to support the translation 
         """
 
-        for t in [ 'A', 'B', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C6', 'C7', 'CCCC', 'GISC'  ]:
+        for t in [
+                'A', 'B', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C6', 'C7',
+                'CCCC', 'GISC'
+        ]:
             f = self.tableDir + '/Table%s.json' % t
-            with open( f, 'r' ) as m:
-                if self.debug: print( 'reading %s' % f )
-                exec( "self.table"+t+"=json.load(m)" )
+            with open(f, 'r') as m:
+                if self.debug: print('reading %s' % f)
+                exec("self.table" + t + "=json.load(m)")
             if self.dump:
-               d = eval( "json.dumps(self.table"+t+", indent=2)" )
-               print( "Table%s : %s" % (t, d ) )
+                d = eval("json.dumps(self.table" + t + ", indent=2)")
+                print("Table%s : %s" % (t, d))
 
 
     def __init__(self,tableDir=None,debug=False,dump_tables=False, \
@@ -113,17 +118,17 @@ class GTStoWIS2():
 
         """
         self.properties = properties
-        self.debug=debug
-        self.dump=dump_tables
+        self.debug = debug
+        self.dump = dump_tables
 
         if tableDir is None:
-            self.tableDir = os.path.dirname( __file__ )
+            self.tableDir = os.path.dirname(__file__)
             if not self.tableDir:
-               self.tableDir = os.getcwd()
+                self.tableDir = os.getcwd()
         else:
             self.tableDir = tableDir
 
-        if self.debug: print( 'self.tableDir = %s' % self.tableDir )
+        if self.debug: print('self.tableDir = %s' % self.tableDir)
         self._readTables()
 
     # get CCCC subtopic
@@ -141,8 +146,7 @@ class GTStoWIS2():
                 if "CC" in self.tableC1[c]:
                     if CC in self.tableC1[c]['CC']:
                         return self.tableC1[c]['topic'] + '/' + CCCC
-        return 'unknown'                 
-    
+        return 'unknown'
 
     def _getSubtopicTableT2(self, myT1, myT2, myA1, myii, mytableT2):
         subTopicT2 = ""
@@ -168,7 +172,8 @@ class GTStoWIS2():
                                     if int(iiKey) > int(key):
                                         iiKey = key
                         if iiKey != "":
-                            subTopicT2 = self.tableC7[TTA]["ii"][iiKeys[count-1]]
+                            subTopicT2 = self.tableC7[TTA]["ii"][iiKeys[count -
+                                                                        1]]
                     else:
                         subTopicT2 = self.tableC7[TTA]
         return subTopicT2
@@ -198,14 +203,15 @@ class GTStoWIS2():
                                             if int(iiKey) > int(key):
                                                 iiKey = key
                                 if iiKey != "":
-                                    subTopicA1 = self.tableC6[TT][myA1]["ii"][iiKey]
+                                    subTopicA1 = self.tableC6[TT][myA1]["ii"][
+                                        iiKey]
                             else:
                                 subTopicA1 = self.tableC6[TT][myA1]
                         else:
                             if "A-Z" in self.tableC6[TT].keys():
-                                subTopicA1 =  self.tableC6[TT]["A-Z"]
+                                subTopicA1 = self.tableC6[TT]["A-Z"]
         return subTopicA1
-    
+
     def _getSubtopicTableA2(self, myA2, mytableA2):
         subTopicA2 = ""
         if mytableA2 == "C4":
@@ -218,8 +224,8 @@ class GTStoWIS2():
                     if myA2 in self.tableC5.keys():
                         subTopicA2 = self.tableC5[myA2]
         return subTopicA2
-    
-    def mapAHLtoSubTopic(self,ahl):
+
+    def mapAHLtoSubTopic(self, ahl):
         """
         Returns a topic, given an ahl... actually a file name that contains an ahl.
 
@@ -231,11 +237,11 @@ class GTStoWIS2():
         The routine looks for the A_ at the beginning to decide how to interpret the ahl.
 
         """
-        if self.debug: print("input ahl=%s" % ahl )
-        fn386=False
+        if self.debug: print("input ahl=%s" % ahl)
+        fn386 = False
         if ahl[0:2] == 'A_':
-           ahl=ahl[2:]
-           fn386=True
+            ahl = ahl[2:]
+            fn386 = True
 
         # split input TTAAii
         T1 = ahl[0:1]
@@ -249,7 +255,9 @@ class GTStoWIS2():
         else:
             input_c = ahl[7:11]
 
-        if self.debug: print( "T1=%s, T2=%s, A1=%s, A2=%s, ii=%s, CCCC=%s" % ( T1, T2, A1, A2, ii, input_c ) )
+        if self.debug:
+            print("T1=%s, T2=%s, A1=%s, A2=%s, ii=%s, CCCC=%s" %
+                  (T1, T2, A1, A2, ii, input_c))
 
         # get WMOtables for T1
         tableT2 = self.tableA[T1]["T2"]
@@ -257,11 +265,11 @@ class GTStoWIS2():
         tableA2 = self.tableA[T1]["A2"]
         topic = self.tableA[T1]["topic"]
 
-        if self.debug: print("topic from tableA: %s" % topic )
+        if self.debug: print("topic from tableA: %s" % topic)
 
         # get topic and subtopics
         subtopic_cccc = self._getSubtopic_CCCC(input_c)
-        if self.debug: print("subtopic_CCCC: %s" % subtopic_cccc )
+        if self.debug: print("subtopic_CCCC: %s" % subtopic_cccc)
 
         subtopicT2 = ""
         subtopicA1 = ""
@@ -269,163 +277,170 @@ class GTStoWIS2():
         fulltopic = subtopic_cccc + '/' + topic
 
         subtopicT2 = self._getSubtopicTableT2(T1, T2, A1, ii, tableT2)
-        if self.debug: print("subtopicT2: %s" % subtopicT2 )
+        if self.debug: print("subtopicT2: %s" % subtopicT2)
         if subtopicT2 != "":
             fulltopic = fulltopic + '/' + subtopicT2
 
         subtopicA1 = self._getSubtopicTableA1(T1, T2, A1, A2, ii, tableA1)
-        if self.debug: print("subtopicA1: %s" % subtopicA1 )
+        if self.debug: print("subtopicA1: %s" % subtopicA1)
         if subtopicA1 != "":
             fulltopic = fulltopic + '/' + subtopicA1
 
         subtopicA2 = self._getSubtopicTableA2(A2, tableA2)
-        if self.debug: print("subtopicA2: %s" % subtopicA2 )
+        if self.debug: print("subtopicA2: %s" % subtopicA2)
         if subtopicA2 != "":
             fulltopic = fulltopic + '/' + subtopicA2
 
-        if self.properties[ 'topicSeparator' ] != '/' :
-           fulltopic = fulltopic.replace( '/', self.properties[ 'topicSeparator' ] )
+        if self.properties['topicSeparator'] != '/':
+            fulltopic = fulltopic.replace('/',
+                                          self.properties['topicSeparator'])
 
-        if self.debug: print("fulltopic is: %s" % fulltopic )
+        if self.debug: print("fulltopic is: %s" % fulltopic)
 
         return fulltopic
 
+    def mapAHLtoFullTopic(self, ahl):
+        return self.properties['topicPrefix'] + '/' + self.mapAHLtoSubTopic(
+            ahl)
 
-    def mapAHLtoFullTopic( self, ahl ):
-        return self.properties['topicPrefix'] + '/' + self.mapAHLtoSubTopic( ahl )
-
-    def mapAHLtoExtension(self,ahl):
+    def mapAHLtoExtension(self, ahl):
         """        
         return an appropriate file extension for a file.
 
-        """        
-        if self.debug: print("input ahl=%s" % ahl )
-        fn386=False
+        """
+        if self.debug: print("input ahl=%s" % ahl)
+        fn386 = False
         if ahl[0:2] == 'A_':
-           ahl=ahl[2:]
-           fn386=True
+            ahl = ahl[2:]
+            fn386 = True
 
         T1 = ahl[0:1]
-        TT = ahl[0:2] 
+        TT = ahl[0:2]
 
-        if T1 in [ 'G' ]:
+        if T1 in ['G']:
             return '.grid'
 
-        if T1 in [ 'I' ]:
+        if T1 in ['I']:
             return '.bufr'
 
-        if TT in [ 'IX' ]:
+        if TT in ['IX']:
             return '.hdf'
 
-        if T1 in [ 'K' ]:
+        if T1 in ['K']:
             return '.crex'
 
-        if TT in [ 'LT' ]: 
+        if TT in ['LT']:
             return '.iwxxm'
 
-        if T1 in [ 'L' ]:
+        if T1 in ['L']:
             return '.grib'
 
-        if TT in [ 'XW' ]:
+        if TT in ['XW']:
             return '.txt'
 
-        if T1 in [ 'X' ]:
+        if T1 in ['X']:
             return '.cap'
 
-        if T1 in [ 'D', 'H', 'O', 'Y' ]:
+        if T1 in ['D', 'H', 'O', 'Y']:
             return '.grib'
 
-        if T1 in [ 'E', 'P', 'Q', 'R' ]:
+        if T1 in ['E', 'P', 'Q', 'R']:
             return '.bin'
 
-        return '.txt'         
+        return '.txt'
 
-    def mapAHLtoRelPath(self,ahl):
+    def mapAHLtoRelPath(self, ahl):
         """
           return complete relative path based on a traditional file name.
           append extension if necessary.
         """
-        topic = self.mapAHLtoSubTopic( ahl )
-        ext = self.mapAHLtoExtension( ahl )
+        topic = self.mapAHLtoSubTopic(ahl)
+        ext = self.mapAHLtoExtension(ahl)
 
         lext = len(ext)
-        if ( ahl[-lext:] == ext ) or ( ahl[-lext] == '.' ): #there is another extension et already.
-             fname = ahl
+        if (ahl[-lext:] == ext) or (
+                ahl[-lext] == '.'):  #there is another extension et already.
+            fname = ahl
         else:
-             fname = ahl + ext
+            fname = ahl + ext
 
-        if os.sep != '/' :
-           topic = topic.replace( '/', os.sep )
+        if os.sep != '/':
+            topic = topic.replace('/', os.sep)
 
         relpath = topic + os.sep + fname
-        if self.debug: print("relpath is: %s" % relpath )
+        if self.debug: print("relpath is: %s" % relpath)
 
         return relpath
 
     def mapAHLtoMessage(self, path, basePath):
-       """
+        """
            given an path to file with AHL like name, and a base bath (base URL),
            build an MQP message as a python dictionary (msg) which can be turned
            into json using: json.dumps(msg)
        """
-       msg = {}
-       msg[ 'baseUrl' ] = self.properties[ 'baseUrl' ] + str( basePath )
-       msg[ 'relPath' ] = self.mapAHLtoRelPath( path.name )
-       msg[ 'retPath' ] = str( path.relative_to( basePath ) )
-       msg[ 'pubTime' ] = v3timeflt2str( time.time() )
+        msg = {}
+        msg['baseUrl'] = self.properties['baseUrl'] + str(basePath)
+        msg['relPath'] = self.mapAHLtoRelPath(path.name)
+        msg['retPath'] = str(path.relative_to(basePath))
+        msg['pubTime'] = v3timeflt2str(time.time())
 
-       lstat = os.lstat( path )
+        lstat = os.lstat(path)
 
-       h = sha512()
-       if lstat.st_size < self.properties['inlineMax'] :
-         # FIXME: should have guessing logic here to pick utf-8 if it makes sense.
-         #        and back off to base64 otherwise.
-         msg[ 'content' ] = { 'encoding': self.properties['inlineEncoding'], 'value':'' }
-           
-       with open(path, 'rb') as f:
+        h = sha512()
+        if lstat.st_size < self.properties['inlineMax']:
+            # FIXME: should have guessing logic here to pick utf-8 if it makes sense.
+            #        and back off to base64 otherwise.
+            msg['content'] = {
+                'encoding': self.properties['inlineEncoding'],
+                'value': ''
+            }
+
+        with open(path, 'rb') as f:
             for data in iter(functools.partial(f.read, 1024 * 1024), b''):
-                if lstat.st_size < self.properties['inlineMax'] :
-                   if self.properties['inlineEncoding'] == 'utf-8':
-                       msg['content']['value'] += data.decode('utf-8')
-                   else:
-                       msg['content']['value'] += b64encode(data).decode('utf-8')
+                if lstat.st_size < self.properties['inlineMax']:
+                    if self.properties['inlineEncoding'] == 'utf-8':
+                        msg['content']['value'] += data.decode('utf-8')
+                    else:
+                        msg['content']['value'] += b64encode(data).decode(
+                            'utf-8')
 
                 h.update(data)
 
-       msg[ 'integrity' ] = { 'method': 'sha512', 'value':b64encode(h.digest()).decode('utf-8') }
+        msg['integrity'] = {
+            'method': 'sha512',
+            'value': b64encode(h.digest()).decode('utf-8')
+        }
 
-       if self.properties[ 'preserveTime' ]:
-           msg[ 'mtime' ] = v3timeflt2str(lstat.st_mtime)
-           msg[ 'atime' ] = v3timeflt2str(lstat.st_atime)
+        if self.properties['preserveTime']:
+            msg['mtime'] = v3timeflt2str(lstat.st_mtime)
+            msg['atime'] = v3timeflt2str(lstat.st_atime)
 
-       if self.properties[ 'preserveMode' ]:
-           msg[ 'mode' ] = "%o" % (lstat[stat.ST_MODE] & 0o7777)
-       return msg
+        if self.properties['preserveMode']:
+            msg['mode'] = "%o" % (lstat[stat.ST_MODE] & 0o7777)
+        return msg
 
 
 if __name__ == '__main__':
     # for AMQP topic separator is a period, rather than a slash, as in MQTT
-    g = GTStoWIS2( debug=False, dump_tables=False )
-  
+    g = GTStoWIS2(debug=False, dump_tables=False)
+
     for ahl in [ 'IUPA54_LFPW_150000' , 'A_ISID01LZIB190300_C_EDZW_20200619030401_18422777', \
         'UACN10_CYXL_170329_8064d8dc1a1c71b014e0278b97e46187.txt' ]:
 
-        topic = g.mapAHLtoFullTopic( ahl ).replace('/','.')
-        relpath = g.mapAHLtoRelPath( ahl )
-        print( 'input ahl=%s\n\tAMQP topic=%s\n\trelPath=%s' % ( ahl, topic, relpath ) )
+        topic = g.mapAHLtoFullTopic(ahl).replace('/', '.')
+        relpath = g.mapAHLtoRelPath(ahl)
+        print('input ahl=%s\n\tAMQP topic=%s\n\trelPath=%s' %
+              (ahl, topic, relpath))
 
     import json
 
-
-    currentDir = Path( os.getcwd() )
+    currentDir = Path(os.getcwd())
     basePath = currentDir.parent
     dataDir = currentDir / '../sample_GTS_data'
     dataDir = dataDir.resolve()
 
     for path in dataDir.iterdir():
-        print( 'file: %s' % path.name )
-        m = g.mapAHLtoMessage( path, basePath )
-        msg = json.dumps( m )
-        print( 'message is: %s' % msg )
-
-
+        print('file: %s' % path.name)
+        m = g.mapAHLtoMessage(path, basePath)
+        msg = json.dumps(m)
+        print('message is: %s' % msg)
