@@ -365,14 +365,14 @@ class GTStoWIS2():
     def mapAHLtoMessage(self, path, basePath):
        """
            given an path to file with AHL like name, and a base bath (base URL),
-           build an MQP message as a python dictionary which can be turned
+           build an MQP message as a python dictionary (msg) which can be turned
            into json using: json.dumps(msg)
        """
-       m = {}
-       m[ 'baseUrl' ] = self.properties[ 'baseUrl' ] + str( basePath )
-       m[ 'relPath' ] = self.mapAHLtoRelPath( path.name )
-       m[ 'retPath' ] = str( path.relative_to( basePath ) )
-       m[ 'pubTime' ] = v3timeflt2str( time.time() )
+       msg = {}
+       msg[ 'baseUrl' ] = self.properties[ 'baseUrl' ] + str( basePath )
+       msg[ 'relPath' ] = self.mapAHLtoRelPath( path.name )
+       msg[ 'retPath' ] = str( path.relative_to( basePath ) )
+       msg[ 'pubTime' ] = v3timeflt2str( time.time() )
 
        lstat = os.lstat( path )
 
@@ -380,27 +380,27 @@ class GTStoWIS2():
        if lstat.st_size < self.properties['inlineMax'] :
          # FIXME: should have guessing logic here to pick utf-8 if it makes sense.
          #        and back off to base64 otherwise.
-         m[ 'content' ] = { 'encoding': self.properties['inlineEncoding'], 'value':'' }
+         msg[ 'content' ] = { 'encoding': self.properties['inlineEncoding'], 'value':'' }
            
        with open(path, 'rb') as f:
             for data in iter(functools.partial(f.read, 1024 * 1024), b''):
                 if lstat.st_size < self.properties['inlineMax'] :
                    if self.properties['inlineEncoding'] == 'utf-8':
-                       m['content']['value'] += data.decode('utf-8')
+                       msg['content']['value'] += data.decode('utf-8')
                    else:
-                       m['content']['value'] += b64encode(data).decode('utf-8')
+                       msg['content']['value'] += b64encode(data).decode('utf-8')
 
                 h.update(data)
 
-       m[ 'integrity' ] = { 'method': 'sha512', 'value':b64encode(h.digest()).decode('utf-8') }
+       msg[ 'integrity' ] = { 'method': 'sha512', 'value':b64encode(h.digest()).decode('utf-8') }
 
        if self.properties[ 'preserveTime' ]:
-           m[ 'mtime' ] = v3timeflt2str(lstat.st_mtime)
-           m[ 'atime' ] = v3timeflt2str(lstat.st_atime)
+           msg[ 'mtime' ] = v3timeflt2str(lstat.st_mtime)
+           msg[ 'atime' ] = v3timeflt2str(lstat.st_atime)
 
        if self.properties[ 'preserveMode' ]:
-           m[ 'mode' ] = "%o" % (lstat[stat.ST_MODE] & 0o7777)
-       return m
+           msg[ 'mode' ] = "%o" % (lstat[stat.ST_MODE] & 0o7777)
+       return msg
 
 
 if __name__ == '__main__':
