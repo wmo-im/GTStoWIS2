@@ -76,6 +76,7 @@ def timestr2flt(s):
 
 
 default_properties = {
+    'basePath': '.',       # basis for relative paths.
     'baseUrl': 'file://',  # depends on many things...
     'topicPrefix': 'v03/post',  # for AMQP would set to 'v03.post'
     'topicSeparator': '/',  # for AMQP would set to '.'
@@ -372,16 +373,16 @@ class GTStoWIS2():
 
         return relpath
 
-    def mapAHLtoMessage(self, path, basePath):
+    def mapAHLtoMessage(self, path):
         """
            given an path to file with AHL like name, and a base bath (base URL),
            build an MQP message as a python dictionary (msg) which can be turned
            into json using: json.dumps(msg)
        """
         msg = {}
-        msg['baseUrl'] = self.properties['baseUrl'] + str(basePath)
+        msg['baseUrl'] = self.properties['baseUrl'] + str(self.properties['basePath']) 
         msg['relPath'] = self.mapAHLtoRelPath(path.name)
-        msg['retPath'] = str(path.relative_to(basePath))
+        msg['retPath'] = str(path.relative_to(self.properties['basePath'] ))
         msg['pubTime'] = v3timeflt2str(time.time())
 
         lstat = os.lstat(path)
@@ -421,8 +422,17 @@ class GTStoWIS2():
 
 
 if __name__ == '__main__':
+
+    currentDir = Path(os.getcwd())
+    basePath = currentDir.parent
+    dataDir = currentDir / '../sample_GTS_data'
+    dataDir = dataDir.resolve()
+
     # for AMQP topic separator is a period, rather than a slash, as in MQTT
-    g = GTStoWIS2(debug=False, dump_tables=False)
+    gprops = default_properties
+    gprops[ 'basePath' ] = dataDir
+
+    g = GTStoWIS2(debug=False, dump_tables=False, properties=gprops )
 
     for ahl in [ 'IUPA54_LFPW_150000' , 'A_ISID01LZIB190300_C_EDZW_20200619030401_18422777', \
         'UACN10_CYXL_170329_8064d8dc1a1c71b014e0278b97e46187.txt' ]:
@@ -434,13 +444,9 @@ if __name__ == '__main__':
 
     import json
 
-    currentDir = Path(os.getcwd())
-    basePath = currentDir.parent
-    dataDir = currentDir / '../sample_GTS_data'
-    dataDir = dataDir.resolve()
 
     for path in dataDir.iterdir():
         print('file: %s' % path.name)
-        m = g.mapAHLtoMessage(path, basePath)
+        m = g.mapAHLtoMessage(path)
         msg = json.dumps(m)
         print('message is: %s' % msg)
