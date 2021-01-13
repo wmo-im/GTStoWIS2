@@ -76,7 +76,7 @@ def timestr2flt(s):
 
 
 default_properties = {
-    'basePath': '.',       # basis for relative paths.
+    'basePath': '.',  # basis for relative paths.
     'baseUrl': 'file://',  # depends on many things...
     'topicPrefix': 'v03/post',  # for AMQP would set to 'v03.post'
     'topicSeparator': '/',  # for AMQP would set to '.'
@@ -380,9 +380,10 @@ class GTStoWIS2():
            into json using: json.dumps(msg)
        """
         msg = {}
-        msg['baseUrl'] = self.properties['baseUrl'] + str(self.properties['basePath']) 
+        msg['baseUrl'] = self.properties['baseUrl'] + str(
+            self.properties['basePath'])
         msg['relPath'] = self.mapAHLtoRelPath(path.name)
-        msg['retPath'] = str(path.relative_to(self.properties['basePath'] ))
+        msg['retPath'] = str(path.relative_to(self.properties['basePath']))
         msg['pubTime'] = v3timeflt2str(time.time())
 
         lstat = os.lstat(path)
@@ -430,9 +431,9 @@ if __name__ == '__main__':
 
     # for AMQP topic separator is a period, rather than a slash, as in MQTT
     gprops = default_properties
-    gprops[ 'basePath' ] = dataDir
+    gprops['basePath'] = dataDir
 
-    g = GTStoWIS2(debug=False, dump_tables=False, properties=gprops )
+    g = GTStoWIS2(debug=False, dump_tables=False, properties=gprops)
 
     for ahl in [ 'IUPA54_LFPW_150000' , 'A_ISID01LZIB190300_C_EDZW_20200619030401_18422777', \
         'UACN10_CYXL_170329_8064d8dc1a1c71b014e0278b97e46187.txt' ]:
@@ -443,7 +444,6 @@ if __name__ == '__main__':
               (ahl, topic, relpath))
 
     import json
-
 
     for path in dataDir.iterdir():
         print('file: %s' % path.name)
