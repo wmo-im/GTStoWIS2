@@ -95,6 +95,15 @@
 		"ii":"", 
 		"priority":"1/2/3" 
 	},
+ "M": {
+                "topic": "national",
+        "T2":"B",
+                "A1":"",
+                "A2":"",
+                "ii":"",
+                "priority":""
+
+        },
  "N": { 
 		"topic": "notices",            
         "T2":"B", 
