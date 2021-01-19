@@ -160,7 +160,7 @@
 "CIMA":{"centre":"cima", "name":"--", "country_short":"br",  "comment":""},
 "CTPP":{"centre":"camp_canargu", "name":"CAMP CANARGU", "country_short":"ht",  "comment":"MISSING (from stations.txt)"},
 "CWAH":{"centre":"CWAH", "name":"--", "country_short":"ca",  "comment":""},
-"CWAO":{"centre":"montreal_canadian_met_centre_que", "name":"Montreal (Canadian Met. Centre), Que.", "country_short":"ca", "wigos":"0-20008-0-MTL", "comment":"wigos?"},
+"CWAO":{"centre":"canadian_met_centre", "name":"Montreal (Canadian Met. Centre), Que.", "country_short":"ca", "wigos":"0-20008-0-MTL", "comment":"wigos?"},
 "CWBA":{"centre":"CWBA", "name":"--", "country_short":"ca",  "comment":""},
 "CWCI":{"centre":"CWCI", "name":"--", "country_short":"ca",  "comment":""},
 "CWCL":{"centre":"CWCL", "name":"--", "country_short":"ca",  "comment":""},
