@@ -5035,6 +5035,7 @@
 "TIUK":{"centre":"tiuk", "name":"MISSING: tiuk", "country_short":"vg",  "comment":""},
 "TJAB":{"centre":"tjab", "name":"MISSING: --", "country_short":"pr",  "comment":""},
 "TJBQ":{"centre":"aguadilla_ramey_ab", "name":"Aguadilla/Ramey AB", "country_short":"pr",  "comment":""},
+"TJDP":{"centre":"unknown", "name":"unknown", "country_short":"pr", "comment":"unknown" },
 "TJEY":{"centre":"tjey", "name":"MISSING: --", "country_short":"pr",  "comment":""},
 "TJGU":{"centre":"tjgu", "name":"MISSING: --", "country_short":"pr",  "comment":""},
 "TJMZ":{"centre":"mayaguez_mayaguez", "name":"Mayaguez/Mayaguez", "country_short":"pr",  "comment":""},
