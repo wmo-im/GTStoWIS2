@@ -52,7 +52,7 @@ def nowstr():
     """
        return a string representation of the current time.
     """
-    return timeflt2str(time.time())
+    return v3timeflt2str(time.time())
 
 
 def v3timeflt2str(f):
@@ -78,6 +78,7 @@ def timestr2flt(s):
 default_properties = {
     'basePath': '.',  # basis for relative paths.
     'baseUrl': 'file://',  # depends on many things...
+    'source' : 'WIS',      # the directory that comes after the date level.
     'topicPrefix': 'v03/post',  # for AMQP would set to 'v03.post'
     'topicSeparator': '/',  # for AMQP would set to '.'
     'preserveTime': True,  # include atime/mtime?
@@ -301,7 +302,8 @@ class GTStoWIS2():
         return fulltopic
 
     def mapAHLtoFullTopic(self, ahl):
-        return self.properties['topicPrefix'] + '/' + self.mapAHLtoSubTopic(
+        Tdir=nowstr()[0:8]
+        return self.properties['topicPrefix'] + '/' + Tdir + '/' + self.properties['source'] + '/' + self.mapAHLtoSubTopic(
             ahl)
 
     def mapAHLtoExtension(self, ahl):
