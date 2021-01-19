@@ -3670,6 +3670,7 @@
 "MWCB":{"centre":"charles_kirkconnell_international_airport", "name":"Charles Kirkconnell International Airport", "country_short":"ky",  "comment":""},
 "MWCG":{"centre":"grand_cayman_cayman_is", "name":"Grand Cayman, Cayman Is.", "country_short":"ky",  "comment":""},
 "MWCR":{"centre":"owen_roberts_intl_grand_cayman", "name":"Owen Roberts Intl/Grand Cayman", "country_short":"ky",  "comment":""},
+"MXBA":{"centre":"NMC", "name":"National Meteorological Centre", "country_short":"mx", "comment":"Unverified" },
 "MYAF":{"centre":"andros_town", "name":" ANDROS TOWN", "country_short":"bs",  "comment":""},
 "MYAK":{"centre":"kemps_bay_an", "name":" KEMPS BAY_AN", "country_short":"bs",  "comment":""},
 "MYBE":{"centre":"mybe", "name":"--", "country_short":"bs",  "comment":""},
