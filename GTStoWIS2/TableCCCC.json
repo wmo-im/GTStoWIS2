@@ -3447,7 +3447,7 @@
 "LZTT":{"centre":"trencin", "name":"Trencin", "country_short":"sk",  "comment":""},
 "LZZI":{"centre":"zilina", "name":" ZILINA", "country_short":"sk",  "comment":""},
 "MBGT":{"centre":"poprad", "name":"Poprad", "country_short":"sk",  "comment":""},
-"MBJT":{"centre":"turks_mccart", "name":" TURKS_MCCART", "country_short":"bs",  "comment":""},
+"MBJT":{"centre":"turks_mccart", "name":" TURKS_MCCART", "country_short":"tc",  "comment":""},
 "MBPV":{"centre":"jags_mccartney_international", "name":"Jags McCartney International", "country_short":"tc",  "comment":""},
 "MCGV":{"centre":"gaviotas", "name":" GAVIOTAS", "country_short":"co",  "comment":""},
 "MCOL":{"centre":"antigua_cool", "name":" ANTIGUA_COOL", "country_short":"ag",  "comment":""},
