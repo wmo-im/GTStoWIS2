@@ -174,9 +174,7 @@
 		"W": "airmet",
 		"Y": "sigmet/tropical-cyclone"
       },
- "M": {
-		"Q": "model-grib"
-      },
+ "M": {},
  "N": {
 		"A": "aviation",
 		"B": "aviation",
