@@ -79,7 +79,7 @@ default_properties = {
     'basePath': '.',  # basis for relative paths.
     'baseUrl': 'file://',  # depends on many things...
     'source' : 'WIS',      # the directory that comes after the date level.
-    'topicPrefix': 'v03/post',  # for AMQP would set to 'v03.post'
+    'topicPrefix': 'v03',  # for AMQP would set to 'v03.post'
     'topicSeparator': '/',  # for AMQP would set to '.'
     'preserveTime': True,  # include atime/mtime?
     'preserveMode': True,  # include mode property?
