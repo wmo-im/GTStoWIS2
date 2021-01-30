@@ -77,7 +77,7 @@ def timestr2flt(s):
 
 default_properties = {
     'basePath': '.',  # basis for relative paths.
-    'baseUrl': 'file://',  # depends on many things...
+    'baseUrl': 'file:/',  # depends on many things...
     'source' : 'WIS',      # the directory that comes after the date level.
     'topicPrefix': 'v03',  # for AMQP would set to 'v03.post'
     'topicSeparator': '/',  # for AMQP would set to '.'
@@ -382,8 +382,11 @@ class GTStoWIS2():
            into json using: json.dumps(msg)
        """
         msg = {}
-        msg['baseUrl'] = self.properties['baseUrl'] + str(
-            self.properties['basePath'])
+
+        msg['baseUrl'] = self.properties['baseUrl'] 
+        if msg['baseUrl'][0:5] == 'file:' :
+            msg['baseUrl'] += str(self.properties['basePath'])
+
         msg['relPath'] = self.mapAHLtoRelPath(path.name)
         msg['retPath'] = str(path.relative_to(self.properties['basePath']))
         msg['pubTime'] = v3timeflt2str(time.time())
@@ -440,10 +443,10 @@ if __name__ == '__main__':
     for ahl in [ 'IUPA54_LFPW_150000' , 'A_ISID01LZIB190300_C_EDZW_20200619030401_18422777', \
         'UACN10_CYXL_170329_8064d8dc1a1c71b014e0278b97e46187.txt' ]:
 
-        topic = g.mapAHLtoFullTopic(ahl).replace('/', '.')
+        amqpTopic = g.mapAHLtoFullTopic(ahl).replace('/', '.')
         relpath = g.mapAHLtoRelPath(ahl)
         print('input ahl=%s\n\tAMQP topic=%s\n\trelPath=%s' %
-              (ahl, topic, relpath))
+              (ahl, amqpTopic, relpath))
 
     import json
 
