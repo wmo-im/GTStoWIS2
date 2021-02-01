@@ -79,7 +79,7 @@ default_properties = {
     'basePath': '.',  # basis for relative paths.
     'baseUrl': 'file:/',  # depends on many things...
     'source' : 'WIS',      # the directory that comes after the date level.
-    'topicPrefix': 'v03',  # for AMQP would set to 'v03.post'
+    'topicPrefix': 'v03',  # for AMQP would set to 'v03', for MQTT it might be 'xpublic/v03'
     'topicSeparator': '/',  # for AMQP would set to '.'
     'preserveTime': True,  # include atime/mtime?
     'preserveMode': True,  # include mode property?
@@ -302,6 +302,9 @@ class GTStoWIS2():
         return fulltopic
 
     def mapAHLtoFullTopic(self, ahl):
+        """
+          for the given AHL, return a Full topic, which starts with the topic prefix, to which sub-topics are appended.
+        """
         Tdir=nowstr()[0:8]
         return self.properties['topicPrefix'] + '/' + Tdir + '/' + self.properties['source'] + '/' + self.mapAHLtoSubTopic(
             ahl)
