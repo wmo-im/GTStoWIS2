@@ -443,6 +443,7 @@ if __name__ == '__main__':
 
     g = GTStoWIS2(debug=False, dump_tables=False, properties=gprops)
 
+    print( 'trying some AHLs' )
     for ahl in [ 'IUPA54_LFPW_150000' , 'A_ISID01LZIB190300_C_EDZW_20200619030401_18422777', \
         'UACN10_CYXL_170329_8064d8dc1a1c71b014e0278b97e46187.txt' ]:
 
@@ -451,12 +452,15 @@ if __name__ == '__main__':
         print('input ahl=%s\n\tAMQP topic=%s\n\trelPath=%s' %
               (ahl, amqpTopic, relpath))
 
+    print( '\n\ntrying some sample files from: %s' % dataDir )
     import json
 
     for root, directories, files in os.walk(dataDir):
         for f in files:
             path = PurePath( root, f )
             print('file: %s' % path.name)
+            amqpTopic = g.mapAHLtoFullTopic(path.name).replace('/', '.')
+            print('AMQP topic is: %s' % amqpTopic)
             m = g.mapAHLtoMessage(path)
             msg = json.dumps(m)
             print('message is: %s' % msg)
