@@ -26,7 +26,7 @@ from hashlib import sha512
 import functools
 import json
 import pkgutil
-from pathlib import Path
+from pathlib import Path,PurePath
 import os
 import os.path
 import stat
@@ -389,6 +389,9 @@ class GTStoWIS2():
 
         msg['relPath'] = self.mapAHLtoRelPath(path.name)
         msg['retPath'] = str(path.relative_to(self.properties['basePath']))
+        if msg['retPath' ] == msg['relPath' ]:
+            del msg['retPath']
+
         msg['pubTime'] = v3timeflt2str(time.time())
 
         lstat = os.lstat(path)
@@ -450,8 +453,10 @@ if __name__ == '__main__':
 
     import json
 
-    for path in dataDir.iterdir():
-        print('file: %s' % path.name)
-        m = g.mapAHLtoMessage(path)
-        msg = json.dumps(m)
-        print('message is: %s' % msg)
+    for root, directories, files in os.walk(dataDir):
+        for f in files:
+            path = PurePath( root, f )
+            print('file: %s' % path.name)
+            m = g.mapAHLtoMessage(path)
+            msg = json.dumps(m)
+            print('message is: %s' % msg)
