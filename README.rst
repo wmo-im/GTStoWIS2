@@ -223,6 +223,28 @@ it will output the translation results for a number of sample AHL's::
 
 This provides a means of inspection and consideration of the hierarchy.
 one can add lines to the end of the file (*AHL_examples.txt*) to put in more tests. 
+One can use the unit test of the GTStoWIS2 module to see a few messages being constructed from sample data::
+
+   fractal% cd GTStoWIS2
+   fractal% python3 __init__.py
+   trying some AHLs
+   input ahl=IUPA54_LFPW_150000
+        AMQP topic=v03.20210201.WIS.fr.toulouse_centre_régional_de_télécommunications.observation.upperair.profile.pilot.0-90n.0-90w
+        relPath=fr/toulouse_centre_régional_de_télécommunications/observation/upperair/profile/pilot/0-90n/0-90w/IUPA54_LFPW_150000.bufr
+   input ahl=A_ISID01LZIB190300_C_EDZW_20200619030401_18422777
+        AMQP topic=v03.20210201.WIS.me.tivat.observation.surface.land.fixed.synop.intermediate.0-90n.90e-0
+        relPath=me/tivat/observation/surface/land/fixed/synop/intermediate/0-90n/90e-0/A_ISID01LZIB190300_C_EDZW_20200619030401_18422777.bufr
+   input ahl=UACN10_CYXL_170329_8064d8dc1a1c71b014e0278b97e46187.txt
+        AMQP topic=v03.20210201.WIS.ca.CYXL.upperair.aircraft.airep.ca
+        relPath=ca/CYXL/upperair/aircraft/airep/ca/UACN10_CYXL_170329_8064d8dc1a1c71b014e0278b97e46187.txt
+
+   trying some sample files from: /home/peter/Projects/GTStoWIS2/issue018/sample_GTS_data
+   file: SZAU01_AMMC_111809_c87a603174d55735bb57d91621db1751.txt
+   AMQP topic is: v03.20210201.WIS.au.melbourne_world_met_centre.surface.sea.tsunami.au
+   message is: {"baseUrl": "file://home/peter/Projects/GTStoWIS2/issue018/sample_GTS_data", "relPath": "au/melbourne_world_met_centre/surface/sea/tsunami/au/SZAU01_AMMC_111809_c87a603174d55735bb57d91621db1751.txt", "retPath": "SZAU01_AMMC_111809_c87a603174d55735bb57d91621db1751.txt", "pubTime": "20210201T163321.0472002029", "integrity": {"method": "sha512", "value": "zzVurIaqW0nqWdid1jGj6YKS1MYuJRsAEr/Qte30lYbquESK7P9fLkFkUsix1nMmqAMoIRxW09TWpKmO6nonSw=="}, "mtime": "20210111T223832.91905427", "atime": "20210201T151331.529934406", "mode": "664"}
+   
+
+
 
 
 
