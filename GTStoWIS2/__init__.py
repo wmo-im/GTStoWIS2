@@ -31,10 +31,13 @@ class GTStoWIS2():
 
     def _readTables(self):
         """
-          read in the tables to support the translation 
+          read in the tables to support the translation.
+
+          as per https://github.com/wmo-im/GTStoWIS2/issues/5 removing hours from topic tree.
+          we don't ingest Tables C4 and C5, to which references from TableA have also been removed. 
         """
 
-        for t in [ 'A', 'B', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C6', 'C7', 'CCCC', 'GISC'  ]:
+        for t in [ 'A', 'B', 'C1', 'C2', 'C3', 'C6', 'C6', 'C7', 'CCCC', 'GISC'  ]:
             f = self.tableDir + '/Table%s.json' % t
             with open( f, 'r' ) as m:
                 if self.debug: print( 'reading %s' % f )
