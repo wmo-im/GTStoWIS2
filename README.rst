@@ -109,8 +109,8 @@ as extracted from the WMO web site and expanded through testing with some
 feeds. The topics chosen are taken from the existing tables, subject
 to a few conventions, to create a starting point.
 
-To do so, we need an executable version of the Tables from WMO 386. 
-Those tables are in this directory with names like TableB.json
+To do so, we need an executable version of the Tables from `WMO 386 Volume 1<https://www.wmo.int/pages/prog/www/ois/Operational_Information/Publications/WMO_386/WMO_386_Vol_I_2009_en.pdf>`_
+Attachment II-5.  Those tables are in this directory with names like TableB.json
 (where TableB includes both B1 and B2 in a single table). Where they
 can be literally used, the tables are in json format. where some comments or
 processing is required, the input is a comma separated value, or csv file.
