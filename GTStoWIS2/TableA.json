@@ -27,7 +27,7 @@
 		"topic": "model",
         "T2":"B",
 		"A1":"C3", 
-		"A2":"C4", 
+		"A2":"", 
 		"ii":"D2", 
 		"priority":"3" 
 	},
@@ -51,7 +51,7 @@
 		"topic": "model",
         "T2":"B", 
 		"A1":"C3", 
-		"A2":"C4", 
+		"A2":"", 
 		"ii":"D2", 
 		"priority":"3" 
 	},
@@ -59,7 +59,7 @@
 		"topic": "model",
         "T2":"B", 
 		"A1":"C3", 
-		"A2":"C4", 
+		"A2":"", 
 		"ii":"D2", 
 		"priority":"3" 
 	},
@@ -75,7 +75,7 @@
 		"topic": "forecast",
         "T2":"B", 
 		"A1":"C6", 
-		"A2":"C4", 
+		"A2":"", 
 		"ii":"D2", 
 		"priority":"3" 
 	},
@@ -116,7 +116,7 @@
 		"topic": "sea",
         "T2":"B", 
 		"A1":"C3", 
-		"A2":"C4", 
+		"A2":"", 
 		"ii":"D1", 
 		"priority":"3" 
 	},
@@ -124,7 +124,7 @@
 		"topic": "pictorial",
         "T2":"B", 
 		"A1":"C3", 
-		"A2":"C4", 
+		"A2":"", 
 		"ii":"D2",
 		"priority":"3" 
 	},
@@ -132,7 +132,7 @@
 		"topic": "pictorial/regional",
         "T2":"B", 
 		"A1":"C3", 
-		"A2":"C5", 
+		"A2":"", 
 		"ii":"D2", 
 		"priority":"3" 
 	},
@@ -148,7 +148,7 @@
 		"topic": "satellite",     
         "T2":"B", 
 		"A1":"C3", 
-		"A2":"C4", 
+		"A2":"", 
 		"ii":"", 
 		"priority":"2" 
 	} ,
@@ -188,7 +188,7 @@
 		"topic": "model-regional",  
         "T2":"B",
 		"A1":"C3", 
-		"A2":"C5", 
+		"A2":"", 
 		"ii":"D2", 
 		"priority":"3" 
 	},
@@ -196,7 +196,7 @@
 		"topic": "model-regional_KWBE",  
         "T2":"B",
 		"A1":"C3", 
-		"A2":"C5", 
+		"A2":"", 
 		"ii":"D2", 
 		"priority":"3" 
 	}

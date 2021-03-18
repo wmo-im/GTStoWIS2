@@ -31,10 +31,13 @@ class GTStoWIS2():
 
     def _readTables(self):
         """
-          read in the tables to support the translation 
+          read in the tables to support the translation.
+
+          as per https://github.com/wmo-im/GTStoWIS2/issues/5 removing hours from topic tree.
+          we don't ingest Tables C4 and C5, to which references from TableA have also been removed. 
         """
 
-        for t in [ 'A', 'B', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C6', 'C7', 'CCCC', 'GISC'  ]:
+        for t in [ 'A', 'B', 'C1', 'C2', 'C3', 'C6', 'C6', 'C7', 'CCCC', 'GISC', 'D1', 'D2' ]:
             f = self.tableDir + '/Table%s.json' % t
             with open( f, 'r' ) as m:
                 if self.debug: print( 'reading %s' % f )
@@ -42,6 +45,29 @@ class GTStoWIS2():
             if self.dump:
                d = eval( "json.dumps(self.table"+t+", indent=2)" )
                print( "Table%s : %s" % (t, d ) )
+
+    def genTableTTAAii(self):
+        """
+          given the Tables have been read, create one super table that combines Tables A->D (except CCCC)
+          
+        """
+        self.tableTTAAii={}
+        for T1 in self.tableA:
+            self.tableTTAAii[T1]={}
+            self.tableTTAAii[T1]['topic'] = self.tableA[T1]['topic']
+            self.tableTTAAii[T1]['priority'] = self.tableA[T1]['priority']
+            if T1 == 'B':
+                self.tableTTAAii[T1]['T2'] = ""
+            else:
+                self.tableTTAAii[T1]['T2'] = self.tableB[T1]
+
+            for key in [ 'A1', 'A2', 'ii' ]:
+                if self.tableA[T1][key] == "":
+                    value=""
+                else:
+                    value=eval( "self.table%s" % self.tableA[T1][key] )
+                self.tableTTAAii[T1][key]=value
+
 
 
     def __init__(self,tableDir=None,debug=False,dump_tables=False):
