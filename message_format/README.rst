@@ -43,12 +43,14 @@ Boiling it down to this relatively small example makes discussion easier.
 
    Specifying the baseUrl in each message provides a number of benefits:
   
-   - use of schema gives mechanism for multiple protocols. Initial list:
+   - Use of schema gives mechanism for multiple protocols. Initially, subscribers
+     shall support at least:
 
      * https
      * sftp
-     * ftp
+     * http/ftp (supported for legacy sources, though deprecated, only to be used for very public data.)
 
+     This minimum list in will be reviewed in future from time to time.
 
    - enables third party transfer, where the broker announcing data doesn't necessarily
      have it locally, it might just know of a remote location, and not be interested in
