@@ -299,6 +299,7 @@
 "CYXD":{"centre":"edmonton_city_centre_blatchford_field_ab", "name":"Edmonton City Centre (Blatchford Field), AB", "country_short":"ca",  "comment":""},
 "CYXE":{"centre":"saskatoon_john_g_diefenbaker_sask", "name":"Saskatoon/John G. Diefenbaker, Sask.", "country_short":"ca",  "comment":""},
 "CYXJ":{"centre":"fort_st_john_bc", "name":"Fort St John, BC", "country_short":"ca",  "comment":""},
+"CYXL":{"centre":"sioux_lookout_airport", "name":"Sioux Lookout Airport, ON", "country_short":"ca",  "comment":""},
 "CYXR":{"centre":"earlton_timiskaming_regional_on", "name":"Earlton (Timiskaming Regional), ON", "country_short":"ca",  "comment":""},
 "CYXS":{"centre":"prince_george_bc", "name":"Prince George, BC", "country_short":"ca",  "comment":""},
 "CYXU":{"centre":"london_ont", "name":"London, Ont.", "country_short":"ca",  "comment":""},
