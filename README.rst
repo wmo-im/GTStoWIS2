@@ -123,7 +123,7 @@ INSTALLATION
 The module is a python package. 
 Installing::
 
-   git clone https://github.com/wmo-om/GTStoWIS2.git
+   git clone https://github.com/wmo-im/GTStoWIS2.git
    cd GTStoWIS2
    pip3 install -e .
 
