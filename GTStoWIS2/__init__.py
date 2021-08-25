@@ -39,7 +39,7 @@ class GTStoWIS2():
 
         for t in [ 'A', 'B', 'C1', 'C2', 'C3', 'C6', 'C6', 'C7', 'CCCC', 'GISC', 'D1', 'D2' ]:
             f = self.tableDir + '/Table%s.json' % t
-            with open( f, 'r' ) as m:
+            with open( f, 'r',encoding="UTF-8" ) as m:
                 if self.debug: print( 'reading %s' % f )
                 exec( "self.table"+t+"=json.load(m)" )
             if self.dump:

@@ -15,7 +15,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 def read(*parts):
     # intentionally *not* adding an encoding option to open, See:
     #   https://github.com/pypa/virtualenv/issues/201#issuecomment-3145690
-    return codecs.open(os.path.join(here, *parts), 'r').read()
+    return codecs.open(os.path.join(here, *parts), 'r', encoding="UTF-8").read()
 
 packages=find_packages()
 print("packages = %s" % packages)
