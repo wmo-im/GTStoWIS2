@@ -7,7 +7,10 @@ Place test AHL's here to see how they are interpreted.
 print ( "%s" % __file__ )
 
 import GTStoWIS2
+import sys
+import io
 
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 topic_builder=GTStoWIS2.GTStoWIS2(debug=False,dump_tables=False)
 
 with open( 'AHL_examples.txt', 'r' ) as headers:
