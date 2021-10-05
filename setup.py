@@ -42,7 +42,9 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
     packages = [ 'GTStoWIS2' ],
-    include_package_data=True,
+    package_data={
+        "GTStoWIS2": ["*.json"], # includes all Table json files in dist
+    }
 )
     
     
