@@ -123,6 +123,10 @@ INSTALLATION
 The module is a python package. 
 Installing::
 
+   pip3 install git+https://github.com/wmo-im/GTStoWIS2.git
+
+Or if you wish to have the package editable and available locally::
+
    git clone https://github.com/wmo-im/GTStoWIS2.git
    cd GTStoWIS2
    pip3 install -e .
