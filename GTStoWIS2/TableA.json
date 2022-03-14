@@ -362,13 +362,13 @@
 		"A2":"" 
 	},
  "K": { 
-		"topic": "forecast/model/crex",               
+		"topic": "crex",               
         "T2":{
-				"F": "forecast/model/crex",
+				"F": "forecast/crex",
 				"O": "observation/sea",
 				"P": "observation/sea",
 				"S": "observation/surface",
-				"T": "observation/aviation",
+				"T": "warnings/aviation",
 				"U": "observation/upperair",
 				"V": "warnings/aviation"
 		},  
@@ -395,11 +395,11 @@
 				"X": "observation/sea"
 			},
 			"KP": {
-				"I": "forecast/sea/ice",
-				"S": "forecast/sea/surface-below",
-				"T": "forecast/sea/surface/temperature",
-				"W": "forecast/sea/surface/waves",
-				"X": "forecast/sea"
+				"I": "observation/sea/ice",
+				"S": "observation/sea/surface-below",
+				"T": "observation/sea/surface/temperature",
+				"W": "observation/sea/surface/waves",
+				"X": "observation/sea"
 			},
 			"KS": {
 				"A": {
@@ -417,7 +417,7 @@
 				},
 				"D": "observation/radiation",
 				"E": "observation/land/surface/ozone",
-				"F": "observation/surface/sfazi-sfloc-sfazu",
+				"F": "observation/sfazi-sfloc-sfazu",
 				"I": {
 					"ii": {
 						"45" : "observation/land/surface/synop/intermediate",
@@ -449,8 +449,8 @@
 				"X": "observation/land/surface"
 			},
 			"KT": {
-				"E": "forecast/tsunami",
-				"H": "forecast/cyclone",
+				"E": "warnings/tsunami",
+				"H": "warnings/cyclone",
 				"S": "warnings/aviation/sigmet",
 				"T": "warnings/tornado",
 				"X": "warnings"
@@ -508,15 +508,15 @@
 			},
 			"KV": {
 				"A": "forecast/level",
-				"B": "alert/aviation/sigwx/cb",
-				"C": "alert/aviation/sigwx/cat",
-				"F": "alert/aviation/sigwx/fronts",
-				"N": "alert/aviation/sigwx/other",
-				"O": "alert/aviation/sigwx/turbulence",
+				"B": "warnings/aviation/sigwx/cb",
+				"C": "warnings/aviation/sigwx/cat",
+				"F": "warnings/aviation/sigwx/fronts",
+				"N": "warnings/aviation/sigwx/other",
+				"O": "warnings/aviation/sigwx/turbulence",
 				"S": "forecast/soundings",
-				"T": "alert/aviation/sigwx/icing",
-				"V": "alert/aviation/sigwx/storms",
-				"W": "alert/aviation/sigwx/winds",
+				"T": "warnings/aviation/sigwx/icing",
+				"V": "warnings/aviation/sigwx/storms",
+				"W": "warnings/aviation/sigwx/winds",
 				"X": "forecast/upperair"
 			}
 		},
