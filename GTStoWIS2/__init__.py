@@ -101,7 +101,10 @@ class GTStoWIS2():
             AA = myA1 + myA2
             if AA in self.tableC1.keys():
                 subTopicA1_C1 = self.tableC1[AA]["topic"]
-            subTopicA1 = self.tableA[myT1]['T2'][myT2] + self.separator + subTopicA1_C1
+                if myT2 in self.tableA[myT1]['T2'].keys():
+                    subTopicA1 = self.tableA[myT1]['T2'][myT2] + self.separator + subTopicA1_C1
+                else:
+                    subTopicA1 = self.tableA[T1]["topic"] + self.separator + subTopicA1_C1
         else:
             if myT1 in [ 'I', 'J', 'K']:
                 iiKey = ""
