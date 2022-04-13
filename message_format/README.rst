@@ -10,10 +10,10 @@ a complete example being::
 
    {  "pubTime" : "20190120T045018.314854383", 
       "baseUrl" : "https://localhost/data/20190120", 
-      "integrity": {"method": "sha512", "value": "A2KNxvks...S8qfSCw=='},
+      "integrity": {"method": "sha512", "value": "A2KNxvks...S8qfSCw=="},
       "relPath" : "WIS/CA/CMC/UpperAir/04/UANT01_CWAO_200445___15103.txt", 
       "size": 457,
-      "content": { "encoding": "utf-8", "value": "encoded bytes from the file" },
+      "content" : { "encoding": "utf-8", "value": "encoded bytes from the file" },
       "retPath" : "4Pubsub/92c557ef-d28e-4713-91af-2e2e7be6f8ab" 
    }
 
