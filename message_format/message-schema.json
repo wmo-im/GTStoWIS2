@@ -80,6 +80,20 @@
         }
       }
     },
+    "type": {
+      "$id": "#/properties/type",
+      "type": "string",
+      "title": "Fixed value",
+      "description": "Type is needed for compatibility with GeoJSON, it is set to a fixed value",
+      "const": "Feature",
+      "examples": [
+        "Feature"
+      ]
+    },
+    "geometry": {
+      "$ref": "https://geojson.org/schema/Geometry.json",
+      "description": "Geometry is needed for compatibility with GeoJSON, it is set to a fixed value",
+    },
     "partitionStrategy": {
       "$id": "#/properties/partitionStrategy",
       "type": "object",
