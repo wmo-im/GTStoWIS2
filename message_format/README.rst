@@ -3,7 +3,7 @@ Message Format
 ==============
 
 The payload of messages, regardless of the MQP chosen, should user readable
-JSON. Server-side representation may vary, but the message should represent a file
+JSON. Server-side representation may vary, but the message should logically represent a product
 that can be downloaded from a server.
 
 a complete example being:: 
