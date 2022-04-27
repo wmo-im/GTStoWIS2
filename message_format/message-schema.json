@@ -1,230 +1,138 @@
 {
-  "definitions": {},
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "github.com/MetPX/wmo_mesh/message-schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.wmo.int/wis2/broker/message/4.0.0/schema.yml",
+  "title": "WMO WIS 2.0 broker data notification schema",
+  "description": "WMO WIS 2.0 broker data notification schema",
   "type": "object",
-  "title": "The WIS mesh data notification schema",
-  "description": "Formal description of the messages send as notification about data/file availability.",
-  "required": [
-    "pubTime",
-    "baseUrl",
-    "relPath",
-    "integrity"
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/opengeospatial/ogcapi-features/master/core/openapi/schemas/featureGeoJSON.yaml"
+    }
   ],
   "properties": {
-    "pubTime": {
-      "$id": "#/properties/pubTime",
-      "format": "regex",
-      "pattern": "[0-9]{8}T[0-9]{6}(\\.[0-9]+)?Z?",
+    "id": {
       "type": "string",
-      "title": "Publication time",
-      "description": "Time of ingestion into the mesh. ISO 8601.",
-      "examples": [
-        "20190213T123456.789Z"
-      ]
+      "format": "uuid",
+      "description": "Unique identifier for the data notification.",
+      "examples": ["31e9d66a-cd83-4174-9429-b932f1abe1be"]
     },
-    "baseUrl": {
-      "$id": "#/properties/baseUrl",
+    "version": {
       "type": "string",
-      "title": "Base URL of the service",
-      "description": "URL pointing to the server that send this notification and where the data (file) is available. For historical reasons the URL is spelled 'Url'.",
-      "examples": [
-        "https://host.example.com/data"
-      ]
-    },
-    "relPath": {
-      "$id": "#/properties/relPath",
-      "type": "string",
-      "title": "Relative path",
-      "description": "Relative path identifies location of the file (relative to the base URL) but also can be considered as very brief metadata as the path is expected to contain standardised components such as name of producing organization.",
-      "examples": [
-        "20190213/wis/int/wmo/example/test.txt"
-      ],
-      "pattern": "^(.*)$"
-    },
-    "integrity": {
-      "$id": "#/properties/integrity",
-      "type": "object",
-      "title": "Checksum or a digital signature of the file.",
-      "required": [
-        "method",
-        "value"
-      ],
-      "properties": {
-        "method": {
-          "$id": "#/properties/sum/properties/method",
-          "type": "string",
-          "title": "Checksumming (or signature) method",
-          "examples": [
-            "sha512", "md5", "remove", "link", "cod", "arbitrary", "md5name", "random"
-          ]
-        },
-        "value": {
-          "$id": "#/properties/sum/properties/value",
-          "type": "string",
-          "title": "The Value Schema",
-          "description": "Base 64 encoded checksum or digital signature",
-          "examples": [
-            "sZRqySSS0jR8YjW00mERhA=="
-          ]
-        }
-      }
-    },
-    "retPath": {
-      "$id": "#/properties/retPath",
-      "type": "string",
-      "title": "Retrieval path",
-      "description": "If the relPath cannot be used to construct a URL that unambiguously identifies the data instance, than this value can be used to override it. In other words, this can be a very ugly string that together with the baseUrl forms a URL that your web server understands, while the relPath is a nice and structured and standardised and human readable identifier.",
-      "examples": [
-        "hgmpf/pfrck?instanceID=61686f79"
-      ],
-      "pattern": "^(.*)$"
-    },
-    "type": {
-      "$id": "#/properties/type",
-      "type": "string",
-      "title": "Fixed value",
-      "description": "Type is needed for compatibility with GeoJSON, it is set to a fixed value",
-      "const": "Feature",
-      "examples": [
-        "Feature"
-      ]
+      "description": "Version of the data notification specification format.",
+      "const": "4.0.0"
     },
     "geometry": {
-      "$ref": "https://geojson.org/schema/Geometry.json",
-      "description": "Geometry is needed for compatibility with GeoJSON, it is set to a fixed value",
+      "$ref":"#/definitions/PointOrPolygon",
+      "nullable": true,
+      "examples": [{"type": "Point", "coordinates": [6.146255135536194, 46.223296618227444]}, null]
     },
-    "size": {
-      "$id": "#/properties/size",
-      "type": "integer",
-      "title": "File size in bytes (octets)",
-      "default": 0,
-      "examples": [
-        12345
-      ]
-    },
-    "atime": {
-      "$id": "#/properties/atime",
-      "format": "regex",
-      "pattern": "[0-9]{8}T[0-9]{6}(\\.[0-9]+)?Z?",
-      "type": "string",
-      "title": "File access date/time",
-      "description": "Optional file attribute that can help simulate 'rsync'. ISO 8601.",
-      "examples": [
-        "20201023T123456.789Z"
-      ]
-    },
-    "mtime": {
-      "$id": "#/properties/atime",
-      "format": "regex",
-      "pattern": "[0-9]{8}T[0-9]{6}(\\.[0-9]+)?Z?",
-      "type": "string",
-      "title": "File modification date/time",
-      "description": "Optional file attribute that can help simulate 'rsync'. ISO 8601.",
-      "examples": [
-        "20201023T123456.789Z"
-      ]
-    },
-    "mode": {
-      "$id": "#/properties/mode",
-      "format": "regex",
-      "pattern": "[0-7]{3}",
-      "type": "string",
-      "title": "File access mode in Unix like octal number.",
-      "examples": [
-        "640"
-      ]
-    },
-    "partitionStrategy": {
-      "$id": "#/properties/partitionStrategy",
+    "properties": {
       "type": "object",
-      "title": "Partition strategy",
-      "description": "Optional way of anouncing patrialy available files.",
-      "required": [
-        "method",
-        "size",
-        "count",
-        "remainder",
-        "number"
-      ],
       "properties": {
-        "method": {
-          "$id": "#/properties/partitionStrategy/properties/method",
+        "instance_identifier": {
           "type": "string",
-          "title": "The Method Schema",
-          "default": "",
-          "examples": [
-            "partitioned", "inplace"
-          ],
-          "pattern": "^(.*)$"
+          "title": "Identifier of the data instance",
+          "description": "Identifier of the current instance (of the instance whose availability this notification announces). \nCan be a file name or some other, preferably unique, identifier.",
+          "examples": ["gfs.t00z.pgrb2.0p25.f003", "A_IEDX02EUMP270634_C_EDZW_20220427072332_84196486.bufr", "d64b8d25-4fd0-42b2-91b3-ba29f215fbfc"]
+        },
+        "publication_datetime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Identifies the date/time of when the notification was posted/published, in ISO8601/RFC3339 format.\n\nThe publication date/time is critical for subscribers to prevent message loss by knowing\ntheir lag (how far behind the publisher they are).\n",
+          "examples": ["20220427T072332.314854383Z", "2022-04-27T07:23:32.314854383Z"]
+        },
+        "instance_datetime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "TBD, Identifies the date/time that characterizes the data instance being published, \ne.g. observation time, model run, etc. - typically rounded to a multiple of data production interval. ISO8601/RFC3339 format.",
+          "examples": ["20220427T063000Z", "2022-04-27T06:30:00Z"]
+        },
+        "data_start_datetime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "TBD, Identifies the start date/time date of the data being published, in ISO8601/RFC3339 format."
+        },
+        "data_end_datetime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "TBD, Identifies the end date/time date of the data being published, in ISO8601/RFC3339 format."
+        },
+        "integrity": {
+          "type": "object",
+          "description": "Specifies a way to verify integrity and/or uniqueness of the data instance.",
+          "properties": {
+            "method": {
+              "type": "string",
+              "description": "A specific set of methods for calculating the checksum algorithms:\n* ``sha512``: the Secure Hash Algorithm 512 bits, value is base64 encoded.\n* ``arbitrary``: an arbitrary string is used to identify the value.\n* ``md5``: the Message Digest 5 hash (obsolete, perhaps will be rejected)\n",
+              "enum": ["sha256", "sha512", "md5", "remove", "link", "cod", "arbitrary", "md5name", "random"]
+            },
+            "value": {
+              "type": "string",
+              "description": "Base 64 encoded checksum or digital signature",
+              "examples": ["N2Y4M2IxNjU3ZmYxZmM1M2I5MmRjMTgxNDhhMWQ2NWRmYzJkNGIxZmEzZDY3NzI4NGFkZGQyMDAxMjZkOTA2OSAqYWEuanNvbgo="]
+            }
+          },
+          "required": [
+            "method",
+            "value"
+          ]
+        },
+        "hierarchy": {
+          "type": "string",
+          "description": "WIS 2.0 data hierarchical category identifier.",
+          "examples": ["EUE/eumetsat_darmstadt/observation/global/", "CAN/eccc-msc/data/core/weather/surface-based-obs/landFixed"]
         },
         "size": {
-          "$id": "#/properties/partitionStrategy/properties/blockSize",
           "type": "integer",
-          "title": "The Blocksize Schema",
-          "default": 0,
-          "examples": [
-            65535
-          ],
-          "pattern": "^(.*)$"
+          "description": "Size of the data instance in bytes/octets, if known.",
+          "examples": [12345]
         },
-        "count": {
-          "$id": "#/properties/partitionStrategy/properties/count",
-          "type": "integer",
-          "title": "The Blockcount Schema",
-          "default": 0,
-          "examples": [
-            65535
-          ],
-          "pattern": "^(.*)$"
-        },
-        "remainder": {
-          "$id": "#/properties/partitionStrategy/properties/lastBlock",
-          "type": "integer",
-          "title": "The size of the Lastblock Schema",
-          "default": 0,
-          "examples": [
-            1, 21352352
-          ]
-        },
-        "number": {
-          "$id": "#/properties/partitionStrategy/properties/blockNumber",
-          "type": "integer",
-          "title": "The Blocknumber Schema",
-          "default": 0,
-          "examples": [
-            0
+        "content": {
+          "type": "object",
+          "description": "Used to embed small instances/products inline within the notification.",
+          "properties": {
+            "encoding": {
+              "type": "string",
+              "description": "Encoding of content. Note that if gzip compression is used the result is base64 encoded too.",
+              "enum": ["utf-8", "base64", "gzip"]
+            },
+            "value": {
+              "type": "string",
+              "description": "The in-lined content of the file.",
+              "examples": ["Hello World!"]
+            }
+          },
+          "required": [
+            "encoding",
+            "value"
           ]
         }
-      }
-    },
-    "content": {
-      "$id": "#/properties/content",
-      "type": "object",
-      "title": "Content (body) of the file",
-      "description": "Optional way how to send the content of a file to optimize transfer of small files.",
+      },
       "required": [
-        "encoding",
-        "value"
-      ],
-      "properties": {
-        "encoding": {
-          "$id": "#/properties/content/properties/encoding",
-          "type": "string",
-          "title": "Message encoding",
-          "examples": [
-            "utf-8", "base64"
-          ]
-        },
-        "value": {
-          "$id": "#/properties/content/properties/value",
-          "type": "string",
-          "title": "The file data",
-          "examples": [
-            "Hello world!"
-          ]
-        }
-      }
+        "publication_datetime",
+        "integrity",
+        "hierarchy"
+      ]
     }
-  }
+  },
+  "definitions":
+  {
+    "PointOrPolygon": {
+      "oneOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/opengeospatial/ogcapi-features/master/core/openapi/schemas/pointGeoJSON.yaml"
+        },
+        {
+          "$ref": "https://raw.githubusercontent.com/opengeospatial/ogcapi-features/master/core/openapi/schemas/polygonGeoJSON.yaml"
+        }
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "geometry",
+    "properties",
+    "links"
+  ]
 }

@@ -1,0 +1,25 @@
+{
+  "id": "31e9d66a-cd83-4174-9429-b932f1abe1be",
+  "version": "4.0.0",
+  "geometry": null,
+  "properties": {
+    "instance_identifier": "A_IEDX02EUMP270634_C_EDZW_20220427072332_84196486.bufr",
+    "publication_datetime": "2022-04-27T07:23:32.314Z",
+    "instance_datetime": "2022-04-27T06:30:00Z",
+    "integrity": {
+      "method": "sha256",
+      "value": "N2Y4M2IxNjU3ZmYxZmM1M2I5MmRjMTgxNDhhMWQ2NWRmYzJkNGIxZmEzZDY3NzI4NGFkZGQyMDAxMjZkOTA2OSAqYWEuanNvbgo="
+    },
+    "hierarchy": "EUE/eumetsat_darmstadt/observation/global/",
+    "size": 12345
+  },
+  "type": "Feature",
+  "links": [
+    {
+      "href": "https://example.org/{hierarchy}/{instance_identifier}",
+      "rel": "alternate",
+      "type": "application/x-bufr",
+      "templated": true
+    }
+  ]
+}
