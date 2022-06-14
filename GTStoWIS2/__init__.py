@@ -168,8 +168,9 @@ class GTStoWIS2():
         subtopicA2 = ""
         topic = self.tableA[T1]["topic"]
 
-        if T2 in self.tableA[T1]['T2'].keys():
-            subtopicT2 = self.tableA[T1]['T2'][T2]
+        if self.tableA[T1]['T2'] != "":
+            if T2 in self.tableA[T1]['T2'].keys():
+                subtopicT2 = self.tableA[T1]['T2'][T2]
         if self.debug: print("subtopicT2: %s" % subtopicT2 )
 
         if self.tableA[T1]['A1'] == "C1":
