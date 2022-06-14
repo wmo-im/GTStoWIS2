@@ -82,17 +82,11 @@ class GTStoWIS2():
         if CCCC in self.tableCCCC.keys():
             country = self.tableCCCC[CCCC]["country_short"]
             centre = self.tableCCCC[CCCC]["centre"]
-            subtopic = country + self.separator + centre
-            return subtopic
         else:
-            country = ''
-            centre = ''
-            CC = CCCC[0:2]
-            for c in self.tableC1:
-                if "CC" in self.tableC1[c]:
-                    if CC in self.tableC1[c]['CC']:
-                        return self.tableC1[c]['topic'] + self.separator + CCCC
-        return 'unknown'                 
+            country = 'MISSING'
+            centre = CCCC
+        subtopic = country + self.separator + centre
+        return subtopic
     
 
     def _getSubtopicA1(self, myT1, myT2, myA1, myA2, myii, mytableA1):
