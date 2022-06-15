@@ -91,7 +91,7 @@ class GTStoWIS2():
             for c in self.tableC1:
                 if "CC" in self.tableC1[c]:
                     if CC in self.tableC1[c]['CC']:
-                        return self.tableC1[c]['topic'] + self.separator + CCCC
+                        return self.tableC1[c]['topic'] + self.separator + CCCC.lower()
         return 'unknown'                 
     
 
