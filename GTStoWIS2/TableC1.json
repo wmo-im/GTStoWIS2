@@ -1,296 +1,1111 @@
 {
-"AA": { "topic":"aq"},
-"AB": { "topic":"al","description":"Albania, different country code"},
-"AC": { "topic":"arctic","description":"country code?" },
-"AE": { "topic":"southeast-asia","description":"topic one word" },
-"AF": { "topic":"africa"},
-"AG": { "topic":"ar", "CC":[ "SA" ] },
-"AH": { "topic":"af"},
-"AI": { "topic":"ac"},
-"AJ": { "topic":"az"},
-"AK": { "topic":"us","description":"Alaska" },
-"AL": { "topic":"dz"},
-"AM": { "topic":"central-africa","description":"topic one word" },
-"AN": { "topic":"ao"},
-"AO": { "topic":"west-africa" },
-"AP": { "topic":"southern-africa" },
-"AS": { "topic":"asia" },
-"AT": { "topic":"ag","description":"Antigua and Barbuda, Saint Kitts and other British Islands in the vicinity"},
-"AU": { "topic":"au","CC": [ "AA", "AB", "AD", "AH", "AM", "YB", "YC", "YD", "YE", "YF", "YG", "YH", "YL", "YM", "YO", "YP", "YR", "YS", "YT", "YW" ] },
-"AW": { "topic":"neareast" },
-"aw": { "topic":"aw", "note":"MISSING from WMO Table C1, and a conflict" },
-"AX": { "topic":"arabian-sea","description":"Arabian Sea area" },
-"AY": { "topic":"am"},
-"AZ": { "topic":"pt","description":"Azores"},
-"BA": { "topic":"bs", "CC": [ "MY" ] },
-"BB": { "topic":"bt","description":"Bhutan, different country code", "note":"MISSING invented WMO code"},
-"BC": { "topic":"bw"},
-"BD": { "topic":"bn"},
-"BE": { "topic":"bm"},
-"BH": { "topic":"bz"},
-"BI": { "topic":"bi"},
-"BJ": { "topic":"bj"},
-"BK": { "topic":"vu","description":"Banks Islands"},
-"BM": { "topic":"mm"},
-"BN": { "topic":"bh"},
-"BO": { "topic":"bo"},
-"BQ": { "topic":"baltic-sea","description":"topic one word" },
-"BR": { "topic":"bb"},
-"BU": { "topic":"bg"},
-"BV": { "topic":"bv","description":"Bouvet Island"},
-"BW": { "topic":"bd"},
-"BX": { "topic":"be"},
-"BY": { "topic":"by"},
-"BZ": { "topic":"br", "CC":[ "SB" ] },
-"CA": { "topic":"caribbean","description":"Caribbean and Central America, topic one word" },
-"CD": { "topic":"td"},
-"CE": { "topic":"cf"},
-"CG": { "topic":"cg"},
-"CH": { "topic":"cl"},
-"CI": { "topic":"cn", "CC":[ "ZB", "ZG", "ZH", "ZJ", "ZK", "ZL", "ZM", "ZP", "ZS", "ZU", "ZW", "ZY" ] },
-"CM": { "topic":"cm"},
-"CN": { "topic":"ca", "CC":[ "CA", "CW", "CY" ] }, 
-"CO": { "topic":"co"},
-"CR": { "topic":"es","description":"Canary Islands (Spain)"},
-"CS": { "topic":"cr"},
-"CT": { "topic":"ki","description":"Canton Island"},
-"CU": { "topic":"cu"},
-"CV": { "topic":"cv"},
-"cw": { "topic":"cw", "note": "MISSING from WMO Table C1" },
-"CY": { "topic":"cy"},
-"CZ": { "topic":"cz"},
-"DC": { "topic":"bq"},
-"DJ": { "topic":"dj"},
-"DL": { "topic":"de", "CC": [ "ED" ] },
-"DN": { "topic":"dk"},
-"DO": { "topic":"DM"},
-"DR": { "topic":"DO"},
-"EA": { "topic":"east-africa","description":"topic one word" },
-"EC": { "topic":"east-china-sea","description":"East China Sea area, topic one word" },
-"EE": { "topic":"eastern-europe","description":"topic one word" },
-"EG": { "topic":"eg"},
-"eh": { "topic":"eh", "note":"MISSING from WMO table C1"},
-"EI": { "topic":"er"},
-"EM": { "topic":"middle-europe","description":"topic one word" },
-"EN": { "topic":"northern-europe","description":"topic one word" },
-"EO": { "topic":"ee"},
-"EQ": { "topic":"ec"},
-"ER": { "topic":"ae"},
-"ES": { "topic":"sv"},
-"ET": { "topic":"et"},
-"EU": { "topic":"europe","description":"Europe" },
-"EW": { "topic":"western-europe","description":"Western Europe, topic one word" },
-"FA": { "topic":"dk","description":"Faroe Islands"},
-"FE": { "topic":"east-asia","description":"Far East, topic one word" },
-"FG": { "topic":"gf"},
-"FI": { "topic":"fi"},
-"FJ": { "topic":"fj"},
-"FK": { "topic":"fk"},
-"FP": { "topic":"pm"},
-"FR": { "topic":"fr", "CC": [ "FM" ] },
-"FW": { "topic":"pf","description":"Wallis and Futuna Islands"},
-"GA": { "topic":"gulf-of-alaska","description":"Gulf of Alaska area, topic one word" },
-"GB": { "topic":"gm"},
-"GC": { "topic":"ky"},
-"GD": { "topic":"gd"},
-"GE": { "topic":"sh","description":"Gough Island"},
-"GG": { "topic":"ge"},
-"GH": { "topic":"gh"},
-"GI": { "topic":"gi"},
-"GL": { "topic":"gl"},
-"GM": { "topic":"gu"},
-"GN": { "topic":"gn"},
-"GO": { "topic":"ga"},
-"gp": { "topic":"gp", "note":"MISSING from WMO Table C1" },
-"GQ": { "topic":"gq"},
-"GR": { "topic":"gr"},
-"GU": { "topic":"gt"},
-"GW": { "topic":"gw"},
-"GX": { "topic":"gulf-of-mexico","description":"topic one word" },
-"GY": { "topic":"gy"},
-"HA": { "topic":"ht"},
-"HE": { "topic":"sh","description":"St. Helena"},
-"HK": { "topic":"hk"},
-"hl": { "topic":"io","description":"Halley", "note":"MISSING from WMO Table C1, io - British Indian Ocean Territory"},
-"HO": { "topic":"hn"},
-"HU": { "topic":"hu"},
-"HV": { "topic":"bf"},
-"HW": { "topic":"us","description":"Hawaiian Islands", "CC": [ "PH" ] },
-"IC": { "topic":"km"},
-"ID": { "topic":"id", "CC":[ "WI", "WR" ] },
-"IE": { "topic":"ie"},
-"IL": { "topic":"is"},
-"IN": { "topic":"in", "CC" : [ "VA", "VB", "VC", "VD", "VE", "VI", "VO" ] },
-"IO": { "topic":"io"},
-"IQ": { "topic":"iq"},
-"IR": { "topic":"ir"},
-"IS": { "topic":"il"},
-"IV": { "topic":"ci"},
-"IY": { "topic":"it"},
-"JD": { "topic":"jo"},
-"JM": { "topic":"jm"},
-"JP": { "topic":"jp", "CC":[ "RO" ]},
-"KA": { "topic":"fm","description":"Caroline Islands (Federated State of Micronesia)"},
-"KB": { "topic":"ki"},
-"KI": { "topic":"cx","description":"Christmas Island"},
-"KK": { "topic":"cc", "CC":[ "AC" ]},
-"KN": { "topic":"ke"},
-"KO": { "topic":"kr"},
-"KP": { "topic":"kh"},
-"KR": { "topic":"kp"},
-"KU": { "topic":"ck"},
-"KW": { "topic":"kw"},
-"KY": { "topic":"kg"},
-"KZ": { "topic":"kz"},
-"LA": { "topic":"la"},
-"LB": { "topic":"lb"},
-"LC": { "topic":"lc"},
-"LI": { "topic":"lr"},
-"LJ": { "topic":"si"},
-"LN": { "topic":"us","description":"Southern Line Islands", "note":"MISSING from iso table, likely refers to us posessions."},
-"LS": { "topic":"ls"},
-"LT": { "topic":"lt"},
-"lu": { "topic":"lu", "note":"MISSING from Table C1" },
-"LV": { "topic":"lv"},
-"LY": { "topic":"ly"},
-"MA": { "topic":"mu"},
-"MB": { "topic":"za","description":"Marion Island"},
-"MC": { "topic":"ma"},
-"MD": { "topic":"pt","description":"Madeira"},
-"ME": { "topic":"eastern-mediterranean","description":"Eastern Mediterranean area, topic one word" },
-"MF": { "topic":"mf","description":"Saint-Martin, Saint-Barthélemy, Guadeloupe and other French islands in the vicinity"},
-"MG": { "topic":"mg"},
-"MH": { "topic":"mh"},
-"MI": { "topic":"ml"},
-"MJ": { "topic":"mk"},
-"MK": { "topic":"me"},
-"ML": { "topic":"mt"},
-"MM": { "topic":"mediterranean","description":"Mediterranean area, topic one word" },
-"MN": { "topic":"sx"},
-"MO": { "topic":"mn"},
-"MP": { "topic":"central-mediterranean","description":"Central Mediterranean area, topic one word" },
-"MQ": { "topic":"western-mediterraenean","description":"Western Mediterranean area, topic one word" },
-"MR": { "topic":"mq"},
-"MS": { "topic":"my", "CC":[ "GM" ]},
-"MT": { "topic":"mr"},
-"MU": { "topic":"mo"},
-"MV": { "topic":"mv"},
-"MW": { "topic":"mw"},
-"MX": { "topic":"mx"},
-"MY": { "topic":"mp"},
-"MZ": { "topic":"mx","description":"Mozambique - mz, mx - Mexico"},
-"NA": { "topic":"north-america","description":"North America, topic one word" },
-"NC": { "topic":"nc"},
-"NG": { "topic":"pg"},
-"NI": { "topic":"ng"},
-"NK": { "topic":"ni"},
-"NL": { "topic":"nl"},
-"NM": { "topic":"na"},
-"NO": { "topic":"no"},
-"NP": { "topic":"np"},
-"NR": { "topic":"ne"},
-"NT": { "topic":"north-atlantic","description":"North Atlantic area, topic one word" },
-"NU": { "topic":"aw-cw","description":"Curaçao and Aruba"},
-"nu": { "topic":"nu", "note":"MISSING from WMO table C1"},
-"NV": { "topic":"vu"},
-"NW": { "topic":"nr", "CC": [ "AN" ] },
-"NZ": { "topic":"nz", "CC": [ "NZ" ] },
-"OC": { "topic":"oceania","description":"Oceania" },
-"OH": { "topic":"sea-of-okhotsk","description":"Sea of Okhotsk, topic one word" },
-"OM": { "topic":"om"},
-"OR": { "topic":"aq","description":"South Orkney Islands, aq Antarctica"},
-"OS": { "topic":"at"},
-"PA": { "topic":"pacific","description":"Pacific area, topic one word" },
-"PE": { "topic":"persian-gulf","description":"Persian Gulf area, topic one word" },
-"PF": { "topic":"pf"},
-"PH": { "topic":"ph", "CC":[ "RP" ] },
-"PI": { "topic":"ki","description":"Phoenix Islands, country code Kiribati"},
-"PK": { "topic":"pk"},
-"PL": { "topic":"pl"},
-"PM": { "topic":"pa"},
-"PN": { "topic":"north-pacific","description":"North Pacific area, topic one word" },
-"PO": { "topic":"pt","description":"Portugal, different country code"},
-"PP": { "topic":"pw"},
-"PQ": { "topic":"western-north-pacific","description": "Western North Pacific, topic one word" },
-"PR": { "topic":"pe"},
-"PS": { "topic":"south-pacific","description":"South Pacific area, topic one word" },
-"PT": { "topic":"pn"},
-"PU": { "topic":"pr", "CC":[ "TJ" ] },
-"PW": { "topic":"western-pacific","description":"Western Pacific area, topic one word" },
-"PY": { "topic":"py"},
-"PZ": { "topic":"eastern-pacific","description":"Eastern Pacific area, topic one word" },
-"QB": { "topic":"ba"},
-"QT": { "topic":"qa"},
-"RA": { "topic":"ru", "description":"Russian Federation (East)", "CC": [ "RU" ] },
-"RE": { "topic":"re"},
-"RH": { "topic":"hr"},
-"RM": { "topic":"md"},
-"RO": { "topic":"ro", "CC":[ "LR" ] },
-"RS": { "topic":"ru","description":"Russian Federation (West)"},
-"RW": { "topic":"rw"},
-"SA": { "topic":"south-america","description":"South America, topic one word" },
-"SB": { "topic":"lk"},
-"SC": { "topic":"sc"},
-"SD": { "topic":"sa"},
-"SE": { "topic":"southern-ocean","description":"Southern Ocean area, topic one word" },
-"SG": { "topic":"sn"},
-"SI": { "topic":"so"},
-"SJ": { "topic":"sea-of-japan","description":"Sea of Japan area, topic one word" },
-"SK": { "topic":"my","description":"Sarawak as part of Malaysia"},
-"SL": { "topic":"sl"},
-"SM": { "topic":"sr"},
-"SN": { "topic":"se"},
-"SO": { "topic":"sb"},
-"SP": { "topic":"es"},
-"SQ": { "topic":"sk"},
-"SR": { "topic":"sg"},
-"SS": { "topic":"south-china-sea","description":"South China Sea area, topic one word" },
-"SS": { "topic":"ss"},
-"ST": { "topic":"south-atlantic","description":"South Atlantic area, topic one word" },
-"SU": { "topic":"sd"},
-"SV": { "topic":"sz", "CC": [ "FD" ] },
-"SW": { "topic":"ch"},
-"SX": { "topic":"us","description":"Santa Cruz Islands"},
-"SY": { "topic":"sy"},
-"SZ": { "topic":"sj"},
-"TA": { "topic":"tj"},
-"TC": { "topic":"sh","description":"Tristan da Cunha"},
-"TD": { "topic":"tt"},
-"TG": { "topic":"tg"},
-"TH": { "topic":"th"},
-"TI": { "topic":"tc", "CC":[ "MB" ] },
-"TK": { "topic":"tk"},
-"TM": { "topic":"tl"},
-"TN": { "topic":"tz"},
-"TO": { "topic":"to"},
-"TP": { "topic":"st"},
-"TR": { "topic":"tm"},
-"TS": { "topic":"tn"},
-"TU": { "topic":"tr"},
-"TV": { "topic":"tv"},
-"UG": { "topic":"ug"},
-"UK": { "topic":"uk", "CC":[ "EC" ] },
-"UR": { "topic":"ua"},
-"US": { "topic":"us", "CC":[ "K1", "K2", "K3", "K4", "K5", "K6", "K6", "K7", "K8", "K9", "KA", "KB", "KB", "KC", "KD", "KE", "KF", "KG", "KH", "KI", "KJ", "KK", "KL", "KM", "KN", "KO", "KP", "KQ", "KR", "KS", "KT", "KU", "KV", "KW", "KZ", "LN" ] },
-"UY": { "topic":"uy"},
-"UZ": { "topic":"uz"},
-"VG": { "topic":"vc"},
-"VI": { "topic":"vg"},
-"VN": { "topic":"ve"},
-"VS": { "topic":"vn"},
-"XE": { "topic":"eastern-sphere","description":"Eastern hemisphere, topic one word" },
-"XN": { "topic":"northern-sphere","description":"Northern hemisphere, topic one word" },
-"XS": { "topic":"southern-sphere","description":"Southern hemisphere, topic one word" },
-"XT": { "topic":"tropics","description":"Tropical belt" },
-"XW": { "topic":"western-sphere","description":"Western hemisphere, topic one word" },
-"XX": { "topic":"","description":"For use when other designators are not appropriate" },
-"YE": { "topic":"ye"},
-"YG": { "topic":"rs"},
-"ZA": { "topic":"za"},
-"ZB": { "topic":"zm"},
-"ZM": { "topic":"ws"},
-"ZR": { "topic":"cd"},
-"ZS": { "topic":"ZS","description":"MISSING C1: designator on some gribs called: LVZS50 KWBX"},
-"ZW": { "topic":"zw"},
-"ZZ": { "topic":"ZZ","description":"used in some American FT", "note":"MISSING: WMO Table C1"}
+    "AA": {
+        "topic": "ata"
+    },
+    "AB": {
+        "topic": "alb",
+        "description": "Albania, different country code"
+    },
+    "AC": {
+        "topic": "arctic",
+        "description": "country code?"
+    },
+    "AE": {
+        "topic": "southeast-asia",
+        "description": "topic one word"
+    },
+    "AF": {
+        "topic": "africa"
+    },
+    "AG": {
+        "topic": "arg",
+        "CC": [
+            "SA"
+        ]
+    },
+    "AH": {
+        "topic": "afg"
+    },
+    "AI": {
+        "topic": "arctic"
+    },
+    "AJ": {
+        "topic": "aze"
+    },
+    "AK": {
+        "topic": "usa",
+        "description": "Alaska"
+    },
+    "AL": {
+        "topic": "dza"
+    },
+    "AM": {
+        "topic": "central-africa",
+        "description": "topic one word"
+    },
+    "AN": {
+        "topic": "ago"
+    },
+    "AO": {
+        "topic": "west-africa"
+    },
+    "AP": {
+        "topic": "southern-africa"
+    },
+    "AS": {
+        "topic": "asia"
+    },
+    "AT": {
+        "topic": "atg",
+        "description": "Antigua and Barbuda, Saint Kitts and other British Islands in the vicinity"
+    },
+    "AU": {
+        "topic": "AUS",
+        "CC": [
+            "AA",
+            "AB",
+            "AD",
+            "AH",
+            "AM",
+            "YB",
+            "YC",
+            "YD",
+            "YE",
+            "YF",
+            "YG",
+            "YH",
+            "YL",
+            "YM",
+            "YO",
+            "YP",
+            "YR",
+            "YS",
+            "YT",
+            "YW"
+        ]
+    },
+    "AW": {
+        "topic": "neareast"
+    },
+    "aw": {
+        "topic": "abw",
+        "note": "MISSING from WMO Table C1, and a conflict"
+    },
+    "AX": {
+        "topic": "arabian-sea",
+        "description": "Arabian Sea area"
+    },
+    "AY": {
+        "topic": "arm"
+    },
+    "AZ": {
+        "topic": "prt",
+        "description": "Azores"
+    },
+    "BA": {
+        "topic": "bhs",
+        "CC": [
+            "MY"
+        ]
+    },
+    "BB": {
+        "topic": "btn",
+        "description": "Bhutan, different country code",
+        "note": "MISSING invented WMO code"
+    },
+    "BC": {
+        "topic": "bwa"
+    },
+    "BD": {
+        "topic": "brn"
+    },
+    "BE": {
+        "topic": "bmu"
+    },
+    "BH": {
+        "topic": "blz"
+    },
+    "BI": {
+        "topic": "bdi"
+    },
+    "BJ": {
+        "topic": "ben"
+    },
+    "BK": {
+        "topic": "vut",
+        "description": "Banks Islands"
+    },
+    "BM": {
+        "topic": "mmr"
+    },
+    "BN": {
+        "topic": "bhr"
+    },
+    "BO": {
+        "topic": "bol"
+    },
+    "BQ": {
+        "topic": "baltic-sea",
+        "description": "topic one word"
+    },
+    "BR": {
+        "topic": "brb"
+    },
+    "BU": {
+        "topic": "bgr"
+    },
+    "BV": {
+        "topic": "bvt",
+        "description": "Bouvet Island"
+    },
+    "BW": {
+        "topic": "bgd"
+    },
+    "BX": {
+        "topic": "bel"
+    },
+    "BY": {
+        "topic": "blr"
+    },
+    "BZ": {
+        "topic": "BRB",
+        "CC": [
+            "SB"
+        ]
+    },
+    "CA": {
+        "topic": "caribbean",
+        "description": "Caribbean and Central America, topic one word"
+    },
+    "CD": {
+        "topic": "tcd"
+    },
+    "CE": {
+        "topic": "caf"
+    },
+    "CG": {
+        "topic": "cog"
+    },
+    "CH": {
+        "topic": "chl"
+    },
+    "CI": {
+        "topic": "chn",
+        "CC": [
+            "ZB",
+            "ZG",
+            "ZH",
+            "ZJ",
+            "ZK",
+            "ZL",
+            "ZM",
+            "ZP",
+            "ZS",
+            "ZU",
+            "ZW",
+            "ZY"
+        ]
+    },
+    "CM": {
+        "topic": "cmr"
+    },
+    "CN": {
+        "topic": "can",
+        "CC": [
+            "CA",
+            "CW",
+            "CY"
+        ]
+    },
+    "CO": {
+        "topic": "col"
+    },
+    "CR": {
+        "topic": "esp",
+        "description": "Canary Islands (Spain)"
+    },
+    "CS": {
+        "topic": "cri"
+    },
+    "CT": {
+        "topic": "kir",
+        "description": "Canton Island"
+    },
+    "CU": {
+        "topic": "cub"
+    },
+    "CV": {
+        "topic": "cpv"
+    },
+    "cw": {
+        "topic": "cuw",
+        "note": "MISSING from WMO Table C1"
+    },
+    "CY": {
+        "topic": "cyp"
+    },
+    "CZ": {
+        "topic": "cze"
+    },
+    "DC": {
+        "topic": "bes"
+    },
+    "DJ": {
+        "topic": "dji"
+    },
+    "DL": {
+        "topic": "deu",
+        "CC": [
+            "ED"
+        ]
+    },
+    "DN": {
+        "topic": "dnk"
+    },
+    "DO": {
+        "topic": "dma"
+    },
+    "DR": {
+        "topic": "dom"
+    },
+    "EA": {
+        "topic": "east-africa",
+        "description": "topic one word"
+    },
+    "EC": {
+        "topic": "east-china-sea",
+        "description": "East China Sea area, topic one word"
+    },
+    "EE": {
+        "topic": "eastern-europe",
+        "description": "topic one word"
+    },
+    "EG": {
+        "topic": "egy"
+    },
+    "eh": {
+        "topic": "esh",
+        "note": "MISSING from WMO table C1"
+    },
+    "EI": {
+        "topic": "eri"
+    },
+    "EM": {
+        "topic": "middle-europe",
+        "description": "topic one word"
+    },
+    "EN": {
+        "topic": "northern-europe",
+        "description": "topic one word"
+    },
+    "EO": {
+        "topic": "europe"
+    },
+    "EQ": {
+        "topic": "ecu"
+    },
+    "ER": {
+        "topic": "are"
+    },
+    "ES": {
+        "topic": "slv"
+    },
+    "ET": {
+        "topic": "eth"
+    },
+    "EU": {
+        "topic": "europe",
+        "description": "Europe"
+    },
+    "EW": {
+        "topic": "western-europe",
+        "description": "Western Europe, topic one word"
+    },
+    "FA": {
+        "topic": "dnk",
+        "description": "Faroe Islands"
+    },
+    "FE": {
+        "topic": "east-asia",
+        "description": "Far East, topic one word"
+    },
+    "FG": {
+        "topic": "guf"
+    },
+    "FI": {
+        "topic": "fin"
+    },
+    "FJ": {
+        "topic": "fji"
+    },
+    "FK": {
+        "topic": "flk"
+    },
+    "FP": {
+        "topic": "spm"
+    },
+    "FR": {
+        "topic": "fra",
+        "CC": [
+            "FM"
+        ]
+    },
+    "FW": {
+        "topic": "pyf",
+        "description": "Wallis and Futuna Islands"
+    },
+    "GA": {
+        "topic": "gulf-of-alaska",
+        "description": "Gulf of Alaska area, topic one word"
+    },
+    "GB": {
+        "topic": "gmb"
+    },
+    "GC": {
+        "topic": "cym"
+    },
+    "GD": {
+        "topic": "grd"
+    },
+    "GE": {
+        "topic": "shn",
+        "description": "Gough Island"
+    },
+    "GG": {
+        "topic": "geo"
+    },
+    "GH": {
+        "topic": "gha"
+    },
+    "GI": {
+        "topic": "gib"
+    },
+    "GL": {
+        "topic": "grl"
+    },
+    "GM": {
+        "topic": "gum"
+    },
+    "GN": {
+        "topic": "gin"
+    },
+    "GO": {
+        "topic": "gab"
+    },
+    "gp": {
+        "topic": "glp",
+        "note": "MISSING from WMO Table C1"
+    },
+    "GQ": {
+        "topic": "gnq"
+    },
+    "GR": {
+        "topic": "grc"
+    },
+    "GU": {
+        "topic": "gtm"
+    },
+    "GW": {
+        "topic": "gnb"
+    },
+    "GX": {
+        "topic": "gulf-of-mexico",
+        "description": "topic one word"
+    },
+    "GY": {
+        "topic": "guy"
+    },
+    "HA": {
+        "topic": "hti"
+    },
+    "HE": {
+        "topic": "shn",
+        "description": "St. Helena"
+    },
+    "HK": {
+        "topic": "hkg"
+    },
+    "hl": {
+        "topic": "iot",
+        "description": "Halley",
+        "note": "MISSING from WMO Table C1, io - British Indian Ocean Territory"
+    },
+    "HO": {
+        "topic": "hnd"
+    },
+    "HU": {
+        "topic": "hun"
+    },
+    "HV": {
+        "topic": "bfa"
+    },
+    "HW": {
+        "topic": "usa",
+        "description": "Hawaiian Islands",
+        "CC": [
+            "PH"
+        ]
+    },
+    "IC": {
+        "topic": "com"
+    },
+    "ID": {
+        "topic": "idn",
+        "CC": [
+            "WI",
+            "WR"
+        ]
+    },
+    "IE": {
+        "topic": "irl"
+    },
+    "IL": {
+        "topic": "isl"
+    },
+    "IN": {
+        "topic": "ind",
+        "CC": [
+            "VA",
+            "VB",
+            "VC",
+            "VD",
+            "VE",
+            "VI",
+            "VO"
+        ]
+    },
+    "IO": {
+        "topic": "iot"
+    },
+    "IQ": {
+        "topic": "irq"
+    },
+    "IR": {
+        "topic": "irn"
+    },
+    "IS": {
+        "topic": "isr"
+    },
+    "IV": {
+        "topic": "civ"
+    },
+    "IY": {
+        "topic": "ita"
+    },
+    "JD": {
+        "topic": "jor"
+    },
+    "JM": {
+        "topic": "jam"
+    },
+    "JP": {
+        "topic": "jpn",
+        "CC": [
+            "RO"
+        ]
+    },
+    "KA": {
+        "topic": "fsm",
+        "description": "Caroline Islands (Federated State of Micronesia)"
+    },
+    "KB": {
+        "topic": "kir"
+    },
+    "KI": {
+        "topic": "cxr",
+        "description": "Christmas Island"
+    },
+    "KK": {
+        "topic": "cck",
+        "CC": [
+            "AC"
+        ]
+    },
+    "KN": {
+        "topic": "ken"
+    },
+    "KO": {
+        "topic": "kor"
+    },
+    "KP": {
+        "topic": "khm"
+    },
+    "KR": {
+        "topic": "prk"
+    },
+    "KU": {
+        "topic": "cok"
+    },
+    "KW": {
+        "topic": "kwt"
+    },
+    "KY": {
+        "topic": "kgz"
+    },
+    "KZ": {
+        "topic": "kaz"
+    },
+    "LA": {
+        "topic": "lao"
+    },
+    "LB": {
+        "topic": "lbn"
+    },
+    "LC": {
+        "topic": "lca"
+    },
+    "LI": {
+        "topic": "lbr"
+    },
+    "LJ": {
+        "topic": "svn"
+    },
+    "LN": {
+        "topic": "usa",
+        "description": "Southern Line Islands",
+        "note": "MISSING from iso table, likely refers to us posessions."
+    },
+    "LS": {
+        "topic": "lso"
+    },
+    "LT": {
+        "topic": "ltu"
+    },
+    "lu": {
+        "topic": "lux",
+        "note": "MISSING from Table C1"
+    },
+    "LV": {
+        "topic": "lva"
+    },
+    "LY": {
+        "topic": "lby"
+    },
+    "MA": {
+        "topic": "mus"
+    },
+    "MB": {
+        "topic": "zaf",
+        "description": "Marion Island"
+    },
+    "MC": {
+        "topic": "mar"
+    },
+    "MD": {
+        "topic": "prt",
+        "description": "Madeira"
+    },
+    "ME": {
+        "topic": "eastern-mediterranean",
+        "description": "Eastern Mediterranean area, topic one word"
+    },
+    "MF": {
+        "topic": "maf",
+        "description": "Saint-Martin, Saint-Barth\u00c3\u00a9lemy, Guadeloupe and other French islands in the vicinity"
+    },
+    "MG": {
+        "topic": "mdg"
+    },
+    "MH": {
+        "topic": "mhl"
+    },
+    "MI": {
+        "topic": "mli"
+    },
+    "MJ": {
+        "topic": "mkd"
+    },
+    "MK": {
+        "topic": "mne"
+    },
+    "ML": {
+        "topic": "mlt"
+    },
+    "MM": {
+        "topic": "mediterranean",
+        "description": "Mediterranean area, topic one word"
+    },
+    "MN": {
+        "topic": "sxm"
+    },
+    "MO": {
+        "topic": "mng"
+    },
+    "MP": {
+        "topic": "central-mediterranean",
+        "description": "Central Mediterranean area, topic one word"
+    },
+    "MQ": {
+        "topic": "western-mediterraenean",
+        "description": "Western Mediterranean area, topic one word"
+    },
+    "MR": {
+        "topic": "mtq"
+    },
+    "MS": {
+        "topic": "mys",
+        "CC": [
+            "GM"
+        ]
+    },
+    "MT": {
+        "topic": "mrt"
+    },
+    "MU": {
+        "topic": "mac"
+    },
+    "MV": {
+        "topic": "mdv"
+    },
+    "MW": {
+        "topic": "mwi"
+    },
+    "MX": {
+        "topic": "mex"
+    },
+    "MY": {
+        "topic": "mnp"
+    },
+    "MZ": {
+        "topic": "mex",
+        "description": "Mozambique - mz, mx - Mexico"
+    },
+    "NA": {
+        "topic": "north-america",
+        "description": "North America, topic one word"
+    },
+    "NC": {
+        "topic": "ncl"
+    },
+    "NG": {
+        "topic": "png"
+    },
+    "NI": {
+        "topic": "nga"
+    },
+    "NK": {
+        "topic": "nic"
+    },
+    "NL": {
+        "topic": "nld"
+    },
+    "NM": {
+        "topic": "nam"
+    },
+    "NO": {
+        "topic": "nor"
+    },
+    "NP": {
+        "topic": "npl"
+    },
+    "NR": {
+        "topic": "ner"
+    },
+    "NT": {
+        "topic": "north-atlantic",
+        "description": "North Atlantic area, topic one word"
+    },
+    "NU": {
+        "topic": "aw-cw",
+        "description": "Cura\u00c3\u00a7ao and Aruba"
+    },
+    "nu": {
+        "topic": "niu",
+        "note": "MISSING from WMO table C1"
+    },
+    "NV": {
+        "topic": "vut"
+    },
+    "NW": {
+        "topic": "nru",
+        "CC": [
+            "AN"
+        ]
+    },
+    "NZ": {
+        "topic": "nzl",
+        "CC": [
+            "NZ"
+        ]
+    },
+    "OC": {
+        "topic": "oceania",
+        "description": "Oceania"
+    },
+    "OH": {
+        "topic": "sea-of-okhotsk",
+        "description": "Sea of Okhotsk, topic one word"
+    },
+    "OM": {
+        "topic": "omn"
+    },
+    "OR": {
+        "topic": "ata",
+        "description": "South Orkney Islands, aq Antarctica"
+    },
+    "OS": {
+        "topic": "aut"
+    },
+    "PA": {
+        "topic": "pacific",
+        "description": "Pacific area, topic one word"
+    },
+    "PE": {
+        "topic": "persian-gulf",
+        "description": "Persian Gulf area, topic one word"
+    },
+    "PF": {
+        "topic": "pyf"
+    },
+    "PH": {
+        "topic": "phl",
+        "CC": [
+            "RP"
+        ]
+    },
+    "PI": {
+        "topic": "kir",
+        "description": "Phoenix Islands, country code Kiribati"
+    },
+    "PK": {
+        "topic": "pak"
+    },
+    "PL": {
+        "topic": "pol"
+    },
+    "PM": {
+        "topic": "pan"
+    },
+    "PN": {
+        "topic": "north-pacific",
+        "description": "North Pacific area, topic one word"
+    },
+    "PO": {
+        "topic": "prt",
+        "description": "Portugal, different country code"
+    },
+    "PP": {
+        "topic": "plw"
+    },
+    "PQ": {
+        "topic": "western-north-pacific",
+        "description": "Western North Pacific, topic one word"
+    },
+    "PR": {
+        "topic": "per"
+    },
+    "PS": {
+        "topic": "south-pacific",
+        "description": "South Pacific area, topic one word"
+    },
+    "PT": {
+        "topic": "pcn"
+    },
+    "PU": {
+        "topic": "pri",
+        "CC": [
+            "TJ"
+        ]
+    },
+    "PW": {
+        "topic": "western-pacific",
+        "description": "Western Pacific area, topic one word"
+    },
+    "PY": {
+        "topic": "pry"
+    },
+    "PZ": {
+        "topic": "eastern-pacific",
+        "description": "Eastern Pacific area, topic one word"
+    },
+    "QB": {
+        "topic": "bih"
+    },
+    "QT": {
+        "topic": "qat"
+    },
+    "RA": {
+        "topic": "rus",
+        "description": "Russian Federation (East)",
+        "CC": [
+            "RU"
+        ]
+    },
+    "RE": {
+        "topic": "reu"
+    },
+    "RH": {
+        "topic": "hrv"
+    },
+    "RM": {
+        "topic": "mda"
+    },
+    "RO": {
+        "topic": "rou",
+        "CC": [
+            "LR"
+        ]
+    },
+    "RS": {
+        "topic": "rus",
+        "description": "Russian Federation (West)"
+    },
+    "RW": {
+        "topic": "rwa"
+    },
+    "SA": {
+        "topic": "south-america",
+        "description": "South America, topic one word"
+    },
+    "SB": {
+        "topic": "lka"
+    },
+    "SC": {
+        "topic": "syc"
+    },
+    "SD": {
+        "topic": "sau"
+    },
+    "SE": {
+        "topic": "southern-ocean",
+        "description": "Southern Ocean area, topic one word"
+    },
+    "SG": {
+        "topic": "sen"
+    },
+    "SI": {
+        "topic": "som"
+    },
+    "SJ": {
+        "topic": "sea-of-japan",
+        "description": "Sea of Japan area, topic one word"
+    },
+    "SK": {
+        "topic": "mys",
+        "description": "Sarawak as part of Malaysia"
+    },
+    "SL": {
+        "topic": "sle"
+    },
+    "SM": {
+        "topic": "sur"
+    },
+    "SN": {
+        "topic": "swe"
+    },
+    "SO": {
+        "topic": "slb"
+    },
+    "SP": {
+        "topic": "esp"
+    },
+    "SQ": {
+        "topic": "svk"
+    },
+    "SR": {
+        "topic": "sgp"
+    },
+    "SS": {
+        "topic": "ssd"
+    },
+    "ST": {
+        "topic": "south-atlantic",
+        "description": "South Atlantic area, topic one word"
+    },
+    "SU": {
+        "topic": "sdn"
+    },
+    "SV": {
+        "topic": "swz",
+        "CC": [
+            "FD"
+        ]
+    },
+    "SW": {
+        "topic": "che"
+    },
+    "SX": {
+        "topic": "usa",
+        "description": "Santa Cruz Islands"
+    },
+    "SY": {
+        "topic": "syr"
+    },
+    "SZ": {
+        "topic": "sjm"
+    },
+    "TA": {
+        "topic": "tjk"
+    },
+    "TC": {
+        "topic": "shn",
+        "description": "Tristan da Cunha"
+    },
+    "TD": {
+        "topic": "tto"
+    },
+    "TG": {
+        "topic": "tgo"
+    },
+    "TH": {
+        "topic": "tha"
+    },
+    "TI": {
+        "topic": "tca",
+        "CC": [
+            "MB"
+        ]
+    },
+    "TK": {
+        "topic": "tkl"
+    },
+    "TM": {
+        "topic": "tls"
+    },
+    "TN": {
+        "topic": "tza"
+    },
+    "TO": {
+        "topic": "ton"
+    },
+    "TP": {
+        "topic": "stp"
+    },
+    "TR": {
+        "topic": "tkm"
+    },
+    "TS": {
+        "topic": "tun"
+    },
+    "TU": {
+        "topic": "tur"
+    },
+    "TV": {
+        "topic": "tuv"
+    },
+    "UG": {
+        "topic": "uga"
+    },
+    "UK": {
+        "topic": "uk",
+        "CC": [
+            "EC"
+        ]
+    },
+    "UR": {
+        "topic": "ukr"
+    },
+    "US": {
+        "topic": "usa",
+        "CC": [
+            "K1",
+            "K2",
+            "K3",
+            "K4",
+            "K5",
+            "K6",
+            "K6",
+            "K7",
+            "K8",
+            "K9",
+            "KA",
+            "KB",
+            "KB",
+            "KC",
+            "KD",
+            "KE",
+            "KF",
+            "KG",
+            "KH",
+            "KI",
+            "KJ",
+            "KK",
+            "KL",
+            "KM",
+            "KN",
+            "KO",
+            "KP",
+            "KQ",
+            "KR",
+            "KS",
+            "KT",
+            "KU",
+            "KV",
+            "KW",
+            "KZ",
+            "LN"
+        ]
+    },
+    "UY": {
+        "topic": "ury"
+    },
+    "UZ": {
+        "topic": "uzb"
+    },
+    "VG": {
+        "topic": "vct"
+    },
+    "VI": {
+        "topic": "vgb"
+    },
+    "VN": {
+        "topic": "ven"
+    },
+    "VS": {
+        "topic": "vnm"
+    },
+    "XE": {
+        "topic": "eastern-sphere",
+        "description": "Eastern hemisphere, topic one word"
+    },
+    "XN": {
+        "topic": "northern-sphere",
+        "description": "Northern hemisphere, topic one word"
+    },
+    "XS": {
+        "topic": "southern-sphere",
+        "description": "Southern hemisphere, topic one word"
+    },
+    "XT": {
+        "topic": "tropics",
+        "description": "Tropical belt"
+    },
+    "XW": {
+        "topic": "western-sphere",
+        "description": "Western hemisphere, topic one word"
+    },
+    "XX": {
+        "topic": "xxx",
+        "description": "For use when other designators are not appropriate"
+    },
+    "YE": {
+        "topic": "yem"
+    },
+    "YG": {
+        "topic": "srb"
+    },
+    "ZA": {
+        "topic": "zaf"
+    },
+    "ZB": {
+        "topic": "zmb"
+    },
+    "ZM": {
+        "topic": "wsm"
+    },
+    "ZR": {
+        "topic": "cod"
+    },
+    "ZS": {
+        "topic": "ssd",
+        "description": "MISSING C1: designator on some gribs called: LVZS50 KWBX"
+    },
+    "ZW": {
+        "topic": "zwe"
+    },
+    "ZZ": {
+        "topic": "zzz",
+        "description": "used in some American FT",
+        "note": "MISSING: WMO Table C1"
+    }
 }

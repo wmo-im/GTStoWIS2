@@ -25,7 +25,7 @@ import json
 import pkgutil
 import os.path
 
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 
 class GTStoWIS2():
 
@@ -34,10 +34,13 @@ class GTStoWIS2():
           read in the tables to support the translation.
 
           as per https://github.com/wmo-im/GTStoWIS2/issues/5 removing hours from topic tree.
-          we don't ingest Tables C4 and C5, to which references from TableA have also been removed. 
+          we don't ingest Tables C4 and C5, to which references from TableA have also been removed.
+          
+          merged TableA, TableB and TableC6
+          harmonization for topic tree structure
         """
 
-        for t in [ 'A', 'B', 'C1', 'C2', 'C3', 'C6', 'C6', 'C7', 'CCCC', 'GISC', 'D1', 'D2' ]:
+        for t in [ 'A', 'C1', 'CCCC']:
             f = self.tableDir + '/Table%s.json' % t
             with open( f, 'r',encoding="UTF-8" ) as m:
                 if self.debug: print( 'reading %s' % f )
@@ -45,28 +48,6 @@ class GTStoWIS2():
             if self.dump:
                d = eval( "json.dumps(self.table"+t+", indent=2)" )
                print( "Table%s : %s" % (t, d ) )
-
-    def genTableTTAAii(self):
-        """
-          given the Tables have been read, create one super table that combines Tables A->D (except CCCC)
-          
-        """
-        self.tableTTAAii={}
-        for T1 in self.tableA:
-            self.tableTTAAii[T1]={}
-            self.tableTTAAii[T1]['topic'] = self.tableA[T1]['topic']
-            self.tableTTAAii[T1]['priority'] = self.tableA[T1]['priority']
-            if T1 == 'B':
-                self.tableTTAAii[T1]['T2'] = ""
-            else:
-                self.tableTTAAii[T1]['T2'] = self.tableB[T1]
-
-            for key in [ 'A1', 'A2', 'ii' ]:
-                if self.tableA[T1][key] == "":
-                    value=""
-                else:
-                    value=eval( "self.table%s" % self.tableA[T1][key] )
-                self.tableTTAAii[T1][key]=value
 
 
 
@@ -110,84 +91,40 @@ class GTStoWIS2():
             for c in self.tableC1:
                 if "CC" in self.tableC1[c]:
                     if CC in self.tableC1[c]['CC']:
-                        return self.tableC1[c]['topic'] + self.separator + CCCC
+                        return self.tableC1[c]['topic'] + self.separator + CCCC.lower()
         return 'unknown'                 
     
 
-    def _getSubtopicTableT2(self, myT1, myT2, myA1, myii, mytableT2):
-        subTopicT2 = ""
-        if "B" in mytableT2:
-            #print("tableT2 = B")
-            keyList = self.tableB[myT1].keys()
-            #print(keyList)
-            if myT2 in keyList:
-                subTopicT2 = self.tableB[myT1][myT2]
-        else:
-            if "C7" in mytableT2:
-                #print("tableT2 = C7")
-                TTA = myT1 + myT2 + myA1
-                if TTA in self.tableC7.keys():
-                    if "ii" in self.tableC7[TTA]:
-                        iiKey = ""
-                        iiKeyList = self.tableC7[TTA]["ii"].keys()
-                        for key in iiKeyList:
-                            if int(myii) < int(key):
-                                if iiKey == "":
-                                    iiKey = key
-                                else:
-                                    if int(iiKey) > int(key):
-                                        iiKey = key
-                        if iiKey != "":
-                            subTopicT2 = self.tableC7[TTA]["ii"][iiKeys[count-1]]
-                    else:
-                        subTopicT2 = self.tableC7[TTA]
-        return subTopicT2
-
-    def _getSubtopicTableA1(self, myT1, myT2, myA1, myA2, myii, mytableA1):
+    def _getSubtopicA1(self, myT1, myT2, myA1, myA2, myii, mytableA1):
         subTopicA1 = ""
         if mytableA1 == "C1":
             AA = myA1 + myA2
             if AA in self.tableC1.keys():
-                subTopicA1 = self.tableC1[AA]["topic"]
+                subTopicA1_C1 = self.tableC1[AA]["topic"]
+                if myT2 in self.tableA[myT1]['T2'].keys():
+                    subTopicA1 = self.tableA[myT1]['T2'][myT2] + self.separator + subTopicA1_C1
+                else:
+                    subTopicA1 = self.tableA[myT1]["topic"] + self.separator + subTopicA1_C1
         else:
-            if mytableA1 == "C3":
-                subTopicA1 = self.tableC3[myA1]
-            else:
-                if mytableA1 == "C6":
-                    iiKey = ""
-                    TT = myT1 + myT2
-                    if TT in self.tableC6.keys():
-                        if myA1 in self.tableC6[TT].keys():
-                            if "ii" in self.tableC6[TT][myA1]:
-                                iiKeyList = self.tableC6[TT][myA1]["ii"].keys()
-                                for key in iiKeyList:
-                                    if int(myii) < int(key):
-                                        if iiKey == "":
+            if myT1 in [ 'I', 'J', 'K']:
+                iiKey = ""
+                TT = myT1 + myT2
+                if TT in self.tableA[myT1]['A1'].keys():
+                    if myA1 in self.tableA[myT1]['A1'][TT].keys():
+                        if "ii" in self.tableA[myT1]['A1'][TT][myA1]:
+                            iiKeyList = self.tableA[myT1]['A1'][TT][myA1]["ii"].keys()
+                            for key in iiKeyList:
+                                if int(myii) < int(key):
+                                    if iiKey == "":
+                                        iiKey = key
+                                    else:
+                                        if int(iiKey) > int(key):
                                             iiKey = key
-                                        else:
-                                            if int(iiKey) > int(key):
-                                                iiKey = key
                                 if iiKey != "":
-                                    subTopicA1 = self.tableC6[TT][myA1]["ii"][iiKey]
-                            else:
-                                subTopicA1 = self.tableC6[TT][myA1]
+                                    subTopicA1 = self.tableA[myT1]['A1'][TT][myA1]["ii"][iiKey]
                         else:
-                            if "A-Z" in self.tableC6[TT].keys():
-                                subTopicA1 =  self.tableC6[TT]["A-Z"]
+                            subTopicA1 = self.tableA[myT1]['A1'][TT][myA1]
         return subTopicA1
-    
-    def _getSubtopicTableA2(self, myA2, mytableA2):
-        subTopicA2 = ""
-        if mytableA2 == "C4":
-            subTopicA2 = self.tableC4[myA2]
-        else:
-            if mytableA2 == "C3":
-                subTopicA2 = self.tableC3[myA2]
-            else:
-                if mytableA2 == "C5":
-                    if myA2 in self.tableC5.keys():
-                        subTopicA2 = self.tableC5[myA2]
-        return subTopicA2
     
     def mapAHLtoTopic(self,ahl):
         """
@@ -220,13 +157,6 @@ class GTStoWIS2():
             input_c = ahl[7:11]
 
         if self.debug: print( "T1=%s, T2=%s, A1=%s, A2=%s, ii=%s, CCCC=%s" % ( T1, T2, A1, A2, ii, input_c ) )
-
-        # get WMOtables for T1
-        tableT2 = self.tableA[T1]["T2"]
-        tableA1 = self.tableA[T1]["A1"]
-        tableA2 = self.tableA[T1]["A2"]
-        topic = self.tableA[T1]["topic"]
-
         if self.debug: print("topic from tableA: %s" % topic )
 
         # get topic and subtopics
@@ -236,22 +166,32 @@ class GTStoWIS2():
         subtopicT2 = ""
         subtopicA1 = ""
         subtopicA2 = ""
-        fulltopic = subtopic_cccc + self.separator + topic
+        topic = self.tableA[T1]["topic"]
 
-        subtopicT2 = self._getSubtopicTableT2(T1, T2, A1, ii, tableT2)
+        if self.tableA[T1]['T2'] != "":
+            if T2 in self.tableA[T1]['T2'].keys():
+                subtopicT2 = self.tableA[T1]['T2'][T2]
         if self.debug: print("subtopicT2: %s" % subtopicT2 )
-        if subtopicT2 != "":
-            fulltopic = fulltopic + self.separator + subtopicT2
 
-        subtopicA1 = self._getSubtopicTableA1(T1, T2, A1, A2, ii, tableA1)
+        if self.tableA[T1]['A1'] == "C1":
+            subtopicA1 = self._getSubtopicA1(T1, T2, A1, A2, ii, self.tableA[T1]['A1'])
+        else:
+            subtopicA1 = self._getSubtopicA1(T1, T2, A1, A2, ii, "")
         if self.debug: print("subtopicA1: %s" % subtopicA1 )
+        
         if subtopicA1 != "":
-            fulltopic = fulltopic + self.separator + subtopicA1
+            fulltopic = subtopic_cccc + self.separator + subtopicA1
+        else:
+            if subtopicT2 != "":
+                fulltopic = subtopic_cccc + self.separator + subtopicT2
+            else:
+                fulltopic = subtopic_cccc + self.separator + topic
 
-        subtopicA2 = self._getSubtopicTableA2(A2, tableA2)
-        if self.debug: print("subtopicA2: %s" % subtopicA2 )
-        if subtopicA2 != "":
-            fulltopic = fulltopic + self.separator + subtopicA2
+        # not used as A2 always ""
+        #subtopicA2 = self._getSubtopicA2(A2, tableA[T1]['A2'])
+        #if self.debug: print("subtopicA2: %s" % subtopicA2 )
+        #if subtopicA2 != "":
+        #    fulltopic = fulltopic + self.separator + subtopicA2
 
         if self.debug: print("fulltopic is: %s" % fulltopic )
 
