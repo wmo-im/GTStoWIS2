@@ -248,7 +248,7 @@
         "instance_identifier": {
           "type": "string",
           "title": "Identifier of the data instance",
-          "description": "Indentifier of the current instance (of the instance whose availability this notification anounces). \nCan be a file name or some other, preferably unique, identifier.",
+          "description": "Identifier of the current instance (of the instance whose availability this notification announces). \nCan be a file name or some other, preferably unique, identifier.",
           "examples": [
             "gfs.t00z.pgrb2.0p25.f003",
             "A_IEDX02EUMP270634_C_EDZW_20220427072332_84196486.bufr",
@@ -267,7 +267,7 @@
         "instance_datetime": {
           "type": "string",
           "format": "date-time",
-          "description": "TBD, Identifies the date/time that characterises the data instance being published, \ne.g. observation time, model run, etc. - typically rounded to a multiple of data production interval. ISO8601/RFC3339 format.",
+          "description": "TBD, Identifies the date/time that characterizes the data instance being published, \ne.g. observation time, model run, etc. - typically rounded to a multiple of data production interval. ISO8601/RFC3339 format.",
           "examples": [
             "20220427T063000Z",
             "2022-04-27T06:30:00Z"
@@ -345,7 +345,7 @@
             },
             "value": {
               "type": "string",
-              "description": "The inlined content of the file.",
+              "description": "The in-lined content of the file.",
               "examples": [
                 "Hello World!"
               ]
@@ -359,7 +359,6 @@
       },
       "required": [
         "publication_datetime",
-        "integrity",
         "hierarchy"
       ]
     }

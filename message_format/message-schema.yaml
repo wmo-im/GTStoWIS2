@@ -123,7 +123,6 @@ properties:
           - value
     required:
       - publication_datetime
-      - integrity
       - hierarchy
 definitions:
   PointOrPolygon:
