@@ -1,0 +1,431 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.wmo.int/wis2/broker/message/4.0.0/schema.yml",
+  "title": "WMO WIS 2.0 broker data notification schema",
+  "description": "WMO WIS 2.0 broker data notification schema",
+  "type": "object",
+  "allOf": [
+    {
+      "type": "object",
+      "required": [
+        "type",
+        "geometry",
+        "properties"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Feature"
+          ]
+        },
+        "geometry": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PointOrPolygon/oneOf/0"
+            },
+            {
+              "type": "object",
+              "required": [
+                "type",
+                "coordinates"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "MultiPoint"
+                  ]
+                },
+                "coordinates": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "minItems": 2,
+                    "items": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "type",
+                "coordinates"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "LineString"
+                  ]
+                },
+                "coordinates": {
+                  "type": "array",
+                  "minItems": 2,
+                  "items": {
+                    "type": "array",
+                    "minItems": 2,
+                    "items": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "type",
+                "coordinates"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "MultiLineString"
+                  ]
+                },
+                "coordinates": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "minItems": 2,
+                    "items": {
+                      "type": "array",
+                      "minItems": 2,
+                      "items": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "$ref": "#/definitions/PointOrPolygon/oneOf/1"
+            },
+            {
+              "type": "object",
+              "required": [
+                "type",
+                "coordinates"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "MultiPolygon"
+                  ]
+                },
+                "coordinates": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "array",
+                      "minItems": 4,
+                      "items": {
+                        "type": "array",
+                        "minItems": 2,
+                        "items": {
+                          "type": "number"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "type",
+                "geometries"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "GeometryCollection"
+                  ]
+                },
+                "geometries": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/allOf/0/properties/geometry"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "properties": {
+          "type": "object",
+          "nullable": true
+        },
+        "id": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "href",
+              "rel"
+            ],
+            "properties": {
+              "href": {
+                "type": "string",
+                "example": "http://data.example.com/buildings/123"
+              },
+              "rel": {
+                "type": "string",
+                "example": "alternate"
+              },
+              "type": {
+                "type": "string",
+                "example": "application/geo+json"
+              },
+              "hreflang": {
+                "type": "string",
+                "example": "en"
+              },
+              "title": {
+                "type": "string",
+                "example": "Trierer Strasse 70, 53115 Bonn"
+              },
+              "length": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for the data notification.",
+      "examples": [
+        "31e9d66a-cd83-4174-9429-b932f1abe1be"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "description": "Version of the data notification specification format.",
+      "const": "4.0.0"
+    },
+    "geometry": {
+      "$ref": "#/definitions/PointOrPolygon",
+      "nullable": true,
+      "examples": [
+        {
+          "type": "Point",
+          "coordinates": [
+            6.146255135536194,
+            46.223296618227444
+          ]
+        },
+        null
+      ]
+    },
+    "properties": {
+      "type": "object",
+      "properties": {
+        "instance_identifier": {
+          "type": "string",
+          "title": "Identifier of the data instance",
+          "description": "Indentifier of the current instance (of the instance whose availability this notification anounces). \nCan be a file name or some other, preferably unique, identifier.",
+          "examples": [
+            "gfs.t00z.pgrb2.0p25.f003",
+            "A_IEDX02EUMP270634_C_EDZW_20220427072332_84196486.bufr",
+            "d64b8d25-4fd0-42b2-91b3-ba29f215fbfc"
+          ]
+        },
+        "publication_datetime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Identifies the date/time of when the notification was posted/published, in ISO8601/RFC3339 format.\n\nThe publication date/time is critical for subscribers to prevent message loss by knowing\ntheir lag (how far behind the publisher they are).\n",
+          "examples": [
+            "20220427T072332.314854383Z",
+            "2022-04-27T07:23:32.314854383Z"
+          ]
+        },
+        "instance_datetime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "TBD, Identifies the date/time that characterises the data instance being published, \ne.g. observation time, model run, etc. - typically rounded to a multiple of data production interval. ISO8601/RFC3339 format.",
+          "examples": [
+            "20220427T063000Z",
+            "2022-04-27T06:30:00Z"
+          ]
+        },
+        "data_start_datetime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "TBD, Identifies the start date/time date of the data being published, in ISO8601/RFC3339 format."
+        },
+        "data_end_datetime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "TBD, Identifies the end date/time date of the data being published, in ISO8601/RFC3339 format."
+        },
+        "integrity": {
+          "type": "object",
+          "description": "Specifies a way to verify integrity and/or uniqueness of the data instance.",
+          "properties": {
+            "method": {
+              "type": "string",
+              "description": "A specific set of methods for calculating the checksum algorithms:\n* ``sha512``: the Secure Hash Algorithm 512 bits, value is base64 encoded.\n* ``arbitrary``: an arbitrary string is used to identify the value.\n* ``md5``: the Message Digest 5 hash (obsolete, perhaps will be rejected)\n",
+              "enum": [
+                "sha256",
+                "sha512",
+                "md5",
+                "remove",
+                "link",
+                "cod",
+                "arbitrary",
+                "md5name",
+                "random"
+              ]
+            },
+            "value": {
+              "type": "string",
+              "description": "Base 64 encoded checksum or digital signature",
+              "examples": [
+                "N2Y4M2IxNjU3ZmYxZmM1M2I5MmRjMTgxNDhhMWQ2NWRmYzJkNGIxZmEzZDY3NzI4NGFkZGQyMDAxMjZkOTA2OSAqYWEuanNvbgo="
+              ]
+            }
+          },
+          "required": [
+            "method",
+            "value"
+          ]
+        },
+        "hierarchy": {
+          "type": "string",
+          "description": "WIS 2.0 data hierarchical category identifier.",
+          "examples": [
+            "EUE/eumetsat_darmstadt/observation/global/",
+            "CAN/eccc-msc/data/core/weather/surface-based-obs/landFixed"
+          ]
+        },
+        "size": {
+          "type": "integer",
+          "description": "Size of the data instance in bytes/octets, if known.",
+          "examples": [
+            12345
+          ]
+        },
+        "content": {
+          "type": "object",
+          "description": "Used to embed small instances/products inline within the notification.",
+          "properties": {
+            "encoding": {
+              "type": "string",
+              "description": "Encoding of content. Note that if gzip compression is used the result is base64 encoded too.",
+              "enum": [
+                "utf-8",
+                "base64",
+                "gzip"
+              ]
+            },
+            "value": {
+              "type": "string",
+              "description": "The inlined content of the file.",
+              "examples": [
+                "Hello World!"
+              ]
+            }
+          },
+          "required": [
+            "encoding",
+            "value"
+          ]
+        }
+      },
+      "required": [
+        "publication_datetime",
+        "integrity",
+        "hierarchy"
+      ]
+    }
+  },
+  "definitions": {
+    "PointOrPolygon": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "coordinates"
+          ],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "Point"
+              ]
+            },
+            "coordinates": {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "coordinates"
+          ],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "Polygon"
+              ]
+            },
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "minItems": 4,
+                "items": {
+                  "type": "array",
+                  "minItems": 2,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "geometry",
+    "properties",
+    "links"
+  ]
+}
