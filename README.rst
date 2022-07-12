@@ -241,8 +241,8 @@ Origin
 Top two levels of hierarchy, replace the CCCC with the two-letter iso code, followed by a centre identifier.
 These centre identifiers are just mildly transformed versions of the description from the CCCC table.
 
-To build CCCC, started with (https://www.wmo.int/pages/prog/www/ois/Operational_Information/VolumeC1/CCCC_en.pdf)
-Volume C1 Attachment I in pdf format. After much manual work, 
+To build CCCC, started with Volume C1 Attachment I in pdf format (available via *by Location Indicator (CCCC)* link at <https://community.wmo.int/activity-areas/operational-information-service/volume-c1>).
+After much manual work,  
 there is a mapping built in the CCCC Table lookup.
 tested on real feeds, and noticed many missing CCCC's.
 
