@@ -1,4 +1,22 @@
 
+Change in Direction
+~~~~~~~~~~~~~~~~~~~
+
+This repository reflects leg-work done by the tt-protocols committee working with the WMO.
+The comittee reports to ET-AT, and ET-AT decided to go a different direction, so the information
+here is now of limited value. For current information, please consult the new repositories:
+
+
+* Message format: https://github.com/wmo-im/wis2-notification-message/issues/4 
+
+* Topic hierarchy: https://github.com/wmo-im/wis2-topic-hierarchy
+
+It is unclear if the content of this repository has any role un future WMO
+work.
+
+Thanks.
+
+
 Introduction
 ~~~~~~~~~~~~
 
