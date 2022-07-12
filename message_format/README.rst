@@ -8,7 +8,7 @@ that can be downloaded from a server.
 
 a complete example being:: 
 
-   {  "pubTime" : "20190120T045018.314854383", 
+   {  "pubTime" : "20190120T045018.314854383Z", 
       "baseUrl" : "https://localhost/data/20190120", 
       "integrity": {"method": "sha512", "value": "A2KNxvks...S8qfSCw=="},
       "relPath" : "WIS/CA/CMC/UpperAir/04/UANT01_CWAO_200445___15103.txt", 
@@ -23,7 +23,8 @@ Boiling it down to this relatively small example makes discussion easier.
    This allows easy calculation of propagation delay across any number of nodes.
    The date format looks like a floating point number,  but is the conventional
    YYYYMMDDTHHMMSS (in UTC timezone) followed by a fraction of a second after the
-   decimal place.
+   decimal place, and *Z* (timezone marker). all timestamps are always to be UTC.
+   use of another timezone is considered an error.
 
    This is chosen rather than any sort of epochal second count for readability
    and to avoid worrying about leap seconds. This format is essentially ISO8601
@@ -32,10 +33,7 @@ Boiling it down to this relatively small example makes discussion easier.
    decimal marker allows for different users to give different levels of
    precision (milliseconds, microseconds, etc...) without ambiguity.
 
-   In ISO8601 when times do not include a timezone marker, it is assumed to be local.
-   In the meteorological domain, UTC is more natural. Leaving the Z out seems reasonable.
-
-   The date stamp is critical for subscribers to prevent message loss by knowing
+   The date-time stamp is critical for subscribers to prevent message loss by knowing
    their lag (how far behind the publisher they are.)
 
 *  The *baseUrl* marks the static starting point to build the complete download URL.
