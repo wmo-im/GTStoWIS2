@@ -5759,6 +5759,12 @@
         "country_short": "dnk",
         "comment": ""
     },
+    "EKRS": {
+        "centre": "ROM-SAF Spire",
+        "name": "ROM-SAF Spire",
+        "country_short": "dnk",
+        "comment": ""
+    },
     "EKSB": {
         "centre": "s\u00c3\u00b8nderborg",
         "name": "S\u00c3\u00b8nderborg",
@@ -7380,6 +7386,13 @@
         "comment": ""
     },
    "EUMA": {
+        "centre": "eumetsat_metop-sg",
+        "name": "EUMETSAT (Darmstadt)",
+        "country_short": "eue",
+        "gisc": "Offenbach",
+        "comment": ""
+    },
+	"EUMB": {
         "centre": "eumetsat_dbsite_athens",
         "name": "EUMETSAT (Darmstadt)",
         "country_short": "eue",
@@ -7499,7 +7512,7 @@
         "comment": ""
     },
 	"EUMY": {
-        "centre": "eumetsat_dbsite_sodankyla",
+        "centre": "eumetsat_dbsite_sodankylä",
         "name": "EUMETSAT (Darmstadt)",
         "country_short": "eue",
         "gisc": "Offenbach",
