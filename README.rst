@@ -6,7 +6,7 @@ This repository reflects leg-work done by the tt-protocols committee working wit
 The comittee reported to ET-AT, and ET-AT taken over some of the issues.
 To avoid redundant work, we refer you to the new repositories:
 
-* Message format: https://github.com/wmo-im/wis2-notification-message/issues/4 
+* Message format: https://github.com/wmo-im/wis2-notification-message
 
 * Topic hierarchy: https://github.com/wmo-im/wis2-topic-hierarchy
 
