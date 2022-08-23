@@ -1,785 +1,784 @@
 {
- "A": { 
-		"topic": "analyses",           
+ "A": {
+                "topic": "data/core/weather/surface-based-obs/analyses",
         "T2":{
-				"C": "analyses/cyclone",
-				"E": "analyses/airquality",
-				"G": "analyses/marine",
-				"H": "analyses/thickness",
-				"I": "analyses/ice",
-				"O": "analyses/ozone",
-				"R": "analyses/radar",
-				"S": "analyses/surface",
-				"U": "analyses/upperair",
-				"W": "analyses/weather"
-			}, 
-		"A1":"C1", 
-		"A2":"" 
-	},
- "B": { 
-		"topic": "notes/addressed/",  
-        "T2":"", 
-		"A1":"", 
-		"A2":"" 
-	},
- "C": { 
-		"topic": "observation/climate",  
+                                "C": "data/core/weather/surface-based-obs/analyses",
+                                "E": "data/core/weather/surface-based-obs/analyses",
+                                "G": "data/core/weather/surface-based-obs/analyses",
+                                "H": "data/core/weather/surface-based-obs/analyses",
+                                "I": "data/core/weather/surface-based-obs/analyses",
+                                "O": "data/core/weather/surface-based-obs/analyses",
+                                "R": "data/core/weather/surface-based-obs/analyses",
+                                "S": "data/core/weather/surface-based-obs/analyses",
+                                "U": "data/core/weather/surface-based-obs/analyses",
+                                "W": "data/core/weather/surface-based-obs/analyses"
+                        },
+                "A1":"C1",
+                "A2":""
+        },
+ "B": {
+                "topic": "notes/addressed/",
+        "T2":"",
+                "A1":"",
+                "A2":""
+        },
+ "C": {
+                "topic": "data/core/climate/surface-based-obs",
         "T2":{
-				"A": "observation/climate/anomalies",
-				"D": "observation/climate/daily",
-				"E": "observation/climate/monthly/upperair",
-				"H": "observation/climate/monthly/surface/ship",
-				"O": "observation/climate/monthly/sea",
-				"S": "observation/climate/monthly/surface/land"
-			},
-		"A1":"C1",
-		"A2":"" 
-	},
- "D": { 
-		"topic": "forecast/model",
+                                "A": "data/core/climate/surface-based-obs/anomalies",
+                                "D": "data/core/climate/surface-based-obs/daily",
+                                "E": "data/core/climate/surface-based-obs/monthly/upperair",
+                                "H": "data/core/climate/surface-based-obs/ship",
+                                "O": "data/core/climate/surface-based-obs/monthly/sea",
+                                "S": "data/core/climate/surface-based-obs/monthly/land"
+                        },
+                "A1":"C1",
+                "A2":""
+        },
+ "D": {
+                "topic": "data/core/weather/global-analysis+prediction/forecast/model",
         "T2":{
-				"A": "forecast/model/radar",
-				"B": "forecast/model/cloud",
-				"C": "forecast/model/vorticity",
-				"D": "forecast/model/thickness",
-				"E": "forecast/model/precipitation",
-				"G": "forecast/model/divergence",
-				"H": "forecast/model/height",
-				"J": "forecast/model/wave",
-				"K": "forecast/model/swell",
-				"M": "forecast/model/national",
-				"N": "forecast/model/radiation",
-				"O": "forecast/model/velocity/vertical",
-				"P": "forecast/model/pressure",
-				"Q": "forecast/model/temperature/wet-bulb-potential-temp",
-				"R": "forecast/model/humidity/relative",
-				"T": "forecast/model/temperature",
-				"U": "forecast/model/wind/east",
-				"V": "forecast/model/wind/north",
-				"W": "forecast/model/wind",
-				"X": "forecast/model/lifted",
-				"Y": "forecast/model/chart"
-		},
-		"A1":"", 
-		"A2":"" 
-	},
- "E": { 
-		"topic": "observation/satellite",  
+                                "A": "data/core/weather/global-analysis+prediction/forecast/model/radar",
+                                "B": "data/core/weather/global-analysis+prediction/forecast/model/cloud",
+                                "C": "data/core/weather/global-analysis+prediction/forecast/model/vorticity",
+                                "D": "data/core/weather/global-analysis+prediction/forecast/model/thickness",
+                                "E": "data/core/weather/global-analysis+prediction/forecast/model/precipitation",
+                                "G": "data/core/weather/global-analysis+prediction/forecast/model/divergence",
+                                "H": "data/core/weather/global-analysis+prediction/forecast/model/height",
+                                "J": "data/core/weather/global-analysis+prediction/forecast/model/wave",
+                                "K": "data/core/weather/global-analysis+prediction/forecast/model/swell",
+                                "M": "data/core/weather/global-analysis+prediction/forecast/model/national",
+                                "N": "data/core/weather/global-analysis+prediction/forecast/model/radiation",
+                                "O": "data/core/weather/global-analysis+prediction/forecast/model/velocity/vertical",
+                                "P": "data/core/weather/global-analysis+prediction/forecast/model/pressure",
+                                "Q": "data/core/weather/global-analysis+prediction/forecast/model/temperature/wet-bulb-potential-temp",
+                                "R": "data/core/weather/global-analysis+prediction/forecast/model/humidity/relative",
+                                "T": "data/core/weather/global-analysis+prediction/forecast/model/temperature",
+                                "U": "data/core/weather/global-analysis+prediction/forecast/model/wind/east",
+                                "V": "data/core/weather/global-analysis+prediction/forecast/model/wind/north",
+                                "W": "data/core/weather/global-analysis+prediction/forecast/model/wind",
+                                "X": "data/core/weather/global-analysis+prediction/forecast/model/lifted",
+                                "Y": "data/core/weather/global-analysis+prediction/forecast/model/chart"
+                },
+                "A1":"",
+                "A2":""
+        },
+ "E": {
+                "topic": "data/core/weather/satellite4nowcasting",
         "T2":{
-				"C": "observation/satellite/cloud/top-temperature",
-				"F": "observation/satellite/fog",
-				"I": "observation/satellite/infrared",
-				"S": "observation/satellite/surface/temperature",
-				"V": "observation/satellite/visible",
-				"W": "observation/satellite/vapour",
-				"Y": "observation/satellite/user-specified"
-			}, 
-		"A1":"C1",
-		"A2":"" 
-	},
- "F": { 
-		"topic": "forecast",           
+                                "C": "data/core/weather/satellite4nowcasting/cloud/top-temperature",
+                                "F": "data/core/weather/satellite4nowcasting/fog",
+                                "I": "data/core/weather/satellite4nowcasting/infrared",
+                                "S": "data/core/weather/satellite4nowcasting/surface-temperature",
+                                "V": "data/core/weather/satellite4nowcasting/visible",
+                                "W": "data/core/weather/satellite4nowcasting/vapour",
+                                "Y": "data/core/weather/satellite4nowcasting/user-specified"
+                        },
+                "A1":"C1",
+                "A2":""
+        },
+ "F": {
+                "topic": "data/core/weather/global-analysis+prediction/forecast",
         "T2":{
-				"A": "forecast/aviation/gamet/advisory",
-				"B": "forecast/upperair/winds-temperature",
-				"C": "forecast/aviation/taf/under12hours",
-				"D": "forecast/radiation",
-				"E": "forecast/extended",
-				"F": "forecast/shipping",
-				"G": "forecast/hydrological",
-				"H": "forecast/upperair/thickness",
-				"I": "forecast/iceberg",
-				"J": "forecast/radiowarningservice",
-				"K": "forecast/cyclone",
-				"L": "forecast/local-area",
-				"M": "forecast/temperature/extremes",
-				"O": "forecast/guidance",
-				"P": "forecast/public",
-				"Q": "forecast/shipping/",
-				"R": "forecast/aviation/route",
-				"S": "forecast/surface",
-				"T": "forecast/aviation/taf/over12hours",
-				"U": "forecast/upperair",
-				"V": "forecast/aviation/ash",
-				"W": "forecast/land/sport",
-				"Z": "forecast/shipping/area"
-			},
-		"A1":"C1",
-		"A2":"" 
-	},
- "G": { 
-		"topic": "forecast/model",
+                                "A": "data/recommended/weather/global-analysis+prediction/forecast/aviation/gamet",
+                                "B": "data/core/weather/global-analysis+prediction/forecast/upperair",
+                                "C": "data/recommended/weather/global-analysis+prediction/forecast/aviation/taf",
+                                "D": "data/core/weather/global-analysis+prediction/forecast/radiation",
+                                "E": "data/core/weather/global-analysis+prediction/forecast/extended",
+                                "F": "data/core/weather/global-analysis+prediction/forecast/shipping",
+                                "G": "data/core/weather/global-analysis+prediction/forecast/hydrological",
+                                "H": "data/core/weather/global-analysis+prediction/forecast/upperair",
+                                "I": "data/core/weather/global-analysis+prediction/forecast/iceberg",
+                                "J": "data/core/weather/global-analysis+prediction/forecast/radiowarningservice",
+                                "K": "data/core/weather/global-analysis+prediction/forecast/cyclone",
+                                "L": "data/core/weather/global-analysis+prediction/forecast/local-area",
+                                "M": "data/core/weather/global-analysis+prediction/forecast/temperature/extremes",
+                                "O": "data/core/weather/global-analysis+prediction/forecast/guidance",
+                                "P": "data/core/weather/global-analysis+prediction/forecast/public",
+                                "Q": "data/core/weather/global-analysis+prediction/forecast/shipping/",
+                                "R": "data/recommended/weather/global-analysis+prediction/forecast/aviation/route",
+                                "S": "data/core/weather/global-analysis+prediction/forecast",
+                                "T": "data/recommended/weather/global-analysis+prediction/forecast/aviation/taf",
+                                "U": "data/core/weather/global-analysis+prediction/forecast/upperair",
+                                "V": "data/core/weather/global-analysis+prediction/forecast/aviation/ash",
+                                "W": "data/core/weather/global-analysis+prediction/forecast/sport",
+                                "Z": "data/core/weather/global-analysis+prediction/forecast/shipping"
+                        },
+                "A1":"C1",
+                "A2":""
+        },
+ "G": {
+                "topic": "data/core/weather/global-analysis+prediction/forecast/model",
         "T2":{
-				"A": "forecast/model/radar",
-				"B": "forecast/model/cloud",
-				"C": "forecast/model/vorticity",
-				"D": "forecast/model/thickness",
-				"E": "forecast/model/precipitation",
-				"G": "forecast/model/divergence",
-				"H": "forecast/model/height",
-				"J": "forecast/model/wave",
-				"K": "forecast/model/swell",
-				"M": "forecast/model/national",
-				"N": "forecast/model/radiation",
-				"O": "forecast/model/velocity/vertical",
-				"P": "forecast/model/pressure",
-				"Q": "forecast/model/temperature/wet-bulb-potential-temp",
-				"R": "forecast/model/humidity/relative",
-				"T": "forecast/model/temperature",
-				"U": "forecast/model/wind/east",
-				"V": "forecast/model/wind/north",
-				"W": "forecast/model/wind",
-				"X": "forecast/model/lifted",
-				"Y": "forecast/model/chart"
-		},
-		"A1":"", 
-		"A2":"" 
-	},
- "H": { 
-		"topic": "forecast/model",
+                                "A": "data/core/weather/global-analysis+prediction/forecast/model/radar",
+                                "B": "data/core/weather/global-analysis+prediction/forecast/model/cloud",
+                                "C": "data/core/weather/global-analysis+prediction/forecast/model/vorticity",
+                                "D": "data/core/weather/global-analysis+prediction/forecast/model/thickness",
+                                "E": "data/core/weather/global-analysis+prediction/forecast/model/precipitation",
+                                "G": "data/core/weather/global-analysis+prediction/forecast/model/divergence",
+                                "H": "data/core/weather/global-analysis+prediction/forecast/model/height",
+                                "J": "data/core/weather/global-analysis+prediction/forecast/model/wave",
+                                "K": "data/core/weather/global-analysis+prediction/forecast/model/swell",
+                                "M": "data/core/weather/global-analysis+prediction/forecast/model/national",
+                                "N": "data/core/weather/global-analysis+prediction/forecast/model/radiation",
+                                "O": "data/core/weather/global-analysis+prediction/forecast/model/velocity/vertical",
+                                "P": "data/core/weather/global-analysis+prediction/forecast/model/pressure",
+                                "Q": "data/core/weather/global-analysis+prediction/forecast/model/temperature/wet-bulb-potential-temp",
+                                "R": "data/core/weather/global-analysis+prediction/forecast/model/humidity/relative",
+                                "T": "data/core/weather/global-analysis+prediction/forecast/model/temperature",
+                                "U": "data/core/weather/global-analysis+prediction/forecast/model/wind/east",
+                                "V": "data/core/weather/global-analysis+prediction/forecast/model/wind/north",
+                                "W": "data/core/weather/global-analysis+prediction/forecast/model/wind",
+                                "X": "data/core/weather/global-analysis+prediction/forecast/model/lifted",
+                                "Y": "data/core/weather/global-analysis+prediction/forecast/model/chart"
+                },
+                "A1":"",
+                "A2":""
+        },
+ "H": {
+                "topic": "data/core/weather/global-analysis+prediction/forecast/model",
         "T2":{
-				"A": "forecast/model/radar",
-				"B": "forecast/model/cloud",
-				"C": "forecast/model/vorticity",
-				"D": "forecast/model/thickness",
-				"E": "forecast/model/precipitation",
-				"G": "forecast/model/divergence",
-				"H": "forecast/model/height",
-				"J": "forecast/model/wave",
-				"K": "forecast/model/swell",
-				"M": "forecast/model/national",
-				"N": "forecast/model/radiation",
-				"O": "forecast/model/velocity/vertical",
-				"P": "forecast/model/pressure",
-				"Q": "forecast/model/temperature/wet-bulb-potential-temp",
-				"R": "forecast/model/humidity/relative",
-				"T": "forecast/model/temperature",
-				"U": "forecast/model/wind/east",
-				"V": "forecast/model/wind/north",
-				"W": "forecast/model/wind",
-				"X": "forecast/model/lifted",
-				"Y": "forecast/model/chart"
-			}, 
-		"A1":"", 
-		"A2":"" 
-	},
- "I": { 
-		"topic": "observation",
+                                "A": "data/core/weather/global-analysis+prediction/forecast/model/radar",
+                                "B": "data/core/weather/global-analysis+prediction/forecast/model/cloud",
+                                "C": "data/core/weather/global-analysis+prediction/forecast/model/vorticity",
+                                "D": "data/core/weather/global-analysis+prediction/forecast/model/thickness",
+                                "E": "data/core/weather/global-analysis+prediction/forecast/model/precipitation",
+                                "G": "data/core/weather/global-analysis+prediction/forecast/model/divergence",
+                                "H": "data/core/weather/global-analysis+prediction/forecast/model/height",
+                                "J": "data/core/weather/global-analysis+prediction/forecast/model/wave",
+                                "K": "data/core/weather/global-analysis+prediction/forecast/model/swell",
+                                "M": "data/core/weather/limited-analysis+prediction/forecast/model/national",
+                                "N": "data/core/weather/global-analysis+prediction/forecast/model/radiation",
+                                "O": "data/core/weather/global-analysis+prediction/forecast/model/velocity/vertical",
+                                "P": "data/core/weather/global-analysis+prediction/forecast/model/pressure",
+                                "Q": "data/core/weather/global-analysis+prediction/forecast/model/temperature/wet-bulb-potential-temp",
+                                "R": "data/core/weather/global-analysis+prediction/forecast/model/humidity/relative",
+                                "T": "data/core/weather/global-analysis+prediction/forecast/model/temperature",
+                                "U": "data/core/weather/global-analysis+prediction/forecast/model/wind/east",
+                                "V": "data/core/weather/global-analysis+prediction/forecast/model/wind/north",
+                                "W": "data/core/weather/global-analysis+prediction/forecast/model/wind",
+                                "X": "data/core/weather/global-analysis+prediction/forecast/model/lifted",
+                                "Y": "data/core/weather/global-analysis+prediction/forecast/model/chart"
+                        },
+                "A1":"",
+                "A2":""
+        },
+ "I": {
+                "topic": "data/core/weather/surface-based-obs",
         "T2":{
-				"N": "observation/satellite",
-				"O": "observation/sea",
-				"P": "observation/pictoral",
-				"S": "observation/surface",
-				"T": "obervation/text",
-				"U": "observation/upperair"
-		},
-		"A1":{
-				"IN":{
-					"A":"observation/satellite/amsua",
-					"B":"observation/satellite/amsub",
-					"C":"observation/satellite/cris",
-					"H":"observation/satellite/hirs",
-					"I":"observation/satellite/iras",
-					"J":"observation/satellite/hiras",
-					"K":"observation/satellite/mwhs",
-					"M":"observation/satellite/mhs",
-					"Q":"observation/satellite/iasi",
-					"S":"observation/satellite/atms",
-					"T":"observation/satellite/mwts"
-					},
-				"IO":{
-					"B":"observation/sea/buoy",
-					"I":"observation/sea/sea-ice",
-					"P":"observation/sea/deep",
-					"R":"observation/sea/surface",
-					"S":"observation/sea/surface-below",
-					"T":"observation/sea/surface/temperature",
-					"W":"observation/sea/surface/waves",
-					"X":"observation/sea/other-environmental",
-					"Z":"observation/sea/tsunameter"
-					},
-				"IP":{
-					"C":"observation/radar/composite",
-					"I":"observation/satellite",
-					"R":"observation/radar"
-					},
-				"IS":{
-					"A": "observation/land/surface/synop/automatic",
-					"B": "observation/radar/reports",
-					"C": {
-						"ii": {
-							"45": "observation/climat/land",
-							"59": "observation/climat/sea"
-							}
-						},
-					"D": "observation/surface/radiation",
-					"E": "observation/surface/ozone",
-					"F": "observation/surface/sfazi-sfloc-sfazu",
-					"I": {
-						"ii" : {
-							"45": "observation/land/surface/synop/intermediate",
-							"59": "observation/land/surface/synop/intermediate/mobile"
-							}
-						},
-					"M": {
-						"ii" : {
-							"45": "observation/land/surface/synop/main",
-							"59": "observation/land/surface/synop/main/mobile"
-							}
-						},
-					"N": {
-						"ii":  {
-							"45": "observation/land/surface/synop/non-standard",
-							"59": "observation/land/surface/synop/non-standard/mobile"
-							}
-						},
-					"R": "observation/land/surface/synop/hydrological/reports",
-					"S": {
-						"ii":  {
-							"19": "observation/sea/surface/synop/ship",
-							"39": "observation/sea/surface/synop/automatic/hour",
-							"59": "observation/sea/surface/synop/automatic/n-minute"
-							}
-						},
-					"T":{
-						"ii":  {
-							"19": "observation/sea/surface/tide-gauge",
-							"39": "observation/sea/surface/water-level"
-							}
-						},
-					"V":"observation/aviation/speci",
-					"W":"observation/aviation/metar"
-				},
-				"IT":{
-					"A":"obervation/text/admininstration",
-					"B":"obervation/text/service",
-					"R":"obervation/text/request",
-					"X":"obervation/text/information"
-				},
-				"IU":{
-					"A":"observation/aviation/amdar",
-					"B":"observation/upperair/single-level/ballon",
-					"C":"observation/satellite/sarep-satob",
-					"D":"observation/upperair/temp/drop",
-					"E":"observation/upperair/ozone/vertical",
-					"F":"observation/satellite/radiance",
-					"I":"observation/upperair/dispersal",
-					"J":{ 
-						"ii": {
-							"19": "observation/upperair/land/pilot",
-							"39": "observation/upperair/land/pilot/mobile",
-							"59": "observation/upperair/sea/pilot/ship"
-							}
-						},
-					"K":{
-						"ii": {
-							"19": "observation/upperair/land/temp",
-							"39": "observation/upperair/land/temp/mobile",
-							"59": "observation/upperair/sea/temp/ship"
-							}
-						},
-					"L": "observation/upperair/ozone/total",
-					"M": "observation/upperair/sondes/model",
-					"N": "observation/upperair/sondes/rocket",
-					"O": "observation/aviation/amdar",
-					"P": "observation/upperair/profile/pilot", 
-					"Q": "observation/upperair/profile/temp/rass",
-					"R": "observation/upperair/radiance",
-					"S":{
-						"ii" : {
-							"19": "observation/upperair/land/temp",
-							"39": "observation/upperair/land/temp/mobile",
-							"59": "observation/upperair/sea/temp/ship"
-							}
-						},
-					"T":"observation/satellite/sondes",
-					"U":{
-						"ii" : {
-							"45": "observation/climat/sea/temp/month",
-							"59": "observation/climat/sea/temp/month/ship"
-							}
-						},
-					"W":{
-						"ii" : {
-							"19": "observation/upperair/land/pilot",
-							"39": "observation/upperair/land/pilot/mobile",
-							"59": "observation/upperair/sea/pilot/ship"
-							}
-						},
-					"X":"observation/upperair/reports"
-				}
-		},
-		"A2":"" 
-	},
- "J": { 
-		"topic": "forecast",
+                                "N": "data/core/weather/satellite4nowcasting",
+                                "O": "data/core/weather/surface-based-obs/sea",
+                                "P": "data/core/weather/surface-based-obs/pictoral",
+                                "S": "data/core/weather/surface-based-obs",
+                                "T": "data/core/weather/surface-based-obs/text",
+                                "U": "data/core/weather/surface-based-obs/upperair"
+                },
+                "A1":{
+                                "IN":{
+                                        "A":"data/core/weather/satellite4nowcasting/amsua",
+                                        "B":"data/core/weather/satellite4nowcasting/amsub",
+                                        "C":"data/core/weather/satellite4nowcasting/cris",
+                                        "H":"data/core/weather/satellite4nowcasting/hirs",
+                                        "I":"data/core/weather/satellite4nowcasting/iras",
+                                        "J":"data/core/weather/satellite4nowcasting/hiras",
+                                        "K":"data/core/weather/satellite4nowcasting/mwhs",
+                                        "M":"data/core/weather/satellite4nowcasting/mhs",
+                                        "Q":"data/core/weather/satellite4nowcasting/iasi",
+                                        "S":"data/core/weather/satellite4nowcasting/atms",
+                                        "T":"data/core/weather/satellite4nowcasting/mwts"
+                                        },
+                                "IO":{
+                                        "B":"data/core/weather/surface-based-obs/sea/buoy",
+                                        "I":"data/core/weather/surface-based-obs/sea/sea-ice",
+                                        "P":"data/core/weather/surface-based-obs/sea/deep",
+                                        "R":"data/core/weather/surface-based-obs/sea",
+                                        "S":"data/core/weather/surface-based-obs/sea/surface-below",
+                                        "T":"data/core/weather/surface-based-obs/sea/temperature",
+                                        "W":"data/core/weather/surface-based-obs/sea/waves",
+                                        "X":"data/core/weather/surface-based-obs/sea/other-environmental",
+                                        "Z":"data/core/weather/surface-based-obs/sea/tsunameter"
+                                        },
+                                "IP":{
+                                        "C":"data/core/weather/surface-based-obs/radar",
+                                        "I":"data/core/weather/satellite4nowcasting",
+                                        "R":"data/core/weather/surface-based-obs/radar"
+                                        },
+                                "IS":{
+                                        "A": "data/core/weather/surface-based-obs/synop/land/automatic",
+                                        "B": "data/core/weather/surface-based-obs/radar",
+                                        "C": {
+                                                "ii": {
+                                                        "45": "data/core/climate/surface-based-obs/climat",
+                                                        "59": "data/core/climate/surface-based-obs/climat/sea"
+                                                        }
+                                                },
+                                        "D": "data/core/weather/surface-based-obs/radiation",
+                                        "E": "data/core/weather/surface-based-obs/ozone",
+                                        "F": "data/core/weather/surface-based-obs/sfazi-sfloc-sfazu",
+                                        "I": {
+                                                "ii" : {
+                                                        "45": "data/core/weather/surface-based-obs/synop/land",
+                                                        "59": "data/core/weather/surface-based-obs/synop/land/mobile"
+                                                        }
+                                                },
+                                        "M": {
+                                                "ii" : {
+                                                        "45": "data/core/weather/surface-based-obs/synop/land/main",
+                                                        "59": "data/core/weather/surface-based-obs/synop/land/mobile/main"
+                                                        }
+                                                },
+                                        "N": {
+                                                "ii":  {
+                                                        "45": "data/core/weather/surface-based-obs/synop/land",
+                                                        "59": "data/core/weather/surface-based-obs/synop/land/mobile"
+                                                        }
+                                                },
+                                        "R": "data/core/weather/surface-based-obs/synop/land/hydrological",
+                                        "S": {
+                                                "ii":  {
+                                                        "19": "data/core/weather/surface-based-obs/synop/sea/ship",
+                                                        "39": "data/core/weather/surface-based-obs/synop/sea/automatic/hour",
+                                                        "59": "data/core/weather/surface-based-obs/synop/sea/automatic/n-minute"
+                                                        }
+                                                },
+                                        "T":{
+                                                "ii":  {
+                                                        "19": "data/core/weather/surface-based-obs/sea/tide-gauge",
+                                                        "39": "data/core/weather/surface-based-obs/sea/water-level"
+                                                        }
+                                                },
+                                        "V":"data/recommended/weather/surface-based-obs/aviation/speci",
+                                        "W":"data/recommended/weather/surface-based-obs/aviation/metar"
+                                },
+                                "IT":{
+                                        "A":"data/core/weather/surface-based-obs/text/admininstration",
+                                        "B":"data/core/weather/surface-based-obs/text/service",
+                                        "R":"data/core/weather/surface-based-obs/text/request",
+                                        "X":"data/core/weather/surface-based-obs/text/information"
+                                },
+                                "IU":{
+                                        "A":"data/recommended/weather/surface-based-obs/aviation/amdar",
+                                        "B":"data/core/weather/surface-based-obs/upperair/ballon",
+                                        "C":"data/core/weather/satellite4nowcasting/sarep-satob",
+                                        "D":"data/core/weather/surface-based-obs/upperair/temp/drop",
+                                        "E":"data/core/weather/surface-based-obs/upperair/ozone",
+                                        "F":"data/core/weather/satellite4nowcasting/radiance",
+                                        "I":"data/core/weather/surface-based-obs/upperair/dispersal",
+                                        "J":{
+                                                "ii": {
+                                                        "19": "data/core/weather/surface-based-obs/upperair/pilot",
+                                                        "39": "data/core/weather/surface-based-obs/upperair/pilot/mobile",
+                                                        "59": "data/core/weather/surface-based-obs/upperair/pilot/ship"
+                                                        }
+                                                },
+                                        "K":{
+                                                "ii": {
+                                                        "19": "data/core/weather/surface-based-obs/upperair/temp",
+                                                        "39": "data/core/weather/surface-based-obs/upperair/temp/mobile",
+                                                        "59": "data/core/weather/surface-based-obs/upperair/temp/ship"
+                                                        }
+                                                },
+                                        "L": "data/core/weather/surface-based-obs/upperair/ozone",
+                                        "M": "data/core/weather/surface-based-obs/upperair/sondes",
+                                        "N": "data/core/weather/surface-based-obs/upperair/sondes",
+                                        "O": "data/recommended/weather/surface-based-obs/aviation/amdar",
+                                        "P": "data/core/weather/surface-based-obs/upperair/pilot/profile",
+                                        "Q": "data/core/weather/surface-based-obs/upperair/temp/rass",
+                                        "R": "data/core/weather/surface-based-obs/upperair/radiance",
+                                        "S":{
+                                                "ii" : {
+                                                        "19": "data/core/weather/surface-based-obs/upperair/temp",
+                                                        "39": "data/core/weather/surface-based-obs/upperair/temp/mobile",
+                                                        "59": "data/core/weather/surface-based-obs/upperair/temp/ship"
+                                                        }
+                                                },
+                                        "T":"data/core/weather/satellite4nowcasting/sondes",
+                                        "U":{
+                                                "ii" : {
+                                                        "45": "data/core/climate/surface-based-obs/temp/month",
+                                                        "59": "data/core/climate/surface-based-obs/temp/month/ship"
+                                                        }
+                                                },
+                                        "W":{
+                                                "ii" : {
+                                                        "19": "data/core/weather/surface-based-obs/upperair/pilot",
+                                                        "39": "data/core/weather/surface-based-obs/upperair/pilot/mobile",
+                                                        "59": "data/core/weather/surface-based-obs/upperair/pilot/ship"
+                                                        }
+                                                },
+                                        "X":"data/core/weather/surface-based-obs/upperair/reports"
+                                }
+                },
+                "A2":""
+        },
+ "J": {
+                "topic": "data/core/weather/global-analysis+prediction/forecast",
         "T2":{
-				"N": "forecast/satellite",
-				"O": "forecast/sea",
-				"P": "forecast/pictoral",
-				"S": "forecast/surface",
-				"T": "forecast/text",
-				"U": "forecast/upperair"
-		}, 
-		"A1": {
-			"JO":{
-				"I":"forecast/sea/sea-ice",
-				"S":"forecast/sea/surface-below",
-				"T":"forecast/sea/surface/temperature",
-				"W":"forecast/sea/surface/waves",
-				"X":"forecast/sea/sea-environmental"
-			},
-			"JS":{
-				"A":"forecast/aviation/area",
-				"D":"forecast/radiation",
-				"M":"forecast/mos-or-other",
-				"O":"forecast/sea",
-				"P":"forecast/aviation/airways",
-				"R":"forecast/hydrological",
-				"S":"forecast/aviation/taf",
-				"T":"forecast/aviation/taf"
-			},
-			"JT":{
-				"E":"forecast/text/tsunami",
-				"H":"forecast/text/cyclone",
-				"S":"forecast/aviation/SIGMET",
-				"T":"forecast/text/warning/tornado",
-				"X":"forecast/text/warning"
-			},
-			"JU":{
-				"A":"forecast/upperair/level",
-				"B":"forecast/aviation/sigwx/cb",
-				"C":"forecast/aviation/sigwx/cat",
-				"F":"forecast/aviation/sigwx/fronts",
-				"N":"forecast/aviation/sigwx/other",
-				"O":"forecast/aviation/sigwx/turbulence",
-				"S":"forecast/soundings",
-				"T":"forecast/aviation/sigwx/icing",
-				"V":"forecast/aviation/sigwx/storms",
-				"W":"forecast/aviation/sigwx/winds"
-			}
-		},
-		"A2":"" 
-	},
- "K": { 
-		"topic": "crex",               
+                                "N": "data/core/weather/satellite4nwp",
+                                "O": "data/core/weather/global-analysis+prediction/forecast/sea",
+                                "P": "data/core/weather/global-analysis+prediction/forecast/pictoral",
+                                "S": "data/core/weather/global-analysis+prediction/forecast",
+                                "T": "data/core/weather/global-analysis+prediction/forecast/text",
+                                "U": "data/core/weather/global-analysis+prediction/forecast/upperair"
+                },
+                "A1": {
+                        "JO":{
+                                "I":"data/core/weather/global-analysis+prediction/forecast/sea/sea-ice",
+                                "S":"data/core/weather/global-analysis+prediction/forecast/sea/surface-below",
+                                "T":"data/core/weather/global-analysis+prediction/forecast/sea/temperature",
+                                "W":"data/core/weather/global-analysis+prediction/forecast/sea/waves",
+                                "X":"data/core/weather/global-analysis+prediction/forecast/sea/sea-environmental"
+                        },
+                        "JS":{
+                                "A":"data/recommended/weather/limited-analysis+prediction/forecast/aviation/area",
+                                "D":"data/core/weather/global-analysis+prediction/forecast/radiation",
+                                "M":"data/core/weather/global-analysis+prediction/forecast/mos-or-other",
+                                "O":"data/core/weather/global-analysis+prediction/forecast/sea",
+                                "P":"data/recommended/weather/limited-analysis+prediction/forecast/aviation/airways",
+                                "R":"data/core/weather/global-analysis+prediction/forecast/hydrological",
+                                "S":"data/recommended/weather/limited-analysis+prediction/forecast/aviation/taf",
+                                "T":"data/recommended/weather/limited-analysis+prediction/forecast/aviation/taf"
+                        },
+                        "JT":{
+                                "E":"data/core/weather/global-analysis+prediction/forecast/text/tsunami",
+                                "H":"data/core/weather/global-analysis+prediction/forecast/text/cyclone",
+                                "S":"data/recommended/weather/limited-analysis+prediction/forecast/aviation/SIGMET",
+                                "T":"data/core/weather/watches+advisories+guidance/forecast/text/warning/tornado",
+                                "X":"data/core/weather/watches+advisories+guidance/forecast/text/warning"
+                        },
+                        "JU":{
+                                "A":"data/core/weather/limited-analysis+prediction/forecast/upperair",
+                                "B":"data/core/weather/watches+advisories+guidance/forecast/aviation/sigwx/cb",
+                                "C":"data/core/weather/watches+advisories+guidance/forecast/aviation/sigwx/cat",
+                                "F":"data/core/weather/watches+advisories+guidance/forecast/aviation/sigwx/fronts",
+                                "N":"data/core/weather/watches+advisories+guidance/forecast/aviation/sigwx/other",
+                                "O":"data/core/weather/watches+advisories+guidance/forecast/aviation/sigwx/turbulence",
+                                "S":"data/core/weather/limited-analysis+prediction/forecast/soundings",
+                                "T":"data/core/weather/watches+advisories+guidance/forecast/aviation/sigwx/icing",
+                                "V":"data/core/weather/watches+advisories+guidance/forecast/aviation/sigwx/storms",
+                                "W":"data/core/weather/watches+advisories+guidance/forecast/aviation/sigwx/winds"
+                        }
+                },
+                "A2":""
+        },
+ "K": {
+                "topic": "data/core/weather/surface-based-obs/crex",
         "T2":{
-				"F": "forecast/crex",
-				"O": "observation/sea",
-				"P": "observation/sea",
-				"S": "observation/surface",
-				"T": "warnings/aviation",
-				"U": "observation/upperair",
-				"V": "warnings/aviation"
-		},  
-		"A1":{
-			"KF": {
-				"A": "forecast/aviation/airways",
-				"D": "forecast/radiation",
-				"M": "forecast/surface",
-				"O": "forecast/sea",
-				"P": "forecast/aviation/airways",
-				"R": "forecast/hydrological",
-				"S": "forecast/aviation/taf",
-				"T": "forecast/aviation/taf",
-				"X": "forecast/surface"
-			},
-			"KO": {
-				"B": "observation/sea/buoy",
-				"I": "observation/sea/ice",
-				"P": "observation/sea/depth",
-				"R": "observation/sea/surface",
-				"S": "observation/sea/surface-below",
-				"T": "observation/sea/surface/temperature", 
-				"W": "observation/sea/surface/wave",
-				"X": "observation/sea"
-			},
-			"KP": {
-				"I": "observation/sea/ice",
-				"S": "observation/sea/surface-below",
-				"T": "observation/sea/surface/temperature",
-				"W": "observation/sea/surface/waves",
-				"X": "observation/sea"
-			},
-			"KS": {
-				"A": {
-					"ii": {
-						"29" : "observation/land/surface/synop/automatic",
-						"59" : "observation/land/surface/synop/automatic/n-minute" 
-						}
-				},
-				"B": "observation/radar",
-				"C": {
-					"ii": {
-						"45": "observation/land/climat",
-						"59": "observation/sea/climat" 
-						}
-				},
-				"D": "observation/radiation",
-				"E": "observation/land/surface/ozone",
-				"F": "observation/sfazi-sfloc-sfazu",
-				"I": {
-					"ii": {
-						"45" : "observation/land/surface/synop/intermediate",
-						"59" : "observation/land/surface/synop/intermediate/mobile"
-						}
-				},
-				"M": {
-					"ii": {
-						"45" : "observation/land/surface/synop/main",
-						"59" : "observation/land/surface/synop/main/mobile"
-						}
-				},
-				"N": {
-					"ii": {
-						"45" : "observation/land/surface/synop/non-standard",
-						"59" : "observation/land/surface/synop/non-standard/mobile"
-						}
-				},
-				"R": "observation/hydrological",
-				"S": {
-					"ii": {
-						"19": "observation/sea/ship",
-						"39": "observation/sea/surface/synop/automatic/hour",
-						"59": "observation/sea/surface/synop/automatic/nminute" 
-						}
-				},
-				"V": "observation/aviation/speci",
-				"W": "observation/aviation/metar",
-				"X": "observation/land/surface"
-			},
-			"KT": {
-				"E": "warnings/tsunami",
-				"H": "warnings/cyclone",
-				"S": "warnings/aviation/sigmet",
-				"T": "warnings/tornado",
-				"X": "warnings"
-			},
-			"KU": {
-				"A": "obervation/aviation/amdar",
-				"B": "observation/upperair/single-level/ballon",
-				"C": "observation/satellite/level",
-				"D": "observation/upperair/dropsonde",
-				"E": "observation/upperair/ozone/vertical",
-				"I": "observation/upperair/dispersal",
-				"J": {
-					"ii" : {
-						"19" : "observation/upperair/pilot/wind",
-						"39" : "observation/upperair/pilot/wind/mobile",
-						"59" : "observation/upperair/pilot/wind/ship"
-						}
-				},
-				"K": {
-					"ii" : {
-						"19" : "observation/upperair/temp", 
-						"39" : "observation/upperair/temp/mobile",
-						"59" : "observation/upperair/temp/ship"
-						}
-				},
-				"L": "observation/upperair/ozone/total",
-				"M": "observation/upperair/model/sonde",
-				"N": "observation/upperair/rocketsondes", 
-				"O": "observation/aviation/amdar",
-				"P": "observation/upperair/pilot/profiler",
-				"Q": "observation/upperair/temp/profiler/rass-temperature",
-				"S": {
-					"ii": {
-						"19" : "observation/upperair/temp",
-						"39" : "observation/upperair/temp/mobile",
-						"59" : "observation/upperair/temp/ship"
-						}
-				},
-				"T": "observation/upperair/sonde/satellite",
-				"U": {
-					"ii": {
-						"45": "observation/upperair/temp/climate/monthly",
-						"45": "observation/upperair/temp/climate/monthly/mobile",
-						"59": "observation/upperair/temp/climate/monthly/ship"
-						}
-				},
-				"W": {
-					"ii": {
-						"19": "observation/upperair/pilot/",
-						"39": "observation/upperair/pilot/mobile",
-						"59": "observation/upperair/pilot/ship"
-						}
-				},
-				"X": "observation/upperair"
-			},
-			"KV": {
-				"A": "forecast/level",
-				"B": "warnings/aviation/sigwx/cb",
-				"C": "warnings/aviation/sigwx/cat",
-				"F": "warnings/aviation/sigwx/fronts",
-				"N": "warnings/aviation/sigwx/other",
-				"O": "warnings/aviation/sigwx/turbulence",
-				"S": "forecast/soundings",
-				"T": "warnings/aviation/sigwx/icing",
-				"V": "warnings/aviation/sigwx/storms",
-				"W": "warnings/aviation/sigwx/winds",
-				"X": "forecast/upperair"
-			}
-		},
-		"A2":""
-	},
- "L": { 
-		"topic": "observation/aviation/aviation-XML",
+                                "F": "data/core/weather/global-analysis+prediction/forecast/crex",
+                                "O": "data/core/weather/surface-based-obs/sea",
+                                "P": "data/core/weather/surface-based-obs/sea",
+                                "S": "data/core/weather/surface-based-obs",
+                                "T": "data/core/weather/watches+advisories+guidance/warnings/aviation",
+                                "U": "data/core/weather/surface-based-obs/upperair",
+                                "V": "data/core/weather/watches+advisories+guidance/warnings/aviation"
+                },
+                "A1":{
+                        "KF": {
+                                "A": "data/recommended/weather/limited-analysis+prediction/forecast/aviation/airways",
+                                "D": "data/core/weather/limited-analysis+prediction/forecast/radiation",
+                                "M": "data/core/weather/global-analysis+prediction/forecast",
+                                "O": "data/core/weather/global-analysis+prediction/forecast/sea",
+                                "P": "data/recommended/weather/limited-analysis+prediction/forecast/aviation/airways",
+                                "R": "data/core/weather/global-analysis+prediction/forecast/hydrological",
+                                "S": "data/recommended/weather/limited-analysis+prediction/forecast/aviation/taf",
+                                "T": "data/recommended/weather/limited-analysis+prediction/forecast/aviation/taf",
+                                "X": "data/core/weather/limited-analysis+prediction/forecast"
+                        },
+                        "KO": {
+                                "B": "data/core/weather/surface-based-obs/sea/buoy",
+                                "I": "data/core/weather/surface-based-obs/sea/ice",
+                                "P": "data/core/weather/surface-based-obs/sea/depth",
+                                "R": "data/core/weather/surface-based-obs/sea",
+                                "S": "data/core/weather/surface-based-obs/sea/surface-below",
+                                "T": "data/core/weather/surface-based-obs/sea/temperature",
+                                "W": "data/core/weather/surface-based-obs/sea/wave",
+                                "X": "data/core/weather/surface-based-obs/sea"
+                        },
+                        "KP": {
+                                "I": "data/core/weather/surface-based-obs/sea/ice",
+                                "S": "data/core/weather/surface-based-obs/sea/surface-below",
+                                "T": "data/core/weather/surface-based-obs/sea/temperature",
+                                "W": "data/core/weather/surface-based-obs/sea/waves",
+                                "X": "data/core/weather/surface-based-obs/sea"
+                        },
+                        "KS": {
+                                "A": {
+                                        "ii": {
+                                                "29" : "data/core/weather/surface-based-obs/synop/land/automatic",
+                                                "59" : "data/core/weather/surface-based-obs/synop/land/automatic/n-minute"
+                                                }
+                                },
+                                "B": "data/core/weather/surface-based-obs/radar",
+                                "C": {
+                                        "ii": {
+                                                "45": "data/core/climate/surface-based-obs/climat",
+                                                "59": "data/core/climate/surface-based-obs/climat/sea"
+                                                }
+                                },
+                                "D": "data/core/weather/surface-based-obs/radiation",
+                                "E": "data/core/weather/surface-based-obs/ozone",
+                                "F": "data/core/weather/surface-based-obs/sfazi-sfloc-sfazu",
+                                "I": {
+                                        "ii": {
+                                                "45" : "data/core/weather/surface-based-obs/synop/land",
+                                                "59" : "data/core/weather/surface-based-obs/synop/land/mobile"
+                                                }
+                                },
+                                "M": {
+                                        "ii": {
+                                                "45" : "data/core/weather/surface-based-obs/synop/land/main",
+                                                "59" : "data/core/weather/surface-based-obs/synop/land/mobile/main"
+                                                }
+                                },
+                                "N": {
+                                        "ii": {
+                                                "45" : "data/core/weather/surface-based-obs/synop/land",
+                                                "59" : "data/core/weather/surface-based-obs/synop/land/mobile"
+                                                }
+                                },
+                                "R": "data/core/weather/surface-based-obs/hydrological",
+                                "S": {
+                                        "ii": {
+                                                "19": "data/core/weather/surface-based-obs/synop/sea/ship",
+                                                "39": "data/core/weather/surface-based-obs/synop/sea/automatic",
+                                                "59": "data/core/weather/surface-based-obs/synop/sea/automatic/n-minute"
+                                                }
+                                },
+                                "V": "data/recommended/weather/surface-based-obs/aviation/speci",
+                                "W": "data/recommended/weather/surface-based-obs/aviation/metar",
+                                "X": "data/core/weather/surface-based-obs"
+                        },
+                        "KT": {
+                                "E": "data/core/weather/watches+advisories+guidance/warnings/tsunami",
+                                "H": "data/core/weather/watches+advisories+guidance/warnings/cyclone",
+                                "S": "data/core/weather/watches+advisories+guidance/warnings/aviation/sigmet",
+                                "T": "data/core/weather/watches+advisories+guidance/warnings/tornado",
+                                "X": "data/core/weather/watches+advisories+guidance/warnings"
+                        },
+                        "KU": {
+                                "A": "data/recommended/weather/surface-based-obs/aviation/amdar",
+                                "B": "data/core/weather/surface-based-obs/upperair/ballon",
+                                "C": "data/core/weather/satellite4nowcasting/level",
+                                "D": "data/core/weather/surface-based-obs/upperair/dropsonde",
+                                "E": "data/core/weather/surface-based-obs/upperair/ozone",
+                                "I": "data/core/weather/surface-based-obs/upperair/dispersal",
+                                "J": {
+                                        "ii" : {
+                                                "19" : "data/core/weather/surface-based-obs/upperair/pilot/wind",
+                                                "39" : "data/core/weather/surface-based-obs/upperair/pilot/wind/mobile",
+                                                "59" : "data/core/weather/surface-based-obs/upperair/pilot/wind/ship"
+                                                }
+                                },
+                                "K": {
+                                        "ii" : {
+                                                "19" : "data/core/weather/surface-based-obs/upperair/temp",
+                                                "39" : "data/core/weather/surface-based-obs/upperair/temp/mobile",
+                                                "59" : "data/core/weather/surface-based-obs/upperair/temp/ship"
+                                                }
+                                },
+                                "L": "data/core/weather/surface-based-obs/upperair/ozone",
+                                "M": "data/core/weather/surface-based-obs/upperair/sonde",
+                                "N": "data/core/weather/surface-based-obs/upperair/rocketsondes",
+                                "O": "data/recommended/weather/surface-based-obs/aviation/amdar",
+                                "P": "data/core/weather/surface-based-obs/upperair/pilot/profile",
+                                "Q": "data/core/weather/surface-based-obs/upperair/temp/rass",
+                                "S": {
+                                        "ii": {
+                                                "19" : "data/core/weather/surface-based-obs/upperair/temp",
+                                                "39" : "data/core/weather/surface-based-obs/upperair/temp/mobile",
+                                                "59" : "data/core/weather/surface-based-obs/upperair/temp/ship"
+                                                }
+                                },
+                                "T": "data/core/weather/surface-based-obs/upperair/sonde/satellite",
+                                "U": {
+                                        "ii": {
+                                                "45": "data/core/climate/surface-based-obs/upperair/temp/monthly",
+                                                "45": "data/core/climate/surface-based-obs/upperair/temp/monthly/mobile",
+                                                "59": "data/core/climate/surface-based-obs/upperair/temp/monthly/ship"
+                                                }
+                                },
+                                "W": {
+                                        "ii": {
+                                                "19": "data/core/weather/surface-based-obs/upperair/pilot/",
+                                                "39": "data/core/weather/surface-based-obs/upperair/pilot/mobile",
+                                                "59": "data/core/weather/surface-based-obs/upperair/pilot/ship"
+                                                }
+                                },
+                                "X": "data/core/weather/surface-based-obs/upperair"
+                        },
+                        "KV": {
+                                "A": "data/core/weather/limited-analysis+prediction/forecast/level",
+                                "B": "data/core/weather/watches+advisories+guidance/warnings/aviation/sigwx/cb",
+                                "C": "data/core/weather/watches+advisories+guidance/warnings/aviation/sigwx/cat",
+                                "F": "data/core/weather/watches+advisories+guidance/warnings/aviation/sigwx/fronts",
+                                "N": "data/core/weather/watches+advisories+guidance/warnings/aviation/sigwx/other",
+                                "O": "data/core/weather/watches+advisories+guidance/warnings/aviation/sigwx/turbulence",
+                                "S": "data/core/weather/limited-analysis+prediction/forecast/soundings",
+                                "T": "data/core/weather/watches+advisories+guidance/warnings/aviation/sigwx/icing",
+                                "V": "data/core/weather/watches+advisories+guidance/warnings/aviation/sigwx/storms",
+                                "W": "data/core/weather/watches+advisories+guidance/warnings/aviation/sigwx/winds",
+                                "X": "data/core/weather/limited-analysis+prediction/forecast/upperair"
+                        }
+                },
+                "A2":""
+        },
+ "L": {
+                "topic": "data/recommended/weather/surface-based-obs/aviation/aviation-XML",
         "T2":{
-				"A": "observation/aviation/metar",
-				"C": "forecast/aviation/taf/under12hours",
-				"K": "observation/aviation/tropical-cyclone",
-				"N": "observation/aviation/space-weather",
-				"P": "observation/aviation/speci",
-				"S": "observation/aviation/sigmet",
-				"T": "forecast/aviation/taf/over12hours",
-				"U": "observation/aviation/advisory/ash",
-				"V": "observation/aviation/sigmet/ash",
-				"W": "observation/aviation/airmet",
-				"Y": "observation/aviation/sigmet/tropical-cyclone"
-			}, 
-		"A1":"C1", 
-		"A2":"" 
-	},
+                                "A": "data/recommended/weather/surface-based-obs/aviation/metar",
+                                "C": "data/recommended/weather/limited-analysis+prediction/forecast/aviation/taf",
+                                "K": "data/recommended/weather/surface-based-obs/aviation/tropical-cyclone",
+                                "N": "data/recommended/weather/space-weather",
+                                "P": "data/recommended/weather/surface-based-obs/aviation/speci",
+                                "S": "data/recommended/weather/surface-based-obs/aviation/sigmet",
+                                "T": "data/recommended/weather/limited-analysis+prediction/forecast/aviation/taf",
+                                "U": "data/recommended/weather/watches+advisories+guidance/aviation/advisory/ash",
+                                "V": "data/recommended/weather/surface-based-obs/aviation/sigmet/ash",
+                                "W": "data/recommended/weather/surface-based-obs/aviation/airmet",
+                                "Y": "data/recommended/weather/surface-based-obs/aviation/sigmet/tropical-cyclone"
+                        },
+                "A1":"C1",
+                "A2":""
+        },
  "M": {
-        "topic": "national",
+        "topic": "data/recommended/weather/limited-analysis+prediction/national",
         "T2":"",
         "A1":"",
         "A2":""
         },
- "N": { 
-		"topic": "notes",            
+ "N": {
+                "topic": "data/core/weather/watches+advisories+guidance/notes",
         "T2":{
-				"A": "notes/aviation",
-				"B": "notes/aviation",
-				"G": "notes/hydrological",
-				"H": "notes/marine",
-				"N": "notes/alert/nuclear",
-				"O": "notes/metno",
-				"P": "notes/generation-delay",
-				"T": "notes/test",
-				"W": "notes/warning",
-				"X": "notes/alert",
-				"Z": "notes/alert"
-			},
-		"A1":"C1", 
-		"A2":"" 
-	},
- "O": { 
-		"topic": "observation/sea",
+                                "A": "data/core/weather/watches+advisories+guidance/notes/aviation",
+                                "B": "data/core/weather/watches+advisories+guidance/notes/aviation",
+                                "G": "data/core/weather/watches+advisories+guidance/notes/hydrological",
+                                "H": "data/core/weather/watches+advisories+guidance/notes/marine",
+                                "N": "data/core/weather/watches+advisories+guidance/notes/alert/nuclear",
+                                "O": "data/core/weather/watches+advisories+guidance/notes/metno",
+                                "P": "data/core/weather/watches+advisories+guidance/notes/generation-delay",
+                                "T": "data/core/weather/watches+advisories+guidance/notes/test",
+                                "W": "data/core/weather/watches+advisories+guidance/notes/warning",
+                                "X": "data/core/weather/watches+advisories+guidance/notes/alert",
+                                "Z": "data/core/weather/watches+advisories+guidance/notes/alert"
+                        },
+                "A1":"C1",
+                "A2":""
+        },
+ "O": {
+                "topic": "data/core/weather/surface-based-obs/sea",
         "T2":{
-				"D": "observation/sea/depth",
-				"E": "observation/sea/ice/concentration",
-				"F": "observation/sea/ice/thickness",
-				"G": "observation/sea/ice/drift",
-				"H": "observation/sea/ice/growth",
-				"I": "observation/sea/ice/convergence",
-				"Q": "observation/sea/temperature/anomaly",
-				"R": "observation/sea/depth/anomaly",
-				"S": "observation/sea/salinity",
-				"T": "observation/sea/temperature",
-				"U": "observation/sea/current",
-				"V": "observation/sea/current",
-				"W": "observation/sea/warming",
-				"X": "observation/sea/mixed"
-			},
-		"A1":"", 
-		"A2":""
-	},
- "P": { 
-		"topic": "pictorial",
+                                "D": "data/core/weather/surface-based-obs/sea/depth",
+                                "E": "data/core/weather/surface-based-obs/sea/ice",
+                                "F": "data/core/weather/surface-based-obs/sea/ice",
+                                "G": "data/core/weather/surface-based-obs/sea/ice",
+                                "H": "data/core/weather/surface-based-obs/sea/ice",
+                                "I": "data/core/weather/surface-based-obs/sea/ice",
+                                "Q": "data/core/weather/surface-based-obs/sea/temperature/anomaly",
+                                "R": "data/core/weather/surface-based-obs/sea/depth/anomaly",
+                                "S": "data/core/weather/surface-based-obs/sea/salinity",
+                                "T": "data/core/weather/surface-based-obs/sea/temperature",
+                                "U": "data/core/weather/surface-based-obs/sea/current",
+                                "V": "data/core/weather/surface-based-obs/sea/current",
+                                "W": "data/core/weather/surface-based-obs/sea/warming",
+                                "X": "data/core/weather/surface-based-obs/sea"
+                        },
+                "A1":"",
+                "A2":""
+        },
+ "P": {
+                "topic": "data/core/weather/global-analysis+prediction/pictorial",
         "T2":{
-				"A": "pictorial/radar",
-				"B": "pictorial/cloud",
-				"C": "pictorial/turbulence/cat",
-				"D": "pictorial/thickness",
-				"E": "pictorial/precipitation",
-				"F": "pictorial/cloud/ash",
-				"G": "pictorial/sigwx",
-				"H": "pictorial/cloud/height",
-				"I": "pictorial/sea/ice-flow",
-				"J": "pictorial/sea/wave",
-				"K": "pictorial/sea/swell",
-				"L": "pictorial/text",
-				"M": "pictorial/national",
-				"N": "pictorial/radiation",
-				"O": "pictorial/velocity/vertical",
-				"P": "pictorial/pressure",
-				"Q": "pictorial/temperature/wet-bulb-potential-temp",
-				"R": "pictorial/humidity/relative",
-				"S": "pictorial/land/snow-cover",
-				"T": "pictorial/temperature",
-				"U": "pictorial/wind/east",
-				"V": "pictorial/wind/north",
-				"W": "pictorial/wind",
-				"X": "pictorial/lifted",
-				"Y": "pictorial/plotted-chart"
-			},
-		"A1":"", 
-		"A2":""
-	},
- "Q": { 
-		"topic": "pictorial/regional",
+                                "A": "data/core/weather/global-analysis+prediction/pictorial/radar",
+                                "B": "data/core/weather/global-analysis+prediction/pictorial/cloud",
+                                "C": "data/core/weather/global-analysis+prediction/pictorial/turbulence/cat",
+                                "D": "data/core/weather/global-analysis+prediction/pictorial/thickness",
+                                "E": "data/core/weather/global-analysis+prediction/pictorial/precipitation",
+                                "F": "data/core/weather/global-analysis+prediction/pictorial/cloud/ash",
+                                "G": "data/core/weather/global-analysis+prediction/pictorial/sigwx",
+                                "H": "data/core/weather/global-analysis+prediction/pictorial/cloud/height",
+                                "I": "data/core/weather/global-analysis+prediction/pictorial/sea/ice-flow",
+                                "J": "data/core/weather/global-analysis+prediction/pictorial/sea/wave",
+                                "K": "data/core/weather/global-analysis+prediction/pictorial/sea/swell",
+                                "L": "data/core/weather/global-analysis+prediction/pictorial/text",
+                                "M": "data/core/weather/limited-analysis+prediction/pictorial/national",
+                                "N": "data/core/weather/global-analysis+prediction/pictorial/radiation",
+                                "O": "data/core/weather/global-analysis+prediction/pictorial/velocity/vertical",
+                                "P": "data/core/weather/global-analysis+prediction/pictorial/pressure",
+                                "Q": "data/core/weather/global-analysis+prediction/pictorial/temperature/wet-bulb-potential-temp",
+                                "R": "data/core/weather/global-analysis+prediction/pictorial/humidity/relative",
+                                "S": "data/core/weather/global-analysis+prediction/pictorial/land/snow-cover",
+                                "T": "data/core/weather/global-analysis+prediction/pictorial/temperature",
+                                "U": "data/core/weather/global-analysis+prediction/pictorial/wind/east",
+                                "V": "data/core/weather/global-analysis+prediction/pictorial/wind/north",
+                                "W": "data/core/weather/global-analysis+prediction/pictorial/wind",
+                                "X": "data/core/weather/global-analysis+prediction/pictorial/lifted",
+                                "Y": "data/core/weather/global-analysis+prediction/pictorial/plotted-chart"
+                        },
+                "A1":"",
+                "A2":""
+        },
+ "Q": {
+                "topic": "data/core/weather/limited-analysis+prediction/pictorial/regional",
         "T2":{
-				"A": "pictorial/regional/radar",
-				"B": "pictorial/regional/cloud",
-				"C": "pictorial/regional/turbulence/cat",
-				"D": "pictorial/regional/thickness",
-				"E": "pictorial/regional/precipitation",
-				"F": "pictorial/regional/cloud/ash",
-				"G": "pictorial/regional/sigwx",
-				"H": "pictorial/regional/cloud/height",
-				"I": "pictorial/regional/sea/ice-flow",
-				"J": "pictorial/regional/sea/wave",
-				"K": "pictorial/regional/sea/swell",
-				"L": "pictorial/regional/text",
-				"M": "pictorial/regional/national",
-				"N": "pictorial/regional/radiation",
-				"O": "pictorial/regional/velocity/vertical",
-				"P": "pictorial/regional/pressure",
-				"Q": "pictorial/regional/temperature/wet-bulb-potential-temp",
-				"R": "pictorial/regional/humidity/relative",
-				"S": "pictorial/regional/land/snow-cover",
-				"T": "pictorial/regional/temperature",
-				"U": "pictorial/regional/wind/east",
-				"V": "pictorial/regional/wind/north",
-				"W": "pictorial/regional/wind",
-				"X": "pictorial/regional/lifted",
-				"Y": "pictorial/regional/plotted-chart"
-		}, 
-		"A1":"", 
-		"A2":"" 
-	},
- "S": { 
-		"topic": "observation/surface",       
+                                "A": "data/core/weather/limited-analysis+prediction/pictorial/regional/radar",
+                                "B": "data/core/weather/limited-analysis+prediction/pictorial/regional/cloud",
+                                "C": "data/core/weather/limited-analysis+prediction/pictorial/regional/turbulence/cat",
+                                "D": "data/core/weather/limited-analysis+prediction/pictorial/regional/thickness",
+                                "E": "data/core/weather/limited-analysis+prediction/pictorial/regional/precipitation",
+                                "F": "data/core/weather/limited-analysis+prediction/pictorial/regional/cloud/ash",
+                                "G": "data/core/weather/limited-analysis+prediction/pictorial/regional/sigwx",
+                                "H": "data/core/weather/limited-analysis+prediction/pictorial/regional/cloud/height",
+                                "I": "data/core/weather/limited-analysis+prediction/pictorial/regional/sea/ice-flow",
+                                "J": "data/core/weather/limited-analysis+prediction/pictorial/regional/sea/wave",
+                                "K": "data/core/weather/limited-analysis+prediction/pictorial/regional/sea/swell",
+                                "L": "data/core/weather/limited-analysis+prediction/pictorial/regional/text",
+                                "M": "data/core/weather/limited-analysis+prediction/pictorial/regional/national",
+                                "N": "data/core/weather/limited-analysis+prediction/pictorial/regional/radiation",
+                                "O": "data/core/weather/limited-analysis+prediction/pictorial/regional/velocity/vertical",
+                                "P": "data/core/weather/limited-analysis+prediction/pictorial/regional/pressure",
+                                "Q": "data/core/weather/limited-analysis+prediction/pictorial/regional/temperature/wet-bulb-potential-temp",
+                                "R": "data/core/weather/limited-analysis+prediction/pictorial/regional/humidity/relative",
+                                "S": "data/core/weather/limited-analysis+prediction/pictorial/regional/land/snow-cover",
+                                "T": "data/core/weather/limited-analysis+prediction/pictorial/regional/temperature",
+                                "U": "data/core/weather/limited-analysis+prediction/pictorial/regional/wind/east",
+                                "V": "data/core/weather/limited-analysis+prediction/pictorial/regional/wind/north",
+                                "W": "data/core/weather/limited-analysis+prediction/pictorial/regional/wind",
+                                "X": "data/core/weather/limited-analysis+prediction/pictorial/regional/lifted",
+                                "Y": "data/core/weather/limited-analysis+prediction/pictorial/regional/plotted-chart"
+                },
+                "A1":"",
+                "A2":""
+        },
+ "S": {
+                "topic": "data/core/weather/surface-based-obs",
         "T2":{
-				"A": "observation/aviation/metar",
-				"B": "observation/land/surface/report/radar/part-a",
-				"C": "observation/land/surface/report/radar/part-b",
-				"D": "observation/land/surface/report/radar/part-ab",
-				"E": "observation/surface/seismic",
-				"F": "observation/surface/report/atmosheric",
-				"G": "observation/surface/report/radiation",
-				"H": "observation/surface/report/dcp-stations",
-				"I": "observation/land/surface/synop",
-				"M": "observation/land/surface/synop",
-				"N": "observation/land/surface/synop",
-				"O": "observation/sea/surface",
-				"P": "observation/aviation/speci",
-				"R": "observation/land/surface/hydrological/river",
-				"S": "observation/sea/surface/buoy/drifting",
-				"T": "observation/sea/surface/sea-ice",
-				"U": "observation/land/surface/snow-deep",
-				"V": "observation/land/surface/lake-ice",
-				"W": "observation/sea/surface/wave",
-				"Y": "observation/surface/seismic/waveform",
-				"Z": "observation/sea/surface/tsunami"
-		},
-		"A1":"C1",
-		"A2":""
-	},
- "T": { 
-		"topic": "observation/satellite",     
+                                "A": "data/recommended/weather/surface-based-obs/aviation/metar",
+                                "B": "data/core/weather/surface-based-obs/land/report/radar/part-a",
+                                "C": "data/core/weather/surface-based-obs/land/report/radar/part-b",
+                                "D": "data/core/weather/surface-based-obs/land/report/radar/part-ab",
+                                "E": "data/core/weather/surface-based-obs/seismic",
+                                "F": "data/core/weather/surface-based-obs/report/atmosheric",
+                                "G": "data/core/weather/surface-based-obs/report/radiation",
+                                "H": "data/core/weather/surface-based-obs/report/dcp-stations",
+                                "I": "data/core/weather/surface-based-obs/synop/land",
+                                "M": "data/core/weather/surface-based-obs/synop/land/main",
+                                "N": "data/core/weather/surface-based-obs/synop/land",
+                                "O": "data/core/weather/surface-based-obs/sea",
+                                "P": "data/recommended/weather/surface-based-obs/aviation/speci",
+                                "R": "data/core/weather/surface-based-obs/hydrological/river",
+                                "S": "data/core/weather/surface-based-obs/sea/buoy",
+                                "T": "data/core/weather/surface-based-obs/sea/sea-ice",
+                                "U": "data/core/weather/surface-based-obs/snow-deep",
+                                "V": "data/core/weather/surface-based-obs/lake-ice",
+                                "W": "data/core/weather/surface-based-obs/sea/wave",
+                                "Y": "data/core/weather/surface-based-obs/seismic/waveform",
+                                "Z": "data/core/weather/surface-based-obs/sea/tsunami"
+                },
+                "A1":"C1",
+                "A2":""
+        },
+ "T": {
+                "topic": "data/core/weather/satellite4nowcasting",
         "T2":{
-				"B": "observation/satellite/orbit",
-				"C": "observation/satellite/cloud",
-				"H": "observation/satellite/soundings/upperair",
-				"R": "observation/satellite/radiance",
-				"T": "observation/satellite/sea/surface/temperature",
-				"W": "observation/satellite/winds"
-			}, 
-		"A1":"", 
-		"A2":""
-	} ,
- "U": { 
-		"topic": "observation/upperair",     
+                                "B": "data/core/weather/satellite4nowcasting/orbit",
+                                "C": "data/core/weather/satellite4nowcasting/cloud",
+                                "H": "data/core/weather/satellite4nowcasting/soundings/upperair",
+                                "R": "data/core/weather/satellite4nowcasting/radiance",
+                                "T": "data/core/weather/satellite4nowcasting/sea/temperature",
+                                "W": "data/core/weather/satellite4nowcasting/winds"
+                        },
+                "A1":"",
+                "A2":""
+        } ,
+ "U": {
+                "topic": "data/core/weather/surface-based-obs/upperair",
         "T2":{
-				"A": "observation/aviation/aircraft/airep",
-				"B": "observation/aviation/aircraft",
-				"D": "observation/aviation/aircraft/amdar",
-				"E": "observation/upperair/temp-with-windpart-d",
-				"F": "observation/upperair/temp-with-windpart-cd",
-				"G": "observation/upperair/upper-wind/part-b/pilot-temp",
-				"H": "observation/upperair/upper-wind/part-c/pilot-temp",
-				"I": "observation/upperair/upper-wind/part-ab/pilot-temp",
-				"K": "observation/upperair/temp-with-windpart-b",
-				"L": "observation/upperair/temp-with-windpart-c",
-				"M": "observation/upperair/temp-with-windpart-ab",
-				"N": "observation/upperair/rocob",
-				"P": "observation/upperair/uper-wind/part-a/pilot",
-				"Q": "observation/upperair/upper-wind/part-d/pilot",
-				"R": "observation/aviation/aircraft/recco",
-				"S": "observation/upperair/temp-with-windpart-a",
-				"T": "observation/aviation/aircraft/codar",
-				"Y": "observation/upperair/upper-wind/part-cd/pilot",
-				"Z": "observation/upperair/temp/drop"
-			}, 
-		"A1": "C1",
-		"A2":""
-	} ,
- "V": { 
-		"topic": "national",      
-        "T2":"", 
-		"A1":"C1",
-		"A2":""
-	} ,
- "W": { 
-		"topic": "warnings",           
-        "T2":{
-				"A": "warnings/aviation/airmet",
-				"C": "warnings/aviation/sigmet/cyclone",
-				"E": "warnings/tsunami",
-				"F": "warnings/tornado",
-				"G": "warnings/hydrological/river/flood",
-				"H": "warnings/sea/flood",
-				"R": "warnings/humanitarian-activities",
-				"S": "warnings/aviation/sigmet",
-				"T": "warnings/storms/tropical-cyclone",
-				"U": "warnings/thunderstorm",
-				"V": "warnings/aviation/sigmet/clouds/ash",
-				"W": "warnings/weather-summary"
-			}, 
-		"A1":"C1", 
-		"A2":"" 
-	} ,
- "X": { 
-		"topic": "warnings/alert-CAP",
-        "T2":{
-				"A": "warnings/alert-CAP/radar",
-				"B": "warnings/alert-CAP/cloud",
-				"C": "warnings/alert-CAP/vorticity",
-				"D": "warnings/alert-CAP/thickness",
-				"E": "warnings/alert-CAP/precipitation",
-				"G": "warnings/alert-CAP/divergence",
-				"H": "warnings/alert-CAP/height",
-				"J": "warnings/alert-CAP/wave",
-				"K": "warnings/alert-CAP/swell",
-				"M": "warnings/alert-CAP/national",
-				"N": "warnings/alert-CAP/radiation",
-				"O": "warnings/alert-CAP/velocity/vertical",
-				"P": "warnings/alert-CAP/pressure",
-				"Q": "warnings/alert-CAP/temperature/wetbulb",
-				"R": "warnings/alert-CAP/humidity/relative",
-				"T": "warnings/alert-CAP/temperature",
-				"U": "warnings/alert-CAP/wind/east",
-				"V": "warnings/alert-CAP/wind/north",
-				"W": "warnings/alert-CAP/wind",
-				"X": "warnings/alert-CAP/lifted",
-				"Y": "warnings/alert-CAP/observation/chart"
-			},
-		"A1":"C1", 
-		"A2":""
-	} ,
- "Y": { 
-		"topic": "forecast/model/regional",  
+                                "A": "data/recommended/weather/surface-based-obs/aviation/aircraft/airep",
+                                "B": "data/recommended/weather/surface-based-obs/aviation/aircraft",
+                                "D": "data/recommended/weather/surface-based-obs/aviation/aircraft/amdar",
+                                "E": "data/core/weather/surface-based-obs/upperair/temp-with-windpart-d",
+                                "F": "data/core/weather/surface-based-obs/upperair/temp-with-windpart-cd",
+                                "G": "data/core/weather/surface-based-obs/upperair/upper-wind/part-b/pilot-temp",
+                                "H": "data/core/weather/surface-based-obs/upperair/upper-wind/part-c/pilot-temp",
+                                "I": "data/core/weather/surface-based-obs/upperair/upper-wind/part-ab/pilot-temp",
+                                "K": "data/core/weather/surface-based-obs/upperair/temp-with-windpart-b",
+                                "L": "data/core/weather/surface-based-obs/upperair/temp-with-windpart-c",
+                                "M": "data/core/weather/surface-based-obs/upperair/temp-with-windpart-ab",
+                                "N": "data/core/weather/surface-based-obs/upperair/rocob",
+                                "P": "data/core/weather/surface-based-obs/upperair/uper-wind/part-a/pilot",
+                                "Q": "data/core/weather/surface-based-obs/upperair/upper-wind/part-d/pilot",
+                                "R": "data/recommended/weather/surface-based-obs/aviation/aircraft/recco",
+                                "S": "data/core/weather/surface-based-obs/upperair/temp-with-windpart-a",
+                                "T": "data/recommended/weather/surface-based-obs/aviation/aircraft/codar",
+                                "Y": "data/core/weather/surface-based-obs/upperair/upper-wind/part-cd/pilot",
+                                "Z": "data/core/weather/surface-based-obs/upperair/temp/drop"
+                        },
+                "A1": "C1",
+                "A2":""
+        } ,
+ "V": {
+                "topic": "data/recommended/weather/limited-analysis+prediction/national",
         "T2":"",
-		"A1":"", 
-		"A2":""
-	},
- "Z": { 
-		"topic": "forecast/model/regional/KWBE",  
+                "A1":"C1",
+                "A2":""
+        } ,
+ "W": {
+                "topic": "data/core/weather/watches+advisories+guidance/warnings",
+        "T2":{
+                                "A": "data/core/weather/watches+advisories+guidance/warnings/aviation/airmet",
+                                "C": "data/core/weather/watches+advisories+guidance/warnings/aviation/sigmet/cyclone",
+                                "E": "data/core/weather/watches+advisories+guidance/warnings/tsunami",
+                                "F": "data/core/weather/watches+advisories+guidance/warnings/tornado",
+                                "G": "data/core/weather/watches+advisories+guidance/warnings/hydrological/river/flood",
+                                "H": "data/core/weather/watches+advisories+guidance/warnings/sea/flood",
+                                "R": "data/core/weather/watches+advisories+guidance/warnings/humanitarian-activities",
+                                "S": "data/core/weather/watches+advisories+guidance/warnings/aviation/sigmet",
+                                "T": "data/core/weather/watches+advisories+guidance/warnings/storms/tropical-cyclone",
+                                "U": "data/core/weather/watches+advisories+guidance/warnings/thunderstorm",
+                                "V": "data/core/weather/watches+advisories+guidance/warnings/aviation/sigmet/clouds/ash",
+                                "W": "data/core/weather/watches+advisories+guidance/warnings/weather-summary"
+                        },
+                "A1":"C1",
+                "A2":""
+        } ,
+ "X": {
+                "topic": "data/core/weather/watches+advisories+guidance/warnings/alert-CAP",
+        "T2":{
+                                "A": "data/core/weather/watches+advisories+guidance/warnings/alert-CAP/radar",
+                                "B": "data/core/weather/watches+advisories+guidance/warnings/alert-CAP/cloud",
+                                "C": "data/core/weather/watches+advisories+guidance/warnings/alert-CAP/vorticity",
+                                "D": "data/core/weather/watches+advisories+guidance/warnings/alert-CAP/thickness",
+                                "E": "data/core/weather/watches+advisories+guidance/warnings/alert-CAP/precipitation",
+                                "G": "data/core/weather/watches+advisories+guidance/warnings/alert-CAP/divergence",
+                                "H": "data/core/weather/watches+advisories+guidance/warnings/alert-CAP/height",
+                                "J": "data/core/weather/watches+advisories+guidance/warnings/alert-CAP/wave",
+                                "K": "data/core/weather/watches+advisories+guidance/warnings/alert-CAP/swell",
+                                "M": "data/core/weather/watches+advisories+guidance/warnings/alert-CAP/national",
+                                "N": "data/core/weather/watches+advisories+guidance/warnings/alert-CAP/radiation",
+                                "O": "data/core/weather/watches+advisories+guidance/warnings/alert-CAP/velocity/vertical",
+                                "P": "data/core/weather/watches+advisories+guidance/warnings/alert-CAP/pressure",
+                                "Q": "data/core/weather/watches+advisories+guidance/warnings/alert-CAP/temperature/wetbulb",
+                                "R": "data/core/weather/watches+advisories+guidance/warnings/alert-CAP/humidity/relative",
+                                "T": "data/core/weather/watches+advisories+guidance/warnings/alert-CAP/temperature",
+                                "U": "data/core/weather/watches+advisories+guidance/warnings/alert-CAP/wind/east",
+                                "V": "data/core/weather/watches+advisories+guidance/warnings/alert-CAP/wind/north",
+                                "W": "data/core/weather/watches+advisories+guidance/warnings/alert-CAP/wind",
+                                "X": "data/core/weather/watches+advisories+guidance/warnings/alert-CAP/lifted",
+                                "Y": "data/core/weather/watches+advisories+guidance/warnings/alert-CAP/observation/chart"
+                        },
+                "A1":"C1",
+                "A2":""
+        } ,
+ "Y": {
+                "topic": "data/recommended/weather/limited-analysis+prediction/forecast/model/regional",
         "T2":"",
-		"A1":"", 
-		"A2":""
-	}
+                "A1":"",
+                "A2":""
+        },
+ "Z": {
+                "topic": "data/recommended/weather/limited-analysis+prediction/forecast/model/regional/KWBE",
+        "T2":"",
+                "A1":"",
+                "A2":""
+        }
 }
-
