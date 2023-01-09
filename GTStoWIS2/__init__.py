@@ -95,7 +95,7 @@ class GTStoWIS2():
         return 'unknown'                 
     
 
-    def _getSubtopicA1(self, myT1, myT2, myA1, myA2, myii, mytableA1):
+    def _getSubtopicA1(self, myT1, myT2, myA1, myA2, myii, mytableA1, myCCCC):
         subTopicA1 = ""
         if mytableA1 == "C1":
             AA = myA1 + myA2
@@ -123,7 +123,13 @@ class GTStoWIS2():
                                 if iiKey != "":
                                     subTopicA1 = self.tableA[myT1]['A1'][TT][myA1]["ii"][iiKey]
                         else:
-                            subTopicA1 = self.tableA[myT1]['A1'][TT][myA1]
+                            if 'CCCC' in self.tableA[myT1]['A1'][TT][myA1]:
+                                if myCCCC in self.tableA[myT1]['A1'][TT][myA1]['CCCC'].keys():
+                                    subTopicA1 = self.tableA[myT1]['A1'][TT][myA1]['CCCC'][myCCCC]
+                                else:
+                                    subTopicA1 = self.tableA[myT1]['A1'][TT][myA1]['DEFAULT']
+                            else:
+                                subTopicA1 = self.tableA[myT1]['A1'][TT][myA1]
         return subTopicA1
     
     def mapAHLtoTopic(self,ahl):
@@ -174,9 +180,9 @@ class GTStoWIS2():
         if self.debug: print("subtopicT2: %s" % subtopicT2 )
 
         if self.tableA[T1]['A1'] == "C1":
-            subtopicA1 = self._getSubtopicA1(T1, T2, A1, A2, ii, self.tableA[T1]['A1'])
+            subtopicA1 = self._getSubtopicA1(T1, T2, A1, A2, ii, self.tableA[T1]['A1'], input_c)
         else:
-            subtopicA1 = self._getSubtopicA1(T1, T2, A1, A2, ii, "")
+            subtopicA1 = self._getSubtopicA1(T1, T2, A1, A2, ii, "", input_c)
         if self.debug: print("subtopicA1: %s" % subtopicA1 )
         
         if subtopicA1 != "":
