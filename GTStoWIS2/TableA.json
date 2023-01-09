@@ -166,26 +166,107 @@
  "I": { 
 		"topic": "data/core/weather/surface-based-observations",
         "T2":{
+		                "E": "data/core/weather/space-based-observations/satellite4nwp",
 				"N": "data/core/weather/space-based-observations/satellite4nowcasting",
 				"O": "data/core/weather/surface-based-observations/sea",
 				"P": "data/core/weather/surface-based-observations/pictoral",
+				"R": "data/core/weather/space-based-observations",
 				"S": "data/core/weather/surface-based-observations",
 				"T": "data/core/weather/surface-based-observations/text",
-				"U": "data/core/weather/surface-based-observations/upperair"
+				"U": "data/core/weather/surface-based-observations/upperair",
+				"W": "data/core/weather/space-based-observations/satellite4nwp",
+				"X": "data/core/weather/space-based-observations/satellite4nwp"
 		},
 		"A1":{
+			        "IE":{
+					"A":{
+						"CCCC":{
+							"EUMP":"data/core/weather/space-based-observations/satellite4nwp/amsua",
+							"EUMR":"data/core/weather/space-based-observations/satellite4nwp/amsua",
+							"EUMS":"data/core/weather/space-based-observations/satellite4nowcasting/amsua"
+						},
+						"DEFAULT":"data/core/weather/space-based-observations/satellite4nwp"
+					},
+					"D":"data/core/weather/space-based-observations/satellite4nwp/iasi_l2",
+					"G":"data/core/weather/space-based-observations/satellite4nwp/gras",
+					"H":{
+						"CCCC":{
+							"EUMP":"data/core/weather/space-based-observations/satellite4nwp/hirs",
+							"EUMR":"data/core/weather/space-based-observations/satellite4nwp/hirs",
+							"EUMS":"data/core/weather/space-based-observations/satellite4nowcasting/hirs"
+						},
+						"DEFAULT":"data/core/weather/space-based-observations/satellite4nwp/hirs"
+					},
+					"I":"data/core/weather/space-based-observations/satellite4nwp/iasi_red",
+					"L":"data/core/weather/space-based-observations/satellite4nwp/olci_wv",
+					"M":{
+						"CCCC":{
+							"EUMP":"data/core/weather/space-based-observations/satellite4nwp/mhs",
+							"EUMR":"data/core/weather/space-based-observations/satellite4nwp/mhs",
+							"EUMS":"data/core/weather/space-based-observations/satellite4nowcasting/mhs"
+						},
+						"DEFAULT":"data/core/weather/space-based-observations/satellite4nwp/mhs"
+					},
+					"O":"data/core/weather/space-based-observations/satellite4nwp/ascat",
+					"Q":{
+						"CCCC":{
+							"EUMP":"data/core/weather/space-based-observations/satellite4nwp/iasi_pcs",
+							"EUMR":"data/core/weather/space-based-observations/satellite4nwp/iasi_pcs",
+							"EUMS":"data/core/weather/space-based-observations/satellite4nowcasting/iasi_pcs"
+						},
+						"DEFAULT":"data/core/weather/space-based-observations/satellite4nwp/iasi_pcs"
+					},
+					"V":"data/core/weather/space-based-observations/satellite4nwp/amv"
+				       },
 				"IN":{
-					"A":"data/core/weather/space-based-observations/satellite4nowcasting/amsua",
+					"A":{
+						"CCCC":{
+							"EUMP":"data/core/weather/space-based-observations/satellite4nwp/amsua",
+							"EUMS":"data/core/weather/space-based-observations/satellite4nowcasting/amsua"
+						},
+						"DEFAULT":"data/core/weather/space-based-observations/satellite4nwp/amsua"
+					},
 					"B":"data/core/weather/space-based-observations/satellite4nowcasting/amsub",
-					"C":"data/core/weather/space-based-observations/satellite4nowcasting/cris",
-					"H":"data/core/weather/space-based-observations/satellite4nowcasting/hirs",
+					"C":{
+						"CCCC":{
+							"EUMP":"data/core/weather/space-based-observations/satellite4nwp/cris",
+							"EUMS":"data/core/weather/space-based-observations/satellite4nowcasting/cris"
+						},
+						"DEFAULT":"data/core/weather/space-based-observations/satellite4nwp/cris"
+					},
+					"H":{
+						"CCCC":{
+							"EUMP":"data/core/weather/space-based-observations/satellite4nwp/hirs",
+							"EUMS":"data/core/weather/space-based-observations/satellite4nowcasting/hirs"
+						},
+						"DEFAULT":"data/core/weather/space-based-observations/satellite4nwp/hirs"
+					},
 					"I":"data/core/weather/space-based-observations/satellite4nowcasting/iras",
 					"J":"data/core/weather/space-based-observations/satellite4nowcasting/hiras",
 					"K":"data/core/weather/space-based-observations/satellite4nowcasting/mwhs",
-					"M":"data/core/weather/space-based-observations/satellite4nowcasting/mhs",
+					"M":{
+						"CCCC":{
+							"EUMP":"data/core/weather/space-based-observations/satellite4nwp/mhs",
+							"EUMS":"data/core/weather/space-based-observations/satellite4nowcasting/mhs"
+						},
+						"DEFAULT":"data/core/weather/space-based-observations/satellite4nwp/mhs"
+					},
 					"Q":"data/core/weather/space-based-observations/satellite4nowcasting/iasi",
-					"S":"data/core/weather/space-based-observations/satellite4nowcasting/atms",
-					"T":"data/core/weather/space-based-observations/satellite4nowcasting/mwts"
+					"S":{
+						"CCCC":{
+							"EUMP":"data/core/weather/space-based-observations/satellite4nwp/atms",
+							"EUMS":"data/core/weather/space-based-observations/satellite4nowcasting/atms"
+						},
+						"DEFAULT":"data/core/weather/space-based-observations/satellite4nwp/atms"
+					},
+					"T":{
+						"CCCC":{
+							"EUMP":"data/core/weather/space-based-observations/satellite4nwp/mwts",
+							"EUMS":"data/core/weather/space-based-observations/satellite4nowcasting/mwts"
+						},
+						"DEFAULT":"data/core/weather/space-based-observations/satellite4nwp/mwts"
+					},
+					"V":"data/core/weather/space-based-observations/satellite4nwp/amv"
 					},
 				"IO":{
 					"B":"data/core/weather/surface-based-observations/sea/buoy",
@@ -203,6 +284,9 @@
 					"I":"data/core/weather/space-based-observations/satellite4nowcasting",
 					"R":"data/core/weather/surface-based-observations/radar"
 					},
+				"IR":{
+					"V":"data/core/weather/space-based-observations/satellite4nwp"
+				        },
 				"IS":{
 					"A": "data/core/weather/surface-based-observations/synop/land/automatic",
 					"B": "data/core/weather/surface-based-observations/radar/reports",
@@ -248,7 +332,8 @@
 							}
 						},
 					"V":"data/recommended/weather/surface-based-observations/aviation/speci",
-					"W":"data/recommended/weather/surface-based-observations/aviation/metar"
+					"W":"data/recommended/weather/surface-based-observations/aviation/metar",
+					"Z":"core/weather/space-based-observations/satellite4nwp/altimeter"
 				},
 				"IT":{
 					"A":"data/core/weather/surface-based-observations/text/admininstration",
@@ -262,7 +347,7 @@
 					"C":"data/core/weather/satellite4nowcasting/sarep-satob",
 					"D":"data/core/weather/surface-based-observations/upperair/temp/drop",
 					"E":"data/core/weather/surface-based-observations/upperair/ozone",
-					"F":"data/core/weather/satellite4nowcasting/radiance",
+					"F":"data/core/weather/space-based-observations/satellite4nwp",
 					"I":"data/core/weather/surface-based-observations/upperair/dispersal",
 					"J":{ 
 						"ii": {
@@ -292,13 +377,14 @@
 							"59": "data/core/weather/surface-based-observations/upperair/temp/ship"
 							}
 						},
-					"T":"data/core/weather/satellite4nowcasting/sondes",
+					"T":"data/core/weather/space-based-observations/satellite4nwp/gras",
 					"U":{
 						"ii" : {
 							"45": "data/core/climate/surface-based-observations/temp/month",
 							"59": "data/core/climate/surface-based-observations/temp/month/ship"
 							}
 						},
+					"V":"data/core/weather/space-based-observations/satellite4nwp",
 					"W":{
 						"ii" : {
 							"19": "data/core/weather/surface-based-observations/upperair/pilot",
