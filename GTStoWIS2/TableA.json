@@ -261,7 +261,7 @@
 					},
 					"T":{
 						"CCCC":{
-							"EUMP":"data/core/weather/space-based-observations/satellite4nwp/mwts",
+							"EUMP":"data/core/weather/space-based-observations/satellite4nwp/atovs",
 							"EUMS":"data/core/weather/space-based-observations/satellite4nowcasting/mwts"
 						},
 						"DEFAULT":"data/core/weather/space-based-observations/satellite4nwp/mwts"
@@ -377,7 +377,7 @@
 							"59": "data/core/weather/surface-based-observations/upperair/temp/ship"
 							}
 						},
-					"T":"data/core/weather/space-based-observations/satellite4nwp/gras",
+					"T":"data/core/weather/space-based-observations/satellite4nwp/ro",
 					"U":{
 						"ii" : {
 							"45": "data/core/climate/surface-based-observations/temp/month",
