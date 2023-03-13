@@ -3423,49 +3423,49 @@
     "ECED": {
         "centre": "ecmwf",
         "name": "European Centre for Medium Range Weather Forecasts (ECMWF)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Exter",
         "comment": ""
     },
     "ECEM": {
         "centre": "ecmwf",
         "name": "European Centre for Medium Range Weather Forecasts (ECMWF)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Exter",
         "comment": ""
     },
     "ECEP": {
         "centre": "ecmwf",
         "name": "European Centre for Medium Range Weather Forecasts (ECMWF)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Exter",
         "comment": ""
     },
     "ECMF": {
         "centre": "ecmwf",
         "name": "European Centre for Medium Range Weather Forecasts (ECMWF)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Exter",
         "comment": ""
     },
     "ECMG": {
         "centre": "ecmwf",
         "name": "European Centre for Medium Range Weather Forecasts (ECMWF)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Exter",
         "comment": ""
     },
     "ECMW": {
         "centre": "ecmwf",
         "name": "European Centre for Medium Range Weather Forecasts (ECMWF)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Exter",
         "comment": ""
     },
     "ECSF": {
         "centre": "ecmwf",
         "name": "European Centre for Medium Range Weather Forecasts (ECMWF)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Exter",
         "comment": ""
     },
@@ -7388,133 +7388,133 @@
    "EUMA": {
         "centre": "eumetsat_metop-sg",
         "name": "EUMETSAT (Darmstadt)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Offenbach",
         "comment": ""
     },
 	"EUMB": {
         "centre": "eumetsat_dbsite_athens",
         "name": "EUMETSAT (Darmstadt)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Offenbach",
         "comment": ""
     },
 	"EUMD": {
         "centre": "eumetsat_dbsite_st-denis",
         "name": "EUMETSAT (Darmstadt)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Offenbach",
         "comment": ""
     },
 	"EUME": {
         "centre": "eumetsat_dbsite_edmonton",
         "name": "EUMETSAT (Darmstadt)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Offenbach",
         "comment": ""
     },
 	"EUMG": {
         "centre": "eumetsat_msg",
         "name": "EUMETSAT (Darmstadt)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Offenbach",
         "comment": ""
     },
 	"EUMH": {
         "centre": "eumetsat_dbsite_khabarovsk",
         "name": "EUMETSAT (Darmstadt)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Offenbach",
         "comment": ""
     },
 	"EUMI": {
         "centre": "eumetsat_dbsite_novosibirsk",
         "name": "EUMETSAT (Darmstadt)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Offenbach",
         "comment": ""
     },
 	"EUMK": {
         "centre": "eumetsat_dbsite_kangerlussuaq",
         "name": "EUMETSAT (Darmstadt)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Offenbach",
         "comment": ""
     },
 	"EUML": {
         "centre": "eumetsat_dbsite_lannion",
         "name": "EUMETSAT (Darmstadt)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Offenbach",
         "comment": ""
     },
 	"EUMM": {
         "centre": "eumetsat_dbsite_maspalomas",
         "name": "EUMETSAT (Darmstadt)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Offenbach",
         "comment": ""
     },
 	"EUMN": {
         "centre": "eumetsat_dbsite_gander",
         "name": "EUMETSAT (Darmstadt)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Offenbach",
         "comment": ""
     },
 	"EUMO": {
         "centre": "eumetsat_dbsite_moscow",
         "name": "EUMETSAT (Darmstadt)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Offenbach",
         "comment": ""
     },
 	"EUMP": {
         "centre": "eumetsat_metop-b_s-npp_noaa-20",
         "name": "EUMETSAT (Darmstadt)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Offenbach",
         "comment": ""
     },
 	"EUMR": {
         "centre": "eumetsat_metop-c",
         "name": "EUMETSAT (Darmstadt)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Offenbach",
         "comment": ""
     },
 	"EUMS": {
         "centre": "eumetsat_darmstadt",
         "name": "EUMETSAT (Darmstadt)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Offenbach",
         "comment": ""
     },
 	"EUMT": {
         "centre": "eumetsat_mtg",
         "name": "EUMETSAT (Darmstadt)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Offenbach",
         "comment": ""
     },
 	"EUMU": {
         "centre": "eumetsat_dbsite_muscat",
         "name": "EUMETSAT (Darmstadt)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Offenbach",
         "comment": ""
     },
 	"EUMV": {
         "centre": "eumetsat_dbsite_svalbard",
         "name": "EUMETSAT (Darmstadt)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Offenbach",
         "comment": ""
     },
 	"EUMY": {
         "centre": "eumetsat_dbsite_sodankylä",
         "name": "EUMETSAT (Darmstadt)",
-        "country_short": "eue",
+        "country_short": "xxf",
         "gisc": "Offenbach",
         "comment": ""
     },
@@ -31375,8 +31375,8 @@
         "comment": ""
     },
     "UGGG": {
-        "centre": "tbilisi_novoalexeyvka_+_fir",
-        "name": "Tbilisi/Novoalexeyvka + FIR",
+        "centre": "tbilisi_novoalexeyvka_fir",
+        "name": "Tbilisi/Novoalexeyvka FIR",
         "country_short": "geo",
         "comment": ""
     },
@@ -31915,8 +31915,8 @@
         "comment": ""
     },
     "UMRR": {
-        "centre": "riga_skulte+fir",
-        "name": "Riga/Skulte+FIR",
+        "centre": "riga_skulte_fir",
+        "name": "Riga/Skulte_FIR",
         "country_short": "lva",
         "comment": ""
     },
@@ -31939,8 +31939,8 @@
         "comment": ""
     },
     "UMWW": {
-        "centre": "vilnius+fir",
-        "name": "Vilnius+FIR",
+        "centre": "vilnius_fir",
+        "name": "Vilnius_FIR",
         "country_short": "ltu",
         "comment": ""
     },
@@ -32227,8 +32227,8 @@
         "comment": ""
     },
     "UTAA": {
-        "centre": "ashgabat+fir",
-        "name": "Ashgabat+FIR",
+        "centre": "ashgabat_fir",
+        "name": "Ashgabat_FIR",
         "country_short": "tkm",
         "comment": ""
     },
