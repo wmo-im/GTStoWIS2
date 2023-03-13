@@ -333,7 +333,7 @@
 						},
 					"V":"data/recommended/weather/surface-based-observations/aviation/speci",
 					"W":"data/recommended/weather/surface-based-observations/aviation/metar",
-					"Z":"core/weather/space-based-observations/satellite4nwp/altimeter"
+					"Z":"data/core/weather/space-based-observations/satellite4nwp/altimeter"
 				},
 				"IT":{
 					"A":"data/core/weather/surface-based-observations/text/admininstration",
